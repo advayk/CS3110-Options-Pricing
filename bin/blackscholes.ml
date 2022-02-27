@@ -1,4 +1,3 @@
-
 type european_option = { 
   strike_price : int ; 
   exercise_date : int ; 
