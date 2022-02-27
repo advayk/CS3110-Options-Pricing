@@ -1,8 +1,3 @@
-2022-02-27T20:15:25+00:00 dhcp-vl2042-3353.redrover.cornell.edu#02 I: Start test test suite for blackscholes:1:differnce betwen date1 and date2.
-2022-02-27T20:15:25+00:00 dhcp-vl2042-3353.redrover.cornell.edu#02 E: Test test suite for blackscholes:1:differnce betwen date1 and date2 exited with an error.
-2022-02-27T20:15:25+00:00 dhcp-vl2042-3353.redrover.cornell.edu#02 E: Failure("Unimplemented: time_to_maturity") in test test suite for blackscholes:1:differnce betwen date1 and date2.
-2022-02-27T20:15:25+00:00 dhcp-vl2042-3353.redrover.cornell.edu#02 E: Raised at Blackscholes.time_to_maturity in file "bin/blackscholes.ml", line 44, characters 2-51
-2022-02-27T20:15:25+00:00 dhcp-vl2042-3353.redrover.cornell.edu#02 E: Called from Dune__exe__Main.time_to_maturity_test.(fun) in file "test/main.ml", line 19, characters 31-61
-2022-02-27T20:15:25+00:00 dhcp-vl2042-3353.redrover.cornell.edu#02 E: Called from OUnitRunner.run_one_test.(fun) in file "src/lib/ounit2/advanced/oUnitRunner.ml", line 83, characters 13-26
-2022-02-27T20:15:25+00:00 dhcp-vl2042-3353.redrover.cornell.edu#02 E: 
-2022-02-27T20:15:25+00:00 dhcp-vl2042-3353.redrover.cornell.edu#02 I: End test test suite for blackscholes:1:differnce betwen date1 and date2.
+2022-02-27T21:49:58+00:00 dhcp-vl2042-3353.redrover.cornell.edu#02 I: Start test test suite for blackscholes:1:difference betwen date1 and date2.
+2022-02-27T21:49:58+00:00 dhcp-vl2042-3353.redrover.cornell.edu#02 I: Test test suite for blackscholes:1:difference betwen date1 and date2 is successful.
+2022-02-27T21:49:58+00:00 dhcp-vl2042-3353.redrover.cornell.edu#02 I: End test test suite for blackscholes:1:difference betwen date1 and date2.
