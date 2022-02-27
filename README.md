@@ -1,5 +1,5 @@
 # CS3110-Options-Pricing
-Options Pricing model in OCaml for CS 3110 Spring 2022
+Options Pricing model in OCaml for CS 3110 Spring 2022. 
 
 # Overview: 
 
