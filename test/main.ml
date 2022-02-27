@@ -27,9 +27,13 @@ let time2 = create_time 0 0 0 0
 let date1 = create_date 1 20 2022 time1 
 let date2 = create_date 2 6 2022 time2
 
+let date3 = create_date 1 1 2022 time2
+
 let blackscholes_test = [
   european_call_options_price_test "estimated call option price of euro_option_1" euro_option_1 6 0 6.02;
-  diff_between_dates_test "difference betwen date1 and date2" date1 date2 0.04657
+  diff_between_dates_test "difference betwen date1 and date2" date1 date2 0.04657;
+  diff_between_dates_test "difference betwen date1 and date2" date2 date3 0.09863
+
 ]
 
 let tests =
