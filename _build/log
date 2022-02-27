@@ -1,10 +1,10 @@
 # dune exec test/main.exe
 # OCAMLPARAM: unset
 # Workspace root: /Users/akoranne/Spring_2022_3110/FinalProject/final_project
-$ /usr/bin/getconf _NPROCESSORS_ONLN > /var/folders/k_/vx1zgrkj21j_hlqs81bfgs2c0000gn/T/dune207cf0.output 2> /dev/null
+$ /usr/bin/getconf _NPROCESSORS_ONLN > /var/folders/k_/vx1zgrkj21j_hlqs81bfgs2c0000gn/T/dunef169c6.output 2> /dev/null
 # Auto-detected concurrency: 16
 # disable binary cache
-$ /Users/akoranne/.opam/cs3110-2021-final-project/bin/ocamlc.opt -config > /var/folders/k_/vx1zgrkj21j_hlqs81bfgs2c0000gn/T/dune5fbe72.output
+$ /Users/akoranne/.opam/cs3110-2021-final-project/bin/ocamlc.opt -config > /var/folders/k_/vx1zgrkj21j_hlqs81bfgs2c0000gn/T/dune14a9fe.output
 # Dune context:
 #  { name = "default"
 #  ; kind = "default"
@@ -131,3 +131,9 @@ $ /Users/akoranne/.opam/cs3110-2021-final-project/bin/ocamlc.opt -config > /var/
 #      }
 #  }
 # Workspace root: /Users/akoranne/Spring_2022_3110/FinalProject/final_project
+$ (cd _build/default && /Users/akoranne/.opam/cs3110-2021-final-project/bin/ocamlc.opt -w +a-4-6-7-9-27-29-30-32..42-44-45-48-50-60-66-67 -warn-error -a+31 -g -bin-annot -I bin/.blackscholes.objs/byte -no-alias-deps -opaque -o bin/.blackscholes.objs/byte/blackscholes.cmo -c -impl bin/blackscholes.ml)
+$ (cd _build/default && /Users/akoranne/.opam/cs3110-2021-final-project/bin/ocamlopt.opt -w +a-4-6-7-9-27-29-30-32..42-44-45-48-50-60-66-67 -warn-error -a+31 -g -I bin/.blackscholes.objs/byte -I bin/.blackscholes.objs/native -intf-suffix .ml -no-alias-deps -opaque -o bin/.blackscholes.objs/native/blackscholes.cmx -c -impl bin/blackscholes.ml)
+$ (cd _build/default && /Users/akoranne/.opam/cs3110-2021-final-project/bin/ocamlopt.opt -w +a-4-6-7-9-27-29-30-32..42-44-45-48-50-60-66-67 -warn-error -a+31 -g -a -o bin/blackscholes.cmxa bin/.blackscholes.objs/native/blackscholes.cmx)
+$ (cd _build/default && /Users/akoranne/.opam/cs3110-2021-final-project/bin/ocamlc.opt -w +a-4-6-7-9-27-29-30-32..42-44-45-48-50-60-66-67 -warn-error -a+31 -g -bin-annot -I test/.main.eobjs/byte -I /Users/akoranne/.opam/cs3110-2021-final-project/lib/bytes -I /Users/akoranne/.opam/cs3110-2021-final-project/lib/ounit2 -I /Users/akoranne/.opam/cs3110-2021-final-project/lib/ounit2/advanced -I /Users/akoranne/.opam/cs3110-2021-final-project/lib/seq -I /Users/akoranne/.opam/cs3110-2021-final-project/lib/stdlib-shims -I bin/.blackscholes.objs/byte -no-alias-deps -opaque -o test/.main.eobjs/byte/dune__exe__Main.cmo -c -impl test/main.ml)
+$ (cd _build/default && /Users/akoranne/.opam/cs3110-2021-final-project/bin/ocamlopt.opt -w +a-4-6-7-9-27-29-30-32..42-44-45-48-50-60-66-67 -warn-error -a+31 -g -I test/.main.eobjs/byte -I test/.main.eobjs/native -I /Users/akoranne/.opam/cs3110-2021-final-project/lib/bytes -I /Users/akoranne/.opam/cs3110-2021-final-project/lib/ounit2 -I /Users/akoranne/.opam/cs3110-2021-final-project/lib/ounit2/advanced -I /Users/akoranne/.opam/cs3110-2021-final-project/lib/seq -I /Users/akoranne/.opam/cs3110-2021-final-project/lib/stdlib-shims -I bin/.blackscholes.objs/byte -I bin/.blackscholes.objs/native -intf-suffix .ml -no-alias-deps -opaque -o test/.main.eobjs/native/dune__exe__Main.cmx -c -impl test/main.ml)
+$ (cd _build/default && /Users/akoranne/.opam/cs3110-2021-final-project/bin/ocamlopt.opt -w +a-4-6-7-9-27-29-30-32..42-44-45-48-50-60-66-67 -warn-error -a+31 -g -o test/main.exe bin/blackscholes.cmxa /Users/akoranne/.opam/cs3110-2021-final-project/lib/ocaml/unix.cmxa -I /Users/akoranne/.opam/cs3110-2021-final-project/lib/ocaml /Users/akoranne/.opam/cs3110-2021-final-project/lib/stdlib-shims/stdlib_shims.cmxa /Users/akoranne/.opam/cs3110-2021-final-project/lib/ounit2/advanced/oUnitAdvanced.cmxa /Users/akoranne/.opam/cs3110-2021-final-project/lib/ounit2/oUnit.cmxa test/.main.eobjs/native/dune__exe__Main.cmx)

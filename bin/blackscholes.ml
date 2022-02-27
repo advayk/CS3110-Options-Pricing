@@ -72,8 +72,7 @@ let diff_between_dates date1 date2 =
   (float_of_int(days_inbetwen) /. 365.) 
 
 (* [strd_norm_cumulative_dist] is the standard normal cumulative distribution function. *)
-let strd_norm_cumulative_dist x = raise (Failure "Unimplemented: strd_norm_cumulative_dist")
-
+let strd_norm_cumulative_dist input : float = raise (Failure "Unimplemented: strd_norm_cumulative_dist")
 
 (* [d1] computes the d1 part of the black-scholes equation *)
 let d1 european_option : european_option = raise (Failure "Unimplemented: european_call")
