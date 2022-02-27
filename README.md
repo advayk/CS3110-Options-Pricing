@@ -1,7 +1,7 @@
 # CS3110-Options-Pricing
 Options Pricing model in OCaml for CS 3110 Spring 2022
 
-#Overview: 
+# Overview: 
 
 Quantitative finance is - in essence - 
 the art of applying mathematical models to financial markets. Jane Street (one of the world’s 
