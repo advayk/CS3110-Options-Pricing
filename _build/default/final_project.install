@@ -6,3 +6,6 @@ lib: [
 bin: [
   "_build/install/default/bin/final_project"
 ]
+doc: [
+  "_build/install/default/doc/final_project/README.md"
+]

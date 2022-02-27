@@ -2,3 +2,8 @@
  (public_name final_project)
  (name main)
  (libraries final_project))
+
+(env
+ (dev
+  (flags ;; Change the compile flags to the [ocamlc] defaults
+   (-w +a-21-26 -warn-error -a+31))))
