@@ -1,4 +1,3 @@
-let () = print_endline "CS 3110 Final Project: Options Pricing!"
 
 type european_option = { 
   strike_price : int ; 
@@ -15,7 +14,6 @@ let create_european_option k t r v = {
   risk_free_rate = r; 
   implied_volatility = v
 }
-
 
 
 (* [strd_norm_cumulative_dist] is the standard normal cumulative distribution function. *)
