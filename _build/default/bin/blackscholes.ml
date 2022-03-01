@@ -61,8 +61,6 @@ let is_before date1 date2 =
   date1.year < date2.year || (date1.year = date2.year && date1.month < date2.month) || 
   (date1.year = date2.year && date1.month = date2.month && date1.month < date2.month)
 
-
-  
 (*[days_of_month m] returns the number of days in a given month. Requires m in between [0,12] *)
 let days_of_month m = 
   if m = 1 ||  m = 3 || m = 5 ||  m = 7 ||  m = 8 ||  m = 10 ||  m = 12 then 31 else if m = 2 then 28 else 30
