@@ -1,0 +1,11 @@
+2022-03-05T16:48:15+00:00 dhcp-vl2042-3353.redrover.cornell.edu#01 I: Start test test suite for blackscholes:0:estimated call option price of euro_option_1.
+2022-03-05T16:48:15+00:00 dhcp-vl2042-3353.redrover.cornell.edu#01 E: Test test suite for blackscholes:0:estimated call option price of euro_option_1 exited with an error.
+2022-03-05T16:48:15+00:00 dhcp-vl2042-3353.redrover.cornell.edu#01 E: Failure("Unimplemented: european_call") in test test suite for blackscholes:0:estimated call option price of euro_option_1.
+2022-03-05T16:48:15+00:00 dhcp-vl2042-3353.redrover.cornell.edu#01 E: Raised at Blackscholes.european_call_options_price in file "bin/blackscholes.ml", line 84, characters 2-48
+2022-03-05T16:48:15+00:00 dhcp-vl2042-3353.redrover.cornell.edu#01 E: Called from Dune__exe__Main.european_call_options_price_test.(fun) in file "test/main.ml", line 16, characters 31-109
+2022-03-05T16:48:15+00:00 dhcp-vl2042-3353.redrover.cornell.edu#01 E: Called from OUnitRunner.run_one_test.(fun) in file "src/lib/ounit2/advanced/oUnitRunner.ml", line 83, characters 13-26
+2022-03-05T16:48:15+00:00 dhcp-vl2042-3353.redrover.cornell.edu#01 E: 
+2022-03-05T16:48:15+00:00 dhcp-vl2042-3353.redrover.cornell.edu#01 I: End test test suite for blackscholes:0:estimated call option price of euro_option_1.
+2022-03-05T16:48:15+00:00 dhcp-vl2042-3353.redrover.cornell.edu#01 I: Start test test suite for blackscholes:2:difference betwen date1 and date2.
+2022-03-05T16:48:15+00:00 dhcp-vl2042-3353.redrover.cornell.edu#01 I: Test test suite for blackscholes:2:difference betwen date1 and date2 is successful.
+2022-03-05T16:48:15+00:00 dhcp-vl2042-3353.redrover.cornell.edu#01 I: End test test suite for blackscholes:2:difference betwen date1 and date2.
