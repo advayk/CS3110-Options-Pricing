@@ -1,0 +1,2 @@
+(** @canonical Blackscholes.Author *)
+module Author = Blackscholes__Author

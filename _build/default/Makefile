@@ -22,3 +22,6 @@ zip:
 clean:
 	dune clean
 	rm -f enigma.zip
+
+doc:
+	dune build @doc
