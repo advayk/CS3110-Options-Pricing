@@ -1,4 +1,3 @@
-open Gsl
 
 type european_option = { 
   strike_price : int ; 
