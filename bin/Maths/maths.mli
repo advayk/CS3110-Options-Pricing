@@ -13,7 +13,7 @@ type pdf = { functn : float -> float ; distribution_class : pdf_class ;}
 (** The abstract type of values representing a pdf function. *)
 
  val integrate : pdf -> float -> float -> float
-(* [integrate pdf a b n] 
+(* [integrate pdf a b] 
   integrates the function [pdf] from lower bound [a] to upper bound [b]. 
   Requires: 
   pdf is C0 smooth over [a, b]
