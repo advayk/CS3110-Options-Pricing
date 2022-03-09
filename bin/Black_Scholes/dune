@@ -1,2 +1,3 @@
 (library
- (name blackscholes))
+ (name blackscholes)
+ (libraries maths))

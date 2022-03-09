@@ -1,10 +1,4 @@
-
-type european_option = { 
-  strike_price : int ; 
-  exercise_date : int ; 
-  risk_free_rate : float;  
-  implied_volatility : float;
-}
+open Maths
 
 type time = {
   hour: int; 
@@ -20,6 +14,14 @@ type date = {
   time : time 
 }
 
+type european_option = { 
+  strike_price : float ; 
+  exercise_date : date ; 
+  risk_free_rate : float;  
+  implied_volatility : float;
+}
+
+
 
 let create_time h m s ms = {
   hour = h; minute = m; seconds = s; milliseconds = ms
@@ -28,9 +30,9 @@ let create_time h m s ms = {
 
 let create_date m d y (t: time)  = {month = m; day = d; year = y; time = t}
 
-let create_european_option k t r v = { 
+let create_european_option (k:float) (d:date) (r:float) (v:float) = { 
   strike_price = k ; 
-  exercise_date = t; 
+  exercise_date = d; 
   risk_free_rate = r; 
   implied_volatility = v
 }
@@ -54,11 +56,24 @@ let diff_between_dates date1 date2 =
 (* [strd_norm_cumulative_dist] is the standard normal cumulative distribution function. *)
 let strd_norm_cumulative_dist input : float = raise (Failure "Unimplemented: strd_norm_cumulative_dist")
 
+let sigma = 1.
 (* [d1] computes the d1 part of the black-scholes equation *)
-let d1 european_option : european_option = raise (Failure "Unimplemented: european_call")
+let d1 (european_option : european_option) (current_stock_price : float) (current_date : date) (time_to_expiry : float ): float =  
+  let num = Float.log (current_stock_price /. european_option.strike_price ) +. ((european_option.risk_free_rate  +. (sigma **2. /. 2.)) *. time_to_expiry)in  
+  let den = sigma *. Float.sqrt time_to_expiry in (num/.den)
 
-(* [d2] computes the d1 part of the black-scholes equation *)
-let d2 european_option : european_option = raise (Failure "Unimplemented: european_call")
+let d2 (d1 : float) (time_to_expiry : float) : float = d1 -. Float.sqrt time_to_expiry
 
-let european_call_options_price (european_call : european_option) (current_stock_price : int) (current_time : int) = 
-  raise (Failure "Unimplemented: european_call")
+let compute_cdf_of_normal x:float  = 
+  let a_normal_pdf = {functn = (fun x -> exp( -1.*.Float.pi*.x*.x )); distribution_class = Other} in 
+   (Maths.integrate a_normal_pdf (-1. *.999.0) x)
+
+let european_call_options_price (european_call : european_option) (current_stock_price : float) (current_date : date) = 
+  let time_to_expiry = diff_between_dates european_call.exercise_date current_date in 
+  let d1 = d1 european_call current_stock_price current_date time_to_expiry in 
+  let d2 = (d2 d1 time_to_expiry) in 
+  let term1 = current_stock_price *. (compute_cdf_of_normal d1) in 
+  let term2 = european_call.strike_price *. Float.exp ( -1. *. european_call.risk_free_rate *. time_to_expiry) *. compute_cdf_of_normal d2 in 
+  term1 -. term2
+
+

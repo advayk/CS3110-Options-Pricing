@@ -2,10 +2,10 @@ type pdf_class =
     | Normal of {stddev : float; mean : float}
     | Other
 
-    type pdf = { 
-      functn : float -> float ;
-      distribution_class : pdf_class ;
-    }
+type pdf = { 
+  functn : float -> float ;
+  distribution_class : pdf_class ;
+}
     
 (** Helper function for 4 point gauss-legendre quadrature numeric_integrate. sums
     = *)
