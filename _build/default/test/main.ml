@@ -49,6 +49,17 @@ let blackscholes_test = [
   diff_between_dates_test "difference betwen date1 and date2" date2 date3 0.09863;
 ]
 
+let strd_norm_cumulative_dist_test (name : string) (expected : float) (input : float) :
+  test = name >:: fun _ -> 
+  assert_equal (close_enough expected (strd_norm_cumulative_dist input)) true
+
+let cdf_test = [
+  strd_norm_cumulative_dist_test "Standard Normal Distribution" 0.5 0.;
+  strd_norm_cumulative_dist_test "Standard Normal Distribution Positive Edge" 1. 20.;
+  strd_norm_cumulative_dist_test "Standard Normal Distribution Negative Edge" 0. (-1. *. 20.);
+  strd_norm_cumulative_dist_test "Standard Normal Distribution" 0.9332 1.5;
+]
+
 let a_normal_pdf x = exp( -1.*.Float.pi*.x*.x ) 
 let maths_test = [
   integrate_test " normal pdf numerically integrated small bounds " 
@@ -68,6 +79,6 @@ let maths_test = [
 
 let tests =
   "Maths :::" >::: List.flatten
-         [maths_test; blackscholes_test] 
+         [maths_test; cdf_test; blackscholes_test] 
 
 let _ = run_test_tt_main tests
