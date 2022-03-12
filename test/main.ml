@@ -52,7 +52,7 @@ let blackscholes_test = [
 let strd_norm_cumulative_dist_test (name : string) (expected : float) (input : float) :
   test = name >:: fun _ -> 
   assert_equal (close_enough expected (strd_norm_cumulative_dist input)) true
-  
+
 let cdf_test = [
   strd_norm_cumulative_dist_test "Standard Normal Distribution" 0.5 0.;
   strd_norm_cumulative_dist_test "Standard Normal Distribution Positive Edge" 1. 20.;
@@ -79,6 +79,6 @@ let maths_test = [
 
 let tests =
   "Maths :::" >::: List.flatten
-         [maths_test; blackscholes_test] 
+         [maths_test; cdf_test; blackscholes_test] 
 
 let _ = run_test_tt_main tests
