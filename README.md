@@ -28,3 +28,4 @@ We intend to build an options pricing model using both the Binomial Options Pric
 # Resources: 
 1. https://www.timeanddate.com/date/duration.html?y1=2022&m1=1&d1=1&y2=2022&m2=2&d2=6
 2. https://github.com/jonnydubowsky/owl-1
+3. https://goodcalculators.com/black-scholes-calculator/
