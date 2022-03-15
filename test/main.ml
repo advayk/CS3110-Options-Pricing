@@ -12,9 +12,8 @@ let european_call_options_price_test (name : string)
 (european_option : Blackscholes.european_option) (current_stock_price : float) 
 (current_date : date) (expected_output : float) : test =
   name >:: fun _ ->
-  (* the [printer] tells OUnit how to convert the output to a string *)
-  assert_equal expected_output (european_call_options_price european_option 
-  current_stock_price current_date) ~printer:string_of_float
+  assert (close_enough expected_output (european_call_options_price european_option 
+  current_stock_price current_date))
 
 let diff_between_dates_test (name : string) (date1 : Blackscholes.date) 
 (date2 : Blackscholes.date) (expected_output : float) : test =
@@ -36,7 +35,7 @@ let date3 = create_date 1 1 2022 time2
 (* if the difference between the floats is off by less than 1e-3 geometric 
   means then the floats are said to be equal*)
 let float_about_eq a b = 
-  a-.b |> Float.abs < 1e-3 *. ( a*.b |> Float.abs |> Float.sqrt) 
+  a-.b |> Float.abs < 1e-2 *. ( a*.b |> Float.abs |> Float.sqrt) 
 
   let integrate_test (name : string) (pdf : Maths.pdf) (a : float) (b : float) 
 (expected_output : float) : test =
@@ -49,7 +48,7 @@ let float_about_eq a b =
   let euro_option_1_expiry_time_date = create_date 2 22 2022 euro_option_1_time
 
 let blackscholes_test = [ 
-  european_call_options_price_test "estimated call option price of euro_option_1" euro_option_1 50. euro_option_1_expiry_time_date 6.02;
+  european_call_options_price_test "estimated call option price of euro_option_1" euro_option_1 50. euro_option_1_expiry_time_date 6.02 ;
   diff_between_dates_test "difference betwen date1 and date2" date1 date2 0.04657;
   diff_between_dates_test "difference betwen date1 and date2" date2 date3 0.09863;
 ]
@@ -63,6 +62,8 @@ let cdf_test = [
   strd_norm_cumulative_dist_test "Standard Normal Distribution Positive Edge" 1. 20.;
   strd_norm_cumulative_dist_test "Standard Normal Distribution Negative Edge" 0. (-1. *. 20.);
   strd_norm_cumulative_dist_test "Standard Normal Distribution" 0.9332 1.5;
+  strd_norm_cumulative_dist_test "Standard Normal Distribution" 0.8023 0.851 ;
+  strd_norm_cumulative_dist_test "Standard Normal Distribution" 0.7611 0.711 ;
 ]
 
 let a_normal_pdf x = exp( -1.*.Float.pi*.x*.x ) 
