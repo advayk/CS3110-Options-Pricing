@@ -35,7 +35,6 @@ val create_date : int -> int -> int -> time -> date
 
 val strd_norm_cumulative_dist : float -> float
 
-
 val create_european_option : int -> int -> float -> float  -> european_option
 (* [create_european_option s k t r v ] creates am european_option. 
     Requires:  

@@ -20,11 +20,9 @@ type date = {
   time : time 
 }
 
-
 let create_time h m s ms = {
   hour = h; minute = m; seconds = s; milliseconds = ms
 }
-
 
 let create_date m d y (t: time)  = {month = m; day = d; year = y; time = t}
 
@@ -41,7 +39,7 @@ let create_european_option k t r v = {
 *)
 let is_before date1 date2 =
   date1.year < date2.year || (date1.year = date2.year && date1.month < date2.month) || 
-  (date1.year = date2.year && date1.month = date2.month && date1.month < date2.month)
+  (date1.year = date2.year && date1.month = date2.month && date1.day < date2.day)
 
 (*[days_of_month m] returns the number of days in a given month. Requires m in between [0,12] *)
 let days_of_month m = 

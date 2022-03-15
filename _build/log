@@ -3,7 +3,7 @@
 # Shared cache: disabled
 # Workspace root: /home/maxzweig/3110/CS3110-Options-Pricing
 # Auto-detected concurrency: 8
-$ /home/maxzweig/.opam/4.13.0/bin/ocamlc.opt -config > /tmp/dune_cb5762_output
+$ /home/maxzweig/.opam/4.13.0/bin/ocamlc.opt -config > /tmp/dune_906ac9_output
 # Dune context:
 #  { name = "default"
 #  ; kind = "default"
@@ -111,56 +111,8 @@ $ /home/maxzweig/.opam/4.13.0/bin/ocamlc.opt -config > /tmp/dune_cb5762_output
 #      ; windows_unicode = false
 #      }
 #  }
-$ (cd _build/default && /home/maxzweig/.opam/4.13.0/bin/ocamlc.opt -w +a-4-6-7-9-27-29-30-32..42-44-45-48-50-60-66-67 -warn-error -a+31 -g -bin-annot -I bin/Black_Scholes/.blackscholes.objs/byte -no-alias-deps -opaque -o bin/Black_Scholes/.blackscholes.objs/byte/blackscholes.cmi -c -intf bin/Black_Scholes/blackscholes.mli)
 $ (cd _build/default && /home/maxzweig/.opam/4.13.0/bin/ocamlc.opt -w +a-4-6-7-9-27-29-30-32..42-44-45-48-50-60-66-67 -warn-error -a+31 -g -bin-annot -I test/.main.eobjs/byte -I /home/maxzweig/.opam/4.13.0/lib/ounit2 -I /home/maxzweig/.opam/4.13.0/lib/ounit2/advanced -I /home/maxzweig/.opam/4.13.0/lib/seq -I /home/maxzweig/.opam/4.13.0/lib/stdlib-shims -I bin/Black_Scholes/.blackscholes.objs/byte -I bin/Maths/.maths.objs/byte -no-alias-deps -opaque -o test/.main.eobjs/byte/dune__exe__Main.cmo -c -impl test/main.ml)
 > File "test/main.ml", line 1:
 > Warning 70 [missing-mli]: Cannot find interface file.
-$ (cd _build/default && /home/maxzweig/.opam/4.13.0/bin/ocamlopt.opt -w +a-4-6-7-9-27-29-30-32..42-44-45-48-50-60-66-67 -warn-error -a+31 -g -I bin/Black_Scholes/.blackscholes.objs/byte -I bin/Black_Scholes/.blackscholes.objs/native -intf-suffix .ml -no-alias-deps -opaque -o bin/Black_Scholes/.blackscholes.objs/native/blackscholes.cmx -c -impl bin/Black_Scholes/blackscholes.ml)
-> File "bin/Black_Scholes/blackscholes.ml", line 3, characters 2-22:
-> 3 |   strike_price : int ; 
->       ^^^^^^^^^^^^^^^^^^^^
-> Warning 69 [unused-field]: record field strike_price is never read.
-> (However, this field is used to build or mutate values.)
-> File "bin/Black_Scholes/blackscholes.ml", line 4, characters 2-23:
-> 4 |   exercise_date : int ; 
->       ^^^^^^^^^^^^^^^^^^^^^
-> Warning 69 [unused-field]: record field exercise_date is never read.
-> (However, this field is used to build or mutate values.)
-> File "bin/Black_Scholes/blackscholes.ml", line 5, characters 2-25:
-> 5 |   risk_free_rate : float;  
->       ^^^^^^^^^^^^^^^^^^^^^^^
-> Warning 69 [unused-field]: record field risk_free_rate is never read.
-> (However, this field is used to build or mutate values.)
-> File "bin/Black_Scholes/blackscholes.ml", line 6, characters 2-29:
-> 6 |   implied_volatility : float;
->       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> Warning 69 [unused-field]: record field implied_volatility is never read.
-> (However, this field is used to build or mutate values.)
-> File "bin/Black_Scholes/blackscholes.ml", line 10, characters 2-12:
-> 10 |   hour: int; 
->        ^^^^^^^^^^
-> Warning 69 [unused-field]: record field hour is never read.
-> (However, this field is used to build or mutate values.)
-> File "bin/Black_Scholes/blackscholes.ml", line 11, characters 2-16:
-> 11 |   minute : int ;
->        ^^^^^^^^^^^^^^
-> Warning 69 [unused-field]: record field minute is never read.
-> (However, this field is used to build or mutate values.)
-> File "bin/Black_Scholes/blackscholes.ml", line 12, characters 2-17:
-> 12 |   seconds : int ;
->        ^^^^^^^^^^^^^^^
-> Warning 69 [unused-field]: record field seconds is never read.
-> (However, this field is used to build or mutate values.)
-> File "bin/Black_Scholes/blackscholes.ml", line 13, characters 2-20:
-> 13 |   milliseconds : int
->        ^^^^^^^^^^^^^^^^^^
-> Warning 69 [unused-field]: record field milliseconds is never read.
-> (However, this field is used to build or mutate values.)
-> File "bin/Black_Scholes/blackscholes.ml", line 20, characters 2-13:
-> 20 |   time : time 
->        ^^^^^^^^^^^
-> Warning 69 [unused-field]: record field time is never read.
-> (However, this field is used to build or mutate values.)
 $ (cd _build/default && /home/maxzweig/.opam/4.13.0/bin/ocamlopt.opt -w +a-4-6-7-9-27-29-30-32..42-44-45-48-50-60-66-67 -warn-error -a+31 -g -I test/.main.eobjs/byte -I test/.main.eobjs/native -I /home/maxzweig/.opam/4.13.0/lib/ounit2 -I /home/maxzweig/.opam/4.13.0/lib/ounit2/advanced -I /home/maxzweig/.opam/4.13.0/lib/seq -I /home/maxzweig/.opam/4.13.0/lib/stdlib-shims -I bin/Black_Scholes/.blackscholes.objs/byte -I bin/Black_Scholes/.blackscholes.objs/native -I bin/Maths/.maths.objs/byte -I bin/Maths/.maths.objs/native -intf-suffix .ml -no-alias-deps -opaque -o test/.main.eobjs/native/dune__exe__Main.cmx -c -impl test/main.ml)
-$ (cd _build/default && /home/maxzweig/.opam/4.13.0/bin/ocamlopt.opt -w +a-4-6-7-9-27-29-30-32..42-44-45-48-50-60-66-67 -warn-error -a+31 -g -a -o bin/Black_Scholes/blackscholes.cmxa bin/Black_Scholes/.blackscholes.objs/native/blackscholes.cmx)
 $ (cd _build/default && /home/maxzweig/.opam/4.13.0/bin/ocamlopt.opt -w +a-4-6-7-9-27-29-30-32..42-44-45-48-50-60-66-67 -warn-error -a+31 -g -o test/main.exe bin/Black_Scholes/blackscholes.cmxa bin/Maths/maths.cmxa /home/maxzweig/.opam/4.13.0/lib/ocaml/unix.cmxa -I /home/maxzweig/.opam/4.13.0/lib/ocaml -I /home/maxzweig/.opam/4.13.0/lib/ocaml /home/maxzweig/.opam/4.13.0/lib/stdlib-shims/stdlib_shims.cmxa /home/maxzweig/.opam/4.13.0/lib/ounit2/advanced/oUnitAdvanced.cmxa /home/maxzweig/.opam/4.13.0/lib/ounit2/oUnit.cmxa test/.main.eobjs/native/dune__exe__Main.cmx)
