@@ -52,7 +52,9 @@ let diff_between_dates date1 date2 =
   let days_inbetwen = if is_before date1 date2 then ((days_of_month date1.month) - date1.day) + date2.day else (days_of_month date2.month) - date2.day + date1.day in 
   (float_of_int(days_inbetwen) /. 365.) 
 
-let strd_norm_cumulative_dist (input : float) = (1. +.  (input /. Float.sqrt 2.))/. 2.
+(* let strd_norm_cumulative_dist (input : float) = (1. +. Float.erf (input /. Float.sqrt 2.))/. 2. *)
+
+let strd_norm_cumulative_dist (input : float) = (1. +. (input /. Float.sqrt 2.))/. 2.
 
 let sigma = 1.
 (* [d1] computes the d1 part of the black-scholes equation *)
