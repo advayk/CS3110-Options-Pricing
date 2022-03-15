@@ -19,3 +19,8 @@ type pdf = { functn : float -> float ; distribution_class : pdf_class ;}
   pdf is C0 smooth over [a, b]
   a <= b 
   *)
+
+
+val strd_norm_cumulative_dist : float -> float
+(* [strd_norm_cumulative_dist input ] computes the cdf given a value x. 
+Takes the integral of the normal distribution from -inf to x *)

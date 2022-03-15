@@ -33,9 +33,7 @@ val create_date : int -> int -> int -> time -> date
   day (d) : requires d to be a valid date for the month 
   time (t) : required time to be a valid 24 hour time *)
 
-val create_european_option : float -> date -> float -> float  -> european_option
-
-val strd_norm_cumulative_dist : float -> float
+val create_european_option : float -> date -> float -> float -> european_option
 
 (* [create_european_option s k t r v ] creates am european_option. 
     Requires:  
@@ -50,5 +48,5 @@ val diff_between_dates : date -> date -> float
 example: one month would be 1/12 ~  0.0833...*)
 
 val european_call_options_price : european_option -> float -> date -> float
-(* [european_call_options_price call european option] computes estimates the price of a European call option. *)
+(* [european_call_options_price call european option ] computes estimates the price of a European call option. *)
 

@@ -39,3 +39,5 @@ let integrate (p : pdf) (a : float) (b : float) =
 match p.distribution_class with 
 | Normal {stddev; mean} -> failwith ("Unimplemented")
 | Other -> numeric_integrate p.functn a b 
+
+let strd_norm_cumulative_dist (input : float) = (1. +. Float.erf (input /. Float.sqrt 2.))/. 2.
