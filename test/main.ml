@@ -27,6 +27,9 @@ let euro_option_1_time = create_time 0 0 0 0
 let euro_option_1_date =  create_date 1 1 2022 euro_option_1_time 
 
 let euro_option_1 = create_european_option 45. euro_option_1_date 0.02 0.3 
+<<<<<<< HEAD
+>>>>>>> 4d616098a16dfa5703bcaa6d3dee8730810ef668
+=======
 >>>>>>> 4d616098a16dfa5703bcaa6d3dee8730810ef668
 let time1 = create_time 0 0 0 0
 let time2 = create_time 0 0 0 0
@@ -41,9 +44,12 @@ let date4 = create_date 1 1 2021 time1
   means then the floats are said to be equal*)
 let float_about_eq a b = 
   a-.b |> Float.abs < 1e-2 *. ( a*.b |> Float.abs |> Float.sqrt) 
+<<<<<<< HEAD
 
 let diff_between_dates_test (name : string) (date1 : Blackscholes.date) (date2 : Blackscholes.date) (expected_output : float) : test =
   name >:: fun _ -> assert (close_enough expected_output (diff_between_dates date1 date2))
+=======
+>>>>>>> 4d616098a16dfa5703bcaa6d3dee8730810ef668
 
 let integrate_test (name : string) (pdf : Maths.pdf) (a : float) (b : float) (expected_output : float) : test =
   name >:: fun _ -> 
