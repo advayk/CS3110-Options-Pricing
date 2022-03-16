@@ -7,13 +7,13 @@ let blackscholes_date  lst =
 
 let main () =
   ANSITerminal.print_string [ ANSITerminal.red ]
-    "\n\nWelcome to the 3110 options pricing model.\n";
+    "\n\nWelcome to the Cornell Quant Funds Blackscholes options pricing model.\n";
   print_endline
-    "Please enter the price of stock.";
+    "Please enter the price of stock (float).";
   match read_line () with
   | exception End_of_file -> ()
   | stock_price -> print_endline
-  "Please enter the strike price of the stock.";
+  "Please enter the strike price of the stock (float).";
   match read_line () with
     | exception End_of_file -> ()
     | strike_price -> print_endline
