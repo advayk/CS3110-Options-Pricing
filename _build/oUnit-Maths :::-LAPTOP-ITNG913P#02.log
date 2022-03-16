@@ -1,0 +1,19 @@
+2022-03-16T00:43:57+00:00 LAPTOP-ITNG913P#02 I: Start test Maths ::::1: normal pdf numerically integrated med bounds.
+2022-03-16T00:43:57+00:00 LAPTOP-ITNG913P#02 I: Test Maths ::::1: normal pdf numerically integrated med bounds is successful.
+2022-03-16T00:43:57+00:00 LAPTOP-ITNG913P#02 I: End test Maths ::::1: normal pdf numerically integrated med bounds.
+2022-03-16T00:43:57+00:00 LAPTOP-ITNG913P#02 I: Start test Maths ::::4:Standard Normal Distribution.
+2022-03-16T00:43:57+00:00 LAPTOP-ITNG913P#02 I: Test Maths ::::4:Standard Normal Distribution is successful.
+2022-03-16T00:43:57+00:00 LAPTOP-ITNG913P#02 I: End test Maths ::::4:Standard Normal Distribution.
+2022-03-16T00:43:57+00:00 LAPTOP-ITNG913P#02 I: Start test Maths ::::8:Standard Normal Distribution.
+2022-03-16T00:43:57+00:00 LAPTOP-ITNG913P#02 I: Test Maths ::::8:Standard Normal Distribution is successful.
+2022-03-16T00:43:57+00:00 LAPTOP-ITNG913P#02 I: End test Maths ::::8:Standard Normal Distribution.
+2022-03-16T00:43:57+00:00 LAPTOP-ITNG913P#02 I: Start test Maths ::::10:estimated call option price of euro_option_1.
+2022-03-16T00:43:57+00:00 LAPTOP-ITNG913P#02 E: Test Maths ::::10:estimated call option price of euro_option_1 exited with an error.
+2022-03-16T00:43:57+00:00 LAPTOP-ITNG913P#02 E: File "test/main.ml", line 15, characters 2-8: Assertion failed in test Maths ::::10:estimated call option price of euro_option_1.
+2022-03-16T00:43:57+00:00 LAPTOP-ITNG913P#02 E: Raised at Dune__exe__Main.european_call_options_price_test.(fun) in file "test/main.ml", line 15, characters 2-121
+2022-03-16T00:43:57+00:00 LAPTOP-ITNG913P#02 E: Called from OUnitRunner.run_one_test.(fun) in file "src/lib/ounit2/advanced/oUnitRunner.ml", line 83, characters 13-26
+2022-03-16T00:43:57+00:00 LAPTOP-ITNG913P#02 E: 
+2022-03-16T00:43:57+00:00 LAPTOP-ITNG913P#02 I: End test Maths ::::10:estimated call option price of euro_option_1.
+2022-03-16T00:43:57+00:00 LAPTOP-ITNG913P#02 I: Start test Maths ::::12:difference betwen date2 and date3.
+2022-03-16T00:43:57+00:00 LAPTOP-ITNG913P#02 I: Test Maths ::::12:difference betwen date2 and date3 is successful.
+2022-03-16T00:43:57+00:00 LAPTOP-ITNG913P#02 I: End test Maths ::::12:difference betwen date2 and date3.

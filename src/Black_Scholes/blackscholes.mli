@@ -43,8 +43,8 @@ val create_european_option : float -> date -> float -> float -> european_option
     risk free rate (r): percentage in decimal (i.e 2% = 0.02)
     implied volatility (v) : percentage in decimal (i.e 30% = 0.03) *)
 
-val diff_between_dates : date -> date -> float
-(* [time_to_maturity date1 date2] takes two valid dates and computes the time in between in as a ratio of 1 year 
+val diff_between_dates : date -> date -> int
+(* [time_to_maturity date1 date2] takes two valid dates and computes the time in between in days inclusive.
 example: one month would be 1/12 ~  0.0833...*)
 
 val european_call_options_price : european_option -> float -> date -> float

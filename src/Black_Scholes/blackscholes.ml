@@ -46,19 +46,13 @@ let is_before date1 date2 =
 let days_of_month m = 
   if m = 1 ||  m = 3 || m = 5 ||  m = 7 ||  m = 8 ||  m = 10 ||  m = 12 then 31 else if m = 2 then 28 else 30
 
-<<<<<<< HEAD
 (* [diff_between_dates date1 date2] is the number of days (date1 .... date2] between date1 and date2.
   Requires: date1 and date2 are either the same year or in directly adjacent years. date2 comes after date1.  *)
 let rec diff_between_dates date1 date2 =
-  if date1.month = date2.month && date1.year = date2.year then date2.day - date1.day else if 
-  date1.year = date2.year && date2.month <> date1.month then days_of_month date1.month - date1.day + diff_between_dates {year = date1.year; month = date1.month + 1; day = date1.day; time = date1.time } date2 
+  if date1.month = date2.month && date1.year = date2.year then 1 + date2.day - date1.day else if 
+  date1.year = date2.year && date2.month <> date1.month then 1 + days_of_month date1.month - date1.day + diff_between_dates {year = date1.year; month = date1.month + 1; day = 1; time = date1.time } date2
   else diff_between_dates date1 {month = 12; day = 31; year=date1.year; time=date1.time} + diff_between_dates {month = 1; day = 1; year=date2.year; time=date2.time} date2
 
-=======
-let diff_between_dates date1 date2 = 
-  let days_inbetwen = if is_before date1 date2 then ((days_of_month date1.month) - date1.day) + date2.day 
-  else (days_of_month date2.month) - date2.day + date1.day in (float_of_int(days_inbetwen) /. 365.) 
->>>>>>> 4d616098a16dfa5703bcaa6d3dee8730810ef668
 
 (* [d1] computes the d1 part of the black-scholes equation *)
 let d1 (european_option : european_option) (current_stock_price : float) (time_to_expiry : float )  : float =  
@@ -74,7 +68,7 @@ let compute_cdf_of_normal x:float  =
    (Maths.integrate a_normal_pdf (-1. *.999.0) x)
 
 let european_call_options_price (european_call : european_option) (current_stock_price : float) (current_date : date) = 
-  let time_to_expiry = diff_between_dates european_call.exercise_date current_date in 
+  let time_to_expiry = float_of_int (diff_between_dates european_call.exercise_date current_date) in 
   let d1 = d1 european_call current_stock_price time_to_expiry in 
   let d2 = (d2 european_call d1 time_to_expiry ) in 
   let term1 = current_stock_price *. (Maths.strd_norm_cumulative_dist d1) in 
