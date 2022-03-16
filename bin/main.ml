@@ -9,7 +9,7 @@ let main () =
   ANSITerminal.print_string [ ANSITerminal.red ]
     "\n\nWelcome to the Cornell Quant Funds Blackscholes options pricing model.\n";
   print_endline
-    "Please enter the price of stock (float).";
+    "Please enter the current price of stock (float).";
   match read_line () with
   | exception End_of_file -> ()
   | stock_price -> print_endline
