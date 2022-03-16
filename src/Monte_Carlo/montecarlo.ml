@@ -1,3 +1,4 @@
+(** 
 (** REPRESENTATION INVARIANT: num_bins = num_deltas *)
 type node_record = {cur_price : float; probability : float; hist : float list; deltas : float list}
 
@@ -34,8 +35,8 @@ let create_nodes parent =
 (** Given a list of trees, as well as that lists parent tree, constructs a final tree. *)
 let rec tree_glue parent tree_list = Node(parent, tree_list)
 
-(** let rec create_tree cur_node current_depth max_depth = 
-    if current_depth <> max_depth then create_nodes cur_node |> List.map  *)
+(* let rec create_tree cur_node current_depth max_depth = 
+    if current_depth <> max_depth then create_nodes cur_node |> List.map   *)
 
 
 
@@ -55,4 +56,4 @@ let create_tree prices hist max_depth =
 
 let european_call prices num_days discount_rate = 0.
 
-
+*)
