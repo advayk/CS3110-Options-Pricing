@@ -64,7 +64,7 @@ let european_call_options_price (european_call : european_option) (current_stock
   let d2 = (d2 european_call d1 time_to_expiry ) in 
   let a_normal_pdf =
   {functn = (fun x -> Float.sqrt(1. /. (2.*.Float.pi)) *. Float.exp(-1. *. x *. x /. ((1.0*.1.0)))) ; 
-  (* stddev = sqrt(1/2pi) ; mean = 0 *)
+  (* stddev = 1 ; mean = 0 *)
   distribution_class = Maths.Normal {stddev = 1.0; mean = 0.}} in
   let term1 = current_stock_price *. (Maths.integrate a_normal_pdf (-20.) d1) in 
   let term2 = european_call.strike_price *. 

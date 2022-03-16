@@ -7,8 +7,7 @@ type pdf = {
   distribution_class : pdf_class ;
 }
     
-(** Helper function for 4 point gauss-legendre quadrature numeric_integrate. sums
-    = *)
+(** Helper function for 4 point gauss-legendre quadrature numeric_integrate. *)
 let rec numeric_sum (fn : float -> float) (a : float) (acc : int) (n : int) 
 (h : float) (weights : float list) (points : float list) = 
   let k = (Float.of_int acc)  in
