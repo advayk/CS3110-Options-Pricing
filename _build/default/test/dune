@@ -1,3 +1,0 @@
-(executable
- (name main)
- (libraries blackscholes maths montecarlo ounit2))
