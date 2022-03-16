@@ -1,0 +1,3 @@
+(library
+ (name montecarlo)
+ (libraries maths))
