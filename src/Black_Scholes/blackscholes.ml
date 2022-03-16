@@ -59,7 +59,8 @@ let d2 (european_option : european_option) (d1 : float) (time_to_expiry : float)
   d1 -. european_option.implied_volatility *.Float.sqrt time_to_expiry
 
 let european_call_options_price (european_call : european_option) (current_stock_price : float) (current_date : date) = 
-  let time_to_expiry = float_of_int (diff_between_dates european_call.exercise_date current_date) in 
+  let time_to_expiry = (float_of_int (diff_between_dates current_date european_call.exercise_date )) /. 365.0 in 
+  print_endline (string_of_float time_to_expiry);
   let d1 = d1 european_call current_stock_price time_to_expiry in 
   let d2 = (d2 european_call d1 time_to_expiry ) in 
   let a_normal_pdf =

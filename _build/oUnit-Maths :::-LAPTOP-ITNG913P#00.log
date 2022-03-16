@@ -1,216 +1,224 @@
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: Runner: processes
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: Chooser: simple
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: Configuration suite_name = "Maths :::"
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: Configuration cache_filename = "/home/maxzweig/3110/CS3110-Options-Pricing/_build/oUnit-$(suite_name).cache"
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: Configuration run_gc_full_major = "true"
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: Configuration display = "true"
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: Configuration results_style_1_X = "false"
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: Configuration testdata_dir = "none"
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: Configuration health_check_interval = "1."
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: Configuration verbose = "false"
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: Configuration chooser = "simple"
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: Configuration output_html_dir = "none"
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: Configuration processes_kill_period = "5."
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: Configuration runner = "processes"
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: Configuration shards = "4"
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: Configuration processes_grace_period = "5."
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: Configuration log_encoding = "utf-8"
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: Configuration output_junit_file = "none"
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: Configuration ci = "false"
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: Configuration output_file = "/home/maxzweig/3110/CS3110-Options-Pricing/_build/oUnit-$(suite_name)-$(shard_id).log"
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: Using 4 workers maximum.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: Starting worker number LAPTOP-ITNG913P#01.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: Worker LAPTOP-ITNG913P#01 started.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: Starting worker number LAPTOP-ITNG913P#02.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: Worker LAPTOP-ITNG913P#02 started.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: Starting worker number LAPTOP-ITNG913P#03.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: Worker LAPTOP-ITNG913P#03 started.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: Starting worker number LAPTOP-ITNG913P#04.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: Worker LAPTOP-ITNG913P#04 started.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Maths ::::3: normal pdf with analytical sol, Maths ::::2: normal pdf numerically integrated big bounds, Maths ::::1: normal pdf numerically integrated med bounds, Maths ::::0: normal pdf numerically integrated small bounds .
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#01 I: Start test Maths ::::0: normal pdf numerically integrated small bounds .
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#02 I: Start test Maths ::::1: normal pdf numerically integrated med bounds.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#03 I: Start test Maths ::::2: normal pdf numerically integrated big bounds.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Maths ::::3: normal pdf with analytical sol, Maths ::::2: normal pdf numerically integrated big bounds, Maths ::::1: normal pdf numerically integrated med bounds, Maths ::::0: normal pdf numerically integrated small bounds .
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#01 I: Test Maths ::::0: normal pdf numerically integrated small bounds  is successful.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#02 I: Test Maths ::::1: normal pdf numerically integrated med bounds is successful.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Maths ::::3: normal pdf with analytical sol, Maths ::::2: normal pdf numerically integrated big bounds, Maths ::::1: normal pdf numerically integrated med bounds, Maths ::::0: normal pdf numerically integrated small bounds .
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#01 I: End test Maths ::::0: normal pdf numerically integrated small bounds .
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#02 I: End test Maths ::::1: normal pdf numerically integrated med bounds.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Maths ::::3: normal pdf with analytical sol, Maths ::::2: normal pdf numerically integrated big bounds, Maths ::::1: normal pdf numerically integrated med bounds, Maths ::::0: normal pdf numerically integrated small bounds .
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Maths ::::5:Standard Normal Distribution Positive Edge, Maths ::::4:Standard Normal Distribution, Maths ::::3: normal pdf with analytical sol, Maths ::::2: normal pdf numerically integrated big bounds.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#04 I: Start test Maths ::::3: normal pdf with analytical sol.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Maths ::::5:Standard Normal Distribution Positive Edge, Maths ::::4:Standard Normal Distribution, Maths ::::3: normal pdf with analytical sol, Maths ::::2: normal pdf numerically integrated big bounds.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#02 I: Start test Maths ::::4:Standard Normal Distribution.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#01 I: Start test Maths ::::5:Standard Normal Distribution Positive Edge.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Maths ::::5:Standard Normal Distribution Positive Edge, Maths ::::4:Standard Normal Distribution, Maths ::::3: normal pdf with analytical sol, Maths ::::2: normal pdf numerically integrated big bounds.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#04 E: Test Maths ::::3: normal pdf with analytical sol exited with an error.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#04 E: File "test/main.ml", line 68, characters 4-10: Assertion failed in test Maths ::::3: normal pdf with analytical sol.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#04 E: Raised at Dune__exe__Main.integrate_test.(fun) in file "test/main.ml", line 68, characters 4-53
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#04 E: Called from OUnitRunner.run_one_test.(fun) in file "src/lib/ounit2/advanced/oUnitRunner.ml", line 83, characters 13-26
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#04 E: 
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Maths ::::5:Standard Normal Distribution Positive Edge, Maths ::::4:Standard Normal Distribution, Maths ::::3: normal pdf with analytical sol, Maths ::::2: normal pdf numerically integrated big bounds.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#04 I: End test Maths ::::3: normal pdf with analytical sol.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Maths ::::5:Standard Normal Distribution Positive Edge, Maths ::::4:Standard Normal Distribution, Maths ::::3: normal pdf with analytical sol, Maths ::::2: normal pdf numerically integrated big bounds.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Maths ::::6:Standard Normal Distribution Negative Edge, Maths ::::5:Standard Normal Distribution Positive Edge, Maths ::::4:Standard Normal Distribution, Maths ::::2: normal pdf numerically integrated big bounds.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#04 I: Start test Maths ::::6:Standard Normal Distribution Negative Edge.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Maths ::::6:Standard Normal Distribution Negative Edge, Maths ::::5:Standard Normal Distribution Positive Edge, Maths ::::4:Standard Normal Distribution, Maths ::::2: normal pdf numerically integrated big bounds.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#02 I: Test Maths ::::4:Standard Normal Distribution is successful.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#01 I: Test Maths ::::5:Standard Normal Distribution Positive Edge is successful.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Maths ::::6:Standard Normal Distribution Negative Edge, Maths ::::5:Standard Normal Distribution Positive Edge, Maths ::::4:Standard Normal Distribution, Maths ::::2: normal pdf numerically integrated big bounds.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#02 I: End test Maths ::::4:Standard Normal Distribution.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#01 I: End test Maths ::::5:Standard Normal Distribution Positive Edge.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Maths ::::6:Standard Normal Distribution Negative Edge, Maths ::::5:Standard Normal Distribution Positive Edge, Maths ::::4:Standard Normal Distribution, Maths ::::2: normal pdf numerically integrated big bounds.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Maths ::::8:Standard Normal Distribution, Maths ::::7:Standard Normal Distribution, Maths ::::6:Standard Normal Distribution Negative Edge, Maths ::::2: normal pdf numerically integrated big bounds.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#01 I: Start test Maths ::::7:Standard Normal Distribution.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#02 I: Start test Maths ::::8:Standard Normal Distribution.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Maths ::::8:Standard Normal Distribution, Maths ::::7:Standard Normal Distribution, Maths ::::6:Standard Normal Distribution Negative Edge, Maths ::::2: normal pdf numerically integrated big bounds.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#02 I: Test Maths ::::8:Standard Normal Distribution is successful.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Maths ::::8:Standard Normal Distribution, Maths ::::7:Standard Normal Distribution, Maths ::::6:Standard Normal Distribution Negative Edge, Maths ::::2: normal pdf numerically integrated big bounds.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#04 I: Test Maths ::::6:Standard Normal Distribution Negative Edge is successful.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#01 I: Test Maths ::::7:Standard Normal Distribution is successful.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#02 I: End test Maths ::::8:Standard Normal Distribution.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Maths ::::8:Standard Normal Distribution, Maths ::::7:Standard Normal Distribution, Maths ::::6:Standard Normal Distribution Negative Edge, Maths ::::2: normal pdf numerically integrated big bounds.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#04 I: End test Maths ::::6:Standard Normal Distribution Negative Edge.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#01 I: End test Maths ::::7:Standard Normal Distribution.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Maths ::::9:Standard Normal Distribution, Maths ::::7:Standard Normal Distribution, Maths ::::6:Standard Normal Distribution Negative Edge, Maths ::::2: normal pdf numerically integrated big bounds.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Maths ::::11:difference betwen date1 and date2, Maths ::::10:estimated call option price of euro_option_1, Maths ::::9:Standard Normal Distribution, Maths ::::2: normal pdf numerically integrated big bounds.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#02 I: Start test Maths ::::9:Standard Normal Distribution.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#01 I: Start test Maths ::::10:estimated call option price of euro_option_1.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#04 I: Start test Maths ::::11:difference betwen date1 and date2.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Maths ::::11:difference betwen date1 and date2, Maths ::::10:estimated call option price of euro_option_1, Maths ::::9:Standard Normal Distribution, Maths ::::2: normal pdf numerically integrated big bounds.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#01 E: Test Maths ::::10:estimated call option price of euro_option_1 exited with an error.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#01 E: File "test/main.ml", line 36, characters 2-8: Assertion failed in test Maths ::::10:estimated call option price of euro_option_1.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#01 E: Raised at Dune__exe__Main.european_call_options_price_test.(fun) in file "test/main.ml", line 36, characters 2-121
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#01 E: Called from OUnitRunner.run_one_test.(fun) in file "src/lib/ounit2/advanced/oUnitRunner.ml", line 83, characters 13-26
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#01 E: 
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Maths ::::11:difference betwen date1 and date2, Maths ::::10:estimated call option price of euro_option_1, Maths ::::9:Standard Normal Distribution, Maths ::::2: normal pdf numerically integrated big bounds.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#01 I: End test Maths ::::10:estimated call option price of euro_option_1.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Maths ::::11:difference betwen date1 and date2, Maths ::::10:estimated call option price of euro_option_1, Maths ::::9:Standard Normal Distribution, Maths ::::2: normal pdf numerically integrated big bounds.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Maths ::::12:difference betwen date2 and date3, Maths ::::11:difference betwen date1 and date2, Maths ::::9:Standard Normal Distribution, Maths ::::2: normal pdf numerically integrated big bounds.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#02 I: Test Maths ::::9:Standard Normal Distribution is successful.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#01 I: Start test Maths ::::12:difference betwen date2 and date3.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Maths ::::12:difference betwen date2 and date3, Maths ::::11:difference betwen date1 and date2, Maths ::::9:Standard Normal Distribution, Maths ::::2: normal pdf numerically integrated big bounds.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#02 I: End test Maths ::::9:Standard Normal Distribution.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Maths ::::12:difference betwen date2 and date3, Maths ::::11:difference betwen date1 and date2, Maths ::::9:Standard Normal Distribution, Maths ::::2: normal pdf numerically integrated big bounds.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#04 I: Test Maths ::::11:difference betwen date1 and date2 is successful.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Maths ::::13:difference between date1 and date4, Maths ::::12:difference betwen date2 and date3, Maths ::::11:difference betwen date1 and date2, Maths ::::2: normal pdf numerically integrated big bounds.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#04 I: End test Maths ::::11:difference betwen date1 and date2.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#02 I: Start test Maths ::::13:difference between date1 and date4.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Maths ::::13:difference between date1 and date4, Maths ::::12:difference betwen date2 and date3, Maths ::::11:difference betwen date1 and date2, Maths ::::2: normal pdf numerically integrated big bounds.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#01 I: Test Maths ::::12:difference betwen date2 and date3 is successful.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Maths ::::14:difference between date5 and date6, Maths ::::13:difference between date1 and date4, Maths ::::12:difference betwen date2 and date3, Maths ::::2: normal pdf numerically integrated big bounds.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#01 I: End test Maths ::::12:difference betwen date2 and date3.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Maths ::::14:difference between date5 and date6, Maths ::::13:difference between date1 and date4, Maths ::::12:difference betwen date2 and date3, Maths ::::2: normal pdf numerically integrated big bounds.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#04 I: Start test Maths ::::14:difference between date5 and date6.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Maths ::::15:difference between date7 and date8, Maths ::::14:difference between date5 and date6, Maths ::::13:difference between date1 and date4, Maths ::::2: normal pdf numerically integrated big bounds.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#01 I: Start test Maths ::::15:difference between date7 and date8.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Maths ::::15:difference between date7 and date8, Maths ::::14:difference between date5 and date6, Maths ::::13:difference between date1 and date4, Maths ::::2: normal pdf numerically integrated big bounds.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#02 I: Test Maths ::::13:difference between date1 and date4 is successful.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Maths ::::15:difference between date7 and date8, Maths ::::14:difference between date5 and date6, Maths ::::13:difference between date1 and date4, Maths ::::2: normal pdf numerically integrated big bounds.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#02 I: End test Maths ::::13:difference between date1 and date4.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Maths ::::15:difference between date7 and date8, Maths ::::14:difference between date5 and date6, Maths ::::13:difference between date1 and date4, Maths ::::2: normal pdf numerically integrated big bounds.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Maths ::::16:Zeros Test, Maths ::::15:difference between date7 and date8, Maths ::::14:difference between date5 and date6, Maths ::::2: normal pdf numerically integrated big bounds.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#04 I: Test Maths ::::14:difference between date5 and date6 is successful.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#02 I: Start test Maths ::::16:Zeros Test.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Maths ::::16:Zeros Test, Maths ::::15:difference between date7 and date8, Maths ::::14:difference between date5 and date6, Maths ::::2: normal pdf numerically integrated big bounds.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#04 I: End test Maths ::::14:difference between date5 and date6.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#01 I: Test Maths ::::15:difference between date7 and date8 is successful.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Maths ::::16:Zeros Test, Maths ::::15:difference between date7 and date8, Maths ::::14:difference between date5 and date6, Maths ::::2: normal pdf numerically integrated big bounds.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#01 I: End test Maths ::::15:difference between date7 and date8.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Maths ::::17:Generic Real Number Test, Maths ::::16:Zeros Test, Maths ::::15:difference between date7 and date8, Maths ::::2: normal pdf numerically integrated big bounds.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#04 I: Start test Maths ::::17:Generic Real Number Test.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Maths ::::18:Empty, Maths ::::17:Generic Real Number Test, Maths ::::16:Zeros Test, Maths ::::2: normal pdf numerically integrated big bounds.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#02 I: Test Maths ::::16:Zeros Test is successful.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#01 I: Start test Maths ::::18:Empty.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Maths ::::18:Empty, Maths ::::17:Generic Real Number Test, Maths ::::16:Zeros Test, Maths ::::2: normal pdf numerically integrated big bounds.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#02 I: End test Maths ::::16:Zeros Test.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Maths ::::18:Empty, Maths ::::17:Generic Real Number Test, Maths ::::16:Zeros Test, Maths ::::2: normal pdf numerically integrated big bounds.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Maths ::::19:Single, Maths ::::18:Empty, Maths ::::17:Generic Real Number Test, Maths ::::2: normal pdf numerically integrated big bounds.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#02 I: Start test Maths ::::19:Single.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Maths ::::19:Single, Maths ::::18:Empty, Maths ::::17:Generic Real Number Test, Maths ::::2: normal pdf numerically integrated big bounds.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#04 I: Test Maths ::::17:Generic Real Number Test is successful.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Maths ::::19:Single, Maths ::::18:Empty, Maths ::::17:Generic Real Number Test, Maths ::::2: normal pdf numerically integrated big bounds.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#04 I: End test Maths ::::17:Generic Real Number Test.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#01 I: Test Maths ::::18:Empty is successful.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Maths ::::19:Single, Maths ::::18:Empty, Maths ::::17:Generic Real Number Test, Maths ::::2: normal pdf numerically integrated big bounds.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#01 I: End test Maths ::::18:Empty.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Maths ::::20:Double, Maths ::::19:Single, Maths ::::18:Empty, Maths ::::2: normal pdf numerically integrated big bounds.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#02 I: Test Maths ::::19:Single is successful.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#04 I: Start test Maths ::::20:Double.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: Still 4 tests running : Maths ::::21:Generic Real Number Test, Maths ::::20:Double, Maths ::::19:Single, Maths ::::2: normal pdf numerically integrated big bounds.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Maths ::::21:Generic Real Number Test, Maths ::::20:Double, Maths ::::19:Single, Maths ::::2: normal pdf numerically integrated big bounds.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#03 I: Test Maths ::::2: normal pdf numerically integrated big bounds is successful.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#02 I: End test Maths ::::19:Single.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#01 I: Start test Maths ::::21:Generic Real Number Test.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: Still 4 tests running : Maths ::::21:Generic Real Number Test, Maths ::::20:Double, Maths ::::19:Single, Maths ::::2: normal pdf numerically integrated big bounds.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Maths ::::21:Generic Real Number Test, Maths ::::20:Double, Maths ::::19:Single, Maths ::::2: normal pdf numerically integrated big bounds.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#03 I: End test Maths ::::2: normal pdf numerically integrated big bounds.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: Still 3 tests running : Maths ::::21:Generic Real Number Test, Maths ::::20:Double, Maths ::::2: normal pdf numerically integrated big bounds.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: 3 tests running: Maths ::::21:Generic Real Number Test, Maths ::::20:Double, Maths ::::2: normal pdf numerically integrated big bounds.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#04 I: Test Maths ::::20:Double is successful.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: Still 2 tests running : Maths ::::21:Generic Real Number Test, Maths ::::20:Double.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: 2 tests running: Maths ::::21:Generic Real Number Test, Maths ::::20:Double.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#04 I: End test Maths ::::20:Double.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: Still 2 tests running : Maths ::::21:Generic Real Number Test, Maths ::::20:Double.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: 2 tests running: Maths ::::21:Generic Real Number Test, Maths ::::20:Double.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#01 I: Test Maths ::::21:Generic Real Number Test is successful.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: Still 1 tests running : Maths ::::21:Generic Real Number Test.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: 1 tests running: Maths ::::21:Generic Real Number Test.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#01 I: End test Maths ::::21:Generic Real Number Test.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: Still 1 tests running : Maths ::::21:Generic Real Number Test.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: 1 tests running: Maths ::::21:Generic Real Number Test.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: 0 tests running: .
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: Worker LAPTOP-ITNG913P#03 has ended.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: Worker LAPTOP-ITNG913P#04 has ended.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: Worker LAPTOP-ITNG913P#01 has ended.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: Worker LAPTOP-ITNG913P#02 died unexpectedly.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: Used 4 worker during test execution.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: Run 7 tests with shard LAPTOP-ITNG913P#02.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: Run 6 tests with shard LAPTOP-ITNG913P#04.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: Run 8 tests with shard LAPTOP-ITNG913P#01.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: Run 1 tests with shard LAPTOP-ITNG913P#03.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: Check health of shard LAPTOP-ITNG913P#02, 7 times.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: Check health of shard LAPTOP-ITNG913P#04, 3 times.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: Check health of shard LAPTOP-ITNG913P#03, 5 times.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: Check health of shard LAPTOP-ITNG913P#01, 1 times.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: ==============
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: Summary:
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: Test Maths ::::21:Generic Real Number Test is successful.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: Test Maths ::::20:Double is successful.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: Test Maths ::::2: normal pdf numerically integrated big bounds is successful.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: Test Maths ::::19:Single is successful.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: Test Maths ::::18:Empty is successful.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: Test Maths ::::17:Generic Real Number Test is successful.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: Test Maths ::::16:Zeros Test is successful.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: Test Maths ::::15:difference between date7 and date8 is successful.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: Test Maths ::::14:difference between date5 and date6 is successful.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: Test Maths ::::13:difference between date1 and date4 is successful.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: Test Maths ::::12:difference betwen date2 and date3 is successful.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: Test Maths ::::11:difference betwen date1 and date2 is successful.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: Test Maths ::::9:Standard Normal Distribution is successful.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 E: Test Maths ::::10:estimated call option price of euro_option_1 exited with an error.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 E: File "test/main.ml", line 36, characters 2-8: Assertion failed in test Maths ::::10:estimated call option price of euro_option_1.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 E: Raised at Dune__exe__Main.european_call_options_price_test.(fun) in file "test/main.ml", line 36, characters 2-121
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 E: Called from OUnitRunner.run_one_test.(fun) in file "src/lib/ounit2/advanced/oUnitRunner.ml", line 83, characters 13-26
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 E: 
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: Test Maths ::::7:Standard Normal Distribution is successful.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: Test Maths ::::6:Standard Normal Distribution Negative Edge is successful.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: Test Maths ::::8:Standard Normal Distribution is successful.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: Test Maths ::::5:Standard Normal Distribution Positive Edge is successful.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: Test Maths ::::4:Standard Normal Distribution is successful.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 E: Test Maths ::::3: normal pdf with analytical sol exited with an error.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 E: File "test/main.ml", line 68, characters 4-10: Assertion failed in test Maths ::::3: normal pdf with analytical sol.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 E: Raised at Dune__exe__Main.integrate_test.(fun) in file "test/main.ml", line 68, characters 4-53
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 E: Called from OUnitRunner.run_one_test.(fun) in file "src/lib/ounit2/advanced/oUnitRunner.ml", line 83, characters 13-26
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 E: 
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: Test Maths ::::1: normal pdf numerically integrated med bounds is successful.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: Test Maths ::::0: normal pdf numerically integrated small bounds  is successful.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: Ran: 22 tests in: 0.20 seconds.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: Cases: 22.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: Tried: 22.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: Errors: 2.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: Failures: 0.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: Skip: 0.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: Todo: 0.
-2022-03-16T04:08:07+00:00 LAPTOP-ITNG913P#00 I: Timeout: 0.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#00 I: Runner: processes
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#00 I: Chooser: simple
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#00 I: Configuration suite_name = "Maths :::"
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#00 I: Configuration cache_filename = "/home/maxzweig/3110/CS3110-Options-Pricing/_build/oUnit-$(suite_name).cache"
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#00 I: Configuration run_gc_full_major = "true"
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#00 I: Configuration display = "true"
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#00 I: Configuration results_style_1_X = "false"
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#00 I: Configuration testdata_dir = "none"
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#00 I: Configuration health_check_interval = "1."
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#00 I: Configuration verbose = "false"
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#00 I: Configuration chooser = "simple"
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#00 I: Configuration output_html_dir = "none"
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#00 I: Configuration processes_kill_period = "5."
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#00 I: Configuration runner = "processes"
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#00 I: Configuration shards = "4"
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#00 I: Configuration processes_grace_period = "5."
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#00 I: Configuration log_encoding = "utf-8"
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#00 I: Configuration output_junit_file = "none"
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#00 I: Configuration ci = "false"
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#00 I: Configuration output_file = "/home/maxzweig/3110/CS3110-Options-Pricing/_build/oUnit-$(suite_name)-$(shard_id).log"
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#00 I: Using 4 workers maximum.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#00 I: Starting worker number LAPTOP-ITNG913P#01.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#00 I: Worker LAPTOP-ITNG913P#01 started.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#00 I: Starting worker number LAPTOP-ITNG913P#02.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#00 I: Worker LAPTOP-ITNG913P#02 started.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#00 I: Starting worker number LAPTOP-ITNG913P#03.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#00 I: Worker LAPTOP-ITNG913P#03 started.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#00 I: Starting worker number LAPTOP-ITNG913P#04.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#00 I: Worker LAPTOP-ITNG913P#04 started.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Maths ::::3: normal pdf with analytical sol, Maths ::::2: normal pdf numerically integrated big bounds, Maths ::::1: normal pdf numerically integrated med bounds, Maths ::::0: normal pdf numerically integrated small bounds .
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#01 I: Start test Maths ::::0: normal pdf numerically integrated small bounds .
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#02 I: Start test Maths ::::1: normal pdf numerically integrated med bounds.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#03 I: Start test Maths ::::2: normal pdf numerically integrated big bounds.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Maths ::::3: normal pdf with analytical sol, Maths ::::2: normal pdf numerically integrated big bounds, Maths ::::1: normal pdf numerically integrated med bounds, Maths ::::0: normal pdf numerically integrated small bounds .
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#01 I: Test Maths ::::0: normal pdf numerically integrated small bounds  is successful.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#02 I: Test Maths ::::1: normal pdf numerically integrated med bounds is successful.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Maths ::::3: normal pdf with analytical sol, Maths ::::2: normal pdf numerically integrated big bounds, Maths ::::1: normal pdf numerically integrated med bounds, Maths ::::0: normal pdf numerically integrated small bounds .
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#01 I: End test Maths ::::0: normal pdf numerically integrated small bounds .
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#02 I: End test Maths ::::1: normal pdf numerically integrated med bounds.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#04 I: Start test Maths ::::3: normal pdf with analytical sol.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Maths ::::3: normal pdf with analytical sol, Maths ::::2: normal pdf numerically integrated big bounds, Maths ::::1: normal pdf numerically integrated med bounds, Maths ::::0: normal pdf numerically integrated small bounds .
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#04 E: Test Maths ::::3: normal pdf with analytical sol exited with an error.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#04 E: File "test/main.ml", line 68, characters 4-10: Assertion failed in test Maths ::::3: normal pdf with analytical sol.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#04 E: Raised at Dune__exe__Main.integrate_test.(fun) in file "test/main.ml", line 68, characters 4-53
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#04 E: Called from OUnitRunner.run_one_test.(fun) in file "src/lib/ounit2/advanced/oUnitRunner.ml", line 83, characters 13-26
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#04 E: 
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Maths ::::5:Standard Normal Distribution Positive Edge, Maths ::::4:Standard Normal Distribution, Maths ::::3: normal pdf with analytical sol, Maths ::::2: normal pdf numerically integrated big bounds.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#04 I: End test Maths ::::3: normal pdf with analytical sol.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Maths ::::5:Standard Normal Distribution Positive Edge, Maths ::::4:Standard Normal Distribution, Maths ::::3: normal pdf with analytical sol, Maths ::::2: normal pdf numerically integrated big bounds.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#02 I: Start test Maths ::::4:Standard Normal Distribution.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#01 I: Start test Maths ::::5:Standard Normal Distribution Positive Edge.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Maths ::::6:Standard Normal Distribution Negative Edge, Maths ::::5:Standard Normal Distribution Positive Edge, Maths ::::4:Standard Normal Distribution, Maths ::::2: normal pdf numerically integrated big bounds.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#04 I: Start test Maths ::::6:Standard Normal Distribution Negative Edge.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Maths ::::6:Standard Normal Distribution Negative Edge, Maths ::::5:Standard Normal Distribution Positive Edge, Maths ::::4:Standard Normal Distribution, Maths ::::2: normal pdf numerically integrated big bounds.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#01 I: Test Maths ::::5:Standard Normal Distribution Positive Edge is successful.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Maths ::::6:Standard Normal Distribution Negative Edge, Maths ::::5:Standard Normal Distribution Positive Edge, Maths ::::4:Standard Normal Distribution, Maths ::::2: normal pdf numerically integrated big bounds.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#02 I: Test Maths ::::4:Standard Normal Distribution is successful.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#01 I: End test Maths ::::5:Standard Normal Distribution Positive Edge.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Maths ::::6:Standard Normal Distribution Negative Edge, Maths ::::5:Standard Normal Distribution Positive Edge, Maths ::::4:Standard Normal Distribution, Maths ::::2: normal pdf numerically integrated big bounds.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#02 I: End test Maths ::::4:Standard Normal Distribution.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Maths ::::7:Standard Normal Distribution, Maths ::::6:Standard Normal Distribution Negative Edge, Maths ::::4:Standard Normal Distribution, Maths ::::2: normal pdf numerically integrated big bounds.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#01 I: Start test Maths ::::7:Standard Normal Distribution.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Maths ::::8:Standard Normal Distribution, Maths ::::7:Standard Normal Distribution, Maths ::::6:Standard Normal Distribution Negative Edge, Maths ::::2: normal pdf numerically integrated big bounds.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#02 I: Start test Maths ::::8:Standard Normal Distribution.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Maths ::::8:Standard Normal Distribution, Maths ::::7:Standard Normal Distribution, Maths ::::6:Standard Normal Distribution Negative Edge, Maths ::::2: normal pdf numerically integrated big bounds.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#04 I: Test Maths ::::6:Standard Normal Distribution Negative Edge is successful.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Maths ::::8:Standard Normal Distribution, Maths ::::7:Standard Normal Distribution, Maths ::::6:Standard Normal Distribution Negative Edge, Maths ::::2: normal pdf numerically integrated big bounds.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#04 I: End test Maths ::::6:Standard Normal Distribution Negative Edge.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#01 I: Test Maths ::::7:Standard Normal Distribution is successful.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Maths ::::8:Standard Normal Distribution, Maths ::::7:Standard Normal Distribution, Maths ::::6:Standard Normal Distribution Negative Edge, Maths ::::2: normal pdf numerically integrated big bounds.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#01 I: End test Maths ::::7:Standard Normal Distribution.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#02 I: Test Maths ::::8:Standard Normal Distribution is successful.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Maths ::::9:Standard Normal Distribution, Maths ::::8:Standard Normal Distribution, Maths ::::7:Standard Normal Distribution, Maths ::::2: normal pdf numerically integrated big bounds.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#02 I: End test Maths ::::8:Standard Normal Distribution.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#04 I: Start test Maths ::::9:Standard Normal Distribution.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Maths ::::10:estimated call option price of euro_option_1, Maths ::::9:Standard Normal Distribution, Maths ::::8:Standard Normal Distribution, Maths ::::2: normal pdf numerically integrated big bounds.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Maths ::::11:difference betwen date1 and date2, Maths ::::10:estimated call option price of euro_option_1, Maths ::::9:Standard Normal Distribution, Maths ::::2: normal pdf numerically integrated big bounds.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#01 I: Start test Maths ::::10:estimated call option price of euro_option_1.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#02 I: Start test Maths ::::11:difference betwen date1 and date2.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Maths ::::11:difference betwen date1 and date2, Maths ::::10:estimated call option price of euro_option_1, Maths ::::9:Standard Normal Distribution, Maths ::::2: normal pdf numerically integrated big bounds.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#04 I: Test Maths ::::9:Standard Normal Distribution is successful.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Maths ::::11:difference betwen date1 and date2, Maths ::::10:estimated call option price of euro_option_1, Maths ::::9:Standard Normal Distribution, Maths ::::2: normal pdf numerically integrated big bounds.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#04 I: End test Maths ::::9:Standard Normal Distribution.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#02 I: Test Maths ::::11:difference betwen date1 and date2 is successful.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Maths ::::11:difference betwen date1 and date2, Maths ::::10:estimated call option price of euro_option_1, Maths ::::9:Standard Normal Distribution, Maths ::::2: normal pdf numerically integrated big bounds.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#02 I: End test Maths ::::11:difference betwen date1 and date2.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Maths ::::12:difference betwen date2 and date3, Maths ::::11:difference betwen date1 and date2, Maths ::::10:estimated call option price of euro_option_1, Maths ::::2: normal pdf numerically integrated big bounds.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#04 I: Start test Maths ::::12:difference betwen date2 and date3.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Maths ::::13:difference between date1 and date4, Maths ::::12:difference betwen date2 and date3, Maths ::::10:estimated call option price of euro_option_1, Maths ::::2: normal pdf numerically integrated big bounds.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#02 I: Start test Maths ::::13:difference between date1 and date4.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Maths ::::13:difference between date1 and date4, Maths ::::12:difference betwen date2 and date3, Maths ::::10:estimated call option price of euro_option_1, Maths ::::2: normal pdf numerically integrated big bounds.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#04 I: Test Maths ::::12:difference betwen date2 and date3 is successful.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Maths ::::13:difference between date1 and date4, Maths ::::12:difference betwen date2 and date3, Maths ::::10:estimated call option price of euro_option_1, Maths ::::2: normal pdf numerically integrated big bounds.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#04 I: End test Maths ::::12:difference betwen date2 and date3.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#02 I: Test Maths ::::13:difference between date1 and date4 is successful.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Maths ::::13:difference between date1 and date4, Maths ::::12:difference betwen date2 and date3, Maths ::::10:estimated call option price of euro_option_1, Maths ::::2: normal pdf numerically integrated big bounds.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#02 I: End test Maths ::::13:difference between date1 and date4.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Maths ::::14:difference between date5 and date6, Maths ::::13:difference between date1 and date4, Maths ::::10:estimated call option price of euro_option_1, Maths ::::2: normal pdf numerically integrated big bounds.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#04 I: Start test Maths ::::14:difference between date5 and date6.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Maths ::::15:difference between date7 and date8, Maths ::::14:difference between date5 and date6, Maths ::::10:estimated call option price of euro_option_1, Maths ::::2: normal pdf numerically integrated big bounds.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#02 I: Start test Maths ::::15:difference between date7 and date8.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Maths ::::15:difference between date7 and date8, Maths ::::14:difference between date5 and date6, Maths ::::10:estimated call option price of euro_option_1, Maths ::::2: normal pdf numerically integrated big bounds.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#04 I: Test Maths ::::14:difference between date5 and date6 is successful.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Maths ::::15:difference between date7 and date8, Maths ::::14:difference between date5 and date6, Maths ::::10:estimated call option price of euro_option_1, Maths ::::2: normal pdf numerically integrated big bounds.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#04 I: End test Maths ::::14:difference between date5 and date6.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#02 I: Test Maths ::::15:difference between date7 and date8 is successful.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Maths ::::15:difference between date7 and date8, Maths ::::14:difference between date5 and date6, Maths ::::10:estimated call option price of euro_option_1, Maths ::::2: normal pdf numerically integrated big bounds.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#02 I: End test Maths ::::15:difference between date7 and date8.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Maths ::::16:Zeros Test, Maths ::::15:difference between date7 and date8, Maths ::::10:estimated call option price of euro_option_1, Maths ::::2: normal pdf numerically integrated big bounds.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Maths ::::17:Generic Real Number Test, Maths ::::16:Zeros Test, Maths ::::10:estimated call option price of euro_option_1, Maths ::::2: normal pdf numerically integrated big bounds.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#04 I: Start test Maths ::::16:Zeros Test.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Maths ::::17:Generic Real Number Test, Maths ::::16:Zeros Test, Maths ::::10:estimated call option price of euro_option_1, Maths ::::2: normal pdf numerically integrated big bounds.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#02 I: Start test Maths ::::17:Generic Real Number Test.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Maths ::::17:Generic Real Number Test, Maths ::::16:Zeros Test, Maths ::::10:estimated call option price of euro_option_1, Maths ::::2: normal pdf numerically integrated big bounds.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#03 I: Test Maths ::::2: normal pdf numerically integrated big bounds is successful.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Maths ::::17:Generic Real Number Test, Maths ::::16:Zeros Test, Maths ::::10:estimated call option price of euro_option_1, Maths ::::2: normal pdf numerically integrated big bounds.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#03 I: End test Maths ::::2: normal pdf numerically integrated big bounds.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#04 I: Test Maths ::::16:Zeros Test is successful.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#02 I: Test Maths ::::17:Generic Real Number Test is successful.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Maths ::::17:Generic Real Number Test, Maths ::::16:Zeros Test, Maths ::::10:estimated call option price of euro_option_1, Maths ::::2: normal pdf numerically integrated big bounds.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#04 I: End test Maths ::::16:Zeros Test.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#02 I: End test Maths ::::17:Generic Real Number Test.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Maths ::::18:Empty, Maths ::::17:Generic Real Number Test, Maths ::::16:Zeros Test, Maths ::::10:estimated call option price of euro_option_1.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Maths ::::20:Double, Maths ::::19:Single, Maths ::::18:Empty, Maths ::::10:estimated call option price of euro_option_1.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#03 I: Start test Maths ::::18:Empty.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#02 I: Start test Maths ::::19:Single.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Maths ::::20:Double, Maths ::::19:Single, Maths ::::18:Empty, Maths ::::10:estimated call option price of euro_option_1.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#04 I: Start test Maths ::::20:Double.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Maths ::::20:Double, Maths ::::19:Single, Maths ::::18:Empty, Maths ::::10:estimated call option price of euro_option_1.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#02 I: Test Maths ::::19:Single is successful.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Maths ::::20:Double, Maths ::::19:Single, Maths ::::18:Empty, Maths ::::10:estimated call option price of euro_option_1.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#03 I: Test Maths ::::18:Empty is successful.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#02 I: End test Maths ::::19:Single.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#04 I: Test Maths ::::20:Double is successful.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Maths ::::20:Double, Maths ::::19:Single, Maths ::::18:Empty, Maths ::::10:estimated call option price of euro_option_1.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#03 I: End test Maths ::::18:Empty.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#04 I: End test Maths ::::20:Double.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#00 I: Still 4 tests running : Maths ::::21:Generic Real Number Test, Maths ::::20:Double, Maths ::::18:Empty, Maths ::::10:estimated call option price of euro_option_1.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Maths ::::21:Generic Real Number Test, Maths ::::20:Double, Maths ::::18:Empty, Maths ::::10:estimated call option price of euro_option_1.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#02 I: Start test Maths ::::21:Generic Real Number Test.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#00 I: Still 2 tests running : Maths ::::21:Generic Real Number Test, Maths ::::10:estimated call option price of euro_option_1.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#00 I: 2 tests running: Maths ::::21:Generic Real Number Test, Maths ::::10:estimated call option price of euro_option_1.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#02 I: Test Maths ::::21:Generic Real Number Test is successful.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#00 I: Still 2 tests running : Maths ::::21:Generic Real Number Test, Maths ::::10:estimated call option price of euro_option_1.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#00 I: 2 tests running: Maths ::::21:Generic Real Number Test, Maths ::::10:estimated call option price of euro_option_1.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#02 I: End test Maths ::::21:Generic Real Number Test.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#00 I: Still 2 tests running : Maths ::::21:Generic Real Number Test, Maths ::::10:estimated call option price of euro_option_1.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#00 I: 2 tests running: Maths ::::21:Generic Real Number Test, Maths ::::10:estimated call option price of euro_option_1.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#00 I: Still 1 tests running : Maths ::::10:estimated call option price of euro_option_1.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#00 I: 1 tests running: Maths ::::10:estimated call option price of euro_option_1.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#00 I: Still 1 tests running : Maths ::::10:estimated call option price of euro_option_1.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#00 I: 1 tests running: Maths ::::10:estimated call option price of euro_option_1.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#00 I: Still 1 tests running : Maths ::::10:estimated call option price of euro_option_1.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#00 I: 1 tests running: Maths ::::10:estimated call option price of euro_option_1.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#00 I: Still 1 tests running : Maths ::::10:estimated call option price of euro_option_1.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#00 I: 1 tests running: Maths ::::10:estimated call option price of euro_option_1.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#00 I: Still 1 tests running : Maths ::::10:estimated call option price of euro_option_1.
+2022-03-16T05:18:55+00:00 LAPTOP-ITNG913P#00 I: 1 tests running: Maths ::::10:estimated call option price of euro_option_1.
+2022-03-16T05:18:56+00:00 LAPTOP-ITNG913P#00 I: Still 1 tests running : Maths ::::10:estimated call option price of euro_option_1.
+2022-03-16T05:18:56+00:00 LAPTOP-ITNG913P#00 I: 1 tests running: Maths ::::10:estimated call option price of euro_option_1.
+2022-03-16T05:18:56+00:00 LAPTOP-ITNG913P#00 I: Still 1 tests running : Maths ::::10:estimated call option price of euro_option_1.
+2022-03-16T05:18:56+00:00 LAPTOP-ITNG913P#00 I: 1 tests running: Maths ::::10:estimated call option price of euro_option_1.
+2022-03-16T05:18:56+00:00 LAPTOP-ITNG913P#00 I: Still 1 tests running : Maths ::::10:estimated call option price of euro_option_1.
+2022-03-16T05:18:56+00:00 LAPTOP-ITNG913P#00 I: 1 tests running: Maths ::::10:estimated call option price of euro_option_1.
+2022-03-16T05:18:56+00:00 LAPTOP-ITNG913P#00 I: Still 1 tests running : Maths ::::10:estimated call option price of euro_option_1.
+2022-03-16T05:18:56+00:00 LAPTOP-ITNG913P#00 I: 1 tests running: Maths ::::10:estimated call option price of euro_option_1.
+2022-03-16T05:18:56+00:00 LAPTOP-ITNG913P#00 I: Still 1 tests running : Maths ::::10:estimated call option price of euro_option_1.
+2022-03-16T05:18:56+00:00 LAPTOP-ITNG913P#00 I: 1 tests running: Maths ::::10:estimated call option price of euro_option_1.
+2022-03-16T05:18:56+00:00 LAPTOP-ITNG913P#00 I: Still 1 tests running : Maths ::::10:estimated call option price of euro_option_1.
+2022-03-16T05:18:56+00:00 LAPTOP-ITNG913P#00 E: Worker LAPTOP-ITNG913P#01, running test Maths ::::10:estimated call option price of euro_option_1 is not running anymore.
+2022-03-16T05:18:56+00:00 LAPTOP-ITNG913P#00 E: Test Maths ::::10:estimated call option price of euro_option_1 exited with an error.
+2022-03-16T05:18:56+00:00 LAPTOP-ITNG913P#00 E: Worker stops running: Killed by signal -10 in test Maths ::::10:estimated call option price of euro_option_1.
+2022-03-16T05:18:56+00:00 LAPTOP-ITNG913P#00 I: End test Maths ::::10:estimated call option price of euro_option_1.
+2022-03-16T05:18:56+00:00 LAPTOP-ITNG913P#00 I: 0 tests running: .
+2022-03-16T05:18:56+00:00 LAPTOP-ITNG913P#00 I: 0 tests running: .
+2022-03-16T05:18:56+00:00 LAPTOP-ITNG913P#00 I: Worker LAPTOP-ITNG913P#02 has ended.
+2022-03-16T05:18:56+00:00 LAPTOP-ITNG913P#00 I: Worker LAPTOP-ITNG913P#04 has ended.
+2022-03-16T05:18:56+00:00 LAPTOP-ITNG913P#00 I: Worker LAPTOP-ITNG913P#03 has ended.
+2022-03-16T05:18:56+00:00 LAPTOP-ITNG913P#00 I: Used 4 worker during test execution.
+2022-03-16T05:18:56+00:00 LAPTOP-ITNG913P#00 I: Run 9 tests with shard LAPTOP-ITNG913P#02.
+2022-03-16T05:18:56+00:00 LAPTOP-ITNG913P#00 I: Run 7 tests with shard LAPTOP-ITNG913P#04.
+2022-03-16T05:18:56+00:00 LAPTOP-ITNG913P#00 I: Run 4 tests with shard LAPTOP-ITNG913P#01.
+2022-03-16T05:18:56+00:00 LAPTOP-ITNG913P#00 I: Run 2 tests with shard LAPTOP-ITNG913P#03.
+2022-03-16T05:18:56+00:00 LAPTOP-ITNG913P#00 I: Check health of shard LAPTOP-ITNG913P#02, 12 times.
+2022-03-16T05:18:56+00:00 LAPTOP-ITNG913P#00 I: Check health of shard LAPTOP-ITNG913P#04, 15 times.
+2022-03-16T05:18:56+00:00 LAPTOP-ITNG913P#00 I: Check health of shard LAPTOP-ITNG913P#03, 15 times.
+2022-03-16T05:18:56+00:00 LAPTOP-ITNG913P#00 I: Check health of shard LAPTOP-ITNG913P#01, 1 times.
+2022-03-16T05:18:56+00:00 LAPTOP-ITNG913P#00 I: ==============
+2022-03-16T05:18:56+00:00 LAPTOP-ITNG913P#00 I: Summary:
+2022-03-16T05:18:56+00:00 LAPTOP-ITNG913P#00 E: Test Maths ::::10:estimated call option price of euro_option_1 exited with an error.
+2022-03-16T05:18:56+00:00 LAPTOP-ITNG913P#00 E: Worker stops running: Killed by signal -10 in test Maths ::::10:estimated call option price of euro_option_1.
+2022-03-16T05:18:56+00:00 LAPTOP-ITNG913P#00 I: Test Maths ::::21:Generic Real Number Test is successful.
+2022-03-16T05:18:56+00:00 LAPTOP-ITNG913P#00 I: Test Maths ::::20:Double is successful.
+2022-03-16T05:18:56+00:00 LAPTOP-ITNG913P#00 I: Test Maths ::::18:Empty is successful.
+2022-03-16T05:18:56+00:00 LAPTOP-ITNG913P#00 I: Test Maths ::::19:Single is successful.
+2022-03-16T05:18:56+00:00 LAPTOP-ITNG913P#00 I: Test Maths ::::17:Generic Real Number Test is successful.
+2022-03-16T05:18:56+00:00 LAPTOP-ITNG913P#00 I: Test Maths ::::16:Zeros Test is successful.
+2022-03-16T05:18:56+00:00 LAPTOP-ITNG913P#00 I: Test Maths ::::2: normal pdf numerically integrated big bounds is successful.
+2022-03-16T05:18:56+00:00 LAPTOP-ITNG913P#00 I: Test Maths ::::15:difference between date7 and date8 is successful.
+2022-03-16T05:18:56+00:00 LAPTOP-ITNG913P#00 I: Test Maths ::::14:difference between date5 and date6 is successful.
+2022-03-16T05:18:56+00:00 LAPTOP-ITNG913P#00 I: Test Maths ::::13:difference between date1 and date4 is successful.
+2022-03-16T05:18:56+00:00 LAPTOP-ITNG913P#00 I: Test Maths ::::12:difference betwen date2 and date3 is successful.
+2022-03-16T05:18:56+00:00 LAPTOP-ITNG913P#00 I: Test Maths ::::11:difference betwen date1 and date2 is successful.
+2022-03-16T05:18:56+00:00 LAPTOP-ITNG913P#00 I: Test Maths ::::9:Standard Normal Distribution is successful.
+2022-03-16T05:18:56+00:00 LAPTOP-ITNG913P#00 I: Test Maths ::::8:Standard Normal Distribution is successful.
+2022-03-16T05:18:56+00:00 LAPTOP-ITNG913P#00 I: Test Maths ::::7:Standard Normal Distribution is successful.
+2022-03-16T05:18:56+00:00 LAPTOP-ITNG913P#00 I: Test Maths ::::6:Standard Normal Distribution Negative Edge is successful.
+2022-03-16T05:18:56+00:00 LAPTOP-ITNG913P#00 I: Test Maths ::::4:Standard Normal Distribution is successful.
+2022-03-16T05:18:56+00:00 LAPTOP-ITNG913P#00 I: Test Maths ::::5:Standard Normal Distribution Positive Edge is successful.
+2022-03-16T05:18:56+00:00 LAPTOP-ITNG913P#00 E: Test Maths ::::3: normal pdf with analytical sol exited with an error.
+2022-03-16T05:18:56+00:00 LAPTOP-ITNG913P#00 E: File "test/main.ml", line 68, characters 4-10: Assertion failed in test Maths ::::3: normal pdf with analytical sol.
+2022-03-16T05:18:56+00:00 LAPTOP-ITNG913P#00 E: Raised at Dune__exe__Main.integrate_test.(fun) in file "test/main.ml", line 68, characters 4-53
+2022-03-16T05:18:56+00:00 LAPTOP-ITNG913P#00 E: Called from OUnitRunner.run_one_test.(fun) in file "src/lib/ounit2/advanced/oUnitRunner.ml", line 83, characters 13-26
+2022-03-16T05:18:56+00:00 LAPTOP-ITNG913P#00 E: 
+2022-03-16T05:18:56+00:00 LAPTOP-ITNG913P#00 I: Test Maths ::::1: normal pdf numerically integrated med bounds is successful.
+2022-03-16T05:18:56+00:00 LAPTOP-ITNG913P#00 I: Test Maths ::::0: normal pdf numerically integrated small bounds  is successful.
+2022-03-16T05:18:56+00:00 LAPTOP-ITNG913P#00 I: Ran: 22 tests in: 1.34 seconds.
+2022-03-16T05:18:56+00:00 LAPTOP-ITNG913P#00 I: Cases: 22.
+2022-03-16T05:18:56+00:00 LAPTOP-ITNG913P#00 I: Tried: 22.
+2022-03-16T05:18:56+00:00 LAPTOP-ITNG913P#00 I: Errors: 2.
+2022-03-16T05:18:56+00:00 LAPTOP-ITNG913P#00 I: Failures: 0.
+2022-03-16T05:18:56+00:00 LAPTOP-ITNG913P#00 I: Skip: 0.
+2022-03-16T05:18:56+00:00 LAPTOP-ITNG913P#00 I: Todo: 0.
+2022-03-16T05:18:56+00:00 LAPTOP-ITNG913P#00 I: Timeout: 0.
