@@ -35,9 +35,11 @@ let numeric_integrate (fn : float -> float) (a: float) (b : float) =
   let h = (b-.a) /. (Float.of_int n) in
   numeric_sum fn a 0 n h weights points
 
+(* Main function of the module, integrates [p] from [a] to [b] 
+ Requires:  [p.functn] is C0 smooth on [a, b], a < b *)
 let integrate (p : pdf) (a : float) (b : float) = 
 match p.distribution_class with 
-| Normal {stddev; mean} -> failwith ("Unimplemented")
+| Normal {stddev; mean} -> 0.5 *. 
+ (Float.erf( (b-.mean) /. (stddev*.Float.sqrt(2.))) -. 
+  Float.erf( (a-.mean) /. (stddev*.Float.sqrt(2.))))
 | Other -> numeric_integrate p.functn a b 
-
-let strd_norm_cumulative_dist (input : float) = (1. +. Float.erf (input /. Float.sqrt 2.))/. 2.

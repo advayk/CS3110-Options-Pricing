@@ -1,6 +1,27 @@
 open OUnit2
 open Blackscholes
 open Maths
+open Montecarlo
+
+(* Printing *)
+
+(** [pp_float f] pretty-prints float [f]. *)
+let pp_float f = "\"" ^ string_of_float f ^ "\""
+
+(** [pp_list pp_elt lst] pretty-prints list [lst], using [pp_elt] to
+    pretty-print each element of [lst]. *)
+let pp_list pp_elt lst =
+  let pp_elts lst =
+    let rec loop n acc = function
+      | [] -> acc
+      | [ h ] -> acc ^ pp_elt h
+      | h1 :: (h2 :: t as t') ->
+          if n = 100 then acc ^ "..." (* stop printing long list *)
+          else loop (n + 1) (acc ^ pp_elt h1 ^ "; ") t'
+    in
+    loop 0 "" lst
+  in
+  "[" ^ pp_elts lst ^ "]"
 
 let () = print_endline "CS 3110 Final Project: Options Pricing!"
 
@@ -28,13 +49,14 @@ let date3 = create_date 3 6 2022 time2
 let date4 = create_date 1 29 2022 time1
 let date5 = create_date 7 8 2021 time1 
 let date6 = create_date 8 16 2022 time2 
+let date7 = create_date 1 1 2022 time1 
+let date8 = create_date 3 21 2022 time1 
 
 (** Maths *)
 (* if the difference between the floats is off by less than 1e-3 geometric 
   means then the floats are said to be equal*)
 let float_about_eq a b = 
   a-.b |> Float.abs < 1e-3 *. ( a*.b |> Float.abs |> Float.sqrt) 
-
 
 let diff_between_dates_test (name : string) (date1 : Blackscholes.date) (date2 : Blackscholes.date) (expected_output : int) : test =
   name >:: fun _ -> assert_equal expected_output (diff_between_dates date1 date2) ~printer: string_of_int
@@ -53,12 +75,13 @@ let blackscholes_test = [
   diff_between_dates_test "difference betwen date1 and date2" date1 date2 18;
   diff_between_dates_test "difference betwen date2 and date3" date2 date3 29;
   diff_between_dates_test "difference between date1 and date4" date1 date4 10;
-  diff_between_dates_test "difference between date5 and date6" date5 date6 405
+  diff_between_dates_test "difference between date5 and date6" date5 date6 405;
+  diff_between_dates_test "difference between date7 and date8" date7 date8 80
 ]
 
 let strd_norm_cumulative_dist_test (name : string) (expected : float) (input : float) :
   test = name >:: fun _ -> 
-  assert (close_enough expected (strd_norm_cumulative_dist input))
+  assert (close_enough expected ((1. +. Float.erf (input /. Float.sqrt 2.))/. 2.))
 
 let cdf_test = [
   strd_norm_cumulative_dist_test "Standard Normal Distribution" 0.5 0.;
@@ -87,9 +110,24 @@ let maths_test = [
   (-999.) (999.) 0.5;
 ]
 
+(* Monte Carlo Tests *)
+
+let tuple_close (a, b) = Float.abs (a -. b) < 1e-2 
+
+let deltas_test (name : string) (input : float list) (expected : float list ) : test = name >:: fun _ -> 
+  deltas input |> List.combine expected |> List.map tuple_close |> assert_equal (List.map (fun x -> true) expected) 
+
+let monte_carlo_test = [
+  deltas_test "Zeros Test" [0.; 0.; 0.; 0.; 0.; 0.; 0.;] [1.; 1.; 1.; 1.; 1.;
+  1.]; deltas_test "Generic Real Number Test" [101.5; 101.5; 101.5; 101.5;
+  101.5; 101.5; 101.5;] [0.; 0.; 0.; 0.; 0.; 0.;]; deltas_test
+  "Empty" [] []; deltas_test "Single" [5.] []; deltas_test "Double" [17.; 15.]
+  [-0.117647]; deltas_test "Generic Real Number Test" [12.; 12.; 15.;
+  11.; 13.; 0.; 15.; 225.] [0.; 0.25; -0.2666; 0.1818; -1.; 1.; 14.]
+]
 
 let tests =
   "Maths :::" >::: List.flatten
-         [maths_test; cdf_test; blackscholes_test] 
+         [maths_test; cdf_test; blackscholes_test; monte_carlo_test] 
 
 let _ = run_test_tt_main tests

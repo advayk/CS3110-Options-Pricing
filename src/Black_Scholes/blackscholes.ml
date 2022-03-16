@@ -41,10 +41,13 @@ let days_of_month m =
 (* [diff_between_dates date1 date2] is the number of days (date1 .... date2] between date1 and date2.
   Requires: date1 and date2 are either the same year or in directly adjacent years. date2 comes after date1.  *)
 let rec diff_between_dates date1 date2 =
-  if date1.month = date2.month && date1.year = date2.year then 1 + date2.day - date1.day else if 
-  date1.year = date2.year && date2.month <> date1.month then 1 + days_of_month date1.month - date1.day + diff_between_dates {year = date1.year; month = date1.month + 1; day = 1; time = date1.time } date2
-  else diff_between_dates date1 {month = 12; day = 31; year=date1.year; time=date1.time} + diff_between_dates {month = 1; day = 1; year=date2.year; time=date2.time} date2
-
+  if date1.month = date2.month && date1.year = date2.year then 1 + date2.day -
+  date1.day else if date1.year = date2.year && date2.month <> date1.month then 1
+  + days_of_month date1.month - date1.day + diff_between_dates {year =
+  date1.year; month = date1.month + 1; day = 1; time = date1.time } date2 else
+  diff_between_dates date1 {month = 12; day = 31; year=date1.year;
+  time=date1.time} + diff_between_dates {month = 1; day = 1; year=date2.year;
+  time=date2.time} date2
 
 (* [d1] computes the d1 part of the black-scholes equation *)
 let d1 (european_option : european_option) (current_stock_price : float) (time_to_expiry : float )  : float =  
