@@ -1,38 +1,49 @@
-open Game
+open ANSITerminal
+open Blackscholes
 
-let rec game_loop adv state = 
-  let () = print_endline "Enter Command: " in 
-  let command = Command.parse (read_line ()) in 
-    match command with 
-    | Quit -> let () = print_endline "Terminating..." in exit 0 
-    | Go x -> let ex = String.concat " " x in 
-      let visited = State.visited state in 
-        match State.go  (String.trim ex) adv state with 
-        | Legal y -> let description = Adventure.description adv (State.current_room_id y) in  
-        if not (List.mem (State.current_room_id y) visited) then (print_string "Description: "; print_endline description; game_loop adv y) 
-        else game_loop adv y
-        | Illegal -> 
-        game_loop adv state 
+let blackscholes_date  lst = 
+  let time = Blackscholes.create_time 0 0 0 0  in 
+  Blackscholes.create_date (int_of_string (List.nth lst 0)) ( int_of_string (List.nth lst 1)) (int_of_string (List.nth lst 2)) time
 
-(** [play_game f] starts the adventure in file [f]. *)
-let play_game f = 
-  if not (Sys.file_exists f) then let () = print_endline "File does not exist. Please enter another." in exit 0; else ();
-  let adventure = Adventure.from_json (Yojson.Basic.from_file f) in
-    let init_state = State.init_state adventure in
-      game_loop adventure init_state
-    
-let data_dir_prefix = "data" ^ Filename.dir_sep
-
-(** [main ()] prompts for the game to play, then starts it. *)
 let main () =
   ANSITerminal.print_string [ ANSITerminal.red ]
-    "\n\nWelcome to the 3110 Text Adventure Game engine.\n";
+    "\n\nWelcome to the 3110 options pricing model.\n";
   print_endline
-    "Please enter the name of the game file you want to load.\n";
-  print_string "> ";
+    "Please enter the price of stock.";
   match read_line () with
   | exception End_of_file -> ()
-  | file_name -> play_game (data_dir_prefix ^ file_name ^ ".json")
+  | stock_price -> print_endline
+  "Please enter the strike price of the stock.";
+  match read_line () with
+    | exception End_of_file -> ()
+    | strike_price -> print_endline
+    "Please enter the expiration date as (m/d/2022).";
+    match read_line () with
+      | exception End_of_file -> ()
+      | date -> print_endline
+      "Please enter the risk free rate.";
+      match read_line () with
+        | exception End_of_file -> ()
+        | risk_free_rate -> print_endline
+        "Please enter the implied volatility.";
+        match read_line () with
+        | exception End_of_file -> ()
+        | implied_volatility -> print_endline
+            "Please enter the current date as (m/d/2022).";
+            match read_line () with
+              | exception End_of_file -> ()
+              | current_date ->  let date_lst =  String.split_on_char '/' date in 
+              let bd = blackscholes_date date_lst in 
+              let date_lst_current =  String.split_on_char '/' current_date in 
+              let bd_current = blackscholes_date date_lst_current in   
+              let european_option = Blackscholes.create_european_option (float_of_string strike_price) bd (float_of_string risk_free_rate) (float_of_string implied_volatility) in 
+              print_endline ("-----input data-----");
+              print_endline ("stock price: " ^ "$" ^ stock_price);
+              print_endline ("strike price: " ^  "$" ^ strike_price);
+              print_endline ("risk-free interest rate as a decimal: " ^ risk_free_rate);
+              print_endline ("implied volatility as a decimal: " ^ implied_volatility);
+              print_endline ( "----------------");
+              print_endline ("$" ^ string_of_float (Blackscholes.european_call_options_price european_option (float_of_string stock_price) bd_current))
 
 (* Execute the game engine. *)
 let () = main ()
