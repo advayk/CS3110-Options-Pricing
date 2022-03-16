@@ -1,6 +1,27 @@
 open OUnit2
 open Blackscholes
 open Maths
+open Montecarlo
+
+(* Printing *)
+
+(** [pp_float f] pretty-prints float [f]. *)
+let pp_float f = "\"" ^ string_of_float f ^ "\""
+
+(** [pp_list pp_elt lst] pretty-prints list [lst], using [pp_elt] to
+    pretty-print each element of [lst]. *)
+let pp_list pp_elt lst =
+  let pp_elts lst =
+    let rec loop n acc = function
+      | [] -> acc
+      | [ h ] -> acc ^ pp_elt h
+      | h1 :: (h2 :: t as t') ->
+          if n = 100 then acc ^ "..." (* stop printing long list *)
+          else loop (n + 1) (acc ^ pp_elt h1 ^ "; ") t'
+    in
+    loop 0 "" lst
+  in
+  "[" ^ pp_elts lst ^ "]"
 
 let () = print_endline "CS 3110 Final Project: Options Pricing!"
 
@@ -21,6 +42,7 @@ let european_call_options_price_test
 
 let diff_between_dates_test (name : string) (date1 : Blackscholes.date) (date2 : Blackscholes.date) (expected_output : int) : test =
   name >:: fun _ -> assert_equal expected_output (diff_between_dates date1 date2) ~printer: string_of_int
+
 let euro_option_1_time = create_time 0 0 0 0
 let euro_option_1_expiration_date = create_date 3 22 2022 euro_option_1_time
 
@@ -38,7 +60,6 @@ let euro_option_1_expiration_date = create_date 3 22 2022 euro_option_1_time
 let euro_option_1 =
   create_european_option 45. date8 0.02 0.3
   
-
 
 (* if the difference between the floats is off by less than 1e-3
    geometric means then the floats are said to be equal*)
@@ -58,8 +79,6 @@ let integrate_test
   (* result |> Printf.printf "\n%8f\n";
   expected_output |> Printf.printf "%8f\n"; *)
   assert (result |> float_about_eq expected_output)
-
-let euro_option_1_expiry_time = create_time 0 0 0 0
 
 let blackscholes_test =
   [
