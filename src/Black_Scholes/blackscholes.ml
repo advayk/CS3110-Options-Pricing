@@ -59,18 +59,17 @@ let d1 (european_option : european_option) (current_stock_price : float) (time_t
 let d2 (european_option : european_option) (d1 : float) (time_to_expiry : float) : float = 
   d1 -. european_option.implied_volatility *.Float.sqrt time_to_expiry
 
-
-  let european_call_options_price (european_call : european_option) (current_stock_price : float) (current_date : date) = 
-    let time_to_expiry = diff_between_dates european_call.exercise_date current_date in 
-    let d1 = d1 european_call current_stock_price time_to_expiry in 
-    let d2 = (d2 european_call d1 time_to_expiry ) in 
-    let a_normal_pdf =
-    {functn = (fun x -> Float.sqrt(1. /. (2.*.Float.pi)) *. Float.exp(-1. *. x *. x /. ((1.0*.1.0)))) ; 
-    (* stddev = sqrt(1/2pi) ; mean = 0 *)
-    distribution_class = Maths.Normal {stddev = 1.0; mean = 0.}} in
-    let term1 = current_stock_price *. (Maths.integrate a_normal_pdf (-20.) d1) in 
-    let term2 = european_call.strike_price *. 
-    Float.exp ( -1. *. european_call.risk_free_rate *. time_to_expiry) *. Maths.integrate a_normal_pdf (-20.) d2 in 
-    term1 -. term2
+let european_call_options_price (european_call : european_option) (current_stock_price : float) (current_date : date) = 
+  let time_to_expiry = diff_between_dates european_call.exercise_date current_date in 
+  let d1 = d1 european_call current_stock_price time_to_expiry in 
+  let d2 = (d2 european_call d1 time_to_expiry ) in 
+  let a_normal_pdf =
+  {functn = (fun x -> Float.sqrt(1. /. (2.*.Float.pi)) *. Float.exp(-1. *. x *. x /. ((1.0*.1.0)))) ; 
+  (* stddev = sqrt(1/2pi) ; mean = 0 *)
+  distribution_class = Maths.Normal {stddev = 1.0; mean = 0.}} in
+  let term1 = current_stock_price *. (Maths.integrate a_normal_pdf (-20.) d1) in 
+  let term2 = european_call.strike_price *. 
+  Float.exp ( -1. *. european_call.risk_free_rate *. time_to_expiry) *. Maths.integrate a_normal_pdf (-20.) d2 in 
+  term1 -. term2
 
 
