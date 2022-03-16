@@ -5,7 +5,7 @@
 type 'a price_tree 
 (** The abstract type of a Monte-Carlo tree *)
 
-val ceate_tree : int list -> 'a price_tree 
+(** val ceate_tree : int list -> 'a price_tree *)
 
 val european_call : int list -> int -> float -> float 
 (** [european_call prices num_days discount_rate] is the theoretical value of the option after num_days. 
