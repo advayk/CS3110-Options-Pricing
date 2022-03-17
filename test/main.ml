@@ -2,6 +2,7 @@ open OUnit2
 open Blackscholes
 open Maths
 open Montecarlo
+open Csvreader
 
 (* Printing *)
 
@@ -24,6 +25,16 @@ let pp_list pp_elt lst =
   "[" ^ pp_elts lst ^ "]"
 
 let () = print_endline "CS 3110 Final Project: Options Pricing!"
+
+
+(*CSV Reader*)
+(** [csv_test filename expected_output] constructs an OUnit
+    test named [name] that asserts the equality of [expected_output]
+    with [from_csv filename]. *)
+  let csv_test (name : string) (filename : string) (expected_output : string) =
+    name >:: fun _ -> 
+    assert (expected_output = (filename |> load_csv |> from_csv |> first))
+
 
 (** Black Scholes *)
 let close_enough a b = Float.abs (a -. b) < 1e-2
@@ -100,6 +111,11 @@ let blackscholes_test =
       diff_between_dates_test "difference between date11 and date10" date11 date10 45;
       diff_between_dates_test "difference between date11 and date10" date12 date11 7;
   ]
+
+
+let csvreader_test = [
+  csv_test "CSV with a Single Row" "Data/test.csv" "AB"
+]
 
 let maths_test =
   [
@@ -186,6 +202,6 @@ let maths_test =
   ]
 
 let tests =
-  "Tests :::" >::: List.flatten [ maths_test; blackscholes_test ]
+  "Tests :::" >::: List.flatten [ maths_test; csvreader_test; blackscholes_test ]
 
 let _ = run_test_tt_main tests

@@ -9,23 +9,23 @@ let main () =
   ANSITerminal.print_string [ ANSITerminal.red ]
     "\n\nWelcome to the Cornell Quant Funds Blackscholes options pricing model.\n";
   print_endline
-    "Please enter the current price of stock (float).";
+    "Please enter the current price of stock (must be float, write '40$' as '40.').";
   match read_line () with
   | exception End_of_file -> ()
   | stock_price -> print_endline
-  "Please enter the strike price of the stock (float).";
+  "Please enter the strike price of the stock (must be float).";
   match read_line () with
     | exception End_of_file -> ()
     | strike_price -> print_endline
-    "Please enter the expiration date as (m/d/2022).";
+    "Please enter the expiration date as (mm/dd/2022).";
     match read_line () with
       | exception End_of_file -> ()
       | date -> print_endline
-      "Please enter the risk free rate.";
+      "Please enter the risk free rate (float).";
       match read_line () with
         | exception End_of_file -> ()
         | risk_free_rate -> print_endline
-        "Please enter the implied volatility.";
+        "Please enter the implied volatility (float).";
         match read_line () with
         | exception End_of_file -> ()
         | implied_volatility -> print_endline
