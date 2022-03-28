@@ -25,6 +25,13 @@ let create_time h m s ms = {
   hour = h; minute = m; seconds = s; milliseconds = ms
 }
 
+let get_day d = d.day
+
+let get_month d = d.month
+
+let get_year d = d.year 
+
+
 let create_date m d y (t: time)  = {month = m; day = d; year = y; time = t}
 
 let create_european_option (k:float) (d:date) (r:float) (v:float) = { 

@@ -1,6 +1,12 @@
-2022-03-28T09:54:44+00:00 LAPTOP-ITNG913P#02 I: Start test Tests ::::1: f(x) = ln(x) numerically integrated med bounds .
-2022-03-28T09:54:44+00:00 LAPTOP-ITNG913P#02 I: Test Tests ::::1: f(x) = ln(x) numerically integrated med bounds  is successful.
-2022-03-28T09:54:44+00:00 LAPTOP-ITNG913P#02 I: End test Tests ::::1: f(x) = ln(x) numerically integrated med bounds .
-2022-03-28T09:54:44+00:00 LAPTOP-ITNG913P#02 I: Start test Tests ::::5: normal pdf numerically integrated big bounds.
-2022-03-28T09:54:44+00:00 LAPTOP-ITNG913P#02 I: Test Tests ::::5: normal pdf numerically integrated big bounds is successful.
-2022-03-28T09:54:44+00:00 LAPTOP-ITNG913P#02 I: End test Tests ::::5: normal pdf numerically integrated big bounds.
+2022-03-28T10:26:48+00:00 LAPTOP-ITNG913P#02 I: Start test Tests ::::1: f(x) = ln(x) numerically integrated med bounds .
+2022-03-28T10:26:48+00:00 LAPTOP-ITNG913P#02 I: Test Tests ::::1: f(x) = ln(x) numerically integrated med bounds  is successful.
+2022-03-28T10:26:48+00:00 LAPTOP-ITNG913P#02 I: End test Tests ::::1: f(x) = ln(x) numerically integrated med bounds .
+2022-03-28T10:26:48+00:00 LAPTOP-ITNG913P#02 I: Start test Tests ::::5: normal pdf numerically integrated big bounds.
+2022-03-28T10:26:48+00:00 LAPTOP-ITNG913P#02 I: Test Tests ::::5: normal pdf numerically integrated big bounds is successful.
+2022-03-28T10:26:48+00:00 LAPTOP-ITNG913P#02 I: End test Tests ::::5: normal pdf numerically integrated big bounds.
+2022-03-28T10:26:48+00:00 LAPTOP-ITNG913P#02 I: Start test Tests ::::16:difference between date5 and date6.
+2022-03-28T10:26:48+00:00 LAPTOP-ITNG913P#02 I: Test Tests ::::16:difference between date5 and date6 is successful.
+2022-03-28T10:26:48+00:00 LAPTOP-ITNG913P#02 I: End test Tests ::::16:difference between date5 and date6.
+2022-03-28T10:26:48+00:00 LAPTOP-ITNG913P#02 I: Start test Tests ::::19:difference between date11 and date10.
+2022-03-28T10:26:48+00:00 LAPTOP-ITNG913P#02 I: Test Tests ::::19:difference between date11 and date10 is successful.
+2022-03-28T10:26:48+00:00 LAPTOP-ITNG913P#02 I: End test Tests ::::19:difference between date11 and date10.

@@ -17,6 +17,12 @@ type time
 type date
 (** The abstract type of values representing a date. *)
 
+val get_month : date -> int 
+
+val get_day : date -> int
+
+val get_year : date -> int 
+
 val create_time : int -> int -> int -> int -> time
 (* [create_time h m s ms] creates a time type. 
   Requires: 
