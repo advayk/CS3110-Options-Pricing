@@ -29,4 +29,4 @@ val init_tree : float -> (float * float) tree
 
 val check_sum : float -> (float * float) tree -> float 
 
-exception Bad of string 
+exception Bad of string
