@@ -62,14 +62,23 @@ let create prev_data q tree up down is_up depth num_periods=
 
 let max x y = if x >= y then x else y 
 
-let valuation_tree risk_free_rate q time_step strike = function 
-    | Leaf -> 0. 
-    | Node ((price,probability), left, right) -> 
-        match left, right with 
-        | Leaf, Leaf -> max 0. (strike -. price)
-        | Node ((xl,yl), ll, lr), Node ((xr,yr), rl, rr) -> ((max 0. (strike -. xl)) *. q) +. ((max 0. (strike -. xr)) *. (1. -. q)) 
-        | Leaf, Node (_, _, _) -> 0.
-        | Node (_, _, _), Leaf -> 0.
+
+let rec evaluate prior risk_free_rate q time_step strike = function 
+    | Leaf -> (match prior with | (x,y) -> (max 0. (strike -. x))) | Node
+    ((price, probability), left, right) -> (q *. evaluate (price, probability)
+    risk_free_rate q time_step strike left +. (1. -. q) *. evaluate (price,
+    probability) risk_free_rate q time_step strike right) *. (Float.exp ( -1. *.
+    risk_free_rate *. time_step)) 
+
+
+let rec valuation_tree prev risk_free_rate q time_step strike = function 
+    | Node ((price, probability), left, right) -> let valuation = (evaluate (price, probability)
+    risk_free_rate q time_step strike (Node ((price, probability), left,
+    right))) in 
+        Node((valuation, probability), (valuation_tree (price, probability)
+        risk_free_rate q time_step strike left), (valuation_tree (price,
+        probability) risk_free_rate q time_step strike right))
+    | Leaf -> (match prev with | (x,y) -> Node (((max 0. (strike -. x)), y), Leaf, Leaf)) 
 
 exception Bad of string 
 
@@ -79,7 +88,11 @@ let american_option_price cur_date exercise_date option =
         (float_of_int ((diff_between_dates cur_date option.expiration_date) /
         (option.num_periods * 365))) in let price_tree = create
         (option.strike_price , 1.) q (init_tree option.current_price) 1.2 0.8
-        false 0 option.num_periods
+        false 0 option.num_periods in let valuations = match price_tree with |
+        Node ((price, probability), left, right) -> (valuation_tree (price,
+        probability) option.risk_free_rate q (float_of_int ((diff_between_dates
+        cur_date option.expiration_date) / (option.num_periods * 365)))
+        option.strike_price price_tree) | Leaf -> Node ((0., 0.), Leaf, Leaf)
 
     
 
