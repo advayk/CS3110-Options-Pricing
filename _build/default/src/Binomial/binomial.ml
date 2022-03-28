@@ -32,6 +32,11 @@ let rec check_sum prev tree = match tree with
   | Leaf -> prev /. 2.
   | Node ((x, y), left, right) -> check_sum y left +. check_sum y right
 
+let rec expected_val prev tree = match tree with 
+    | Leaf -> begin match prev with 
+        (x,y) -> ((x *. y) /. 2.) end 
+    | Node ((x, y), left, right) -> expected_val prev left +. expected_val prev right 
+
 let is_between date0 date1 date2 = 
     if get_year date0 < get_year date1 || get_year date0 > get_year date2 then false else 
         if get_month date0 < get_month date1 || get_month date0 > get_month date2 then false else
@@ -56,12 +61,17 @@ let create prev_data q tree up down is_up depth num_periods=
 
 exception Bad of string 
 
-let american_call_option_price cur_date exercise_date option = 
+let american_option_price cur_date exercise_date option = 
     if not (is_between exercise_date cur_date option.expiration_date) then raise (Bad (date_to_string exercise_date)) else 
         let q = q_calculation option.risk_free_rate option.up option.down
         (float_of_int ((diff_between_dates cur_date option.expiration_date) /
-        option.num_periods)) in 0.
+        (option.num_periods * 365))) in let price_tree = create
+        (option.strike_price , 1.) q (init_tree option.current_price) 1.2 0.8
+        false 0 option.num_periods
+
     
+
+
 
 
 

@@ -59,9 +59,21 @@ let create prev_data q tree up down is_up depth num_periods=
                 (x,y) prb right up down true (depth + 1) num_periods)
         in creator prev_data prb tree up down is_up depth num_periods
 
+
+let max x y = if x >= y then x else y 
+
+let valuation_tree risk_free_rate q time_step strike = function 
+    | Leaf -> 0. 
+    | Node ((price,probability), left, right) -> 
+        match left, right with 
+        | Leaf, Leaf -> max 0. (strike -. price)
+        | Node ((xl,yl), ll, lr), Node ((xr,yr), rl, rr) -> ((max 0. (strike -. xl)) *. q) +. ((max 0. (strike -. xr)) *. (1. -. q)) 
+        | Leaf, Node (_, _, _) -> 0.
+        | Node (_, _, _), Leaf -> 0.
+
 exception Bad of string 
 
-let american_call_option_price cur_date exercise_date option = 
+let american_option_price cur_date exercise_date option = 
     if not (is_between exercise_date cur_date option.expiration_date) then raise (Bad (date_to_string exercise_date)) else 
         let q = q_calculation option.risk_free_rate option.up option.down
         (float_of_int ((diff_between_dates cur_date option.expiration_date) /
@@ -71,11 +83,6 @@ let american_call_option_price cur_date exercise_date option =
 
     
 
-let american_put_option_price cur_date exercise_date option = 
-    if not (is_between exercise_date cur_date option.expiration_date) then raise (Bad (date_to_string exercise_date)) else 
-        let q = q_calculation option.risk_free_rate option.up option.down
-        (float_of_int ((diff_between_dates cur_date option.expiration_date) /
-        option.num_periods)) in 0.
 
 
 

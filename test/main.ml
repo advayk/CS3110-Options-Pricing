@@ -204,6 +204,7 @@ let maths_test =
 
 let tree_test tree = print_tree tree 
 let sum_test tree = assert_equal (check_sum 0. tree) 1.
+let expected_value_test input tree = assert_equal (expected_val tree) input 
 
 let binomial_test = [
   (** tree_test (create (100. , 1.) 0.54 (init_tree 100.) 1.2 0.8 false 0 3); *)

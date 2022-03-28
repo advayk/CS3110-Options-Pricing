@@ -3,7 +3,7 @@
 # Shared cache: disabled
 # Workspace root: /home/maxzweig/3110/CS3110-Options-Pricing
 # Auto-detected concurrency: 8
-$ /home/maxzweig/.opam/4.13.0/bin/ocamlc.opt -config > /tmp/dune_55cee0_output
+$ /home/maxzweig/.opam/4.13.0/bin/ocamlc.opt -config > /tmp/dune_770157_output
 # Dune context:
 #  { name = "default"
 #  ; kind = "default"
@@ -111,24 +111,11 @@ $ /home/maxzweig/.opam/4.13.0/bin/ocamlc.opt -config > /tmp/dune_55cee0_output
 #      ; windows_unicode = false
 #      }
 #  }
-$ (cd _build/default && /home/maxzweig/.opam/4.13.0/bin/ocamlc.opt -w +a-4-6-7-9-27-29-30-32..42-44-45-48-50-60-66-67 -warn-error -a+31 -g -bin-annot -I src/Binomial/.binomial.objs/byte -I src/Black_Scholes/.blackscholes.objs/byte -I src/Maths/.maths.objs/byte -no-alias-deps -opaque -o src/Binomial/.binomial.objs/byte/binomial.cmi -c -intf src/Binomial/binomial.mli)
 $ (cd _build/default && /home/maxzweig/.opam/4.13.0/bin/ocamlc.opt -w +a-4-6-7-9-27-29-30-32..42-44-45-48-50-60-66-67 -warn-error -a+31 -g -bin-annot -I src/Binomial/.binomial.objs/byte -I src/Black_Scholes/.blackscholes.objs/byte -I src/Maths/.maths.objs/byte -intf-suffix .ml -no-alias-deps -opaque -o src/Binomial/.binomial.objs/byte/binomial.cmo -c -impl src/Binomial/binomial.ml)
-> File "src/Binomial/binomial.ml", line 1:
-> Error: The implementation src/Binomial/binomial.ml
->        does not match the interface src/Binomial/.binomial.objs/byte/binomial.cmi:
->         The value `american_put_option_price' is required but not provided
->        File "src/Binomial/binomial.mli", line 17, characters 0-64:
->          Expected declaration
+> File "src/Binomial/binomial.ml", line 86, characters 0-0:
+> Error: Syntax error
 [2]
 $ (cd _build/default && /home/maxzweig/.opam/4.13.0/bin/ocamlopt.opt -w +a-4-6-7-9-27-29-30-32..42-44-45-48-50-60-66-67 -warn-error -a+31 -g -I src/Binomial/.binomial.objs/byte -I src/Binomial/.binomial.objs/native -I src/Black_Scholes/.blackscholes.objs/byte -I src/Black_Scholes/.blackscholes.objs/native -I src/Maths/.maths.objs/byte -I src/Maths/.maths.objs/native -intf-suffix .ml -no-alias-deps -opaque -o src/Binomial/.binomial.objs/native/binomial.cmx -c -impl src/Binomial/binomial.ml)
-> File "src/Binomial/binomial.ml", line 1:
-> Error: The implementation src/Binomial/binomial.ml
->        does not match the interface src/Binomial/.binomial.objs/byte/binomial.cmi:
->         The value `american_put_option_price' is required but not provided
->        File "src/Binomial/binomial.mli", line 17, characters 0-64:
->          Expected declaration
+> File "src/Binomial/binomial.ml", line 86, characters 0-0:
+> Error: Syntax error
 [2]
-$ (cd _build/default && /home/maxzweig/.opam/4.13.0/bin/ocamlc.opt -w +a-4-6-7-9-27-29-30-32..42-44-45-48-50-60-66-67 -warn-error -a+31 -g -bin-annot -I test/.main.eobjs/byte -I /home/maxzweig/.opam/4.13.0/lib/csv -I /home/maxzweig/.opam/4.13.0/lib/ounit2 -I /home/maxzweig/.opam/4.13.0/lib/ounit2/advanced -I /home/maxzweig/.opam/4.13.0/lib/seq -I /home/maxzweig/.opam/4.13.0/lib/stdlib-shims -I src/Binomial/.binomial.objs/byte -I src/Black_Scholes/.blackscholes.objs/byte -I src/CsvReader/.csvreader.objs/byte -I src/Maths/.maths.objs/byte -I src/Monte_Carlo/.montecarlo.objs/byte -no-alias-deps -opaque -o test/.main.eobjs/byte/dune__exe__Main.cmo -c -impl test/main.ml)
-> File "test/main.ml", line 1:
-> Warning 70 [missing-mli]: Cannot find interface file.
-$ (cd _build/default && /home/maxzweig/.opam/4.13.0/bin/ocamlopt.opt -w +a-4-6-7-9-27-29-30-32..42-44-45-48-50-60-66-67 -warn-error -a+31 -g -I test/.main.eobjs/byte -I test/.main.eobjs/native -I /home/maxzweig/.opam/4.13.0/lib/csv -I /home/maxzweig/.opam/4.13.0/lib/ounit2 -I /home/maxzweig/.opam/4.13.0/lib/ounit2/advanced -I /home/maxzweig/.opam/4.13.0/lib/seq -I /home/maxzweig/.opam/4.13.0/lib/stdlib-shims -I src/Binomial/.binomial.objs/byte -I src/Binomial/.binomial.objs/native -I src/Black_Scholes/.blackscholes.objs/byte -I src/Black_Scholes/.blackscholes.objs/native -I src/CsvReader/.csvreader.objs/byte -I src/CsvReader/.csvreader.objs/native -I src/Maths/.maths.objs/byte -I src/Maths/.maths.objs/native -I src/Monte_Carlo/.montecarlo.objs/byte -I src/Monte_Carlo/.montecarlo.objs/native -intf-suffix .ml -no-alias-deps -opaque -o test/.main.eobjs/native/dune__exe__Main.cmx -c -impl test/main.ml)

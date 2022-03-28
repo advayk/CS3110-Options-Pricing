@@ -12,14 +12,14 @@ type american_option
 
 type 'a tree
 
-val american_call_option_price : date -> american_option -> float 
-
-val american_put_option_price : date -> american_option -> float 
+val american_option_price : date -> american_option -> float 
 
 val print_tree : (float * float) tree -> unit 
 
 val create : (float * float) -> float -> (float * float) tree -> float -> float
 -> bool -> int -> int -> (float * float) tree
+
+val expected_val : (float * float ) -> (float * float) tree -> float 
 
 val is_between : date -> date -> date -> bool
 
@@ -27,4 +27,4 @@ val init_tree : float -> (float * float) tree
 
 val check_sum : float -> (float * float) tree -> float 
 
-exception Bad of string 
+exception Bad of string
