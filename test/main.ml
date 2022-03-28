@@ -2,6 +2,7 @@ open OUnit2
 open Blackscholes
 open Maths
 open Montecarlo
+open Binomial
 
 (* Printing *)
 
@@ -184,6 +185,12 @@ let maths_test =
       (3. *. Float.sqrt (1. /. (2. *. Float.pi)))
       0.9973;
   ]
+
+let tree_test tree = print_tree tree 
+
+let binomial_test = [
+  tree_test (create (100. , 1.) 0.54 (init_tree 100.) 1.2 0.8 false 0 10)   
+]
 
 let tests =
   "Tests :::" >::: List.flatten [ maths_test; blackscholes_test ]

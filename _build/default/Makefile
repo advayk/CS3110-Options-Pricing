@@ -9,6 +9,9 @@ utop:
 test:
 	OCAMLRUNPARAM=b dune exec test/main.exe
 
+app:
+	OCAMLRUNPARAM=b dune exec bin/main.exe
+
 check:
 	@bash check.sh
 

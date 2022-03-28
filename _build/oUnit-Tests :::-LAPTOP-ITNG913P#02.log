@@ -1,6 +1,6 @@
-2022-03-16T17:11:41+00:00 LAPTOP-ITNG913P#02 I: Start test Tests ::::1: f(x) = ln(x) numerically integrated med bounds .
-2022-03-16T17:11:41+00:00 LAPTOP-ITNG913P#02 I: Test Tests ::::1: f(x) = ln(x) numerically integrated med bounds  is successful.
-2022-03-16T17:11:41+00:00 LAPTOP-ITNG913P#02 I: End test Tests ::::1: f(x) = ln(x) numerically integrated med bounds .
-2022-03-16T17:11:41+00:00 LAPTOP-ITNG913P#02 I: Start test Tests ::::5: normal pdf numerically integrated big bounds.
-2022-03-16T17:11:41+00:00 LAPTOP-ITNG913P#02 I: Test Tests ::::5: normal pdf numerically integrated big bounds is successful.
-2022-03-16T17:11:41+00:00 LAPTOP-ITNG913P#02 I: End test Tests ::::5: normal pdf numerically integrated big bounds.
+2022-03-28T09:54:44+00:00 LAPTOP-ITNG913P#02 I: Start test Tests ::::1: f(x) = ln(x) numerically integrated med bounds .
+2022-03-28T09:54:44+00:00 LAPTOP-ITNG913P#02 I: Test Tests ::::1: f(x) = ln(x) numerically integrated med bounds  is successful.
+2022-03-28T09:54:44+00:00 LAPTOP-ITNG913P#02 I: End test Tests ::::1: f(x) = ln(x) numerically integrated med bounds .
+2022-03-28T09:54:44+00:00 LAPTOP-ITNG913P#02 I: Start test Tests ::::5: normal pdf numerically integrated big bounds.
+2022-03-28T09:54:44+00:00 LAPTOP-ITNG913P#02 I: Test Tests ::::5: normal pdf numerically integrated big bounds is successful.
+2022-03-28T09:54:44+00:00 LAPTOP-ITNG913P#02 I: End test Tests ::::5: normal pdf numerically integrated big bounds.
