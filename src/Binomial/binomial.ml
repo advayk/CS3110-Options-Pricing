@@ -12,7 +12,8 @@ type american_option = {
   current_price : float
 }
 
-let date_to_string date = (string_of_int (get_month date)) ^ "/" ^ (string_of_int (get_day date)) ^ "/" ^ (string_of_int (get_year date))
+let date_to_string date = (string_of_int (get_month date)) ^ "/" ^
+(string_of_int (get_day date)) ^ "/" ^ (string_of_int (get_year date))
 
 let q_calculation risk_free_rate up down time_step = (Float.exp (risk_free_rate
 *. time_step) -. down) /. (up -. down)
