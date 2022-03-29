@@ -35,10 +35,11 @@ let () = print_endline "CS 3110 Final Project: Options Pricing!"
   let csv_test (name : string) (filename : string) (expected_output : string) =
     name >:: fun _ -> 
     assert (expected_output = (filename |> load_csv |> from_csv |> first))
-
-
+    
 (** Black Scholes *)
-let close_enough a b = Float.abs (a -. b) < 1e-2
+let close_enough a b = 
+  (* print_endline (string_of_float(Float.abs (a -. b))); *)
+  Float.abs (a -. b) < 1e-2
 
 let european_call_options_price_test
     (name : string)
@@ -51,6 +52,18 @@ let european_call_options_price_test
     close_enough expected_output
       (european_call_options_price european_option current_stock_price
          current_date))
+
+let european_put_options_price_test
+  (name : string)
+  (european_option : Blackscholes.european_option)
+  (current_stock_price : float)
+  (current_date : date)
+  (expected_output : float) : test =
+  name >:: fun _ ->
+  assert (
+    close_enough expected_output
+      (european_put_options_price european_option current_stock_price
+        current_date))
 
 let diff_between_dates_test (name : string) (date1 : Blackscholes.date) (date2 : Blackscholes.date) (expected_output : int) : test =
   name >:: fun _ -> assert_equal expected_output (diff_between_dates date1 date2) ~printer: string_of_int
@@ -72,11 +85,9 @@ let euro_option_1_expiration_date = create_date 3 22 2022 euro_option_1_time
   let date10 = create_date 3 1 2022 time2 
   let date11 = create_date 1 16 2022 time2 
   let date12 = create_date 1 10 2022 time2 
+  let date13 = create_date 3 22 2022 time2 
 
 
-let euro_option_1 =
-  create_european_option 45. date8 0.02 0.3
-  
 
 (* if the difference between the floats is off by less than 1e-3
    geometric means then the floats are said to be equal*)
@@ -97,11 +108,56 @@ let integrate_test
   expected_output |> Printf.printf "%8f\n"; *)
   assert (result |> float_about_eq expected_output)
 
+let euro_option_1 =
+  create_european_option 45. date8 0.02 0.3
+  
+
+(* [create_european_option s k t r v ] creates am european_option. 
+    Requires:  
+    stock price (s): dollars 
+    strike price (k): dollars 
+    exercise_date (t): in date-time format 
+    risk free rate (r): percentage in decimal (i.e 2% = 0.02)
+    implied volatility (v) : percentage in decimal (i.e 30% = 0.03) *)
+  
+    (* let create_european_option (k:float) (d:date) (r:float) (v:float) = {  *)
+
+let euro_option_2 =
+  create_european_option 250. date8 0.03 0.15
+  
+
 let blackscholes_test =
   [
-    european_call_options_price_test
+      european_call_options_price_test
+      "estimated call option price of euro_option_1" euro_option_1 60.
+      date7 15.25;
+      european_call_options_price_test
+      "estimated call option price of euro_option_1" euro_option_1 100.
+      date7 55.20;
+      european_call_options_price_test
       "estimated call option price of euro_option_1" euro_option_1 50.
       date7 6.02;
+      european_call_options_price_test
+      "estimated call option price of euro_option_1" euro_option_1 50.
+      date7 6.02;
+      european_put_options_price_test
+      "estimated call option price of euro_option_1" euro_option_1 100.
+      date7 0.0;
+      european_put_options_price_test
+      "estimated call option price of euro_option_1" euro_option_1 50.
+      date7 0.82;
+      european_put_options_price_test
+      "estimated call option price of euro_option_1" euro_option_2 300.
+      date7 0.02;
+      european_put_options_price_test
+      "estimated call option price of euro_option_1" euro_option_2 100.
+      date7 148.36;
+      european_put_options_price_test
+      "estimated call option price of euro_option_1" euro_option_2 70.
+      date7 178.36;
+      european_put_options_price_test
+      "estimated call option price of euro_option_1" euro_option_2 1000.
+      date7 0.;
       diff_between_dates_test "difference betwen date1 and date2" date1 date2 18;
       diff_between_dates_test "difference betwen date2 and date3" date2 date3 29;
       diff_between_dates_test "difference between date1 and date4" date1 date4 10;
@@ -207,7 +263,7 @@ let sum_test tree = assert_equal (check_sum 0. tree) 1.
 let expected_value_test input tree = assert_equal (expected_val tree) input 
 
 let binomial_test = [
-  (** tree_test (create (100. , 1.) 0.54 (init_tree 100.) 1.2 0.8 false 0 3); *)
+  tree_test (create (100. , 1.) 0.54 (init_tree 100.) 1.2 0.8 false 0 3);
   sum_test (create (100. , 1.) 0.54 (init_tree 100.) 1.2 0.8 false 0 10)
 ]
 
