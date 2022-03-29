@@ -32,7 +32,11 @@ let main () =
             "Please enter the current date as (m/d/2022).";
             match read_line () with
               | exception End_of_file -> ()
-              | current_date ->  let date_lst =  String.split_on_char '/' date in 
+              | current_date -> print_endline
+              "Please call or put.";
+              match read_line () with
+                | exception End_of_file -> ()
+                | call_or_put -> let date_lst =  String.split_on_char '/' date in 
               let bd = blackscholes_date date_lst in 
               let date_lst_current =  String.split_on_char '/' current_date in 
               let bd_current = blackscholes_date date_lst_current in   
@@ -43,7 +47,11 @@ let main () =
               print_endline ("risk-free interest rate as a decimal: " ^ risk_free_rate);
               print_endline ("implied volatility as a decimal: " ^ implied_volatility);
               print_endline ( "----------------");
-              print_endline ("$" ^ string_of_float (Blackscholes.european_call_options_price european_option (float_of_string stock_price) bd_current))
+              if (call_or_put = "call") then 
+                print_endline ("$" ^ string_of_float (Blackscholes.european_call_options_price european_option (float_of_string stock_price) bd_current))
+              else 
+                print_endline ("$" ^ string_of_float (Blackscholes.european_put_options_price european_option (float_of_string stock_price) bd_current))
+
 
 (* Execute the game engine. *)
 let () = main () 
