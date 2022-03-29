@@ -1,6 +1,12 @@
 # CS3110-Options-Pricing
 Options Pricing model in OCaml for CS 3110 Spring 2022. 
 
+# Contributors
+1. Arthur Wayne (asw263)
+2. Advay Koranne (ak845)
+3. Maxwell Zweig (maz72)
+4. Jack Young (jry28)
+
 # Overview: 
 
 Quantitative finance is - in essence - 
