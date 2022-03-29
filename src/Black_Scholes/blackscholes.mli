@@ -39,10 +39,8 @@ val create_date : int -> int -> int -> time -> date
   time (t) : required time to be a valid 24 hour time *)
 
 val create_european_option : float -> date -> float -> float -> european_option
-
-(* [create_european_option s k t r v ] creates am european_option. 
+(* [create_european_option k t r v ] creates am european_option. 
     Requires:  
-    stock price (s): dollars 
     strike price (k): dollars 
     exercise_date (t): in date-time format 
     risk free rate (r): percentage in decimal (i.e 2% = 0.02)
@@ -54,4 +52,8 @@ example: one month would be 28, 30, 31*)
 
 val european_call_options_price : european_option -> float -> date -> float
 (* [european_call_options_price call european option ] computes estimates the price of a European call option. *)
+
+val european_put_options_price : european_option -> float -> date -> float
+(* [european_put_options_price call european option ] computes estimates the price of a European put option. *)
+
 

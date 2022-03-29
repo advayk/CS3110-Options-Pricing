@@ -79,3 +79,16 @@ let european_call_options_price (european_call : european_option) (current_stock
   term1 -. term2
 
 
+let european_put_options_price (european_put : european_option) (current_stock_price : float) (current_date : date) = 
+  let time_to_expiry = (float_of_int (diff_between_dates current_date european_put.exercise_date )) /. 365.0 in 
+  let d1 = d1 european_put current_stock_price time_to_expiry in 
+  let d2 = (d2 european_put d1 time_to_expiry ) in 
+  let a_normal_pdf =
+  {functn = (fun x -> Float.sqrt(1. /. (2.*.Float.pi)) *. Float.exp(-1. *. x *. x /. ((1.0*.1.0)))) ; 
+  (* stddev = 1 ; mean = 0 *)
+  distribution_class = Maths.Normal {stddev = 1.0; mean = 0.}} in
+  let term2 = current_stock_price *. (Maths.integrate a_normal_pdf (-50.) (-1. *.d1)) in 
+  let term1 = european_put.strike_price *. 
+  Float.exp ( -1. *. european_put.risk_free_rate *. time_to_expiry) *. Maths.integrate a_normal_pdf (-50.) (-1.*.d2) in 
+  term1 -. term2
+
