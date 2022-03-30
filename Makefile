@@ -12,6 +12,10 @@ test:
 app:
 	OCAMLRUNPARAM=b dune exec bin/main.exe
 
+reader:
+	OCAMLRUNPARAM=b dune exec bin/csv_loader.exe
+
+
 check:
 	@bash check.sh
 
