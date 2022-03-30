@@ -1,9 +1,11 @@
 open ANSITerminal
 open Blackscholes
+open Spread
 
 let blackscholes_date  lst = 
   let time = Blackscholes.create_time 0 0 0 0  in 
   Blackscholes.create_date (int_of_string (List.nth lst 0)) ( int_of_string (List.nth lst 1)) (int_of_string (List.nth lst 2)) time
+
 
 let main () =
   ANSITerminal.print_string [ ANSITerminal.red ]
@@ -47,10 +49,12 @@ let main () =
               print_endline ("risk-free interest rate as a decimal: " ^ risk_free_rate);
               print_endline ("implied volatility as a decimal: " ^ implied_volatility);
               print_endline ( "----------------");
-              if (call_or_put = "call") then 
-                print_endline ("$" ^ string_of_float (Blackscholes.european_call_options_price european_option (float_of_string stock_price) bd_current))
-              else 
-                print_endline ("$" ^ string_of_float (Blackscholes.european_put_options_price european_option (float_of_string stock_price) bd_current))
+              if (call_or_put = "call") then (
+                print_endline ("$" ^ string_of_float (Blackscholes.european_call_options_price european_option (float_of_string stock_price) bd_current));
+                )
+              else (
+                print_endline ("$" ^ string_of_float (Blackscholes.european_put_options_price european_option (float_of_string stock_price) bd_current)) ;
+                )
 
 
 (* Execute the game engine. *)

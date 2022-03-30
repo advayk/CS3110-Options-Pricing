@@ -22,7 +22,7 @@ let main () =
   match read_line () with
     | exception End_of_file -> ()
     | date -> let date_lst =  String.split_on_char '/' date in 
-    let bd = blackscholes_date date_lst in 
-    print_endline (Csvreader.(data_dir_prefix ^ file_name ^ ".csv") |> load_csv |> from_csv |> (Csvreader.delta bd))
+    (*let bd = blackscholes_date date_lst in *)
+    print_endline "csvloader print working" (*(Csvreader.(data_dir_prefix ^ file_name ^ ".csv") |> load_csv |> from_csv |> (Csvreader.delta bd))*)
     
 let () = main ()
