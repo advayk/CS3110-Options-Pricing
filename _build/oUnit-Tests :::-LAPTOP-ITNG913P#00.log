@@ -1,0 +1,197 @@
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: Runner: processes
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: Chooser: simple
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: Configuration suite_name = "Tests :::"
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: Configuration cache_filename = "/home/maxzweig/3110/CS3110-Options-Pricing/_build/oUnit-$(suite_name).cache"
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: Configuration run_gc_full_major = "true"
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: Configuration display = "true"
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: Configuration results_style_1_X = "false"
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: Configuration testdata_dir = "none"
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: Configuration health_check_interval = "1."
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: Configuration verbose = "false"
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: Configuration chooser = "simple"
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: Configuration output_html_dir = "none"
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: Configuration processes_kill_period = "5."
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: Configuration runner = "processes"
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: Configuration shards = "4"
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: Configuration processes_grace_period = "5."
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: Configuration log_encoding = "utf-8"
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: Configuration output_junit_file = "none"
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: Configuration ci = "false"
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: Configuration output_file = "/home/maxzweig/3110/CS3110-Options-Pricing/_build/oUnit-$(suite_name)-$(shard_id).log"
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: Using 4 workers maximum.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: Starting worker number LAPTOP-ITNG913P#01.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: Worker LAPTOP-ITNG913P#01 started.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: Starting worker number LAPTOP-ITNG913P#02.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: Worker LAPTOP-ITNG913P#02 started.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: Starting worker number LAPTOP-ITNG913P#03.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: Worker LAPTOP-ITNG913P#03 started.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: Starting worker number LAPTOP-ITNG913P#04.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: Worker LAPTOP-ITNG913P#04 started.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Tests ::::3: normal pdf numerically integrated small bounds , Tests ::::2: f(x) = ln(x) numerically integrated small bounds , Tests ::::1: f(x) = ln(x) numerically integrated med bounds , Tests ::::0: f(x) = x^2 numerically integrated small bounds .
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#01 I: Start test Tests ::::0: f(x) = x^2 numerically integrated small bounds .
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#02 I: Start test Tests ::::1: f(x) = ln(x) numerically integrated med bounds .
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Tests ::::3: normal pdf numerically integrated small bounds , Tests ::::2: f(x) = ln(x) numerically integrated small bounds , Tests ::::1: f(x) = ln(x) numerically integrated med bounds , Tests ::::0: f(x) = x^2 numerically integrated small bounds .
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#01 I: Test Tests ::::0: f(x) = x^2 numerically integrated small bounds  is successful.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#02 I: Test Tests ::::1: f(x) = ln(x) numerically integrated med bounds  is successful.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Tests ::::3: normal pdf numerically integrated small bounds , Tests ::::2: f(x) = ln(x) numerically integrated small bounds , Tests ::::1: f(x) = ln(x) numerically integrated med bounds , Tests ::::0: f(x) = x^2 numerically integrated small bounds .
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#01 I: End test Tests ::::0: f(x) = x^2 numerically integrated small bounds .
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#02 I: End test Tests ::::1: f(x) = ln(x) numerically integrated med bounds .
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#03 I: Start test Tests ::::2: f(x) = ln(x) numerically integrated small bounds .
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#04 I: Start test Tests ::::3: normal pdf numerically integrated small bounds .
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Tests ::::3: normal pdf numerically integrated small bounds , Tests ::::2: f(x) = ln(x) numerically integrated small bounds , Tests ::::1: f(x) = ln(x) numerically integrated med bounds , Tests ::::0: f(x) = x^2 numerically integrated small bounds .
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#03 I: Test Tests ::::2: f(x) = ln(x) numerically integrated small bounds  is successful.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#04 I: Test Tests ::::3: normal pdf numerically integrated small bounds  is successful.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Tests ::::5: normal pdf numerically integrated big bounds, Tests ::::4: normal pdf numerically integrated med bounds, Tests ::::3: normal pdf numerically integrated small bounds , Tests ::::2: f(x) = ln(x) numerically integrated small bounds .
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#03 I: End test Tests ::::2: f(x) = ln(x) numerically integrated small bounds .
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#04 I: End test Tests ::::3: normal pdf numerically integrated small bounds .
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Tests ::::5: normal pdf numerically integrated big bounds, Tests ::::4: normal pdf numerically integrated med bounds, Tests ::::3: normal pdf numerically integrated small bounds , Tests ::::2: f(x) = ln(x) numerically integrated small bounds .
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#02 I: Start test Tests ::::4: normal pdf numerically integrated med bounds.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#01 I: Start test Tests ::::5: normal pdf numerically integrated big bounds.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Tests ::::7: normal pdf with analytical sol half bounds, Tests ::::6: normal pdf with analytical sol big bounds, Tests ::::5: normal pdf numerically integrated big bounds, Tests ::::4: normal pdf numerically integrated med bounds.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#04 I: Start test Tests ::::6: normal pdf with analytical sol big bounds.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#03 I: Start test Tests ::::7: normal pdf with analytical sol half bounds.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Tests ::::7: normal pdf with analytical sol half bounds, Tests ::::6: normal pdf with analytical sol big bounds, Tests ::::5: normal pdf numerically integrated big bounds, Tests ::::4: normal pdf numerically integrated med bounds.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#02 I: Test Tests ::::4: normal pdf numerically integrated med bounds is successful.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#04 I: Test Tests ::::6: normal pdf with analytical sol big bounds is successful.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Tests ::::7: normal pdf with analytical sol half bounds, Tests ::::6: normal pdf with analytical sol big bounds, Tests ::::5: normal pdf numerically integrated big bounds, Tests ::::4: normal pdf numerically integrated med bounds.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#02 I: End test Tests ::::4: normal pdf numerically integrated med bounds.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#04 I: End test Tests ::::6: normal pdf with analytical sol big bounds.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#03 I: Test Tests ::::7: normal pdf with analytical sol half bounds is successful.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Tests ::::7: normal pdf with analytical sol half bounds, Tests ::::6: normal pdf with analytical sol big bounds, Tests ::::5: normal pdf numerically integrated big bounds, Tests ::::4: normal pdf numerically integrated med bounds.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#03 I: End test Tests ::::7: normal pdf with analytical sol half bounds.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Tests ::::9: normal pdf with analytical sol 2 stddev width, Tests ::::8: normal pdf with analytical sol 1 stddev width, Tests ::::7: normal pdf with analytical sol half bounds, Tests ::::5: normal pdf numerically integrated big bounds.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Tests ::::10: normal pdf with analytical sol 3 stddev width, Tests ::::9: normal pdf with analytical sol 2 stddev width, Tests ::::8: normal pdf with analytical sol 1 stddev width, Tests ::::5: normal pdf numerically integrated big bounds.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#04 I: Start test Tests ::::8: normal pdf with analytical sol 1 stddev width.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#02 I: Start test Tests ::::9: normal pdf with analytical sol 2 stddev width.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Tests ::::10: normal pdf with analytical sol 3 stddev width, Tests ::::9: normal pdf with analytical sol 2 stddev width, Tests ::::8: normal pdf with analytical sol 1 stddev width, Tests ::::5: normal pdf numerically integrated big bounds.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#03 I: Start test Tests ::::10: normal pdf with analytical sol 3 stddev width.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Tests ::::10: normal pdf with analytical sol 3 stddev width, Tests ::::9: normal pdf with analytical sol 2 stddev width, Tests ::::8: normal pdf with analytical sol 1 stddev width, Tests ::::5: normal pdf numerically integrated big bounds.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#04 I: Test Tests ::::8: normal pdf with analytical sol 1 stddev width is successful.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Tests ::::10: normal pdf with analytical sol 3 stddev width, Tests ::::9: normal pdf with analytical sol 2 stddev width, Tests ::::8: normal pdf with analytical sol 1 stddev width, Tests ::::5: normal pdf numerically integrated big bounds.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#04 I: End test Tests ::::8: normal pdf with analytical sol 1 stddev width.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#02 I: Test Tests ::::9: normal pdf with analytical sol 2 stddev width is successful.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#03 I: Test Tests ::::10: normal pdf with analytical sol 3 stddev width is successful.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Tests ::::10: normal pdf with analytical sol 3 stddev width, Tests ::::9: normal pdf with analytical sol 2 stddev width, Tests ::::8: normal pdf with analytical sol 1 stddev width, Tests ::::5: normal pdf numerically integrated big bounds.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#02 I: End test Tests ::::9: normal pdf with analytical sol 2 stddev width.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#03 I: End test Tests ::::10: normal pdf with analytical sol 3 stddev width.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Tests ::::11:CSV with a Single Row, Tests ::::10: normal pdf with analytical sol 3 stddev width, Tests ::::9: normal pdf with analytical sol 2 stddev width, Tests ::::5: normal pdf numerically integrated big bounds.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#04 I: Start test Tests ::::11:CSV with a Single Row.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Tests ::::13:difference betwen date1 and date2, Tests ::::12:estimated call option price of euro_option_1, Tests ::::11:CSV with a Single Row, Tests ::::5: normal pdf numerically integrated big bounds.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#03 I: Start test Tests ::::12:estimated call option price of euro_option_1.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#02 I: Start test Tests ::::13:difference betwen date1 and date2.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Tests ::::13:difference betwen date1 and date2, Tests ::::12:estimated call option price of euro_option_1, Tests ::::11:CSV with a Single Row, Tests ::::5: normal pdf numerically integrated big bounds.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#03 I: Test Tests ::::12:estimated call option price of euro_option_1 is successful.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#02 I: Test Tests ::::13:difference betwen date1 and date2 is successful.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Tests ::::13:difference betwen date1 and date2, Tests ::::12:estimated call option price of euro_option_1, Tests ::::11:CSV with a Single Row, Tests ::::5: normal pdf numerically integrated big bounds.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#03 I: End test Tests ::::12:estimated call option price of euro_option_1.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#02 I: End test Tests ::::13:difference betwen date1 and date2.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Tests ::::13:difference betwen date1 and date2, Tests ::::12:estimated call option price of euro_option_1, Tests ::::11:CSV with a Single Row, Tests ::::5: normal pdf numerically integrated big bounds.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Tests ::::15:difference between date1 and date4, Tests ::::14:difference betwen date2 and date3, Tests ::::11:CSV with a Single Row, Tests ::::5: normal pdf numerically integrated big bounds.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#02 I: Start test Tests ::::14:difference betwen date2 and date3.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#03 I: Start test Tests ::::15:difference between date1 and date4.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Tests ::::15:difference between date1 and date4, Tests ::::14:difference betwen date2 and date3, Tests ::::11:CSV with a Single Row, Tests ::::5: normal pdf numerically integrated big bounds.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#04 I: Test Tests ::::11:CSV with a Single Row is successful.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Tests ::::15:difference between date1 and date4, Tests ::::14:difference betwen date2 and date3, Tests ::::11:CSV with a Single Row, Tests ::::5: normal pdf numerically integrated big bounds.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#04 I: End test Tests ::::11:CSV with a Single Row.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Tests ::::15:difference between date1 and date4, Tests ::::14:difference betwen date2 and date3, Tests ::::11:CSV with a Single Row, Tests ::::5: normal pdf numerically integrated big bounds.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Tests ::::16:difference between date5 and date6, Tests ::::15:difference between date1 and date4, Tests ::::14:difference betwen date2 and date3, Tests ::::5: normal pdf numerically integrated big bounds.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#04 I: Start test Tests ::::16:difference between date5 and date6.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Tests ::::16:difference between date5 and date6, Tests ::::15:difference between date1 and date4, Tests ::::14:difference betwen date2 and date3, Tests ::::5: normal pdf numerically integrated big bounds.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#03 I: Test Tests ::::15:difference between date1 and date4 is successful.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Tests ::::16:difference between date5 and date6, Tests ::::15:difference between date1 and date4, Tests ::::14:difference betwen date2 and date3, Tests ::::5: normal pdf numerically integrated big bounds.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#02 I: Test Tests ::::14:difference betwen date2 and date3 is successful.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#03 I: End test Tests ::::15:difference between date1 and date4.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Tests ::::16:difference between date5 and date6, Tests ::::15:difference between date1 and date4, Tests ::::14:difference betwen date2 and date3, Tests ::::5: normal pdf numerically integrated big bounds.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#02 I: End test Tests ::::14:difference betwen date2 and date3.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Tests ::::17:difference between date7 and date8, Tests ::::16:difference between date5 and date6, Tests ::::14:difference betwen date2 and date3, Tests ::::5: normal pdf numerically integrated big bounds.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#03 I: Start test Tests ::::17:difference between date7 and date8.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Tests ::::18:difference between date9 and date10, Tests ::::17:difference between date7 and date8, Tests ::::16:difference between date5 and date6, Tests ::::5: normal pdf numerically integrated big bounds.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#04 I: Test Tests ::::16:difference between date5 and date6 is successful.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Tests ::::18:difference between date9 and date10, Tests ::::17:difference between date7 and date8, Tests ::::16:difference between date5 and date6, Tests ::::5: normal pdf numerically integrated big bounds.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#04 I: End test Tests ::::16:difference between date5 and date6.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#02 I: Start test Tests ::::18:difference between date9 and date10.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Tests ::::18:difference between date9 and date10, Tests ::::17:difference between date7 and date8, Tests ::::16:difference between date5 and date6, Tests ::::5: normal pdf numerically integrated big bounds.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Tests ::::19:difference between date11 and date10, Tests ::::18:difference between date9 and date10, Tests ::::17:difference between date7 and date8, Tests ::::5: normal pdf numerically integrated big bounds.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#04 I: Start test Tests ::::19:difference between date11 and date10.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Tests ::::19:difference between date11 and date10, Tests ::::18:difference between date9 and date10, Tests ::::17:difference between date7 and date8, Tests ::::5: normal pdf numerically integrated big bounds.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#03 I: Test Tests ::::17:difference between date7 and date8 is successful.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Tests ::::19:difference between date11 and date10, Tests ::::18:difference between date9 and date10, Tests ::::17:difference between date7 and date8, Tests ::::5: normal pdf numerically integrated big bounds.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#03 I: End test Tests ::::17:difference between date7 and date8.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#02 I: Test Tests ::::18:difference between date9 and date10 is successful.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Tests ::::19:difference between date11 and date10, Tests ::::18:difference between date9 and date10, Tests ::::17:difference between date7 and date8, Tests ::::5: normal pdf numerically integrated big bounds.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#02 I: End test Tests ::::18:difference between date9 and date10.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Tests ::::20:difference between date11 and date10, Tests ::::19:difference between date11 and date10, Tests ::::18:difference between date9 and date10, Tests ::::5: normal pdf numerically integrated big bounds.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#04 I: Test Tests ::::19:difference between date11 and date10 is successful.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: Still 4 tests running : Tests ::::21:difference between date11 and date10, Tests ::::20:difference between date11 and date10, Tests ::::19:difference between date11 and date10, Tests ::::5: normal pdf numerically integrated big bounds.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Tests ::::21:difference between date11 and date10, Tests ::::20:difference between date11 and date10, Tests ::::19:difference between date11 and date10, Tests ::::5: normal pdf numerically integrated big bounds.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#04 I: End test Tests ::::19:difference between date11 and date10.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#03 I: Start test Tests ::::20:difference between date11 and date10.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#02 I: Start test Tests ::::21:difference between date11 and date10.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: Still 4 tests running : Tests ::::21:difference between date11 and date10, Tests ::::20:difference between date11 and date10, Tests ::::19:difference between date11 and date10, Tests ::::5: normal pdf numerically integrated big bounds.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: 4 tests running: Tests ::::21:difference between date11 and date10, Tests ::::20:difference between date11 and date10, Tests ::::19:difference between date11 and date10, Tests ::::5: normal pdf numerically integrated big bounds.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: Still 3 tests running : Tests ::::21:difference between date11 and date10, Tests ::::20:difference between date11 and date10, Tests ::::5: normal pdf numerically integrated big bounds.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: 3 tests running: Tests ::::21:difference between date11 and date10, Tests ::::20:difference between date11 and date10, Tests ::::5: normal pdf numerically integrated big bounds.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#03 I: Test Tests ::::20:difference between date11 and date10 is successful.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: Still 3 tests running : Tests ::::21:difference between date11 and date10, Tests ::::20:difference between date11 and date10, Tests ::::5: normal pdf numerically integrated big bounds.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: 3 tests running: Tests ::::21:difference between date11 and date10, Tests ::::20:difference between date11 and date10, Tests ::::5: normal pdf numerically integrated big bounds.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#03 I: End test Tests ::::20:difference between date11 and date10.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#02 I: Test Tests ::::21:difference between date11 and date10 is successful.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: Still 3 tests running : Tests ::::21:difference between date11 and date10, Tests ::::20:difference between date11 and date10, Tests ::::5: normal pdf numerically integrated big bounds.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: 3 tests running: Tests ::::21:difference between date11 and date10, Tests ::::20:difference between date11 and date10, Tests ::::5: normal pdf numerically integrated big bounds.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#02 I: End test Tests ::::21:difference between date11 and date10.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: Still 2 tests running : Tests ::::21:difference between date11 and date10, Tests ::::5: normal pdf numerically integrated big bounds.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: 2 tests running: Tests ::::21:difference between date11 and date10, Tests ::::5: normal pdf numerically integrated big bounds.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: Still 1 tests running : Tests ::::5: normal pdf numerically integrated big bounds.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: 1 tests running: Tests ::::5: normal pdf numerically integrated big bounds.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#01 I: Test Tests ::::5: normal pdf numerically integrated big bounds is successful.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: Still 1 tests running : Tests ::::5: normal pdf numerically integrated big bounds.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: 1 tests running: Tests ::::5: normal pdf numerically integrated big bounds.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#01 I: End test Tests ::::5: normal pdf numerically integrated big bounds.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: Still 1 tests running : Tests ::::5: normal pdf numerically integrated big bounds.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: 1 tests running: Tests ::::5: normal pdf numerically integrated big bounds.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: 0 tests running: .
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: Worker LAPTOP-ITNG913P#04 has ended.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: Worker LAPTOP-ITNG913P#03 has ended.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: Worker LAPTOP-ITNG913P#02 has ended.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: Worker LAPTOP-ITNG913P#01 died unexpectedly.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: Used 4 worker during test execution.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: Run 7 tests with shard LAPTOP-ITNG913P#02.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: Run 6 tests with shard LAPTOP-ITNG913P#04.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: Run 2 tests with shard LAPTOP-ITNG913P#01.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: Run 7 tests with shard LAPTOP-ITNG913P#03.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: Check health of shard LAPTOP-ITNG913P#02, 4 times.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: Check health of shard LAPTOP-ITNG913P#04, 8 times.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: Check health of shard LAPTOP-ITNG913P#03, 5 times.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: Check health of shard LAPTOP-ITNG913P#01, 2 times.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: ==============
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: Summary:
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: Test Tests ::::5: normal pdf numerically integrated big bounds is successful.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: Test Tests ::::21:difference between date11 and date10 is successful.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: Test Tests ::::20:difference between date11 and date10 is successful.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: Test Tests ::::19:difference between date11 and date10 is successful.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: Test Tests ::::18:difference between date9 and date10 is successful.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: Test Tests ::::17:difference between date7 and date8 is successful.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: Test Tests ::::16:difference between date5 and date6 is successful.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: Test Tests ::::14:difference betwen date2 and date3 is successful.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: Test Tests ::::15:difference between date1 and date4 is successful.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: Test Tests ::::11:CSV with a Single Row is successful.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: Test Tests ::::13:difference betwen date1 and date2 is successful.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: Test Tests ::::12:estimated call option price of euro_option_1 is successful.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: Test Tests ::::10: normal pdf with analytical sol 3 stddev width is successful.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: Test Tests ::::9: normal pdf with analytical sol 2 stddev width is successful.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: Test Tests ::::8: normal pdf with analytical sol 1 stddev width is successful.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: Test Tests ::::7: normal pdf with analytical sol half bounds is successful.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: Test Tests ::::6: normal pdf with analytical sol big bounds is successful.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: Test Tests ::::4: normal pdf numerically integrated med bounds is successful.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: Test Tests ::::3: normal pdf numerically integrated small bounds  is successful.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: Test Tests ::::2: f(x) = ln(x) numerically integrated small bounds  is successful.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: Test Tests ::::1: f(x) = ln(x) numerically integrated med bounds  is successful.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: Test Tests ::::0: f(x) = x^2 numerically integrated small bounds  is successful.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: Ran: 22 tests in: 0.22 seconds.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: Cases: 22.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: Tried: 22.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: Errors: 0.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: Failures: 0.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: Skip: 0.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: Todo: 0.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#00 I: Timeout: 0.

@@ -2,7 +2,7 @@ open Blackscholes
 
 type 'a tree = | Leaf | Node of 'a * 'a tree * 'a tree
 
-type american_option = { 
+type t = { 
   strike_price : float ; 
   risk_free_rate : float;
   expiration_date : date; 
@@ -10,6 +10,16 @@ type american_option = {
   up : float;
   down : float;
   current_price : float
+}
+
+let cons_american strike risk exp num up down cur = {
+    strike_price = strike;
+    risk_free_rate = risk;
+    expiration_date = exp;
+    num_periods = num;
+    up = up;
+    down = down;
+    current_price = cur
 }
 
 let date_to_string date = (string_of_int (get_month date)) ^ "/" ^
@@ -20,7 +30,7 @@ let q_calculation risk_free_rate up down time_step = (Float.exp (risk_free_rate
 
 let print_pair pair = 
     match pair with | (price, probability) -> (print_string "( "; print_string
-    "Price: "; print_string (string_of_float price); print_string "Probability:
+    "Price: "; print_string (string_of_float price); print_string " Probability:
     "; print_string (string_of_float probability); print_string " )";)
 
 let init_tree price = Node((price, 1.), Leaf, Leaf)
@@ -61,51 +71,48 @@ let create prev_data q tree up down is_up depth num_periods=
         in creator prev_data prb tree up down is_up depth num_periods
 
 
-let max x y = if x >= y then x else y 
+let max (x : float) (y : float) = if x >= y then x else y 
+
+let rec evaluate risk_free_rate q time_step strike tree = 
+    match tree with 
+    | Node ((price, (probability : float)), left, right) -> 
+        begin match left, right with
+        | Leaf, Leaf -> (max 0. (price -. strike)) 
+        | Node ((xl, yl), _, _ ), Node ((xr,yr), _, _ ) -> ((q *. evaluate risk_free_rate q time_step strike left) +. ((1. -. q) *.evaluate risk_free_rate q time_step strike right) ) *. (Float.exp ( -1. *.
+    risk_free_rate *. time_step))
+    (** Should never execute this statement *)
+        | Node ((xl, yl), _, _ ), Leaf -> 0.
+        | Leaf, Node ((xr,yr), _, _ ) -> 0.
+        end 
+    (** Should never execute this statement  *)
+    | Leaf -> 0. 
+
+let rec valuation_tree risk_free_rate q time_step strike = function 
+    | Leaf -> Leaf
+    | Node ((x, y), left, right) -> 
+        Node ((evaluate risk_free_rate q time_step strike (Node((x, y), left, right)), y), 
+        valuation_tree risk_free_rate q time_step strike left,
+        valuation_tree risk_free_rate q time_step strike right)
 
 
-let rec evaluate prior risk_free_rate q time_step strike = function 
-    | Leaf -> (match prior with | (x,y) -> (max 0. (strike -. x))) | Node
-    ((price, probability), left, right) -> (q *. evaluate (price, probability)
-    risk_free_rate q time_step strike left +. (1. -. q) *. evaluate (price,
-    probability) risk_free_rate q time_step strike right) *. (Float.exp ( -1. *.
-    risk_free_rate *. time_step)) 
+let first_node tree = 
+  match tree with
+  | Node ((price, probability), l, r) -> print_endline (string_of_float price)
+  | Leaf -> ()
 
 
-let rec valuation_tree prev risk_free_rate q time_step strike = function 
-    | Node ((price, probability), left, right) -> let valuation = (evaluate (price, probability)
-    risk_free_rate q time_step strike (Node ((price, probability), left,
-    right))) in 
-        Node((valuation, probability), (valuation_tree (price, probability)
-        risk_free_rate q time_step strike left), (valuation_tree (price,
-        probability) risk_free_rate q time_step strike right))
-    | Leaf -> (match prev with | (x,y) -> Node (((max 0. (strike -. x)), y), Leaf, Leaf)) 
+let rec print_day tree depth cur_depth = 
+    match tree with | Node ((price, probability), l, r) -> if cur_depth = depth
+    then let () = print_endline((string_of_float price) ^ " ") in let () = (print_day l depth (cur_depth + 1)) in (print_day r depth
+    (cur_depth + 1)) else let () = (print_day l depth (cur_depth + 1)) in (print_day r depth
+    (cur_depth + 1)) | Leaf -> ()
 
 exception Bad of string 
 
-let american_option_price cur_date exercise_date option = 
-    if not (is_between exercise_date cur_date option.expiration_date) then raise (Bad (date_to_string exercise_date)) else 
-        let q = q_calculation option.risk_free_rate option.up option.down
-        (float_of_int ((diff_between_dates cur_date option.expiration_date) /
-        (option.num_periods * 365))) in let price_tree = create
-        (option.strike_price , 1.) q (init_tree option.current_price) 1.2 0.8
-        false 0 option.num_periods in let valuations = match price_tree with |
-        Node ((price, probability), left, right) -> (valuation_tree (price,
-        probability) option.risk_free_rate q (float_of_int ((diff_between_dates
-        cur_date option.expiration_date) / (option.num_periods * 365)))
-        option.strike_price price_tree) | Leaf -> Node ((0., 0.), Leaf, Leaf)
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
+(** Just call evaluate on different depths to today's value  *)
+let american_option_price cur_date option = 
+    let time_step = float_of_int (diff_between_dates cur_date option.expiration_date) /. (float_of_int (option.num_periods) *. 365.) in
+        let q = (q_calculation option.risk_free_rate option.up option.down time_step) in 
+            let price_tree = create (option.current_price , 1.) q (init_tree option.current_price) option.up option.down false 0 option.num_periods in 
+                let valuation_tree = (valuation_tree option.risk_free_rate q time_step option.strike_price price_tree) in valuation_tree
 

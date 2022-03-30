@@ -1,0 +1,6 @@
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#01 I: Start test Tests ::::0: f(x) = x^2 numerically integrated small bounds .
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#01 I: Test Tests ::::0: f(x) = x^2 numerically integrated small bounds  is successful.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#01 I: End test Tests ::::0: f(x) = x^2 numerically integrated small bounds .
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#01 I: Start test Tests ::::5: normal pdf numerically integrated big bounds.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#01 I: Test Tests ::::5: normal pdf numerically integrated big bounds is successful.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#01 I: End test Tests ::::5: normal pdf numerically integrated big bounds.

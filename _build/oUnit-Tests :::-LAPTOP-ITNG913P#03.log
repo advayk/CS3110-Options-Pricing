@@ -1,0 +1,21 @@
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#03 I: Start test Tests ::::2: f(x) = ln(x) numerically integrated small bounds .
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#03 I: Test Tests ::::2: f(x) = ln(x) numerically integrated small bounds  is successful.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#03 I: End test Tests ::::2: f(x) = ln(x) numerically integrated small bounds .
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#03 I: Start test Tests ::::7: normal pdf with analytical sol half bounds.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#03 I: Test Tests ::::7: normal pdf with analytical sol half bounds is successful.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#03 I: End test Tests ::::7: normal pdf with analytical sol half bounds.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#03 I: Start test Tests ::::10: normal pdf with analytical sol 3 stddev width.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#03 I: Test Tests ::::10: normal pdf with analytical sol 3 stddev width is successful.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#03 I: End test Tests ::::10: normal pdf with analytical sol 3 stddev width.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#03 I: Start test Tests ::::12:estimated call option price of euro_option_1.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#03 I: Test Tests ::::12:estimated call option price of euro_option_1 is successful.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#03 I: End test Tests ::::12:estimated call option price of euro_option_1.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#03 I: Start test Tests ::::15:difference between date1 and date4.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#03 I: Test Tests ::::15:difference between date1 and date4 is successful.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#03 I: End test Tests ::::15:difference between date1 and date4.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#03 I: Start test Tests ::::17:difference between date7 and date8.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#03 I: Test Tests ::::17:difference between date7 and date8 is successful.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#03 I: End test Tests ::::17:difference between date7 and date8.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#03 I: Start test Tests ::::20:difference between date11 and date10.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#03 I: Test Tests ::::20:difference between date11 and date10 is successful.
+2022-03-30T18:55:51+00:00 LAPTOP-ITNG913P#03 I: End test Tests ::::20:difference between date11 and date10.
