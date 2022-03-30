@@ -1,6 +1,3 @@
-(executable
- (name main)
- (libraries blackscholes montecarlo maths ANSITerminal))
-
-
-
+(executables
+ (names main csv_loader)
+ (libraries blackscholes montecarlo maths ANSITerminal csvreader))
