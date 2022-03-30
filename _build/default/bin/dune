@@ -1,6 +1,0 @@
-(executable
- (name main)
- (libraries blackscholes montecarlo maths ANSITerminal))
-
-
-
