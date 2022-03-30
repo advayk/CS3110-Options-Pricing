@@ -15,7 +15,6 @@ app:
 reader:
 	OCAMLRUNPARAM=b dune exec bin/csv_loader.exe
 
-
 check:
 	@bash check.sh
 
