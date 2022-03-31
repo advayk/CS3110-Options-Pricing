@@ -1,0 +1,30 @@
+2022-03-31T01:40:58+00:00 LAPTOP-ITNG913P#03 I: Start test Tests ::::2: f(x) = ln(x) numerically integrated small bounds .
+2022-03-31T01:40:58+00:00 LAPTOP-ITNG913P#03 I: Test Tests ::::2: f(x) = ln(x) numerically integrated small bounds  is successful.
+2022-03-31T01:40:58+00:00 LAPTOP-ITNG913P#03 I: End test Tests ::::2: f(x) = ln(x) numerically integrated small bounds .
+2022-03-31T01:40:58+00:00 LAPTOP-ITNG913P#03 I: Start test Tests ::::4: normal pdf numerically integrated med bounds.
+2022-03-31T01:40:58+00:00 LAPTOP-ITNG913P#03 I: Test Tests ::::4: normal pdf numerically integrated med bounds is successful.
+2022-03-31T01:40:58+00:00 LAPTOP-ITNG913P#03 I: End test Tests ::::4: normal pdf numerically integrated med bounds.
+2022-03-31T01:40:58+00:00 LAPTOP-ITNG913P#03 I: Start test Tests ::::7: normal pdf with analytical sol half bounds.
+2022-03-31T01:40:58+00:00 LAPTOP-ITNG913P#03 I: Test Tests ::::7: normal pdf with analytical sol half bounds is successful.
+2022-03-31T01:40:58+00:00 LAPTOP-ITNG913P#03 I: End test Tests ::::7: normal pdf with analytical sol half bounds.
+2022-03-31T01:40:58+00:00 LAPTOP-ITNG913P#03 I: Start test Tests ::::11:CSV with a Single Row.
+2022-03-31T01:40:58+00:00 LAPTOP-ITNG913P#03 I: Test Tests ::::11:CSV with a Single Row is successful.
+2022-03-31T01:40:58+00:00 LAPTOP-ITNG913P#03 I: End test Tests ::::11:CSV with a Single Row.
+2022-03-31T01:40:58+00:00 LAPTOP-ITNG913P#03 I: Start test Tests ::::14:estimated call option price of euro_option_1.
+2022-03-31T01:40:58+00:00 LAPTOP-ITNG913P#03 I: Test Tests ::::14:estimated call option price of euro_option_1 is successful.
+2022-03-31T01:40:58+00:00 LAPTOP-ITNG913P#03 I: End test Tests ::::14:estimated call option price of euro_option_1.
+2022-03-31T01:40:58+00:00 LAPTOP-ITNG913P#03 I: Start test Tests ::::17:estimated call option price of euro_option_1.
+2022-03-31T01:40:58+00:00 LAPTOP-ITNG913P#03 I: Test Tests ::::17:estimated call option price of euro_option_1 is successful.
+2022-03-31T01:40:58+00:00 LAPTOP-ITNG913P#03 I: End test Tests ::::17:estimated call option price of euro_option_1.
+2022-03-31T01:40:58+00:00 LAPTOP-ITNG913P#03 I: Start test Tests ::::20:estimated call option price of euro_option_1.
+2022-03-31T01:40:58+00:00 LAPTOP-ITNG913P#03 I: Test Tests ::::20:estimated call option price of euro_option_1 is successful.
+2022-03-31T01:40:58+00:00 LAPTOP-ITNG913P#03 I: End test Tests ::::20:estimated call option price of euro_option_1.
+2022-03-31T01:40:58+00:00 LAPTOP-ITNG913P#03 I: Start test Tests ::::23:difference betwen date2 and date3.
+2022-03-31T01:40:58+00:00 LAPTOP-ITNG913P#03 I: Test Tests ::::23:difference betwen date2 and date3 is successful.
+2022-03-31T01:40:58+00:00 LAPTOP-ITNG913P#03 I: End test Tests ::::23:difference betwen date2 and date3.
+2022-03-31T01:40:58+00:00 LAPTOP-ITNG913P#03 I: Start test Tests ::::26:difference between date7 and date8.
+2022-03-31T01:40:58+00:00 LAPTOP-ITNG913P#03 I: Test Tests ::::26:difference between date7 and date8 is successful.
+2022-03-31T01:40:58+00:00 LAPTOP-ITNG913P#03 I: End test Tests ::::26:difference between date7 and date8.
+2022-03-31T01:40:58+00:00 LAPTOP-ITNG913P#03 I: Start test Tests ::::28:difference between date11 and date10.
+2022-03-31T01:40:58+00:00 LAPTOP-ITNG913P#03 I: Test Tests ::::28:difference between date11 and date10 is successful.
+2022-03-31T01:40:58+00:00 LAPTOP-ITNG913P#03 I: End test Tests ::::28:difference between date11 and date10.

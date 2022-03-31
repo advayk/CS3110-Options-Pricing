@@ -263,10 +263,9 @@ let sum_test tree = assert_equal (check_sum 0. tree) 1.
 let expected_value_test input tree = assert_equal (expected_val tree) input 
 
 
-let yay = cons_american 110. 0.05 date2 12 1.01 0.99 110.
+let yay = cons_american 110. 0.05 date2 12 1.01 0.99 100.
 
 let binomial_test = [
-<<<<<<< HEAD
   (** tree_test (create (100. , 1.) 0.54 (init_tree 100.) 1.2 0.8 false 0 3); *)
   sum_test (create (100. , 1.) 0.54 (init_tree 100.) 1.2 0.8 false 0 10);
   (** 
@@ -276,10 +275,6 @@ let binomial_test = [
   *)
   print_day (american_option_price date1 yay) 0 0; 
 
-=======
-  tree_test (create (100. , 1.) 0.54 (init_tree 100.) 1.2 0.8 false 0 3);
-  sum_test (create (100. , 1.) 0.54 (init_tree 100.) 1.2 0.8 false 0 10)
->>>>>>> d7f3dbbc840083bb14a7b743c228d2bae56306ef
 ]
 
 let tests =
