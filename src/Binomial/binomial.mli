@@ -1,10 +1,4 @@
-(** Representation of the binomial model.
-    This module represents the data stored in adventure files, including
-    the rooms and exits. It handles loading of that data from JSON as
-    well as querying the data. *)
-
-
-(** Abstract type representing an American Option. Can be exercised anytime between now and expiration. *)
+(** Representation of the binomial model.*)
 
 open Blackscholes
 

@@ -1,5 +1,5 @@
 (** Module containing the characteristic features of a type of option spread.
-    This module represents ...*)
+    This module represents an honest to goodness representation of a spread.*)
 
 (**********************************************************************
  * DO NOT CHANGE THIS FILE
@@ -19,7 +19,9 @@
  | BullCallLadder of {strike1:float; strike2:float; strike3:float; bwpc_list: string list}
  (** The abstract type of values representing an option spread. *)
 
-type t = { spread : spread; expiry : Blackscholes.date; options : Blackscholes.european_option list}
+type t = { spread : spread;
+           expiry : Blackscholes.date;
+           options : Blackscholes.european_option list }
 (** The abstract type of values representing a pdf function. *)
 
 val make_spread: string -> t

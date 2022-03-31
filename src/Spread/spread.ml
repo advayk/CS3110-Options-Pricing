@@ -41,7 +41,7 @@ let rec make_options (strikes : float list) (expiry : date) (r:float) (v:float) 
   | h :: t -> (create_european_option h expiry r v) :: make_options t expiry r v
 
 let make_t (name : string) (expiry : date) (r : float) (v : float)  = 
-  print_endline "Please enter the strike prices of the options in increasing order (float).";
+  print_endline "Please enter the strike prices of the options in increasing order.";
   match name with
     | "condor" -> ( let strikes = (get_strikes 4) in 
       let option_spread = 
@@ -100,23 +100,32 @@ match options with
     match code with
       | "bc" -> (match float_of_string_opt num with 
         | None -> failwith "invalid bwpc string"
-        | Some flt -> (flt *. (european_call_options_price h underlying today) +. price_options t tl underlying today))
+        | Some flt -> 
+        (flt *. (european_call_options_price h underlying today) +.
+         price_options t tl underlying today))
       | "bp" -> (match float_of_string_opt num with 
         | None -> failwith "invalid bwpc string"
-        | Some flt -> (flt *. (european_put_options_price h underlying today) +. price_options t tl underlying today) )
+        | Some flt -> 
+        (flt *. (european_put_options_price h underlying today) +. 
+        price_options t tl underlying today) )
       | "wc" -> (match float_of_string_opt num with 
         | None -> failwith "invalid bwpc string"
-        | Some flt -> (-1. *. flt *. (european_call_options_price h underlying today) +. price_options t tl underlying today) )
+        | Some flt -> 
+        (-1. *. flt *. (european_call_options_price h underlying today) +. 
+        price_options t tl underlying today) )
       | "wp" -> (match float_of_string_opt num with 
         | None -> failwith "invalid bwpc string"
-        | Some flt -> (-1.*. flt *. (european_put_options_price h underlying today) +. price_options t tl underlying today) )
+        | Some flt -> 
+        (-1.*. flt *. (european_put_options_price h underlying today) +. 
+        price_options t tl underlying today) )
       | _ -> failwith "invalid bwpc string"
 
+      
 let price_spread (spread : t) (underlying : float) (today : date) = 
   match spread with
   | {spread; expiry; options} -> price_options options (get_spread_bwpc_list spread) underlying today
 
-  
+
 let make_spread (spread : string) =
   ANSITerminal.print_string [ ANSITerminal.green ]
     "\n\nThank you for choosing to buy a spread !\n";
@@ -125,8 +134,11 @@ let make_spread (spread : string) =
   print_endline "\nPlease enter the expiry of this spread as (mm/dd/2022).";
   match read_line () with
     | date -> let expiry = blackscholes_date (String.split_on_char '/' date) in
-    print_endline "Please enter the risk free rate (float).";
+    print_endline
+      "Please enter the risk free interest rate (Usually 30-year US Treasury bond yield [.0248]).";
     match read_line () with
-      | r -> print_endline "Please enter the volatility (float).";
+      | r -> print_endline
+      ("Please enter the implied volatility (annualized standard deviation of asset returns)\n" ^
+      "or: 0.1 -> 0.2 : not volatile, 0.2 -> 0.4 : fairly volatile, 0.4+ : highly volatile.");
       match read_line () with
         | v -> make_t name expiry (float_of_string r) (float_of_string v)

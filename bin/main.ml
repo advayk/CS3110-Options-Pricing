@@ -15,19 +15,20 @@ let main () =
   match read_line () with
   | exception End_of_file -> ()
   | stock_price -> print_endline
-  "Please enter the strike price of the stock (must be float).";
+  "Please enter the strike price of the option (must be float).";
   match read_line () with
     | exception End_of_file -> ()
     | strike_price -> print_endline
-    "Please enter the expiration date as (mm/dd/2022).";
+    "Please enter the expiration date as (m/d/2022).";
     match read_line () with
       | exception End_of_file -> ()
       | date -> print_endline
-      "Please enter the risk free rate (float).";
+      "Please enter the risk free interest rate (Usually 30-year US Treasury bond yield [.0248]).";
       match read_line () with
         | exception End_of_file -> ()
         | risk_free_rate -> print_endline
-        "Please enter the implied volatility (float).";
+        ("Please enter the implied volatility (annualized standard deviation of asset returns)\n" ^
+        "or: 0.1 -> 0.2 : not volatile, 0.2 -> 0.4 : fairly volatile, 0.4+ : highly volatile.");
         match read_line () with
         | exception End_of_file -> ()
         | implied_volatility -> print_endline
@@ -35,7 +36,7 @@ let main () =
             match read_line () with
               | exception End_of_file -> ()
               | current_date -> print_endline
-              "Please call or put.";
+              "call or put ?";
               match read_line () with
                 | exception End_of_file -> ()
                 | call_or_put -> let date_lst =  String.split_on_char '/' date in 
