@@ -1,3 +1,10 @@
 (executables
- (names main csv_loader)
- (libraries blackscholes montecarlo maths ANSITerminal csvreader))
+ (names main csv_loader spread_loader binomial_loader)
+ (libraries
+  blackscholes
+  montecarlo
+  maths
+  spread
+  ANSITerminal
+  csvreader
+  binomial))
