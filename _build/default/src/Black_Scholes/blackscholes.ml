@@ -78,7 +78,6 @@ let european_call_options_price (european_call : european_option) (current_stock
   Float.exp ( -1. *. european_call.risk_free_rate *. time_to_expiry) *. Maths.integrate a_normal_pdf (-20.) d2 in 
   term1 -. term2
 
-
 let european_put_options_price (european_put : european_option) (current_stock_price : float) (current_date : date) = 
   let time_to_expiry = (float_of_int (diff_between_dates current_date european_put.exercise_date )) /. 365.0 in 
   let d1 = d1 european_put current_stock_price time_to_expiry in 
