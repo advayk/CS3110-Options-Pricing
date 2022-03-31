@@ -54,4 +54,6 @@ let rec from_csv csv_data = match csv_data with
 let load_csv filename = 
   Csv.load filename
 
+let delta date lst  = print_endline (string_of_float (List.nth (List.filter (fun x -> (x.expiration = date)) lst) 0 ).delta)
+
 let first lst = let () = print_endline (List.nth lst 0).ul_symbol in (List.nth lst 0).ul_symbol 

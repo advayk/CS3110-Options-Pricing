@@ -83,8 +83,9 @@ let rec valuation_tree prev risk_free_rate q time_step strike = function
 
 exception Bad of string 
 
-let american_option_price cur_date exercise_date option = 
-    if not (is_between exercise_date cur_date option.expiration_date) then raise (Bad (date_to_string exercise_date)) else 
+let american_option_price cur_date exercise_date option =   raise (Failure "Unimplemented: american_option_price")
+
+    (* if not (is_between exercise_date cur_date option.expiration_date) then raise (Bad (date_to_string exercise_date)) else 
         let q = q_calculation option.risk_free_rate option.up option.down
         (float_of_int ((diff_between_dates cur_date option.expiration_date) /
         (option.num_periods * 365))) in let price_tree = create
@@ -93,19 +94,4 @@ let american_option_price cur_date exercise_date option =
         Node ((price, probability), left, right) -> (valuation_tree (price,
         probability) option.risk_free_rate q (float_of_int ((diff_between_dates
         cur_date option.expiration_date) / (option.num_periods * 365)))
-        option.strike_price price_tree) | Leaf -> Node ((0., 0.), Leaf, Leaf)
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
+        option.strike_price price_tree) | Leaf -> Node ((0., 0.), Leaf, Leaf) *)

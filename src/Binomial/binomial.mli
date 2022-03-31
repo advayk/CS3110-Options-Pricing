@@ -12,7 +12,7 @@ type american_option
 
 type 'a tree
 
-val american_option_price : date -> american_option -> float 
+(* val american_option_price : date -> american_option -> float  *)
 
 val print_tree : (float * float) tree -> unit 
 
