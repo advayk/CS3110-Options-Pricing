@@ -12,6 +12,6 @@ val from_csv : Csv.t -> d list
 
 val load_csv : string -> Csv.t
 (** [load_csv s] is the [Csv] module representation of a given csv file. *)
-val delta : date -> d list -> string
+val delta : date -> d list -> unit
 
 val first : d list -> string

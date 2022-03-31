@@ -2,8 +2,8 @@ open OUnit2
 open Blackscholes
 open Maths
 open Montecarlo
-open Binomial
 open Csvreader
+open Binomial
 
 (* Printing *)
 
@@ -261,6 +261,9 @@ let maths_test =
 let tree_test tree = print_tree tree 
 let sum_test tree = assert_equal (check_sum 0. tree) 1.
 let expected_value_test input tree = assert_equal (expected_val tree) input 
+
+
+let yay = cons_american 110. 0.05 date2 12 1.01 0.99 110.
 
 let binomial_test = [
   tree_test (create (100. , 1.) 0.54 (init_tree 100.) 1.2 0.8 false 0 3);
