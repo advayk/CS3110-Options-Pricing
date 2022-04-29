@@ -1,9 +1,9 @@
-# dune exec bin/binomial_loader.exe
+# dune exec bin/spread_loader.exe
 # OCAMLPARAM: unset
 # Shared cache: disabled
-# Workspace root: /home/maxzweig/3110/CS3110-Options-Pricing
-# Auto-detected concurrency: 8
-$ /home/maxzweig/.opam/4.13.0/bin/ocamlc.opt -config > /tmp/dune_dc112e_output
+# Workspace root: /Users/arthurwayne/Downloads/newestrepo
+# Auto-detected concurrency: 10
+$ /Users/arthurwayne/.opam/4.13.0/bin/ocamlc.opt -config > /var/folders/tn/f6z662tn2nj0z2pfbns9br0c0000gn/T/dune_2c56af_output
 # Dune context:
 #  { name = "default"
 #  ; kind = "default"
@@ -12,74 +12,74 @@ $ /home/maxzweig/.opam/4.13.0/bin/ocamlc.opt -config > /tmp/dune_dc112e_output
 #  ; for_host = None
 #  ; fdo_target_exe = None
 #  ; build_dir = "default"
-#  ; toplevel_path = Some External "/home/maxzweig/.opam/4.13.0/lib/toplevel"
-#  ; ocaml_bin = External "/home/maxzweig/.opam/4.13.0/bin"
-#  ; ocaml = Ok External "/home/maxzweig/.opam/4.13.0/bin/ocaml"
-#  ; ocamlc = External "/home/maxzweig/.opam/4.13.0/bin/ocamlc.opt"
-#  ; ocamlopt = Ok External "/home/maxzweig/.opam/4.13.0/bin/ocamlopt.opt"
-#  ; ocamldep = Ok External "/home/maxzweig/.opam/4.13.0/bin/ocamldep.opt"
-#  ; ocamlmklib = Ok External "/home/maxzweig/.opam/4.13.0/bin/ocamlmklib.opt"
+#  ; toplevel_path =
+#      Some External "/Users/arthurwayne/.opam/4.13.0/lib/toplevel"
+#  ; ocaml_bin = External "/Users/arthurwayne/.opam/4.13.0/bin"
+#  ; ocaml = Ok External "/Users/arthurwayne/.opam/4.13.0/bin/ocaml"
+#  ; ocamlc = External "/Users/arthurwayne/.opam/4.13.0/bin/ocamlc.opt"
+#  ; ocamlopt = Ok External "/Users/arthurwayne/.opam/4.13.0/bin/ocamlopt.opt"
+#  ; ocamldep = Ok External "/Users/arthurwayne/.opam/4.13.0/bin/ocamldep.opt"
+#  ; ocamlmklib =
+#      Ok External "/Users/arthurwayne/.opam/4.13.0/bin/ocamlmklib.opt"
 #  ; env =
 #      map
-#        { "DUNE_OCAML_HARDCODED" : "/home/maxzweig/.opam/4.13.0/lib"
-#        ; "DUNE_OCAML_STDLIB" : "/home/maxzweig/.opam/4.13.0/lib/ocaml"
-#        ; "DUNE_SOURCEROOT" : "/home/maxzweig/3110/CS3110-Options-Pricing"
+#        { "DUNE_OCAML_HARDCODED" : "/Users/arthurwayne/.opam/4.13.0/lib"
+#        ; "DUNE_OCAML_STDLIB" : "/Users/arthurwayne/.opam/4.13.0/lib/ocaml"
+#        ; "DUNE_SOURCEROOT" : "/Users/arthurwayne/Downloads/newestrepo"
 #        ; "INSIDE_DUNE" :
-#            "/home/maxzweig/3110/CS3110-Options-Pricing/_build/default"
+#            "/Users/arthurwayne/Downloads/newestrepo/_build/default"
 #        ; "OCAMLFIND_IGNORE_DUPS_IN" :
-#            "/home/maxzweig/3110/CS3110-Options-Pricing/_build/install/default/lib"
+#            "/Users/arthurwayne/Downloads/newestrepo/_build/install/default/lib"
 #        ; "OCAMLPATH" :
-#            "/home/maxzweig/3110/CS3110-Options-Pricing/_build/install/default/lib"
+#            "/Users/arthurwayne/Downloads/newestrepo/_build/install/default/lib"
 #        ; "OCAMLTOP_INCLUDE_PATH" :
-#            "/home/maxzweig/3110/CS3110-Options-Pricing/_build/install/default/lib/toplevel"
+#            "/Users/arthurwayne/Downloads/newestrepo/_build/install/default/lib/toplevel"
 #        ; "OCAML_COLOR" : "always"
 #        ; "OPAMCOLOR" : "always"
 #        }
-#  ; findlib_path = [ External "/home/maxzweig/.opam/4.13.0/lib" ]
+#  ; findlib_path = [ External "/Users/arthurwayne/.opam/4.13.0/lib" ]
 #  ; arch_sixtyfour = true
 #  ; natdynlink_supported = true
 #  ; supports_shared_libraries = true
 #  ; ocaml_config =
 #      { version = "4.13.0"
-#      ; standard_library_default = "/home/maxzweig/.opam/4.13.0/lib/ocaml"
-#      ; standard_library = "/home/maxzweig/.opam/4.13.0/lib/ocaml"
+#      ; standard_library_default = "/Users/arthurwayne/.opam/4.13.0/lib/ocaml"
+#      ; standard_library = "/Users/arthurwayne/.opam/4.13.0/lib/ocaml"
 #      ; standard_runtime = "the_standard_runtime_variable_was_deleted"
 #      ; ccomp_type = "cc"
-#      ; c_compiler = "gcc"
+#      ; c_compiler = "cc"
 #      ; ocamlc_cflags =
-#          [ "-O2"; "-fno-strict-aliasing"; "-fwrapv"; "-pthread"; "-fPIC" ]
+#          [ "-O2"; "-fno-strict-aliasing"; "-fwrapv"; "-pthread" ]
 #      ; ocamlc_cppflags = [ "-D_FILE_OFFSET_BITS=64" ]
 #      ; ocamlopt_cflags =
-#          [ "-O2"; "-fno-strict-aliasing"; "-fwrapv"; "-pthread"; "-fPIC" ]
+#          [ "-O2"; "-fno-strict-aliasing"; "-fwrapv"; "-pthread" ]
 #      ; ocamlopt_cppflags = [ "-D_FILE_OFFSET_BITS=64" ]
 #      ; bytecomp_c_compiler =
-#          [ "gcc"
+#          [ "cc"
 #          ; "-O2"
 #          ; "-fno-strict-aliasing"
 #          ; "-fwrapv"
 #          ; "-pthread"
-#          ; "-fPIC"
 #          ; "-D_FILE_OFFSET_BITS=64"
 #          ]
-#      ; bytecomp_c_libraries = [ "-lm"; "-ldl"; "-lpthread" ]
+#      ; bytecomp_c_libraries = [ "-lm"; "-lpthread" ]
 #      ; native_c_compiler =
-#          [ "gcc"
+#          [ "cc"
 #          ; "-O2"
 #          ; "-fno-strict-aliasing"
 #          ; "-fwrapv"
 #          ; "-pthread"
-#          ; "-fPIC"
 #          ; "-D_FILE_OFFSET_BITS=64"
 #          ]
-#      ; native_c_libraries = [ "-lm"; "-ldl" ]
+#      ; native_c_libraries = [ "-lm" ]
 #      ; native_pack_linker = [ "ld"; "-r"; "-o" ]
 #      ; cc_profile = []
-#      ; architecture = "amd64"
+#      ; architecture = "arm64"
 #      ; model = "default"
 #      ; int_size = 63
 #      ; word_size = 64
-#      ; system = "linux"
-#      ; asm = [ "as" ]
+#      ; system = "macosx"
+#      ; asm = [ "cc"; "-c"; "-Wno-trigraphs" ]
 #      ; asm_cfi_supported = true
 #      ; with_frame_pointers = false
 #      ; ext_exe = ""
@@ -90,8 +90,8 @@ $ /home/maxzweig/.opam/4.13.0/bin/ocamlc.opt -config > /tmp/dune_dc112e_output
 #      ; os_type = "Unix"
 #      ; default_executable_name = "a.out"
 #      ; systhread_supported = true
-#      ; host = "x86_64-pc-linux-gnu"
-#      ; target = "x86_64-pc-linux-gnu"
+#      ; host = "aarch64-apple-darwin21.1.0"
+#      ; target = "aarch64-apple-darwin21.1.0"
 #      ; profiling = false
 #      ; flambda = false
 #      ; spacetime = false
@@ -111,9 +111,89 @@ $ /home/maxzweig/.opam/4.13.0/bin/ocamlc.opt -config > /tmp/dune_dc112e_output
 #      ; windows_unicode = false
 #      }
 #  }
-$ (cd _build/default && /home/maxzweig/.opam/4.13.0/bin/ocamldep.opt -modules -impl bin/binomial_loader.ml) > _build/default/bin/.main.eobjs/binomial_loader.ml.d
-$ (cd _build/default && /home/maxzweig/.opam/4.13.0/bin/ocamlc.opt -w +a-4-6-7-9-27-29-30-32..42-44-45-48-50-60-66-67 -warn-error -a+31 -g -bin-annot -I bin/.main.eobjs/byte -I /home/maxzweig/.opam/4.13.0/lib/ANSITerminal -I /home/maxzweig/.opam/4.13.0/lib/csv -I src/Binomial/.binomial.objs/byte -I src/Black_Scholes/.blackscholes.objs/byte -I src/CsvReader/.csvreader.objs/byte -I src/Maths/.maths.objs/byte -I src/Monte_Carlo/.montecarlo.objs/byte -I src/Spread/.spread.objs/byte -no-alias-deps -opaque -open Dune__exe -o bin/.main.eobjs/byte/dune__exe__Binomial_loader.cmo -c -impl bin/binomial_loader.ml)
-> File "bin/binomial_loader.ml", line 1:
+$ (cd _build/default && /Users/arthurwayne/.opam/4.13.0/bin/ocamldep.opt -modules -impl bin/spread_loader.ml) > _build/default/bin/.main.eobjs/spread_loader.ml.d
+$ (cd _build/default && /Users/arthurwayne/.opam/4.13.0/bin/ocamlc.opt -w +a-4-6-7-9-27-29-30-32..42-44-45-48-50-60-66-67 -warn-error -a+31 -g -bin-annot -I src/Maths/.maths.objs/byte -no-alias-deps -opaque -o src/Maths/.maths.objs/byte/maths.cmi -c -intf src/Maths/maths.mli)
+$ (cd _build/default && /Users/arthurwayne/.opam/4.13.0/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -49 -nopervasives -nostdlib -g -bin-annot -I bin/.main.eobjs/byte -no-alias-deps -opaque -o bin/.main.eobjs/byte/dune__exe.cmo -c -impl bin/.main.eobjs/dune__exe.ml-gen)
+$ (cd _build/default && /Users/arthurwayne/.opam/4.13.0/bin/ocamlc.opt -w +a-4-6-7-9-27-29-30-32..42-44-45-48-50-60-66-67 -warn-error -a+31 -g -bin-annot -I src/Black_Scholes/.blackscholes.objs/byte -I src/Maths/.maths.objs/byte -no-alias-deps -opaque -o src/Black_Scholes/.blackscholes.objs/byte/blackscholes.cmi -c -intf src/Black_Scholes/blackscholes.mli)
+$ (cd _build/default && /Users/arthurwayne/.opam/4.13.0/bin/ocamlc.opt -w +a-4-6-7-9-27-29-30-32..42-44-45-48-50-60-66-67 -warn-error -a+31 -g -bin-annot -I src/Monte_Carlo/.montecarlo.objs/byte -I src/Maths/.maths.objs/byte -no-alias-deps -opaque -o src/Monte_Carlo/.montecarlo.objs/byte/montecarlo.cmi -c -intf src/Monte_Carlo/montecarlo.mli)
+$ (cd _build/default && /Users/arthurwayne/.opam/4.13.0/bin/ocamlc.opt -w +a-4-6-7-9-27-29-30-32..42-44-45-48-50-60-66-67 -warn-error -a+31 -g -bin-annot -I src/Spread/.spread.objs/byte -I /Users/arthurwayne/.opam/4.13.0/lib/ANSITerminal -I src/Black_Scholes/.blackscholes.objs/byte -I src/Maths/.maths.objs/byte -no-alias-deps -opaque -o src/Spread/.spread.objs/byte/spread.cmi -c -intf src/Spread/spread.mli)
+$ (cd _build/default && /Users/arthurwayne/.opam/4.13.0/bin/ocamlc.opt -w +a-4-6-7-9-27-29-30-32..42-44-45-48-50-60-66-67 -warn-error -a+31 -g -bin-annot -I src/CsvReader/.csvreader.objs/byte -I /Users/arthurwayne/.opam/4.13.0/lib/ANSITerminal -I /Users/arthurwayne/.opam/4.13.0/lib/csv -I src/Black_Scholes/.blackscholes.objs/byte -I src/Maths/.maths.objs/byte -no-alias-deps -opaque -o src/CsvReader/.csvreader.objs/byte/csvreader.cmi -c -intf src/CsvReader/csvreader.mli)
+$ (cd _build/default && /Users/arthurwayne/.opam/4.13.0/bin/ocamlc.opt -w +a-4-6-7-9-27-29-30-32..42-44-45-48-50-60-66-67 -warn-error -a+31 -g -bin-annot -I src/Binomial/.binomial.objs/byte -I src/Black_Scholes/.blackscholes.objs/byte -I src/Maths/.maths.objs/byte -no-alias-deps -opaque -o src/Binomial/.binomial.objs/byte/binomial.cmi -c -intf src/Binomial/binomial.mli)
+$ (cd _build/default && /Users/arthurwayne/.opam/4.13.0/bin/ocamlc.opt -w +a-4-6-7-9-27-29-30-32..42-44-45-48-50-60-66-67 -warn-error -a+31 -g -bin-annot -I bin/.main.eobjs/byte -I /Users/arthurwayne/.opam/4.13.0/lib/ANSITerminal -I /Users/arthurwayne/.opam/4.13.0/lib/base -I /Users/arthurwayne/.opam/4.13.0/lib/base/base_internalhash_types -I /Users/arthurwayne/.opam/4.13.0/lib/base/caml -I /Users/arthurwayne/.opam/4.13.0/lib/base/shadow_stdlib -I /Users/arthurwayne/.opam/4.13.0/lib/csv -I /Users/arthurwayne/.opam/4.13.0/lib/matplotlib -I /Users/arthurwayne/.opam/4.13.0/lib/pyml -I /Users/arthurwayne/.opam/4.13.0/lib/seq -I /Users/arthurwayne/.opam/4.13.0/lib/sexplib0 -I /Users/arthurwayne/.opam/4.13.0/lib/stdcompat -I src/Binomial/.binomial.objs/byte -I src/Black_Scholes/.blackscholes.objs/byte -I src/CsvReader/.csvreader.objs/byte -I src/Maths/.maths.objs/byte -I src/Monte_Carlo/.montecarlo.objs/byte -I src/Spread/.spread.objs/byte -no-alias-deps -opaque -open Dune__exe -o bin/.main.eobjs/byte/dune__exe__Spread_loader.cmo -c -impl bin/spread_loader.ml)
+> File "bin/spread_loader.ml", line 1:
 > Warning 70 [missing-mli]: Cannot find interface file.
-$ (cd _build/default && /home/maxzweig/.opam/4.13.0/bin/ocamlopt.opt -w +a-4-6-7-9-27-29-30-32..42-44-45-48-50-60-66-67 -warn-error -a+31 -g -I bin/.main.eobjs/byte -I bin/.main.eobjs/native -I /home/maxzweig/.opam/4.13.0/lib/ANSITerminal -I /home/maxzweig/.opam/4.13.0/lib/csv -I src/Binomial/.binomial.objs/byte -I src/Binomial/.binomial.objs/native -I src/Black_Scholes/.blackscholes.objs/byte -I src/Black_Scholes/.blackscholes.objs/native -I src/CsvReader/.csvreader.objs/byte -I src/CsvReader/.csvreader.objs/native -I src/Maths/.maths.objs/byte -I src/Maths/.maths.objs/native -I src/Monte_Carlo/.montecarlo.objs/byte -I src/Monte_Carlo/.montecarlo.objs/native -I src/Spread/.spread.objs/byte -I src/Spread/.spread.objs/native -intf-suffix .ml -no-alias-deps -opaque -open Dune__exe -o bin/.main.eobjs/native/dune__exe__Binomial_loader.cmx -c -impl bin/binomial_loader.ml)
-$ (cd _build/default && /home/maxzweig/.opam/4.13.0/bin/ocamlopt.opt -w +a-4-6-7-9-27-29-30-32..42-44-45-48-50-60-66-67 -warn-error -a+31 -g -o bin/binomial_loader.exe src/Maths/maths.cmxa src/Black_Scholes/blackscholes.cmxa src/Monte_Carlo/montecarlo.cmxa /home/maxzweig/.opam/4.13.0/lib/ocaml/unix.cmxa -I /home/maxzweig/.opam/4.13.0/lib/ocaml -I /home/maxzweig/.opam/4.13.0/lib/ocaml /home/maxzweig/.opam/4.13.0/lib/ANSITerminal/ANSITerminal.cmxa -I /home/maxzweig/.opam/4.13.0/lib/ANSITerminal src/Spread/spread.cmxa /home/maxzweig/.opam/4.13.0/lib/csv/csv.cmxa src/CsvReader/csvreader.cmxa src/Binomial/binomial.cmxa bin/.main.eobjs/native/dune__exe.cmx bin/.main.eobjs/native/dune__exe__Binomial_loader.cmx)
+$ (cd _build/default && /Users/arthurwayne/.opam/4.13.0/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -49 -nopervasives -nostdlib -g -I bin/.main.eobjs/byte -I bin/.main.eobjs/native -intf-suffix .ml-gen -no-alias-deps -opaque -o bin/.main.eobjs/native/dune__exe.cmx -c -impl bin/.main.eobjs/dune__exe.ml-gen)
+$ (cd _build/default && /Users/arthurwayne/.opam/4.13.0/bin/ocamlopt.opt -w +a-4-6-7-9-27-29-30-32..42-44-45-48-50-60-66-67 -warn-error -a+31 -g -I src/Maths/.maths.objs/byte -I src/Maths/.maths.objs/native -intf-suffix .ml -no-alias-deps -opaque -o src/Maths/.maths.objs/native/maths.cmx -c -impl src/Maths/maths.ml)
+$ (cd _build/default && /Users/arthurwayne/.opam/4.13.0/bin/ocamlopt.opt -w +a-4-6-7-9-27-29-30-32..42-44-45-48-50-60-66-67 -warn-error -a+31 -g -I src/Monte_Carlo/.montecarlo.objs/byte -I src/Monte_Carlo/.montecarlo.objs/native -I src/Maths/.maths.objs/byte -I src/Maths/.maths.objs/native -intf-suffix .ml -no-alias-deps -opaque -o src/Monte_Carlo/.montecarlo.objs/native/montecarlo.cmx -c -impl src/Monte_Carlo/montecarlo.ml)
+$ (cd _build/default && /Users/arthurwayne/.opam/4.13.0/bin/ocamlopt.opt -w +a-4-6-7-9-27-29-30-32..42-44-45-48-50-60-66-67 -warn-error -a+31 -g -I src/Black_Scholes/.blackscholes.objs/byte -I src/Black_Scholes/.blackscholes.objs/native -I src/Maths/.maths.objs/byte -I src/Maths/.maths.objs/native -intf-suffix .ml -no-alias-deps -opaque -o src/Black_Scholes/.blackscholes.objs/native/blackscholes.cmx -c -impl src/Black_Scholes/blackscholes.ml)
+> File "src/Black_Scholes/blackscholes.ml", line 4, characters 2-12:
+> 4 |   hour: int; 
+>       ^^^^^^^^^^
+> Warning 69 [unused-field]: record field hour is never read.
+> (However, this field is used to build or mutate values.)
+> File "src/Black_Scholes/blackscholes.ml", line 5, characters 2-16:
+> 5 |   minute : int ;
+>       ^^^^^^^^^^^^^^
+> Warning 69 [unused-field]: record field minute is never read.
+> (However, this field is used to build or mutate values.)
+> File "src/Black_Scholes/blackscholes.ml", line 6, characters 2-17:
+> 6 |   seconds : int ;
+>       ^^^^^^^^^^^^^^^
+> Warning 69 [unused-field]: record field seconds is never read.
+> (However, this field is used to build or mutate values.)
+> File "src/Black_Scholes/blackscholes.ml", line 7, characters 2-20:
+> 7 |   milliseconds : int
+>       ^^^^^^^^^^^^^^^^^^
+> Warning 69 [unused-field]: record field milliseconds is never read.
+> (However, this field is used to build or mutate values.)
+$ (cd _build/default && /Users/arthurwayne/.opam/4.13.0/bin/ocamlopt.opt -w +a-4-6-7-9-27-29-30-32..42-44-45-48-50-60-66-67 -warn-error -a+31 -g -a -o src/Maths/maths.cmxa src/Maths/.maths.objs/native/maths.cmx)
+$ (cd _build/default && /Users/arthurwayne/.opam/4.13.0/bin/ocamlopt.opt -w +a-4-6-7-9-27-29-30-32..42-44-45-48-50-60-66-67 -warn-error -a+31 -g -I src/Spread/.spread.objs/byte -I src/Spread/.spread.objs/native -I /Users/arthurwayne/.opam/4.13.0/lib/ANSITerminal -I src/Black_Scholes/.blackscholes.objs/byte -I src/Black_Scholes/.blackscholes.objs/native -I src/Maths/.maths.objs/byte -I src/Maths/.maths.objs/native -intf-suffix .ml -no-alias-deps -opaque -o src/Spread/.spread.objs/native/spread.cmx -c -impl src/Spread/spread.ml)
+$ (cd _build/default && /Users/arthurwayne/.opam/4.13.0/bin/ocamlopt.opt -w +a-4-6-7-9-27-29-30-32..42-44-45-48-50-60-66-67 -warn-error -a+31 -g -I src/CsvReader/.csvreader.objs/byte -I src/CsvReader/.csvreader.objs/native -I /Users/arthurwayne/.opam/4.13.0/lib/ANSITerminal -I /Users/arthurwayne/.opam/4.13.0/lib/csv -I src/Black_Scholes/.blackscholes.objs/byte -I src/Black_Scholes/.blackscholes.objs/native -I src/Maths/.maths.objs/byte -I src/Maths/.maths.objs/native -intf-suffix .ml -no-alias-deps -opaque -o src/CsvReader/.csvreader.objs/native/csvreader.cmx -c -impl src/CsvReader/csvreader.ml)
+> File "src/CsvReader/csvreader.ml", line 7, characters 2-19:
+> 7 |   ul_price : float;
+>       ^^^^^^^^^^^^^^^^^
+> Warning 69 [unused-field]: record field ul_price is never read.
+> (However, this field is used to build or mutate values.)
+> File "src/CsvReader/csvreader.ml", line 8, characters 2-18:
+> 8 |   symbol : string;
+>       ^^^^^^^^^^^^^^^^
+> Warning 69 [unused-field]: record field symbol is never read.
+> (However, this field is used to build or mutate values.)
+> File "src/CsvReader/csvreader.ml", line 12, characters 2-15:
+> 12 |   last : float;
+>        ^^^^^^^^^^^^^
+> Warning 69 [unused-field]: record field last is never read.
+> (However, this field is used to build or mutate values.)
+> File "src/CsvReader/csvreader.ml", line 13, characters 2-14:
+> 13 |   bid : float;
+>        ^^^^^^^^^^^^
+> Warning 69 [unused-field]: record field bid is never read.
+> (However, this field is used to build or mutate values.)
+> File "src/CsvReader/csvreader.ml", line 14, characters 2-14:
+> 14 |   ask : float;
+>        ^^^^^^^^^^^^
+> Warning 69 [unused-field]: record field ask is never read.
+> (However, this field is used to build or mutate values.)
+> File "src/CsvReader/csvreader.ml", line 15, characters 2-15:
+> 15 |   volume : int;
+>        ^^^^^^^^^^^^^
+> Warning 69 [unused-field]: record field volume is never read.
+> (However, this field is used to build or mutate values.)
+> File "src/CsvReader/csvreader.ml", line 16, characters 2-11:
+> 16 |   oi : int;
+>        ^^^^^^^^^
+> Warning 69 [unused-field]: record field oi is never read.
+> (However, this field is used to build or mutate values.)
+> File "src/CsvReader/csvreader.ml", line 17, characters 2-13:
+> 17 |   iv : float;
+>        ^^^^^^^^^^^
+> Warning 69 [unused-field]: record field iv is never read.
+> (However, this field is used to build or mutate values.)
+$ (cd _build/default && /Users/arthurwayne/.opam/4.13.0/bin/ocamlopt.opt -w +a-4-6-7-9-27-29-30-32..42-44-45-48-50-60-66-67 -warn-error -a+31 -g -a -o src/Monte_Carlo/montecarlo.cmxa src/Monte_Carlo/.montecarlo.objs/native/montecarlo.cmx)
+$ (cd _build/default && /Users/arthurwayne/.opam/4.13.0/bin/ocamlopt.opt -w +a-4-6-7-9-27-29-30-32..42-44-45-48-50-60-66-67 -warn-error -a+31 -g -I bin/.main.eobjs/byte -I bin/.main.eobjs/native -I /Users/arthurwayne/.opam/4.13.0/lib/ANSITerminal -I /Users/arthurwayne/.opam/4.13.0/lib/base -I /Users/arthurwayne/.opam/4.13.0/lib/base/base_internalhash_types -I /Users/arthurwayne/.opam/4.13.0/lib/base/caml -I /Users/arthurwayne/.opam/4.13.0/lib/base/shadow_stdlib -I /Users/arthurwayne/.opam/4.13.0/lib/csv -I /Users/arthurwayne/.opam/4.13.0/lib/matplotlib -I /Users/arthurwayne/.opam/4.13.0/lib/pyml -I /Users/arthurwayne/.opam/4.13.0/lib/seq -I /Users/arthurwayne/.opam/4.13.0/lib/sexplib0 -I /Users/arthurwayne/.opam/4.13.0/lib/stdcompat -I src/Binomial/.binomial.objs/byte -I src/Binomial/.binomial.objs/native -I src/Black_Scholes/.blackscholes.objs/byte -I src/Black_Scholes/.blackscholes.objs/native -I src/CsvReader/.csvreader.objs/byte -I src/CsvReader/.csvreader.objs/native -I src/Maths/.maths.objs/byte -I src/Maths/.maths.objs/native -I src/Monte_Carlo/.montecarlo.objs/byte -I src/Monte_Carlo/.montecarlo.objs/native -I src/Spread/.spread.objs/byte -I src/Spread/.spread.objs/native -intf-suffix .ml -no-alias-deps -opaque -open Dune__exe -o bin/.main.eobjs/native/dune__exe__Spread_loader.cmx -c -impl bin/spread_loader.ml)
+$ (cd _build/default && /Users/arthurwayne/.opam/4.13.0/bin/ocamlopt.opt -w +a-4-6-7-9-27-29-30-32..42-44-45-48-50-60-66-67 -warn-error -a+31 -g -I src/Binomial/.binomial.objs/byte -I src/Binomial/.binomial.objs/native -I src/Black_Scholes/.blackscholes.objs/byte -I src/Black_Scholes/.blackscholes.objs/native -I src/Maths/.maths.objs/byte -I src/Maths/.maths.objs/native -intf-suffix .ml -no-alias-deps -opaque -o src/Binomial/.binomial.objs/native/binomial.cmx -c -impl src/Binomial/binomial.ml)
+$ (cd _build/default && /Users/arthurwayne/.opam/4.13.0/bin/ocamlopt.opt -w +a-4-6-7-9-27-29-30-32..42-44-45-48-50-60-66-67 -warn-error -a+31 -g -a -o src/Black_Scholes/blackscholes.cmxa src/Black_Scholes/.blackscholes.objs/native/blackscholes.cmx)
+$ (cd _build/default && /Users/arthurwayne/.opam/4.13.0/bin/ocamlopt.opt -w +a-4-6-7-9-27-29-30-32..42-44-45-48-50-60-66-67 -warn-error -a+31 -g -a -o src/Spread/spread.cmxa src/Spread/.spread.objs/native/spread.cmx)
+$ (cd _build/default && /Users/arthurwayne/.opam/4.13.0/bin/ocamlopt.opt -w +a-4-6-7-9-27-29-30-32..42-44-45-48-50-60-66-67 -warn-error -a+31 -g -a -o src/CsvReader/csvreader.cmxa src/CsvReader/.csvreader.objs/native/csvreader.cmx)
+$ (cd _build/default && /Users/arthurwayne/.opam/4.13.0/bin/ocamlopt.opt -w +a-4-6-7-9-27-29-30-32..42-44-45-48-50-60-66-67 -warn-error -a+31 -g -a -o src/Binomial/binomial.cmxa src/Binomial/.binomial.objs/native/binomial.cmx)
+$ (cd _build/default && /Users/arthurwayne/.opam/4.13.0/bin/ocamlopt.opt -w +a-4-6-7-9-27-29-30-32..42-44-45-48-50-60-66-67 -warn-error -a+31 -g -o bin/spread_loader.exe src/Maths/maths.cmxa src/Black_Scholes/blackscholes.cmxa src/Monte_Carlo/montecarlo.cmxa /Users/arthurwayne/.opam/4.13.0/lib/ocaml/unix.cmxa -I /Users/arthurwayne/.opam/4.13.0/lib/ocaml -I /Users/arthurwayne/.opam/4.13.0/lib/ocaml /Users/arthurwayne/.opam/4.13.0/lib/ANSITerminal/ANSITerminal.cmxa -I /Users/arthurwayne/.opam/4.13.0/lib/ANSITerminal src/Spread/spread.cmxa /Users/arthurwayne/.opam/4.13.0/lib/csv/csv.cmxa src/CsvReader/csvreader.cmxa /Users/arthurwayne/.opam/4.13.0/lib/base/base_internalhash_types/base_internalhash_types.cmxa -I /Users/arthurwayne/.opam/4.13.0/lib/base/base_internalhash_types /Users/arthurwayne/.opam/4.13.0/lib/base/caml/caml.cmxa /Users/arthurwayne/.opam/4.13.0/lib/sexplib0/sexplib0.cmxa /Users/arthurwayne/.opam/4.13.0/lib/base/shadow_stdlib/shadow_stdlib.cmxa /Users/arthurwayne/.opam/4.13.0/lib/base/base.cmxa -I /Users/arthurwayne/.opam/4.13.0/lib/base /Users/arthurwayne/.opam/4.13.0/lib/ocaml/bigarray.cmxa -I /Users/arthurwayne/.opam/4.13.0/lib/ocaml /Users/arthurwayne/.opam/4.13.0/lib/stdcompat/stdcompat.cmxa -I /Users/arthurwayne/.opam/4.13.0/lib/stdcompat /Users/arthurwayne/.opam/4.13.0/lib/pyml/pyml.cmxa -I /Users/arthurwayne/.opam/4.13.0/lib/pyml /Users/arthurwayne/.opam/4.13.0/lib/matplotlib/matplotlib.cmxa src/Binomial/binomial.cmxa bin/.main.eobjs/native/dune__exe.cmx bin/.main.eobjs/native/dune__exe__Spread_loader.cmx)

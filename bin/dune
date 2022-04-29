@@ -1,10 +1,3 @@
 (executables
- (names main csv_loader spread_loader binomial_loader)
- (libraries
-  blackscholes
-  montecarlo
-  maths
-  spread
-  ANSITerminal
-  csvreader
-  binomial))
+ (names main csv_loader spread_loader visualize binomial_loader)
+ (libraries blackscholes montecarlo maths spread ANSITerminal csvreader matplotlib binomial))
