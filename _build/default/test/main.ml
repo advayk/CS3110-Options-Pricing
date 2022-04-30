@@ -121,13 +121,24 @@ let euro_option_1 =
     implied volatility (v) : percentage in decimal (i.e 30% = 0.03) *)
   
     (* let create_european_option (k:float) (d:date) (r:float) (v:float) = {  *)
-
+ 
 let euro_option_2 =
   create_european_option 250. date8 0.03 0.15
   
-
+let euro_option_3 =
+  create_european_option 100. date9 0.05 0.5
+  
+let euro_option_4 =
+  create_european_option 300. date9 0.05 0.3
+  
 let blackscholes_test =
   [
+      european_call_options_price_test
+      "estimated call option price of euro_option_1" euro_option_1 70.
+      date7 25.20;
+      european_call_options_price_test
+      "estimated call option price of euro_option_1" euro_option_1 100.
+      date7 55.20;
       european_call_options_price_test
       "estimated call option price of euro_option_1" euro_option_1 60.
       date7 15.25;
@@ -140,24 +151,79 @@ let blackscholes_test =
       european_call_options_price_test
       "estimated call option price of euro_option_1" euro_option_1 50.
       date7 6.02;
+      european_call_options_price_test
+      "estimated call option price of euro_option_3" euro_option_3 500.
+      date7 400.81;
+      european_call_options_price_test
+      "estimated call option price of euro_option_3" euro_option_3 1000.
+      date7 900.80;
+      european_call_options_price_test
+      "estimated call option price of euro_option_3" euro_option_3 100.
+      date7 8.38;
+      european_put_options_price_test
+      "estimated put option price of euro_option_3" euro_option_3 20.
+      date7 79.19;
+      european_put_options_price_test
+      "estimated put option price of euro_option_3" euro_option_3 1.
+      date7 98.19;
+      european_call_options_price_test
+      "estimated call option price of euro_option_4" euro_option_4 300.
+      date7 15.61;
+      european_call_options_price_test
+      "estimated call option price of euro_option_4" euro_option_4 500.
+      date7 202.41;
+      european_call_options_price_test
+      "estimated call option price of euro_option_4" euro_option_4 1000.
+      date7 702.41;
+      european_call_options_price_test
+      "estimated call option price of euro_option_2" euro_option_2 300.
+      date7 51.66;
+      european_call_options_price_test
+      "estimated call option price of euro_option_2" euro_option_2 250.
+      date7 7.83;
+      european_call_options_price_test
+      "estimated call option price of euro_option_2" euro_option_2 500.
+      date7 251.64;
       european_put_options_price_test
       "estimated call option price of euro_option_1" euro_option_1 100.
       date7 0.0;
       european_put_options_price_test
-      "estimated call option price of euro_option_1" euro_option_1 50.
+      "estimated put option price of euro_option_1" euro_option_1 50.
       date7 0.82;
       european_put_options_price_test
-      "estimated call option price of euro_option_1" euro_option_2 300.
+      "estimated put option price of euro_option_1" euro_option_2 300.
       date7 0.02;
       european_put_options_price_test
-      "estimated call option price of euro_option_1" euro_option_2 100.
+      "estimated put option price of euro_option_1" euro_option_2 100.
       date7 148.36;
       european_put_options_price_test
-      "estimated call option price of euro_option_1" euro_option_2 70.
+      "estimated put option price of euro_option_1" euro_option_2 70.
       date7 178.36;
       european_put_options_price_test
-      "estimated call option price of euro_option_1" euro_option_2 1000.
+      "estimated put option price of euro_option_1" euro_option_2 1000.
       date7 0.;
+      european_put_options_price_test
+      "estimated put option price of euro_option_3" euro_option_3 100.
+      date7 7.58;
+      european_put_options_price_test
+      "estimated put option price of euro_option_3" euro_option_3 200.
+      date7 0.;
+      european_put_options_price_test
+      "estimated put option price of euro_option_3" euro_option_3 50.
+      date7 49.20;
+      european_put_options_price_test
+      "estimated put option price of euro_option_3" euro_option_3 30.
+      date7 69.19;
+      european_put_options_price_test
+      "estimated put option price of euro_option_4" euro_option_4 400.
+      date7 0.10;
+      european_put_options_price_test
+      "estimated put option price of euro_option_1" euro_option_4 300.
+      date7 13.19;
+      european_put_options_price_test
+      "estimated put option price of euro_option_1" euro_option_4 200.
+      date7 97.59;
+      
       diff_between_dates_test "difference betwen date1 and date2" date1 date2 18;
       diff_between_dates_test "difference betwen date2 and date3" date2 date3 29;
       diff_between_dates_test "difference between date1 and date4" date1 date4 10;
@@ -263,7 +329,7 @@ let sum_test tree = assert_equal (check_sum 0. tree) 1.
 let expected_value_test input tree = assert_equal (expected_val tree) input 
 
 
-let yay = cons_american 110. 0.05 date2 12 1.01 0.99 105.
+let yay = cons_american 110. 0.05 date2 12 1.01 0.99 100.
 
 let binomial_test = [
   (** tree_test (create (100. , 1.) 0.54 (init_tree 100.) 1.2 0.8 false 0 3); *)
