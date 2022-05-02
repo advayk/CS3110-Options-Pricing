@@ -38,6 +38,9 @@ val create_date : int -> int -> int -> time -> date
   day (d) : requires d to be a valid date for the month 
   time (t) : required time to be a valid 24 hour time *)
 
+val date_to_string : date -> string
+(* [date_to_string date] converts [date] to string format. *)
+
 val create_european_option : float -> date -> float -> float -> european_option
 (* [create_european_option k t r v ] creates am european_option. 
     Requires:  

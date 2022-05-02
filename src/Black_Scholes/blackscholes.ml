@@ -34,6 +34,8 @@ let get_year d = d.year
 
 let create_date m d y (t: time)  = {month = m; day = d; year = y; time = t}
 
+let date_to_string date = (string_of_int date.month ^ "/" ^ string_of_int date.day ^ "/" ^ string_of_int date.year)
+
 let create_european_option (k:float) (d:date) (r:float) (v:float) = { 
   strike_price = k ; 
   exercise_date = d; 

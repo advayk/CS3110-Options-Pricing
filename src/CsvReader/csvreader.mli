@@ -12,6 +12,11 @@ val from_csv : Csv.t -> d list
 
 val load_csv : string -> Csv.t
 (** [load_csv s] is the [Csv] module representation of a given csv file. *)
-val delta : date -> d list -> unit
+
+val get_greek : string -> d list -> string -> string -> string -> (float * float) list
+(** [get_greeks greek data symbol exp side] is a list of ([strike], [value]) a given [greek] for a [date] *) 
+
+val get_exps: d list -> string -> string list
+(** [get_exps data symbol] is a set-like list of all expirations for a [symbol] *)
 
 val first : d list -> string

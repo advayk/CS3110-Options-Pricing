@@ -22,6 +22,9 @@ spread:
 reader:
 	OCAMLRUNPARAM=b dune exec bin/csv_loader.exe
 
+visualize:
+	OCAMLRUNPARAM=b dune exec bin/visualize.exe
+
 check:
 	@bash check.sh
 
@@ -29,8 +32,8 @@ finalcheck:
 	@bash check.sh final
 
 zip:
-	rm -f enigma.zip
-	zip -r enigma.zip . -x@exclude.lst
+	rm -f newestrepo.zip
+	zip -r newestrepo.zip . -x@exclude.lst
 
 clean:
 	dune clean
