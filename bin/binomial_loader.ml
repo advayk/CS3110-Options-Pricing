@@ -52,7 +52,7 @@ let main () =
               let bd = blackscholes_date date_lst in 
               let date_lst_current =  String.split_on_char '/' current_date in 
               let bd_current = blackscholes_date date_lst_current in   
-              let american_option = Binomial.cons_american (float_of_string strike_price) (float_of_string risk_free_rate) bd (int_of_string depth) (float_of_string up) (float_of_string depth) (float_of_string stock_price) in 
+              let american_option = Binomial.cons_american (float_of_string strike_price) (float_of_string risk_free_rate) bd (int_of_string depth) (float_of_string up) (float_of_string down) (float_of_string stock_price) in 
               print_endline ("-----input data-----");
               print_endline ("stock price: " ^ "$" ^ stock_price);
               print_endline ("strike price: " ^  "$" ^ strike_price);

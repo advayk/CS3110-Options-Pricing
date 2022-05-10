@@ -1,0 +1,1 @@
+type generator = {pdf : Maths.pdf ; increment : Blackscholes.time}
