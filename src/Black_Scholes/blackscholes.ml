@@ -73,9 +73,9 @@ let european_call_options_price (european_call : european_option) (current_stock
   {functn = (fun x -> Float.sqrt(1. /. (2.*.Float.pi)) *. Float.exp(-1. *. x *. x /. ((1.0*.1.0)))) ; 
   (* stddev = 1 ; mean = 0 *)
   distribution_class = Maths.Normal {stddev = 1.0; mean = 0.}} in
-  let term1 = current_stock_price *. (Maths.integrate a_normal_pdf (-20.) d1) in 
+  let term1 = current_stock_price *. (Maths.cdf a_normal_pdf d1) in 
   let term2 = european_call.strike_price *. 
-  Float.exp ( -1. *. european_call.risk_free_rate *. time_to_expiry) *. Maths.integrate a_normal_pdf (-20.) d2 in 
+  Float.exp ( -1. *. european_call.risk_free_rate *. time_to_expiry) *. Maths.cdf a_normal_pdf d2 in 
   term1 -. term2
 
 let european_put_options_price (european_put : european_option) (current_stock_price : float) (current_date : date) = 
@@ -86,8 +86,8 @@ let european_put_options_price (european_put : european_option) (current_stock_p
   {functn = (fun x -> Float.sqrt(1. /. (2.*.Float.pi)) *. Float.exp(-1. *. x *. x /. ((1.0*.1.0)))) ; 
   (* stddev = 1 ; mean = 0 *)
   distribution_class = Maths.Normal {stddev = 1.0; mean = 0.}} in
-  let term2 = current_stock_price *. (Maths.integrate a_normal_pdf (-50.) (-1. *.d1)) in 
+  let term2 = current_stock_price *. (Maths.cdf a_normal_pdf (-1. *.d1)) in 
   let term1 = european_put.strike_price *. 
-  Float.exp ( -1. *. european_put.risk_free_rate *. time_to_expiry) *. Maths.integrate a_normal_pdf (-50.) (-1.*.d2) in 
+  Float.exp ( -1. *. european_put.risk_free_rate *. time_to_expiry) *. Maths.cdf a_normal_pdf (-1.*.d2) in 
   term1 -. term2
 

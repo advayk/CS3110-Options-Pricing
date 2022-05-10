@@ -1,0 +1,3 @@
+(library
+ (name stochasticwalks)
+ (libraries blackscholes maths))

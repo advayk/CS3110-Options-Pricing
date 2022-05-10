@@ -96,7 +96,18 @@ let euro_option_1_expiration_date = create_date 3 22 2022 euro_option_1_time
 let float_about_eq a b =
   a -. b |> Float.abs < 1e-2 *. (a *. b |> Float.abs |> Float.sqrt)
 
-let integrate_test
+let cdf_test
+    (name : string)
+    (pdf : Maths.pdf)
+    (x : float)
+    (expected_output : float) : test =
+  name >:: fun _ ->
+  let result = Maths.cdf pdf x in
+  (* result |> Printf.printf "\n%8f\n";
+  expected_output |> Printf.printf "%8f\n"; *)
+  assert (result |> float_about_eq expected_output)
+
+  let integrate_test
     (name : string)
     (pdf : Maths.pdf)
     (a : float)
@@ -107,6 +118,7 @@ let integrate_test
   (* result |> Printf.printf "\n%8f\n";
   expected_output |> Printf.printf "%8f\n"; *)
   assert (result |> float_about_eq expected_output)
+
 
 let euro_option_1 =
   create_european_option 45. date8 0.02 0.3
@@ -176,9 +188,6 @@ let csvreader_test = [
 
 let maths_test =
   [
-    integrate_test " f(x) = x^2 numerically integrated small bounds "
-      { functn = (fun x -> x *. x); distribution_class = Maths.Other }
-      (-1.) 1. 0.66666666667;
     integrate_test " f(x) = ln(x) numerically integrated med bounds "
       {
         functn = (fun x -> Float.log x);
