@@ -1,3 +1,3 @@
 (executable
  (name main)
- (libraries blackscholes maths montecarlo ounit2 binomial csvreader spread))
+ (libraries blackscholes maths levy montecarlo ounit2 binomial csvreader spread))
