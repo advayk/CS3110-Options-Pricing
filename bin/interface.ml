@@ -10,8 +10,8 @@ open Spread
 
 let rec interface_main () =
   ANSITerminal.print_string [ ANSITerminal.green ]
-  "\nHello ! \n\n";
-  print_endline "try 'quit' or\nmake spread\nmake reader\nmake binomial\nmake option\nmake visualize";
+  "\nHello welcome to OFinance Options Pricing Model! \n\n";
+  print_endline "try 'quit' or\nmake spread\nmake reader\nmake binomial\nmake option\nmake visualize \n-------------";
     match read_line () with
     | "quit" ->  ANSITerminal.print_string [ ANSITerminal.red ] "\nThank You ! \n\n";
     | "make spread" -> Spread_loader.spread_main (); interface_main ()
