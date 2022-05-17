@@ -7,8 +7,7 @@ type pdf_class =
 
 type pdf = { 
   functn : float -> float ;
-  distribution_class : pdf_class ;
-}
+  distribution_class : pdf_class ;}
     
 (** Helper function for 4 point gauss-legendre quadrature numeric_integrate. *)
 let rec numeric_sum (fn : float -> float) (a : float) (acc : int) (n : int) 
@@ -32,13 +31,13 @@ let numeric_integrate (fn : float -> float) (a: float) (b : float) =
     -1. *. Float.sqrt(3. /. 7.) -. (2. /. 7.) *. Float.sqrt(6. /. 5.) ;
            Float.sqrt(3. /. 7.) -. (2. /. 7.) *. Float.sqrt(6. /. 5.) ;
            Float.sqrt(3. /. 7.) +. (2. /. 7.) *. Float.sqrt(6. /. 5.) ]
-  (* change the 100 below to whatever maximizes accuracy and minimizes runtime *)
+(* change the 100 below to whatever maximizes accuracy and minimizes runtime *)
   and n =  100 * ((b-.a) |> Float.ceil |> Float.to_int) in
   let h = (b-.a) /. (Float.of_int n) in
   numeric_sum fn a 0 n h weights points
 
-  (* integrates [p] from [a] to [b] 
- Requires:  [p.functn] is C0 smooth on [a, b], a < b *)
+(* integrates [p] from [a] to [b] 
+Requires:  [p.functn] is C0 smooth on [a, b], a < b *)
 let integrate (p : pdf) (a : float) (b : float) = 
 match p.distribution_class with 
 | Normal {stddev; mean} -> 0.5 *. 
@@ -55,9 +54,8 @@ match p.distribution_class with
       1. -. 0.5*.Float.exp(-1. *. lambda *. (b-.peak))
 | Other -> numeric_integrate p.functn a b 
 
-
 (* Main function of the module, integrates [p] from -inf to [b] 
- Requires:  [p.functn] is C0 smooth on [-inf, b], integrates to 1 *)
+   Requires:  [p.functn] is C0 smooth on [-inf, b], integrates to 1 *)
  let cdf (p : pdf) (x : float) = 
   let a = match p.distribution_class with 
   | Normal {stddev ; mean} -> -20. *. stddev

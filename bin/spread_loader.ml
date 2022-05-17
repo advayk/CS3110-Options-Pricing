@@ -22,5 +22,3 @@ let spread_main () = print_endline
   | price -> print_endline "Price of spread: " ;
   print_float (price_spread spread (float_of_string price) date); 
   print_endline "\n"
-
-  let () = spread_main ()

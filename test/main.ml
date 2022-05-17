@@ -151,10 +151,8 @@ let rec print_float_list  = function
   print_endline "----------------------------------"; 
   assert true
 
-
 let euro_option_1 =
   create_european_option 45. date8 0.02 0.3
-  
 
 (* [create_european_option s k t r v ] creates am european_option. 
     Requires:  
