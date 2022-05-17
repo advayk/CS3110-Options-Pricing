@@ -6,7 +6,6 @@ let blackscholes_date  lst =
   let time = Blackscholes.create_time 0 0 0 0  in 
   Blackscholes.create_date (int_of_string (List.nth lst 0)) ( int_of_string (List.nth lst 1)) (int_of_string (List.nth lst 2)) time
 
-
 let data_dir_prefix = "data" ^ Filename.dir_sep
 
 let main () =
@@ -26,4 +25,3 @@ let main () =
     print_endline "csvloader print not yet working" 
     (*(Csvreader.(data_dir_prefix ^ file_name ^ ".csv") |> load_csv |> from_csv |> (Csvreader.delta bd))*)
     
-let () = main ()

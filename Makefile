@@ -9,18 +9,6 @@ utop:
 test:
 	OCAMLRUNPARAM=b dune exec test/main.exe
 
-pricing:
-	OCAMLRUNPARAM=b dune exec bin/main.exe
-
-binomial:
-	OCAMLRUNPARAM=b dune exec bin/binomial_loader.exe
-
-reader:
-	OCAMLRUNPARAM=b dune exec bin/csv_loader.exe
-
-visualize:
-	OCAMLRUNPARAM=b dune exec bin/visualize.exe
-
 interface:
 	OCAMLRUNPARAM=b dune exec bin/interface.exe
 

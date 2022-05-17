@@ -10,7 +10,7 @@ let blackscholes_date  lst =
 
 let main () =
   ANSITerminal.print_string [ ANSITerminal.red ]
-    "\n\nWelcome to the Cornell Quant Funds Binomial options pricing model.\n";
+    "\nWelcome to Binomial options pricing model!\n";
   print_endline
     "Please enter the current price of stock (must be float, write '40$' as '40.').";
   match read_line () with
@@ -64,6 +64,4 @@ let main () =
               print_endline ( "----------------");
               if (call_or_put = "call") then print_day (american_option_price bd_current american_option) 0 0
               else ( print_endline ("$"))
-              
-(* Execute the game engine. *)
-let () = main () 
+         

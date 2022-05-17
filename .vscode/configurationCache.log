@@ -1,1 +1,1 @@
-{"buildTargets":["binomial","build","check","clean","doc","finalcheck","interface","make","pricing","reader","spread","test","utop","visualize","zip"],"launchTargets":[],"customConfigurationProvider":{"workspaceBrowse":{"browsePath":[],"compilerArgs":[]},"fileIndex":[]}}
+{"buildTargets":["binomial","build","check","clean","doc","finalcheck","interface","pricing","test","utop","visualize","zip"],"launchTargets":[],"customConfigurationProvider":{"workspaceBrowse":{"browsePath":[],"compilerArgs":[]},"fileIndex":[]}}

@@ -1,15 +1,27 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
-# GNU Make 4.2.1
-# Built for x86_64-pc-linux-gnu
-# Copyright (C) 1988-2016 Free Software Foundation, Inc.
-# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
-# This is free software: you are free to change and redistribute it.
-# There is NO WARRANTY, to the extent permitted by law.
+make: *** No rule to make target 'all'.  Stop.
 
-# Make data base, printed on Tue May 17 12:45:04 2022
+# GNU Make 4.2.1
+ 
+# Built for x86_64-pc-linux-gnu
+ 
+# Copyright (C) 1988-2016 Free Software Foundation, Inc.
+ 
+# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+ 
+# This is free software: you are free to change and redistribute it.
+ 
+# There is NO WARRANTY, to the extent permitted by law.
+ 
+
+ 
+# Make data base, printed on Tue May 17 18:45:47 2022
+ 
 
 # Variables
+ 
 
+ 
 # automatic
 <D = $(patsubst %/,%,$(dir $<))
 # automatic
@@ -59,7 +71,7 @@ XDG_RUNTIME_DIR = /mnt/wslg/runtime-dir
 # environment
 VSCODE_LOG_STACK = false
 # environment
-VSCODE_IPC_HOOK_CLI = /mnt/wslg/runtime-dir/vscode-ipc-c646499c-97f1-469f-b0fc-3fe9180b292b.sock
+VSCODE_IPC_HOOK_CLI = /mnt/wslg/runtime-dir/vscode-ipc-4c8e09af-5066-40b5-8ece-9253c37ae923.sock
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -89,7 +101,7 @@ LESSCLOSE = /usr/bin/lesspipe %s %s
 # environment
 LOGNAME = jungmobile
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
 # environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # automatic
@@ -187,7 +199,7 @@ interface:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 29):
+#  recipe to execute (from 'Makefile', line 22):
 	OCAMLRUNPARAM=b dune exec bin/interface.exe
 
 utop:
@@ -213,14 +225,14 @@ zip:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 38):
+#  recipe to execute (from 'Makefile', line 31):
 	rm -f newestrepo.zip
 	zip -r newestrepo.zip . -x@exclude.lst
 
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-17 12:41:57.470842242
+#  Last modified 2022-05-17 18:45:04.031240413
 #  File has been updated.
 #  Successfully updated.
 
@@ -243,7 +255,7 @@ visualize:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 26):
+#  recipe to execute (from 'Makefile', line 19):
 	OCAMLRUNPARAM=b dune exec bin/visualize.exe
 
 # Not a target:
@@ -263,7 +275,7 @@ clean:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 42):
+#  recipe to execute (from 'Makefile', line 35):
 	dune clean
 	rm -f enigma.zip
 
@@ -275,58 +287,42 @@ binomial:
 	OCAMLRUNPARAM=b dune exec bin/binomial_loader.exe
 
 check:
- 
-make: *** No rule to make target 'all'.  Stop.
-
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 32):
+#  recipe to execute (from 'Makefile', line 25):
 	@bash check.sh
-
-reader:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-#  recipe to execute (from 'Makefile', line 23):
-	OCAMLRUNPARAM=b dune exec bin/csv_loader.exe
-
-spread:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-#  recipe to execute (from 'Makefile', line 20):
-	OCAMLRUNPARAM=b dune exec bin/spread_loader.exe
 
 finalcheck:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
+ 
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 35):
+#  recipe to execute (from 'Makefile', line 28):
 	@bash check.sh final
 
 doc:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 46):
+#  recipe to execute (from 'Makefile', line 39):
 	dune build @doc
 
 # files hash-table stats:
-# Load=19/1024=2%, Rehash=0, Collisions=0/33=0%
+# Load=17/1024=2%, Rehash=0, Collisions=0/31=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 37 / storage = 303 B / avg = 8 B
-# current buf: size = 8162 B / used = 303 B / count = 37 / avg = 8 B
+# strcache buffers: 1 (0) / strings = 35 / storage = 289 B / avg = 8 B
+# current buf: size = 8162 B / used = 289 B / count = 35 / avg = 8 B
 
-# strcache performance: lookups = 59 / hit rate = 37%
+# strcache performance: lookups = 55 / hit rate = 36%
 # hash-table stats:
-# Load=37/8192=0%, Rehash=0, Collisions=1/59=2%
-# Finished Make data base on Tue May 17 12:45:04 2022
+# Load=35/8192=0%, Rehash=0, Collisions=1/55=2%
+# Finished Make data base on Tue May 17 18:45:47 2022
 
  

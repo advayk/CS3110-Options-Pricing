@@ -56,7 +56,3 @@ let main () =
               else (
                 print_endline ("$" ^ string_of_float (Blackscholes.european_put_options_price european_option (float_of_string stock_price) bd_current)) ;
                 )
-
-
-(* Execute the game engine. *)
-let () = main () 
