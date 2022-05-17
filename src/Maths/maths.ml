@@ -59,7 +59,13 @@ match p.distribution_class with
 (* Main function of the module, integrates [p] from -inf to [b] 
  Requires:  [p.functn] is C0 smooth on [-inf, b], integrates to 1 *)
  let cdf (p : pdf) (x : float) = 
-  let a =  -999999.0  and b = x in
+  let a = match p.distribution_class with 
+  | Normal {stddev ; mean} -> -20. *. stddev
+  | LogNormal {sigma_of_log; mean_of_log} -> -20. *. sigma_of_log
+  | Lorentzian {gamma ; peak} -> -80.*.gamma
+  | Laplace {lambda ; peak} -> -80.*.1./.lambda
+  | Other -> -9999.
+  and b = x in
 match p.distribution_class with 
 | Normal {stddev; mean} -> 0.5 *. 
  (Float.erf( (b-.mean) /. (stddev*.Float.sqrt(2.))) -. 
@@ -88,15 +94,23 @@ Float.exp(- 0.5 *. Float.pow ((Float.log(x) -. mean_of_log) /. (sigma_of_log)) 2
 | Other -> p.functn x
 
 
-let generate (p : pdf) = Random.init 1 ; 
-let u = (1000.*.((mod_float (Sys.time()) 0.002) -. 0.001)) in
+let erf_inv (u : float) = let pi = Float.pi in
+  Float.sqrt(pi)/.2.*.(u+.
+  pi/.12.*.(Float.pow u 3.)+.
+  7.*.(Float.pow pi 2.)/.480.*.(Float.pow u 5.)+.
+  127.*.(Float.pow pi 3.)/.40320.*.(Float.pow u 7.)+.
+  4369.*.(Float.pow pi 4.)/.5806080.*.(Float.pow u 9.)+.
+  34807.*.(Float.pow pi 5.)/.182476800.*.(Float.pow u 11.))
+
+let generate (p : pdf) = Random.init (int_of_float (Float.round (1000. *. Sys.time()))) ; 
+let u = Random.float 1. in
 match p.distribution_class with
-| Normal {stddev ; mean} -> failwith "unimplemented"
+| Normal {stddev ; mean} -> let erfgen = erf_inv(2. *. u -. 1.) in
+  mean +. stddev*.Float.sqrt(2.)*.erfgen
 | Laplace{lambda ; peak} -> if u > 0.5 then 
   peak -. 1. /. lambda  *. Float.log(2.-.2.*.u) else 
   peak +. 1. /. lambda  *. Float.log(2.*.u)
-| LogNormal {sigma_of_log; mean_of_log} -> Float.exp(mean_of_log +. 
-  Float.sqrt(2.*.sigma_of_log*.sigma_of_log)*.
-  Float.erfc(2.*.u -. 1.))
-| Lorentzian { gamma;peak} -> peak +. gamma*.Float.tan(Float.pi*.(u -. 0.5))
+| LogNormal {sigma_of_log; mean_of_log} -> let erfgen = erf_inv(2. *. u -. 1.) in
+    Float.exp(mean_of_log +. Float.sqrt(2.*.sigma_of_log*.sigma_of_log)*.erfgen)
+| Lorentzian {gamma;peak} -> peak +. gamma*.Float.tan(Float.pi*.(u -. 0.5))
 | Other -> failwith "unimplemented"

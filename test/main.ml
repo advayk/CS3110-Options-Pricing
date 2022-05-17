@@ -147,7 +147,9 @@ let rec print_float_list  = function
   let result = Levy.walk generator in
   (* result |> Printf.printf "\n%8f\n";
   expected_output |> Printf.printf "%8f\n"; *)
-  print_float_list result ; assert true
+  print_float_list result ;
+  print_endline "----------------------------------"; 
+  assert true
 
 
 let euro_option_1 =
@@ -682,10 +684,15 @@ let maths_test =
       (3. *. Float.minus_one *. Float.sqrt (1. /. (2. *. Float.pi)))
       (3. *. Float.sqrt (1. /. (2. *. Float.pi)))
       0.9973;
-      levy_test "Lorentzian walk" {pdf = { functn = (fun x -> x) ; 
-      distribution_class = Maths.Lorentzian {gamma = 4. ; peak = 0.0}} ; 
+      levy_test "lorentzian walk" {pdf = { functn = (fun x -> x) ; 
+      distribution_class = Maths.Lorentzian {gamma = 1. ; peak = 0.0}} ; 
       init = 0.0 ; 
-      numsteps = 100}
+      numsteps = 1000};
+      
+      levy_test "exponential walk" {pdf = { functn = (fun x -> x) ; 
+      distribution_class = Maths.Laplace {lambda = 1. ; peak = 0.0}} ; 
+      init = 0.0 ; 
+      numsteps = 1000}
   ]
  let price_spread_test
     (name : string)
