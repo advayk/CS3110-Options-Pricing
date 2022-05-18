@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-(** open Arb *) 
-=======
 open OFinance
->>>>>>> 149155b6a3d786ffd3a6e7114e33af6174a83d25
 
 let main () =
   ANSITerminal.print_string [ ANSITerminal.red ]
