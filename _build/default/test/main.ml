@@ -3,29 +3,9 @@ open OFinance
 open Blackscholes
 open Maths
 open Levy
-open Montecarlo
 open Csvreader
 open Binomial
 open Spread
-(* Printing *)
-
-(** [pp_float f] pretty-prints float [f]. *)
-let pp_float f = "\"" ^ string_of_float f ^ "\""
-
-(** [pp_list pp_elt lst] pretty-prints list [lst], using [pp_elt] to
-    pretty-print each element of [lst]. *)
-let pp_list pp_elt lst =
-  let pp_elts lst =
-    let rec loop n acc = function
-      | [] -> acc
-      | [ h ] -> acc ^ pp_elt h
-      | h1 :: (h2 :: t as t') ->
-          if n = 100 then acc ^ "..." (* stop printing long list *)
-          else loop (n + 1) (acc ^ pp_elt h1 ^ "; ") t'
-    in
-    loop 0 "" lst
-  in
-  "[" ^ pp_elts lst ^ "]"
 
 let () = print_endline "CS 3110 Final Project: Options Pricing!"
 
@@ -83,7 +63,7 @@ let european_put_options_price_test
         current_date))
 
 let diff_between_dates_test (name : string) (date1 : Blackscholes.date) (date2 : Blackscholes.date) (expected_output : int) : test =
-  name >:: fun _ -> assert_equal expected_output (diff_between_dates date1 date2) ~printer: string_of_int
+  name >:: fun _ -> assert_equal expected_output (diff_between_dates date1 date2)
 
 let euro_option_1_time = create_time 0 0 0 0
 let euro_option_1_expiration_date = create_date 3 22 2022 euro_option_1_time
@@ -148,8 +128,8 @@ let rec print_float_list  = function
   let result = Levy.walk generator in
   (* result |> Printf.printf "\n%8f\n";
   expected_output |> Printf.printf "%8f\n"; *)
-  print_float_list result ;
-  print_endline "----------------------------------"; 
+  (* print_float_list result ; *)
+  (* print_endline "----------------------------------";  *)
   assert true
 
 let euro_option_1 =

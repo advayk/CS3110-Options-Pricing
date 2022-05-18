@@ -17,6 +17,7 @@
  | LongPut of {strike1:float; bwpc_list: string list}
  (*ATM at 1*)
  | BullCallLadder of {strike1:float; strike2:float; strike3:float; bwpc_list: string list}
+
  (** The abstract type of values representing an option spread. *)
 
 type t = { spread : spread;
@@ -25,11 +26,11 @@ type t = { spread : spread;
 (** The abstract type of values representing a pdf function. *)
 
 val make_spread: string -> t
-(* [make_spread spread_name]   
+(** [make_spread spread_name]   
   Prompts the user to enter information for a spread of name [spread_name],
   and returns a Spread.t with specified info. *)
 
 val price_spread: t -> float -> Blackscholes.date -> float
-(* [price_spread spreadT underlying today]   
+(** [price_spread spreadT underlying today]   
     Calculates the price of [spreadT] on date [today], when the underlying asset 
     is at price [underlying] *)

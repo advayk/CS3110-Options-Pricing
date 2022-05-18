@@ -20,8 +20,6 @@
    levy.mli
    maths.ml
    maths.mli
-   montecarlo.ml
-   montecarlo.mli
    oFinance.cmi
    oFinance.cmt
    oFinance.cmx
@@ -50,10 +48,6 @@
    oFinance__Maths.cmt
    oFinance__Maths.cmti
    oFinance__Maths.cmx
-   oFinance__Montecarlo.cmi
-   oFinance__Montecarlo.cmt
-   oFinance__Montecarlo.cmti
-   oFinance__Montecarlo.cmx
    oFinance__Spread.cmi
    oFinance__Spread.cmt
    oFinance__Spread.cmti
@@ -99,11 +93,6 @@
     ((name Levy) (obj_name oFinance__Levy) (visibility public) (impl) (intf))
     ((name Maths)
      (obj_name oFinance__Maths)
-     (visibility public)
-     (impl)
-     (intf))
-    ((name Montecarlo)
-     (obj_name oFinance__Montecarlo)
      (visibility public)
      (impl)
      (intf))

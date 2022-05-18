@@ -1,5 +1,3 @@
-open Csv
-open Blackscholes
 (** Module to process csv files that contain financial data in a standard format *)
 
 type d
@@ -21,3 +19,4 @@ val get_exps: d list -> string -> string list
 (** [get_exps data symbol] is a set-like list of all expirations for a [symbol] *)
 
 val first : d list -> string
+(** [first data] returns first row of csv file *)

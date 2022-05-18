@@ -22,9 +22,5 @@ module Levy = OFinance__Levy
 module Maths = OFinance__Maths
 
 
-(** @canonical OFinance.Montecarlo *)
-module Montecarlo = OFinance__Montecarlo
-
-
 (** @canonical OFinance.Spread *)
 module Spread = OFinance__Spread

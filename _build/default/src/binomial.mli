@@ -1,4 +1,4 @@
-(** Representation of the binomial model.*)
+(** Representation of the Binomial Option Pricing Model.*)
 
 open Blackscholes
 

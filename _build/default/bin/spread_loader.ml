@@ -2,8 +2,6 @@ open ANSITerminal
 open OFinance
 open Spread 
 
-(* open Blackscholes
-open Spread *)
 
 let blackscholes_date  lst = 
   let time = Blackscholes.create_time 0 0 0 0  in 
