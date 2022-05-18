@@ -11,8 +11,7 @@ open Portfolio
 open Backtester
 
 (* 
-   Because we created an options pricing suite, our test cases required extensivity for handling each individual feature both manually and automatically via OUnit. Manual testing was done through our interactive UI where the user has the ability to first select what feature they’d like to use as well as give a program designed inputs (e.g. for black-scholes or the binomial tree model, the user would specify a strike, expiration, underlying price, volatility, and risk-free rate). OUnit testing handled the backend of the testing. For the OPMs (options pricing models), we needed to ensure that the calculations were in line with what a correctly implemented model would price a given option. CSV reader tested cases of reading in different formats, lines, and values of data. Spreads tested possible combinations of different options legs and their correct pricing, in conjunction. Test cases were generated via both glass-box and black-box processes. With glass-box, we tested almost all possible inputs for a given feature to test its bounds and limitations. Black-box testing was implemented as well, as when we tried to integrate features (e.g. how csvreader requires the date object from black-scholes) we trusted that the specifications that were written in the mli files were correct from each other and we could integrate adjacent features with ease. Our approach demonstrates the correctness of the system as our testing was required to be extensive. Through our three main approaches—manual testing, glass-box, and black-box—we covered many possible edge cases where the system could possibly break, and ultimately our code passed the tests that we created.
-   
+
    To further detail testing approaches for individual features:
    
    Our approach to testing the options pricing model was to test our inputs in
