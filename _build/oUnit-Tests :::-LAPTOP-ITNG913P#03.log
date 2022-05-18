@@ -1,0 +1,81 @@
+2022-05-18T08:56:19+00:00 LAPTOP-ITNG913P#03 I: Start test Tests ::::2: normal pdf numerically integrated small bounds .
+2022-05-18T08:56:19+00:00 LAPTOP-ITNG913P#03 I: Test Tests ::::2: normal pdf numerically integrated small bounds  is successful.
+2022-05-18T08:56:19+00:00 LAPTOP-ITNG913P#03 I: End test Tests ::::2: normal pdf numerically integrated small bounds .
+2022-05-18T08:56:19+00:00 LAPTOP-ITNG913P#03 I: Start test Tests ::::6: normal pdf with analytical sol half bounds.
+2022-05-18T08:56:19+00:00 LAPTOP-ITNG913P#03 I: Test Tests ::::6: normal pdf with analytical sol half bounds is successful.
+2022-05-18T08:56:19+00:00 LAPTOP-ITNG913P#03 I: End test Tests ::::6: normal pdf with analytical sol half bounds.
+2022-05-18T08:56:19+00:00 LAPTOP-ITNG913P#03 I: Start test Tests ::::11:exponential walk.
+2022-05-18T08:56:19+00:00 LAPTOP-ITNG913P#03 I: Test Tests ::::11:exponential walk is successful.
+2022-05-18T08:56:19+00:00 LAPTOP-ITNG913P#03 I: End test Tests ::::11:exponential walk.
+2022-05-18T08:56:19+00:00 LAPTOP-ITNG913P#03 I: Start test Tests ::::19:vega of AAPL 8/23/19 call.
+2022-05-18T08:56:19+00:00 LAPTOP-ITNG913P#03 I: Test Tests ::::19:vega of AAPL 8/23/19 call is successful.
+2022-05-18T08:56:19+00:00 LAPTOP-ITNG913P#03 I: End test Tests ::::19:vega of AAPL 8/23/19 call.
+2022-05-18T08:56:19+00:00 LAPTOP-ITNG913P#03 I: Start test Tests ::::24:theta of AAPL 8/23/19 put.
+2022-05-18T08:56:19+00:00 LAPTOP-ITNG913P#03 I: Test Tests ::::24:theta of AAPL 8/23/19 put is successful.
+2022-05-18T08:56:19+00:00 LAPTOP-ITNG913P#03 I: End test Tests ::::24:theta of AAPL 8/23/19 put.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#03 I: Start test Tests ::::26:gamma of AAPL 12/20/19 call.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#03 I: Test Tests ::::26:gamma of AAPL 12/20/19 call is successful.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#03 I: End test Tests ::::26:gamma of AAPL 12/20/19 call.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#03 I: Start test Tests ::::33:delta of AAPL 1/15/21 call.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#03 I: Test Tests ::::33:delta of AAPL 1/15/21 call is successful.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#03 I: End test Tests ::::33:delta of AAPL 1/15/21 call.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#03 I: Start test Tests ::::34:gamma of AAPL 1/15/21 call.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#03 I: Test Tests ::::34:gamma of AAPL 1/15/21 call is successful.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#03 I: End test Tests ::::34:gamma of AAPL 1/15/21 call.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#03 I: Start test Tests ::::39:vega of AAPL 1/15/21 put.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#03 I: Test Tests ::::39:vega of AAPL 1/15/21 put is successful.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#03 I: End test Tests ::::39:vega of AAPL 1/15/21 put.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#03 I: Start test Tests ::::43:vega of AAPL 6/19/20 call.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#03 I: Test Tests ::::43:vega of AAPL 6/19/20 call is successful.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#03 I: End test Tests ::::43:vega of AAPL 6/19/20 call.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#03 I: Start test Tests ::::46:gamma of AAPL 6/19/20 put.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#03 I: Test Tests ::::46:gamma of AAPL 6/19/20 put is successful.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#03 I: End test Tests ::::46:gamma of AAPL 6/19/20 put.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#03 I: Start test Tests ::::50:gamma of AAPL 9/18/20 call.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#03 I: Test Tests ::::50:gamma of AAPL 9/18/20 call is successful.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#03 I: End test Tests ::::50:gamma of AAPL 9/18/20 call.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#03 I: Start test Tests ::::55:vega of AAPL 9/18/20 put.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#03 I: Test Tests ::::55:vega of AAPL 9/18/20 put is successful.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#03 I: End test Tests ::::55:vega of AAPL 9/18/20 put.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#03 I: Start test Tests ::::59:vega of AAPL 3/20/20 call.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#03 I: Test Tests ::::59:vega of AAPL 3/20/20 call is successful.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#03 I: End test Tests ::::59:vega of AAPL 3/20/20 call.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#03 I: Start test Tests ::::62:gamma of AAPL 3/20/20 put.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#03 I: Test Tests ::::62:gamma of AAPL 3/20/20 put is successful.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#03 I: End test Tests ::::62:gamma of AAPL 3/20/20 put.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#03 I: Start test Tests ::::68:estimated call option price of euro_option_1.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#03 I: Test Tests ::::68:estimated call option price of euro_option_1 is successful.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#03 I: End test Tests ::::68:estimated call option price of euro_option_1.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#03 I: Start test Tests ::::73:estimated call option price of euro_option_1.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#03 I: Test Tests ::::73:estimated call option price of euro_option_1 is successful.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#03 I: End test Tests ::::73:estimated call option price of euro_option_1.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#03 I: Start test Tests ::::77:estimated put option price of euro_option_3.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#03 I: Test Tests ::::77:estimated put option price of euro_option_3 is successful.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#03 I: End test Tests ::::77:estimated put option price of euro_option_3.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#03 I: Start test Tests ::::81:estimated call option price of euro_option_4.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#03 I: Test Tests ::::81:estimated call option price of euro_option_4 is successful.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#03 I: End test Tests ::::81:estimated call option price of euro_option_4.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#03 I: Start test Tests ::::84:estimated call option price of euro_option_2.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#03 I: Test Tests ::::84:estimated call option price of euro_option_2 is successful.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#03 I: End test Tests ::::84:estimated call option price of euro_option_2.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#03 I: Start test Tests ::::88:estimated put option price of euro_option_1.
+2022-05-18T08:56:21+00:00 LAPTOP-ITNG913P#03 I: Test Tests ::::88:estimated put option price of euro_option_1 is successful.
+2022-05-18T08:56:21+00:00 LAPTOP-ITNG913P#03 I: End test Tests ::::88:estimated put option price of euro_option_1.
+2022-05-18T08:56:21+00:00 LAPTOP-ITNG913P#03 I: Start test Tests ::::92:estimated put option price of euro_option_3.
+2022-05-18T08:56:21+00:00 LAPTOP-ITNG913P#03 I: Test Tests ::::92:estimated put option price of euro_option_3 is successful.
+2022-05-18T08:56:21+00:00 LAPTOP-ITNG913P#03 I: End test Tests ::::92:estimated put option price of euro_option_3.
+2022-05-18T08:56:21+00:00 LAPTOP-ITNG913P#03 I: Start test Tests ::::96:estimated put option price of euro_option_1.
+2022-05-18T08:56:21+00:00 LAPTOP-ITNG913P#03 I: Test Tests ::::96:estimated put option price of euro_option_1 is successful.
+2022-05-18T08:56:21+00:00 LAPTOP-ITNG913P#03 I: End test Tests ::::96:estimated put option price of euro_option_1.
+2022-05-18T08:56:21+00:00 LAPTOP-ITNG913P#03 I: Start test Tests ::::99:difference betwen date2 and date3.
+2022-05-18T08:56:21+00:00 LAPTOP-ITNG913P#03 I: Test Tests ::::99:difference betwen date2 and date3 is successful.
+2022-05-18T08:56:21+00:00 LAPTOP-ITNG913P#03 I: End test Tests ::::99:difference betwen date2 and date3.
+2022-05-18T08:56:21+00:00 LAPTOP-ITNG913P#03 I: Start test Tests ::::103:difference between date9 and date10.
+2022-05-18T08:56:21+00:00 LAPTOP-ITNG913P#03 I: Test Tests ::::103:difference between date9 and date10 is successful.
+2022-05-18T08:56:21+00:00 LAPTOP-ITNG913P#03 I: End test Tests ::::103:difference between date9 and date10.
+2022-05-18T08:56:21+00:00 LAPTOP-ITNG913P#03 I: Start test Tests ::::107:simple call, 1 month out -- test.
+2022-05-18T08:56:21+00:00 LAPTOP-ITNG913P#03 I: Test Tests ::::107:simple call, 1 month out -- test is successful.
+2022-05-18T08:56:21+00:00 LAPTOP-ITNG913P#03 I: End test Tests ::::107:simple call, 1 month out -- test.
+2022-05-18T08:56:21+00:00 LAPTOP-ITNG913P#03 I: Start test Tests ::::110:Simple forward test.
+2022-05-18T08:56:21+00:00 LAPTOP-ITNG913P#03 I: Test Tests ::::110:Simple forward test is successful.
+2022-05-18T08:56:21+00:00 LAPTOP-ITNG913P#03 I: End test Tests ::::110:Simple forward test.

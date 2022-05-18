@@ -1,0 +1,93 @@
+2022-05-18T08:56:19+00:00 LAPTOP-ITNG913P#01 I: Start test Tests ::::0: f(x) = ln(x) numerically integrated med bounds .
+2022-05-18T08:56:19+00:00 LAPTOP-ITNG913P#01 I: Test Tests ::::0: f(x) = ln(x) numerically integrated med bounds  is successful.
+2022-05-18T08:56:19+00:00 LAPTOP-ITNG913P#01 I: End test Tests ::::0: f(x) = ln(x) numerically integrated med bounds .
+2022-05-18T08:56:19+00:00 LAPTOP-ITNG913P#01 I: Start test Tests ::::4: normal pdf numerically integrated big bounds.
+2022-05-18T08:56:19+00:00 LAPTOP-ITNG913P#01 I: Test Tests ::::4: normal pdf numerically integrated big bounds is successful.
+2022-05-18T08:56:19+00:00 LAPTOP-ITNG913P#01 I: End test Tests ::::4: normal pdf numerically integrated big bounds.
+2022-05-18T08:56:19+00:00 LAPTOP-ITNG913P#01 I: Start test Tests ::::9: normal pdf with analytical sol 3 stddev width.
+2022-05-18T08:56:19+00:00 LAPTOP-ITNG913P#01 I: Test Tests ::::9: normal pdf with analytical sol 3 stddev width is successful.
+2022-05-18T08:56:19+00:00 LAPTOP-ITNG913P#01 I: End test Tests ::::9: normal pdf with analytical sol 3 stddev width.
+2022-05-18T08:56:19+00:00 LAPTOP-ITNG913P#01 I: Start test Tests ::::12:CSV with a Single Row.
+2022-05-18T08:56:19+00:00 LAPTOP-ITNG913P#01 I: Test Tests ::::12:CSV with a Single Row is successful.
+2022-05-18T08:56:19+00:00 LAPTOP-ITNG913P#01 I: End test Tests ::::12:CSV with a Single Row.
+2022-05-18T08:56:19+00:00 LAPTOP-ITNG913P#01 I: Start test Tests ::::15:theta of test.csv.
+2022-05-18T08:56:19+00:00 LAPTOP-ITNG913P#01 I: Test Tests ::::15:theta of test.csv is successful.
+2022-05-18T08:56:19+00:00 LAPTOP-ITNG913P#01 I: End test Tests ::::15:theta of test.csv.
+2022-05-18T08:56:19+00:00 LAPTOP-ITNG913P#01 I: Start test Tests ::::16:vega of test.csv.
+2022-05-18T08:56:19+00:00 LAPTOP-ITNG913P#01 I: Test Tests ::::16:vega of test.csv is successful.
+2022-05-18T08:56:19+00:00 LAPTOP-ITNG913P#01 I: End test Tests ::::16:vega of test.csv.
+2022-05-18T08:56:19+00:00 LAPTOP-ITNG913P#01 I: Start test Tests ::::21:delta of AAPL 8/23/19 put.
+2022-05-18T08:56:19+00:00 LAPTOP-ITNG913P#01 I: Test Tests ::::21:delta of AAPL 8/23/19 put is successful.
+2022-05-18T08:56:19+00:00 LAPTOP-ITNG913P#01 I: End test Tests ::::21:delta of AAPL 8/23/19 put.
+2022-05-18T08:56:19+00:00 LAPTOP-ITNG913P#01 I: Start test Tests ::::22:gamma of AAPL 8/23/19 put.
+2022-05-18T08:56:19+00:00 LAPTOP-ITNG913P#01 I: Test Tests ::::22:gamma of AAPL 8/23/19 put is successful.
+2022-05-18T08:56:19+00:00 LAPTOP-ITNG913P#01 I: End test Tests ::::22:gamma of AAPL 8/23/19 put.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#01 I: Start test Tests ::::28:theta of AAPL 12/20/19 call.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#01 I: Test Tests ::::28:theta of AAPL 12/20/19 call is successful.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#01 I: End test Tests ::::28:theta of AAPL 12/20/19 call.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#01 I: Start test Tests ::::31:vega of AAPL 12/20/19 put.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#01 I: Test Tests ::::31:vega of AAPL 12/20/19 put is successful.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#01 I: End test Tests ::::31:vega of AAPL 12/20/19 put.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#01 I: Start test Tests ::::37:delta of AAPL 1/15/21 put.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#01 I: Test Tests ::::37:delta of AAPL 1/15/21 put is successful.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#01 I: End test Tests ::::37:delta of AAPL 1/15/21 put.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#01 I: Start test Tests ::::41:delta of AAPL 6/19/20 call.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#01 I: Test Tests ::::41:delta of AAPL 6/19/20 call is successful.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#01 I: End test Tests ::::41:delta of AAPL 6/19/20 call.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#01 I: Start test Tests ::::44:theta of AAPL 6/19/20 call.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#01 I: Test Tests ::::44:theta of AAPL 6/19/20 call is successful.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#01 I: End test Tests ::::44:theta of AAPL 6/19/20 call.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#01 I: Start test Tests ::::48:theta of AAPL 6/19/20 put.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#01 I: Test Tests ::::48:theta of AAPL 6/19/20 put is successful.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#01 I: End test Tests ::::48:theta of AAPL 6/19/20 put.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#01 I: Start test Tests ::::52:theta of AAPL 9/18/20 call.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#01 I: Test Tests ::::52:theta of AAPL 9/18/20 call is successful.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#01 I: End test Tests ::::52:theta of AAPL 9/18/20 call.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#01 I: Start test Tests ::::54:gamma of AAPL 9/18/20 put.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#01 I: Test Tests ::::54:gamma of AAPL 9/18/20 put is successful.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#01 I: End test Tests ::::54:gamma of AAPL 9/18/20 put.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#01 I: Start test Tests ::::58:gamma of AAPL 3/20/20 call.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#01 I: Test Tests ::::58:gamma of AAPL 3/20/20 call is successful.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#01 I: End test Tests ::::58:gamma of AAPL 3/20/20 call.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#01 I: Start test Tests ::::60:theta of AAPL 3/20/20 call.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#01 I: Test Tests ::::60:theta of AAPL 3/20/20 call is successful.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#01 I: End test Tests ::::60:theta of AAPL 3/20/20 call.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#01 I: Start test Tests ::::64:theta of AAPL 3/20/20 put.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#01 I: Test Tests ::::64:theta of AAPL 3/20/20 put is successful.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#01 I: End test Tests ::::64:theta of AAPL 3/20/20 put.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#01 I: Start test Tests ::::66:gamma of AAPL 1/17/20 call.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#01 I: Test Tests ::::66:gamma of AAPL 1/17/20 call is successful.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#01 I: End test Tests ::::66:gamma of AAPL 1/17/20 call.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#01 I: Start test Tests ::::71:estimated call option price of euro_option_1.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#01 I: Test Tests ::::71:estimated call option price of euro_option_1 is successful.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#01 I: End test Tests ::::71:estimated call option price of euro_option_1.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#01 I: Start test Tests ::::75:estimated call option price of euro_option_3.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#01 I: Test Tests ::::75:estimated call option price of euro_option_3 is successful.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#01 I: End test Tests ::::75:estimated call option price of euro_option_3.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#01 I: Start test Tests ::::79:estimated call option price of euro_option_4.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#01 I: Test Tests ::::79:estimated call option price of euro_option_4 is successful.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#01 I: End test Tests ::::79:estimated call option price of euro_option_4.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#01 I: Start test Tests ::::83:estimated call option price of euro_option_2.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#01 I: Test Tests ::::83:estimated call option price of euro_option_2 is successful.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#01 I: End test Tests ::::83:estimated call option price of euro_option_2.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#01 I: Start test Tests ::::87:estimated put option price of euro_option_1.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#01 I: Test Tests ::::87:estimated put option price of euro_option_1 is successful.
+2022-05-18T08:56:20+00:00 LAPTOP-ITNG913P#01 I: End test Tests ::::87:estimated put option price of euro_option_1.
+2022-05-18T08:56:21+00:00 LAPTOP-ITNG913P#01 I: Start test Tests ::::89:estimated put option price of euro_option_1.
+2022-05-18T08:56:21+00:00 LAPTOP-ITNG913P#01 I: Test Tests ::::89:estimated put option price of euro_option_1 is successful.
+2022-05-18T08:56:21+00:00 LAPTOP-ITNG913P#01 I: End test Tests ::::89:estimated put option price of euro_option_1.
+2022-05-18T08:56:21+00:00 LAPTOP-ITNG913P#01 I: Start test Tests ::::95:estimated put option price of euro_option_4.
+2022-05-18T08:56:21+00:00 LAPTOP-ITNG913P#01 I: Test Tests ::::95:estimated put option price of euro_option_4 is successful.
+2022-05-18T08:56:21+00:00 LAPTOP-ITNG913P#01 I: End test Tests ::::95:estimated put option price of euro_option_4.
+2022-05-18T08:56:21+00:00 LAPTOP-ITNG913P#01 I: Start test Tests ::::98:difference betwen date1 and date2.
+2022-05-18T08:56:21+00:00 LAPTOP-ITNG913P#01 I: Test Tests ::::98:difference betwen date1 and date2 is successful.
+2022-05-18T08:56:21+00:00 LAPTOP-ITNG913P#01 I: End test Tests ::::98:difference betwen date1 and date2.
+2022-05-18T08:56:21+00:00 LAPTOP-ITNG913P#01 I: Start test Tests ::::104:difference between date11 and date10.
+2022-05-18T08:56:21+00:00 LAPTOP-ITNG913P#01 I: Test Tests ::::104:difference between date11 and date10 is successful.
+2022-05-18T08:56:21+00:00 LAPTOP-ITNG913P#01 I: End test Tests ::::104:difference between date11 and date10.
+2022-05-18T08:56:21+00:00 LAPTOP-ITNG913P#01 I: Start test Tests ::::108:in the money call at expiry -- test.
+2022-05-18T08:56:21+00:00 LAPTOP-ITNG913P#01 I: Test Tests ::::108:in the money call at expiry -- test is successful.
+2022-05-18T08:56:21+00:00 LAPTOP-ITNG913P#01 I: End test Tests ::::108:in the money call at expiry -- test.
+2022-05-18T08:56:21+00:00 LAPTOP-ITNG913P#01 I: Start test Tests ::::109:out of the money condor, high volatility, 1 month out -- test.
+2022-05-18T08:56:21+00:00 LAPTOP-ITNG913P#01 I: Test Tests ::::109:out of the money condor, high volatility, 1 month out -- test is successful.
+2022-05-18T08:56:21+00:00 LAPTOP-ITNG913P#01 I: End test Tests ::::109:out of the money condor, high volatility, 1 month out -- test.

@@ -6,6 +6,7 @@ open Levy
 open Csvreader
 open Binomial
 open Spread
+open Arb
 
 let () = print_endline "CS 3110 Final Project: Options Pricing!"
 
@@ -319,7 +320,6 @@ let blackscholes_test =
     get_greek_test "gamma of AAPL 1/17/20 call" "gamma" clean_data "AAPL" "1/17/20" "call" [(50.0,0.0);(55.0,0.0);(60.0,0.0);(65.0,0.0);(70.0,0.0);(75.0,0.0);(80.0,0.0);(85.0,0.0);(90.0,0.0001);(95.0,0.0001);(100.0,0.0002);(105.0,0.0004);(110.0,0.0005);(115.0,0.0007);(120.0,0.001);(125.0,0.0013);(130.0,0.0017);(135.0,0.0021);(140.0,0.0025);(145.0,0.0028);(150.0,0.0033);(155.0,0.0039);(160.0,0.0045);(165.0,0.0052);(170.0,0.0059);(175.0,0.0066);(180.0,0.0075);(185.0,0.0083);(190.0,0.009);(195.0,0.0096);(200.0,0.0101);(205.0,0.0105);(210.0,0.0106);(215.0,0.0106);(220.0,0.0102);(225.0,0.0098);(230.0,0.0092);(235.0,0.0084);(240.0,0.0075);(245.0,0.0066);(250.0,0.0057);(255.0,0.0049);(260.0,0.0042);(265.0,0.0036);(270.0,0.0029);(275.0,0.0025);(280.0,0.0021);(285.0,0.0018);(290.0,0.0015);(300.0,0.0011);(310.0,0.0009);(320.0,0.0005);(330.0,0.0003);(340.0,0.0002);];
     get_greek_test "vega of AAPL 1/17/20 call" "vega" clean_data "AAPL" "1/17/20" "call" [(50.0,0.0002);(55.0,0.0009);(60.0,0.0036);(65.0,0.0119);(70.0,0.033);(75.0,0.0807);(80.0,0.1766);(85.0,0.352);(90.0,0.6476);(95.0,1.1113);(100.0,1.7951);(105.0,2.7499);(110.0,4.0201);(115.0,5.6386);(120.0,7.6223);(125.0,9.9697);(130.0,12.6599);(135.0,15.6533);(140.0,18.4405);(145.0,19.0387);(150.0,22.3887);(155.0,24.7814);(160.0,30.135);(165.0,31.7262);(170.0,35.4528);(175.0,38.9571);(180.0,42.0039);(185.0,45.1008);(190.0,47.8021);(195.0,49.9268);(200.0,51.335);(205.0,51.9008);(210.0,51.5475);(215.0,50.2433);(220.0,48.0777);(225.0,45.0438);(230.0,41.3775);(235.0,37.5557);(240.0,33.5323);(245.0,29.0316);(250.0,25.2418);(255.0,21.6653);(260.0,18.2448);(265.0,15.6133);(270.0,12.7983);(275.0,10.938);(280.0,9.2418);(285.0,7.8647);(290.0,7.0439);(300.0,4.9974);(310.0,4.2306);(320.0,2.4958);(330.0,1.5588);(340.0,0.989);];
 ]
-
 let maths_test =
   [
     integrate_test " f(x) = ln(x) numerically integrated med bounds "
@@ -443,7 +443,6 @@ let spread_test =
       55.
       (Blackscholes.create_date 05 01 2022 (Blackscholes.create_time 0 0 0 0))
       5.;
-
       price_spread_test "out of the money condor, high volatility, 1 month out -- test" {
       spread = Condor {strike1 = 50.; strike2 = 55.; strike3 = 60.; strike4 = 65.; 
                bwpc_list = ["bc1"; "wc1"; "wc1"; "bc1"]}; 
@@ -455,7 +454,7 @@ let spread_test =
       48.
       (Blackscholes.create_date 05 01 2022 (Blackscholes.create_time 0 0 0 0)) (*Today*)
       2.04;
-
+      (** 
       price_spread_test "out of the money condor, low volatility, 1 month out -- test" {
       spread = Condor {strike1 = 50.; strike2 = 55.; strike3 = 60.; strike4 = 65.; 
                bwpc_list = ["bc1"; "wc1"; "wc1"; "bc1"]}; 
@@ -466,7 +465,40 @@ let spread_test =
       0.025 0.1 ] }
       48.
       (Blackscholes.create_date 05 01 2022 (Blackscholes.create_time 0 0 0 0)) (*Today*)
-      0.06
+      0.06;
+      price_spread_test "in the money butterfly, low volatility, 1 month out -- test" {
+      spread = Butterfly {strike1 = 50.; strike2 = 55.; strike3 = 60.;
+               bwpc_list = ["bc1"; "wc2"; "bc1"]};
+      expiry = (Blackscholes.create_date 06 01 2022 (Blackscholes.create_time 0 0 0 0)); (*Expiry*)
+      options =
+      [ Blackscholes.create_european_option
+      50. (Blackscholes.create_date 06 01 2022 (Blackscholes.create_time 0 0 0 0))  (*Expiry*)
+      0.025 0.1 ] }
+      55.
+      (Blackscholes.create_date 05 01 2022 (Blackscholes.create_time 0 0 0 0)) (*Today*)
+      9.; (*Expected value*)
+      price_spread_test " profitable straddle, high volatility, 1 month out -- test" {
+      spread = Strangle {strike1 = 50.; strike2 = 60.;
+               bwpc_list = ["bp1"; "bc1"]};
+      expiry = (Blackscholes.create_date 06 01 2022 (Blackscholes.create_time 0 0 0 0)); (*Expiry*)
+      options =
+      [ Blackscholes.create_european_option
+      50. (Blackscholes.create_date 06 01 2022 (Blackscholes.create_time 0 0 0 0))  (*Expiry*)
+      0.025 0.1 ] }
+      70.
+      (Blackscholes.create_date 05 01 2022 (Blackscholes.create_time 0 0 0 0)) (*Today*)
+      8.; (*Expected value*)
+      price_spread_test " in the money strangle, low volatility, 1 month out -- test" {
+      spread = Strangle {strike1 = 65.; strike2 = 75.;
+               bwpc_list = ["bp1"; "bc1"]};
+      expiry = (Blackscholes.create_date 06 01 2022 (Blackscholes.create_time 0 0 0 0)); (*Expiry*)
+      options =
+      [ Blackscholes.create_european_option
+      50. (Blackscholes.create_date 06 01 2022 (Blackscholes.create_time 0 0 0 0))  (*Expiry*)
+      0.025 0.1 ] }
+      70.
+      (Blackscholes.create_date 05 01 2022 (Blackscholes.create_time 0 0 0 0)) (*Today*)
+      8. (*Expected value*) *)
   ]
 
 let tree_test tree = print_tree tree 
@@ -488,7 +520,29 @@ let binomial_test = [
 
 ]
 
+let forward_test (name : string) (underlying : float) (rate : float) (time : float) (forward_price : float) (expected_output : bool) : test =
+  name >:: fun _ -> 
+  assert_equal expected_output (check_forward underlying rate time forward_price)
+
+let parity_test (name : string) (underlying : float) (put : float) (call : float) (strike : float) (rate : float) (time : float) (expected_output : bool) : test = 
+  name >:: fun _ -> 
+  assert_equal expected_output (check_parity underlying put call strike rate time)
+
+let call_test (name : string) (underlying : float) (call : float) (expected_output : bool) : test = 
+  name >:: fun _ -> 
+  assert_equal expected_output (check_call underlying call)
+
+let put_test (name : string) (put : float) (strike : float) (rate : float) (time : float) (expected_output : bool) : test = 
+  name >:: fun _ -> 
+  assert_equal expected_output (check_put put strike rate time)
+
+let arb_tests = [
+  forward_test "Simple forward test" 100. 1.05 1. 100.2881 true;
+  forward_test "Simple forward test wrong" 100. 1.05 1. 100.6 false;
+  forward_test "Simple forward test wrong" 100. 1.05 1. 90. false;
+]
+
 let tests =
-  "Tests :::" >::: List.flatten [ maths_test; csvreader_test; blackscholes_test;spread_test]
+  "Tests :::" >::: List.flatten [ maths_test; csvreader_test; blackscholes_test;spread_test;arb_tests]
 
 let _ = run_test_tt_main tests
