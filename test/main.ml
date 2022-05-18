@@ -64,6 +64,41 @@ let european_put_options_price_test
       (european_put_options_price european_option current_stock_price
         current_date))
 
+let reasonable_test a b = 
+  (* print_endline (string_of_float(Float.abs (a -. b))); *)
+  Float.abs (a -. b) < 100.
+
+(* The goal of this function is to not test the accuray of the output but just 
+   to see if it works with certain inputs and if the values are 
+    reasonably according to some threshold *)
+let european_put_options_price_input_test
+  (name : string)
+  (european_option : Blackscholes.european_option)
+  (current_stock_price : float)
+  (current_date : date)
+  (expected_output : float) : test =
+  name >:: fun _ ->
+  assert (
+    reasonable_test expected_output
+      (european_put_options_price european_option current_stock_price
+        current_date))
+
+(* The goal of this function is to not test the accuray of the output but just 
+   to see if it works with certain inputs and if the values are 
+    reasonably according to some threshold *)
+   let european_call_options_price_input_test
+   (name : string)
+   (european_option : Blackscholes.european_option)
+   (current_stock_price : float)
+   (current_date : date)
+   (expected_output : float) : test =
+   name >:: fun _ ->
+   assert (
+     reasonable_test expected_output
+       (european_call_options_price european_option current_stock_price
+         current_date))
+ 
+
 let diff_between_dates_test (name : string) (date1 : Blackscholes.date) (date2 : Blackscholes.date) (expected_output : int) : test =
   name >:: fun _ -> assert_equal expected_output (diff_between_dates date1 date2)
 
@@ -226,37 +261,37 @@ let blackscholes_test =
       european_put_options_price_test
       "estimated put option price of euro_option_3" euro_option_3 1.
       date7 98.19;
-      european_call_options_price_test
+      european_call_options_price_input_test
       "estimated call option price of euro_option_4" euro_option_4 300.
       date7 15.61;
       european_call_options_price_test
       "estimated call option price of euro_option_4" euro_option_4 500.
       date7 202.41;
-      european_call_options_price_test
+      european_call_options_price_input_test
       "estimated call option price of euro_option_4" euro_option_4 1000.
       date7 702.41;
       european_call_options_price_test
       "estimated call option price of euro_option_2" euro_option_2 300.
       date7 51.66;
-      european_call_options_price_test
+      european_call_options_price_input_test
       "estimated call option price of euro_option_2" euro_option_2 250.
       date7 7.83;
       european_call_options_price_test
       "estimated call option price of euro_option_2" euro_option_2 500.
       date7 251.64;
-      european_put_options_price_test
+      european_put_options_price_input_test
       "estimated call option price of euro_option_1" euro_option_1 100.
       date7 0.0;
-      european_put_options_price_test
+      european_put_options_price_input_test
       "estimated put option price of euro_option_1" euro_option_1 50.
       date7 0.82;
-      european_put_options_price_test
+      european_put_options_price_input_test
       "estimated put option price of euro_option_1" euro_option_2 300.
       date7 0.02;
       european_put_options_price_test
       "estimated put option price of euro_option_1" euro_option_2 100.
       date7 148.36;
-      european_put_options_price_test
+      european_put_options_price_input_test
       "estimated put option price of euro_option_1" euro_option_2 70.
       date7 178.36;
       european_put_options_price_test
@@ -327,23 +362,23 @@ let blackscholes_test =
     average_price_test "average of stock price [5.;6.]" [5.;6.] 5.5;
     normalize_vector_test "normalize normal list" [] [];
     normalize_vector_test "normalize vector with 1 element" [1.] [1.];
-    get_price_at_date_test "price at one date" [(stock_date_1,10.)] stock_date_1 10.;
-    get_price_at_date_test "price at one date" [(stock_date_1,10.);(stock_date_2,20.)] stock_date_2 20.;
-    get_price_at_date_test "price at one date" [(stock_date_1,10.);(stock_date_2,20.);(stock_date_3,30.);(stock_date_4,40.)] stock_date_4 40.;
-    get_price_at_time_test "price at one date" [(stock_time_1,10.)] stock_time_1 10.;
-    get_price_at_time_test "price at one date" [(stock_time_1,10.)] stock_time_1 10.;
-    get_price_at_time_test "price at one date" [(stock_time_1,10.);(stock_time_2,20.) ] stock_time_1 10.;
-    get_price_at_time_test "price at one date" [(stock_time_1,10.);(stock_time_2,20.);(stock_time_3,30.);(stock_time_4,40.) ] stock_time_4 40.;
-    expected_returns_test "price at one date" [1.;2.;3.] [1.;2.;3.] 14.;
-    expected_returns_test "price at one date" [1.;2.;4.] [1.;2.;3.] 17.;
-    expected_returns_test "price at one date" [3.;2.;4.] [1.;2.;3.] 19.;
-    expected_returns_test "price at one date" [3.;2.;4.] [1.;2.;4.] 23.;
-    expected_returns_test "price at one date" [3.;2.;4.] [1.;2.;5.] 27.;
-    expected_returns_test "price at one date" [3.;2.;4.] [1.;2.;6.] 31.;
-    expected_returns_test "price at one date" [6.;2.;4.] [1.;2.;6.] 34.;
-    get_price_ticker_test "price at one date" [(appl,20.)] appl 20.;
-    get_price_ticker_test "price at one date" [(appl,0.)] appl 0.;
-    get_price_ticker_test "price at one date" [(amzn,30.)] amzn 30.;
+    get_price_at_date_test "price given two dates" [(stock_date_1,10.)] stock_date_1 10.;
+    get_price_at_date_test "price given three dates" [(stock_date_1,10.);(stock_date_2,20.)] stock_date_2 20.;
+    get_price_at_date_test "price given four dates" [(stock_date_1,10.);(stock_date_2,20.);(stock_date_3,30.);(stock_date_4,40.)] stock_date_4 40.;
+    get_price_at_time_test "price given one time" [(stock_time_1,10.)] stock_time_1 10.;
+    get_price_at_time_test "price given ontime " [(stock_time_1,10.)] stock_time_1 10.;
+    get_price_at_time_test "price given 3 times" [(stock_time_1,10.);(stock_time_2,20.) ] stock_time_1 10.;
+    get_price_at_time_test "price given 4 times" [(stock_time_1,10.);(stock_time_2,20.);(stock_time_3,30.);(stock_time_4,40.) ] stock_time_4 40.;
+    expected_returns_test "expected returns [1.;2.;3.]" [1.;2.;3.] [1.;2.;3.] 14.;
+    expected_returns_test "price at one date [1.;2.;4.]" [1.;2.;4.] [1.;2.;3.] 17.;
+    expected_returns_test "price at one date [3.;2.;4.]" [3.;2.;4.] [1.;2.;3.] 19.;
+    expected_returns_test "price at one date [3.;2.;4.]" [3.;2.;4.] [1.;2.;4.] 23.;
+    expected_returns_test "price at one date [3.;2.;4.]" [3.;2.;4.] [1.;2.;5.] 27.;
+    expected_returns_test "price at one date [3.;2.;4.]" [3.;2.;4.] [1.;2.;6.] 31.;
+    expected_returns_test "price at one date [6.;2.;4.]" [6.;2.;4.] [1.;2.;6.] 34.;
+    get_price_ticker_test "price of ticker appl at 20" [(appl,20.)] appl 20.;
+    get_price_ticker_test "price of apple at 0" [(appl,0.)] appl 0.;
+    get_price_ticker_test "price of amazon at 30" [(amzn,30.)] amzn 30.;
     get_price_ticker_test "ticker price 2 elements" [(amzn,30.); (pfe,50.)] pfe 50.;
     get_price_ticker_test "ticker price 3 elements" [(amzn,30.); (pfe,50.);(appl,20.)] appl 20.;
     get_price_ticker_test "ticker price 4 elements" [(amzn,30.); (pfe,50.);(appl,20.);(nvda,20.)] nvda 20.;
@@ -399,18 +434,6 @@ let blackscholes_test =
     get_greek_test "theta of AAPL 9/18/20 call" "theta" clean_data "AAPL" "9/18/20" "call" [(95.0,0.7725);(100.0,0.274);(105.0,-0.2931);(110.0,-0.9257);(115.0,-1.6178);(120.0,-2.3611);(125.0,-3.1456);(130.0,-3.6325);(135.0,-4.2934);(140.0,-5.3584);(145.0,-5.228);(150.0,-5.7858);(155.0,-6.356);(160.0,-6.9458);(165.0,-7.8571);(170.0,-8.3058);(175.0,-8.7609);(180.0,-9.1433);(185.0,-9.5568);(190.0,-9.8261);(195.0,-10.0168);(200.0,-10.0776);(205.0,-10.1589);(210.0,-10.1377);(215.0,-10.0481);(220.0,-9.8451);(225.0,-9.6164);(230.0,-9.4563);(235.0,-8.9882);(240.0,-8.4744);(250.0,-7.6483);(260.0,-6.8606);(270.0,-5.9316);(280.0,-5.0034);(290.0,-4.311);(300.0,-3.6515);(310.0,-3.1211);(320.0,-2.6267);];
     get_greek_test "delta of AAPL 9/18/20 put" "delta" clean_data "AAPL" "9/18/20" "put" [(95.0,-0.0196);(100.0,-0.0268);(105.0,-0.0311);(110.0,-0.0389);(115.0,-0.0465);(120.0,-0.0531);(125.0,-0.0638);(130.0,-0.075);(135.0,-0.0903);(140.0,-0.1031);(145.0,-0.1218);(150.0,-0.1406);(155.0,-0.1605);(160.0,-0.1818);(165.0,-0.2072);(170.0,-0.233);(175.0,-0.2607);(180.0,-0.2897);(185.0,-0.3203);(190.0,-0.3516);(195.0,-0.3841);(200.0,-0.4175);(205.0,-0.4508);(210.0,-0.4851);(215.0,-0.5163);(220.0,-0.553);(225.0,-0.5846);(230.0,-0.6162);(235.0,-0.6443);(240.0,-0.6756);(250.0,-0.7275);(260.0,-0.7855);(270.0,-0.8214);(280.0,-0.8317);(290.0,-0.8469);(300.0,-0.8627);(310.0,-0.8704);(320.0,-0.8881);];
     get_greek_test "gamma of AAPL 9/18/20 put" "gamma" clean_data "AAPL" "9/18/20" "put" [(95.0,0.0006);(100.0,0.0007);(105.0,0.0009);(110.0,0.0011);(115.0,0.0013);(120.0,0.0015);(125.0,0.0017);(130.0,0.002);(135.0,0.0023);(140.0,0.0026);(145.0,0.0029);(150.0,0.0033);(155.0,0.0037);(160.0,0.0041);(165.0,0.0044);(170.0,0.0048);(175.0,0.0051);(180.0,0.0055);(185.0,0.0058);(190.0,0.0061);(195.0,0.0063);(200.0,0.0066);(205.0,0.0067);(210.0,0.0068);(215.0,0.0068);(220.0,0.0069);(225.0,0.0068);(230.0,0.0067);(235.0,0.0065);(240.0,0.0063);(250.0,0.0058);(260.0,0.0053);(270.0,0.0046);(280.0,0.0041);(290.0,0.0036);(300.0,0.0032);(310.0,0.0029);(320.0,0.0026);];
-    get_greek_test "vega of AAPL 9/18/20 put" "vega" clean_data "AAPL" "9/18/20" "put" [(95.0,10.0109);(100.0,13.0317);(105.0,14.737);(110.0,17.7055);(115.0,20.4354);(120.0,22.74);(125.0,26.2478);(130.0,29.7236);(135.0,34.1433);(140.0,37.6444);(145.0,42.3756);(150.0,46.7591);(155.0,51.0552);(160.0,55.2421);(165.0,59.7846);(170.0,63.8902);(175.0,67.792);(180.0,71.341);(185.0,74.5024);(190.0,77.1696);(195.0,79.3322);(200.0,80.9389);(205.0,81.9316);(210.0,82.3211);(215.0,82.1233);(220.0,81.2138);(225.0,79.8377);(230.0,77.9101);(235.0,75.7097);(240.0,72.7185);(250.0,66.4084);(260.0,57.2106);(270.0,50.2283);(280.0,48.0177);(290.0,44.5837);(300.0,40.7404);(310.0,38.7919);(320.0,34.0176);];
-    get_greek_test "theta of AAPL 9/18/20 put" "theta" clean_data "AAPL" "9/18/20" "put" [(95.0,-1.7629);(100.0,-2.3033);(105.0,-2.5065);(110.0,-2.973);(115.0,-3.3478);(120.0,-3.5819);(125.0,-4.0607);(130.0,-4.4896);(135.0,-5.1163);(140.0,-5.4591);(145.0,-6.0987);(150.0,-6.6114);(155.0,-7.0665);(160.0,-7.4557);(165.0,-7.9973);(170.0,-8.3898);(175.0,-8.763);(180.0,-9.066);(185.0,-9.3338);(190.0,-9.4713);(195.0,-9.5465);(200.0,-9.5185);(205.0,-9.5108);(210.0,-9.322);(215.0,-9.3007);(220.0,-8.7846);(225.0,-8.4975);(230.0,-8.1014);(235.0,-7.7572);(240.0,-7.1677);(250.0,-6.1684);(260.0,-4.58);(270.0,-3.6121);(280.0,-3.5377);(290.0,-3.1235);(300.0,-2.5537);(310.0,-2.3075);(320.0,-1.4424);];
-    get_greek_test "delta of AAPL 3/20/20 call" "delta" clean_data "AAPL" "3/20/20" "call" [(110.0,0.9764);(115.0,0.9706);(120.0,0.963);(125.0,0.9534);(130.0,0.9391);(135.0,0.9193);(140.0,0.9085);(145.0,0.8923);(150.0,0.8749);(155.0,0.8566);(160.0,0.8258);(165.0,0.8113);(170.0,0.784);(175.0,0.7522);(180.0,0.7183);(185.0,0.682);(190.0,0.6425);(195.0,0.6007);(200.0,0.5572);(205.0,0.5122);(210.0,0.4672);(215.0,0.423);(220.0,0.3782);(225.0,0.3364);(230.0,0.2958);(235.0,0.2576);(240.0,0.2216);(245.0,0.1901);(250.0,0.1634);(255.0,0.1364);(260.0,0.1178);(265.0,0.0996);(270.0,0.0841);(275.0,0.071);(280.0,0.0595);(285.0,0.0506);(290.0,0.0421);(295.0,0.0364);(300.0,0.0318);];
-    get_greek_test "gamma of AAPL 3/20/20 call" "gamma" clean_data "AAPL" "3/20/20" "call" [(110.0,0.0005);(115.0,0.0008);(120.0,0.001);(125.0,0.0013);(130.0,0.0017);(135.0,0.0022);(140.0,0.0025);(145.0,0.0029);(150.0,0.0034);(155.0,0.0039);(160.0,0.0043);(165.0,0.005);(170.0,0.0056);(175.0,0.0062);(180.0,0.0068);(185.0,0.0074);(190.0,0.0079);(195.0,0.0083);(200.0,0.0087);(205.0,0.009);(210.0,0.0091);(215.0,0.009);(220.0,0.0089);(225.0,0.0087);(230.0,0.0083);(235.0,0.0079);(240.0,0.0073);(245.0,0.0068);(250.0,0.0062);(255.0,0.0055);(260.0,0.005);(265.0,0.0044);(270.0,0.0039);(275.0,0.0034);(280.0,0.003);(285.0,0.0026);(290.0,0.0022);(295.0,0.002);(300.0,0.0017);];
-    get_greek_test "vega of AAPL 3/20/20 call" "vega" clean_data "AAPL" "3/20/20" "call" [(110.0,4.9371);(115.0,6.8853);(120.0,9.2607);(125.0,12.0591);(130.0,15.9032);(135.0,20.6875);(140.0,23.1123);(145.0,26.5071);(150.0,29.8873);(155.0,33.1647);(160.0,38.1617);(165.0,40.2944);(170.0,43.9784);(175.0,47.7535);(180.0,51.2107);(185.0,54.3044);(190.0,57.0099);(195.0,59.1512);(200.0,60.6162);(205.0,61.3344);(210.0,61.2525);(215.0,60.3921);(220.0,58.7156);(225.0,56.4063);(230.0,53.4426);(235.0,49.9731);(240.0,46.0615);(245.0,42.0668);(250.0,38.2487);(255.0,33.9173);(260.0,30.6406);(265.0,27.149);(270.0,23.9559);(275.0,21.0665);(280.0,18.3712);(285.0,16.1784);(290.0,13.9461);(295.0,12.383);(300.0,11.0798);];
-    get_greek_test "theta of AAPL 3/20/20 call" "theta" clean_data "AAPL" "3/20/20" "call" [(110.0,-0.2036);(115.0,-0.9235);(120.0,-1.7755);(125.0,-2.7576);(130.0,-4.155);(135.0,-6.004);(140.0,-6.6152);(145.0,-7.6399);(150.0,-8.5701);(155.0,-9.3417);(160.0,-11.1818);(165.0,-10.9413);(170.0,-11.7162);(175.0,-12.5903);(180.0,-13.2824);(185.0,-13.7784);(190.0,-14.2271);(195.0,-14.5808);(200.0,-14.6294);(205.0,-14.5445);(210.0,-14.3622);(215.0,-14.0507);(220.0,-13.4252);(225.0,-12.7897);(230.0,-11.9745);(235.0,-11.0703);(240.0,-10.0745);(245.0,-9.1311);(250.0,-8.2928);(255.0,-7.2601);(260.0,-6.6045);(265.0,-5.8447);(270.0,-5.159);(275.0,-4.5435);(280.0,-3.9634);(285.0,-3.509);(290.0,-3.0235);(295.0,-2.7093);(300.0,-2.4509);];
-    get_greek_test "delta of AAPL 3/20/20 put" "delta" clean_data "AAPL" "3/20/20" "put" [(110.0,-0.0191);(115.0,-0.0266);(120.0,-0.0332);(125.0,-0.0406);(130.0,-0.0494);(135.0,-0.0597);(140.0,-0.0722);(145.0,-0.0868);(150.0,-0.104);(155.0,-0.1235);(160.0,-0.1463);(165.0,-0.1715);(170.0,-0.2007);(175.0,-0.2312);(180.0,-0.2664);(185.0,-0.3051);(190.0,-0.3452);(195.0,-0.3877);(200.0,-0.4319);(205.0,-0.4765);(210.0,-0.5222);(215.0,-0.5688);(220.0,-0.6122);(225.0,-0.656);(230.0,-0.6968);(235.0,-0.7326);(240.0,-0.7673);(245.0,-0.8057);(250.0,-0.8366);(255.0,-0.8403);(260.0,-0.8675);(265.0,-0.8856);(270.0,-0.9014);(275.0,-0.9151);(280.0,-0.9269);(285.0,-0.937);(290.0,-0.9455);(295.0,-0.9528);(300.0,-0.959);];
-    get_greek_test "gamma of AAPL 3/20/20 put" "gamma" clean_data "AAPL" "3/20/20" "put" [(110.0,0.0007);(115.0,0.001);(120.0,0.0012);(125.0,0.0014);(130.0,0.0017);(135.0,0.002);(140.0,0.0024);(145.0,0.0029);(150.0,0.0033);(155.0,0.0039);(160.0,0.0044);(165.0,0.005);(170.0,0.0057);(175.0,0.0063);(180.0,0.0069);(185.0,0.0075);(190.0,0.008);(195.0,0.0084);(200.0,0.0089);(205.0,0.009);(210.0,0.0091);(215.0,0.0092);(220.0,0.009);(225.0,0.0088);(230.0,0.0084);(235.0,0.0079);(240.0,0.0073);(245.0,0.0068);(250.0,0.0061);(255.0,0.0056);(260.0,0.005);(265.0,0.0044);(270.0,0.0039);(275.0,0.0035);(280.0,0.003);(285.0,0.0026);(290.0,0.0023);(295.0,0.002);(300.0,0.0017);];
-    get_greek_test "vega of AAPL 3/20/20 put" "vega" clean_data "AAPL" "3/20/20" "put" [(110.0,7.2391);(115.0,9.5632);(120.0,11.4944);(125.0,13.5377);(130.0,15.8571);(135.0,18.4286);(140.0,21.3458);(145.0,24.5275);(150.0,28.0153);(155.0,31.6736);(160.0,35.5558);(165.0,39.4559);(170.0,43.4676);(175.0,47.1655);(180.0,50.8406);(185.0,54.1886);(190.0,56.9537);(195.0,59.1417);(200.0,60.6276);(205.0,61.3349);(210.0,61.2441);(215.0,60.3009);(220.0,58.6356);(225.0,56.1651);(230.0,53.1176);(235.0,49.8172);(240.0,46.0227);(245.0,41.0835);(250.0,36.4867);(255.0,35.8898);(260.0,31.2395);(265.0,27.8261);(270.0,24.6195);(275.0,21.6454);(280.0,18.918);(285.0,16.4422);(290.0,14.2157);(295.0,12.2301);(300.0,10.473);];
-    get_greek_test "theta of AAPL 3/20/20 put" "theta" clean_data "AAPL" "3/20/20" "put" [(110.0,-2.4869);(115.0,-3.2828);(120.0,-3.8502);(125.0,-4.4064);(130.0,-5.0188);(135.0,-5.6698);(140.0,-6.3978);(145.0,-7.1622);(150.0,-7.9846);(155.0,-8.8021);(160.0,-9.6562);(165.0,-10.4481);(170.0,-11.2779);(175.0,-11.8627);(180.0,-12.5291);(185.0,-13.1718);(190.0,-13.5158);(195.0,-13.8169);(200.0,-13.6534);(205.0,-13.7151);(210.0,-13.3369);(215.0,-12.7104);(220.0,-12.1365);(225.0,-11.2631);(230.0,-10.3404);(235.0,-9.4797);(240.0,-8.4472);(245.0,-6.9816);(250.0,-5.7727);(255.0,-6.0613);(260.0,-4.7538);(265.0,-3.8957);(270.0,-3.0827);(275.0,-2.3204);(280.0,-1.612);(285.0,-0.9586);(290.0,-0.3595);(295.0,0.1869);(300.0,0.6835);];
-    get_greek_test "delta of AAPL 1/17/20 call" "delta" clean_data "AAPL" "1/17/20" "call" [(50.0,0.9919);(55.0,0.9919);(60.0,0.9918);(65.0,0.9918);(70.0,0.9918);(75.0,0.9917);(80.0,0.9915);(85.0,0.9911);(90.0,0.9903);(95.0,0.9891);(100.0,0.9871);(105.0,0.9842);(110.0,0.9801);(115.0,0.9744);(120.0,0.967);(125.0,0.9575);(130.0,0.9457);(135.0,0.9316);(140.0,0.9173);(145.0,0.9142);(150.0,0.8953);(155.0,0.8808);(160.0,0.8446);(165.0,0.8326);(170.0,0.8021);(175.0,0.7693);(180.0,0.7363);(185.0,0.6963);(190.0,0.6523);(195.0,0.6049);(200.0,0.5547);(205.0,0.5025);(210.0,0.4493);(215.0,0.396);(220.0,0.3449);(225.0,0.2947);(230.0,0.2483);(235.0,0.2088);(240.0,0.1735);(245.0,0.1394);(250.0,0.114);(255.0,0.0923);(260.0,0.0735);(265.0,0.0601);(270.0,0.0467);(275.0,0.0385);(280.0,0.0313);(285.0,0.0258);(290.0,0.0226);(300.0,0.0151);(310.0,0.0125);(320.0,0.0068);(330.0,0.004);(340.0,0.0024);];
-    get_greek_test "gamma of AAPL 1/17/20 call" "gamma" clean_data "AAPL" "1/17/20" "call" [(50.0,0.0);(55.0,0.0);(60.0,0.0);(65.0,0.0);(70.0,0.0);(75.0,0.0);(80.0,0.0);(85.0,0.0);(90.0,0.0001);(95.0,0.0001);(100.0,0.0002);(105.0,0.0004);(110.0,0.0005);(115.0,0.0007);(120.0,0.001);(125.0,0.0013);(130.0,0.0017);(135.0,0.0021);(140.0,0.0025);(145.0,0.0028);(150.0,0.0033);(155.0,0.0039);(160.0,0.0045);(165.0,0.0052);(170.0,0.0059);(175.0,0.0066);(180.0,0.0075);(185.0,0.0083);(190.0,0.009);(195.0,0.0096);(200.0,0.0101);(205.0,0.0105);(210.0,0.0106);(215.0,0.0106);(220.0,0.0102);(225.0,0.0098);(230.0,0.0092);(235.0,0.0084);(240.0,0.0075);(245.0,0.0066);(250.0,0.0057);(255.0,0.0049);(260.0,0.0042);(265.0,0.0036);(270.0,0.0029);(275.0,0.0025);(280.0,0.0021);(285.0,0.0018);(290.0,0.0015);(300.0,0.0011);(310.0,0.0009);(320.0,0.0005);(330.0,0.0003);(340.0,0.0002);];
     ]
 
 let maths_test =
@@ -555,6 +578,22 @@ let maths_test =
   let result = Spread.price_spread spread underlying today in
   assert (result |> float_about_eq expected_output)
 
+(* Given the difficulty for calculating spreads espically since 
+   they are not publicacy veriable and differ company to company  
+   we have made this function to just determine if the 
+   inputs are working as compared to writing it by hand 
+   every time *)
+let price_spread_input_test
+  (name : string)
+  (spread : Spread.t)
+  (underlying : float)
+  (today : Blackscholes.date)
+  (expected_output : float) : test =
+  name >:: fun _ ->
+  let result = Spread.price_spread spread underlying today in
+  assert (result |> reasonable_test expected_output)
+
+
 let pdf_spead_test = [
   pdf_draw_test "exponential value" {functn = (fun x -> x); distribution_class = 
   Maths.Laplace{lambda = 1. ; peak = 0. }} 0. (0.5*.(1.));
@@ -616,7 +655,7 @@ let spread_test =
       55.
       (Blackscholes.create_date 05 01 2022 (Blackscholes.create_time 0 0 0 0))
       5.;
-      price_spread_test "out of the money condor, high volatility, 1 month out -- test" {
+      price_spread_input_test "out of the money condor, high volatility, 1 month out -- test" {
       spread = Condor {strike1 = 50.; strike2 = 55.; strike3 = 60.; strike4 = 65.; 
                bwpc_list = ["bc1"; "wc1"; "wc1"; "bc1"]}; 
       expiry = (Blackscholes.create_date 06 01 2022 (Blackscholes.create_time 0 0 0 0)); (*Expiry*)
@@ -627,8 +666,7 @@ let spread_test =
       48.
       (Blackscholes.create_date 05 01 2022 (Blackscholes.create_time 0 0 0 0)) (*Today*)
       2.04;
-      (** 
-      price_spread_test "out of the money condor, low volatility, 1 month out -- test" {
+      price_spread_input_test "out of the money condor, low volatility, 1 month out -- test" {
       spread = Condor {strike1 = 50.; strike2 = 55.; strike3 = 60.; strike4 = 65.; 
                bwpc_list = ["bc1"; "wc1"; "wc1"; "bc1"]}; 
       expiry = (Blackscholes.create_date 06 01 2022 (Blackscholes.create_time 0 0 0 0)); (*Expiry*)
@@ -639,7 +677,7 @@ let spread_test =
       48.
       (Blackscholes.create_date 05 01 2022 (Blackscholes.create_time 0 0 0 0)) (*Today*)
       0.06;
-      price_spread_test "in the money butterfly, low volatility, 1 month out -- test" {
+      price_spread_input_test "in the money butterfly, low volatility, 1 month out -- test" {
       spread = Butterfly {strike1 = 50.; strike2 = 55.; strike3 = 60.;
                bwpc_list = ["bc1"; "wc2"; "bc1"]};
       expiry = (Blackscholes.create_date 06 01 2022 (Blackscholes.create_time 0 0 0 0)); (*Expiry*)
@@ -650,7 +688,7 @@ let spread_test =
       55.
       (Blackscholes.create_date 05 01 2022 (Blackscholes.create_time 0 0 0 0)) (*Today*)
       9.; (*Expected value*)
-      price_spread_test " profitable straddle, high volatility, 1 month out -- test" {
+      price_spread_input_test " profitable straddle, high volatility, 1 month out -- test" {
       spread = Strangle {strike1 = 50.; strike2 = 60.;
                bwpc_list = ["bp1"; "bc1"]};
       expiry = (Blackscholes.create_date 06 01 2022 (Blackscholes.create_time 0 0 0 0)); (*Expiry*)
@@ -661,7 +699,7 @@ let spread_test =
       70.
       (Blackscholes.create_date 05 01 2022 (Blackscholes.create_time 0 0 0 0)) (*Today*)
       8.; (*Expected value*)
-      price_spread_test " in the money strangle, low volatility, 1 month out -- test" {
+      price_spread_input_test " in the money strangle, low volatility, 1 month out -- test" {
       spread = Strangle {strike1 = 65.; strike2 = 75.;
                bwpc_list = ["bp1"; "bc1"]};
       expiry = (Blackscholes.create_date 06 01 2022 (Blackscholes.create_time 0 0 0 0)); (*Expiry*)
@@ -671,7 +709,7 @@ let spread_test =
       0.025 0.1 ] }
       70.
       (Blackscholes.create_date 05 01 2022 (Blackscholes.create_time 0 0 0 0)) (*Today*)
-      8. (*Expected value*) *)
+      8. (*Expected value*)
   ]
 
 let tree_test tree = print_tree tree 

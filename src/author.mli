@@ -24,7 +24,7 @@
    collaboration: I had done this project last semester as well but made some 
    changes to errors I found. I can give access to my old github repo if needed. 
 
-   - 
+   - Arthur, Jack, Advay, Maxwell
 
  ************************************************************)
 

@@ -1,4 +1,0 @@
-(library
- (name OFinance)
- (public_name OFinance)
- (libraries ANSITerminal csv))

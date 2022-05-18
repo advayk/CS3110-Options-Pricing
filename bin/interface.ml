@@ -20,7 +20,6 @@ let rec interface_main () =
     | "make binomial" -> Binomial_loader.main (); interface_main ()
     | "make option" -> Main.main(); interface_main ()
     | "make visualize" -> Visualize.main(); interface_main ()
-    | "make arbitrage" -> Arb_loader.main(); interface_main ()
     | _ -> interface_main ()
 
   let () =  interface_main ()
