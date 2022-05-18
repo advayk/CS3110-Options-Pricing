@@ -1,0 +1,201 @@
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Start test Tests ::::1: f(x) = ln(x) numerically integrated small bounds .
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Test Tests ::::1: f(x) = ln(x) numerically integrated small bounds  is successful.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: End test Tests ::::1: f(x) = ln(x) numerically integrated small bounds .
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Start test Tests ::::2: normal pdf numerically integrated small bounds .
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Test Tests ::::2: normal pdf numerically integrated small bounds  is successful.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: End test Tests ::::2: normal pdf numerically integrated small bounds .
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Start test Tests ::::4: normal pdf numerically integrated big bounds.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Test Tests ::::4: normal pdf numerically integrated big bounds is successful.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: End test Tests ::::4: normal pdf numerically integrated big bounds.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Start test Tests ::::7: normal pdf with analytical sol 1 stddev width.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Test Tests ::::7: normal pdf with analytical sol 1 stddev width is successful.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: End test Tests ::::7: normal pdf with analytical sol 1 stddev width.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Start test Tests ::::9: normal pdf with analytical sol 3 stddev width.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Test Tests ::::9: normal pdf with analytical sol 3 stddev width is successful.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: End test Tests ::::9: normal pdf with analytical sol 3 stddev width.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Start test Tests ::::10:lorentzian walk.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Test Tests ::::10:lorentzian walk is successful.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: End test Tests ::::10:lorentzian walk.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Start test Tests ::::12:CSV with a Single Row.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Test Tests ::::12:CSV with a Single Row is successful.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: End test Tests ::::12:CSV with a Single Row.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Start test Tests ::::14:gamma of test.csv.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Test Tests ::::14:gamma of test.csv is successful.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: End test Tests ::::14:gamma of test.csv.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Start test Tests ::::16:vega of test.csv.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Test Tests ::::16:vega of test.csv is successful.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: End test Tests ::::16:vega of test.csv.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Start test Tests ::::18:gamma of AAPL 8/23/19 call.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Test Tests ::::18:gamma of AAPL 8/23/19 call is successful.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: End test Tests ::::18:gamma of AAPL 8/23/19 call.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Start test Tests ::::20:theta of AAPL 8/23/19 call.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Test Tests ::::20:theta of AAPL 8/23/19 call is successful.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: End test Tests ::::20:theta of AAPL 8/23/19 call.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Start test Tests ::::22:gamma of AAPL 8/23/19 put.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Test Tests ::::22:gamma of AAPL 8/23/19 put is successful.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: End test Tests ::::22:gamma of AAPL 8/23/19 put.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Start test Tests ::::24:theta of AAPL 8/23/19 put.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Test Tests ::::24:theta of AAPL 8/23/19 put is successful.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: End test Tests ::::24:theta of AAPL 8/23/19 put.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Start test Tests ::::27:vega of AAPL 12/20/19 call.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Test Tests ::::27:vega of AAPL 12/20/19 call is successful.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: End test Tests ::::27:vega of AAPL 12/20/19 call.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Start test Tests ::::29:delta of AAPL 12/20/19 put.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Test Tests ::::29:delta of AAPL 12/20/19 put is successful.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: End test Tests ::::29:delta of AAPL 12/20/19 put.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Start test Tests ::::31:vega of AAPL 12/20/19 put.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Test Tests ::::31:vega of AAPL 12/20/19 put is successful.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: End test Tests ::::31:vega of AAPL 12/20/19 put.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Start test Tests ::::33:delta of AAPL 1/15/21 call.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Test Tests ::::33:delta of AAPL 1/15/21 call is successful.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: End test Tests ::::33:delta of AAPL 1/15/21 call.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Start test Tests ::::35:vega of AAPL 1/15/21 call.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Test Tests ::::35:vega of AAPL 1/15/21 call is successful.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: End test Tests ::::35:vega of AAPL 1/15/21 call.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Start test Tests ::::37:delta of AAPL 1/15/21 put.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Test Tests ::::37:delta of AAPL 1/15/21 put is successful.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: End test Tests ::::37:delta of AAPL 1/15/21 put.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Start test Tests ::::39:vega of AAPL 1/15/21 put.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Test Tests ::::39:vega of AAPL 1/15/21 put is successful.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: End test Tests ::::39:vega of AAPL 1/15/21 put.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Start test Tests ::::41:delta of AAPL 6/19/20 call.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Test Tests ::::41:delta of AAPL 6/19/20 call is successful.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: End test Tests ::::41:delta of AAPL 6/19/20 call.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Start test Tests ::::43:vega of AAPL 6/19/20 call.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Test Tests ::::43:vega of AAPL 6/19/20 call is successful.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: End test Tests ::::43:vega of AAPL 6/19/20 call.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Start test Tests ::::45:delta of AAPL 6/19/20 put.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Test Tests ::::45:delta of AAPL 6/19/20 put is successful.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: End test Tests ::::45:delta of AAPL 6/19/20 put.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Start test Tests ::::48:theta of AAPL 6/19/20 put.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Test Tests ::::48:theta of AAPL 6/19/20 put is successful.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: End test Tests ::::48:theta of AAPL 6/19/20 put.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Start test Tests ::::50:gamma of AAPL 9/18/20 call.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Test Tests ::::50:gamma of AAPL 9/18/20 call is successful.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: End test Tests ::::50:gamma of AAPL 9/18/20 call.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Start test Tests ::::51:vega of AAPL 9/18/20 call.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Test Tests ::::51:vega of AAPL 9/18/20 call is successful.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: End test Tests ::::51:vega of AAPL 9/18/20 call.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Start test Tests ::::53:delta of AAPL 9/18/20 put.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Test Tests ::::53:delta of AAPL 9/18/20 put is successful.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: End test Tests ::::53:delta of AAPL 9/18/20 put.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Start test Tests ::::55:vega of AAPL 9/18/20 put.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Test Tests ::::55:vega of AAPL 9/18/20 put is successful.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: End test Tests ::::55:vega of AAPL 9/18/20 put.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Start test Tests ::::57:delta of AAPL 3/20/20 call.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Test Tests ::::57:delta of AAPL 3/20/20 call is successful.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: End test Tests ::::57:delta of AAPL 3/20/20 call.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Start test Tests ::::59:vega of AAPL 3/20/20 call.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Test Tests ::::59:vega of AAPL 3/20/20 call is successful.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: End test Tests ::::59:vega of AAPL 3/20/20 call.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Start test Tests ::::61:delta of AAPL 3/20/20 put.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Test Tests ::::61:delta of AAPL 3/20/20 put is successful.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: End test Tests ::::61:delta of AAPL 3/20/20 put.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Start test Tests ::::63:vega of AAPL 3/20/20 put.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Test Tests ::::63:vega of AAPL 3/20/20 put is successful.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: End test Tests ::::63:vega of AAPL 3/20/20 put.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Start test Tests ::::65:delta of AAPL 1/17/20 call.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Test Tests ::::65:delta of AAPL 1/17/20 call is successful.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: End test Tests ::::65:delta of AAPL 1/17/20 call.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Start test Tests ::::67:vega of AAPL 1/17/20 call.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Test Tests ::::67:vega of AAPL 1/17/20 call is successful.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: End test Tests ::::67:vega of AAPL 1/17/20 call.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Start test Tests ::::69:vega of AAOI 9/27/19 call.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Test Tests ::::69:vega of AAOI 9/27/19 call is successful.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: End test Tests ::::69:vega of AAOI 9/27/19 call.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Start test Tests ::::71:delta of AAOI 9/27/19 put.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Test Tests ::::71:delta of AAOI 9/27/19 put is successful.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: End test Tests ::::71:delta of AAOI 9/27/19 put.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Start test Tests ::::73:vega of AAOI 9/27/19 put.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Test Tests ::::73:vega of AAOI 9/27/19 put is successful.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: End test Tests ::::73:vega of AAOI 9/27/19 put.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Start test Tests ::::75:delta of AAOI 8/16/19 call.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Test Tests ::::75:delta of AAOI 8/16/19 call is successful.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: End test Tests ::::75:delta of AAOI 8/16/19 call.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Start test Tests ::::77:vega of AAOI 8/16/19 call.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Test Tests ::::77:vega of AAOI 8/16/19 call is successful.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: End test Tests ::::77:vega of AAOI 8/16/19 call.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Start test Tests ::::80:gamma of AAOI 8/16/19 put.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Test Tests ::::80:gamma of AAOI 8/16/19 put is successful.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: End test Tests ::::80:gamma of AAOI 8/16/19 put.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Start test Tests ::::82:theta of AAOI 8/16/19 put.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Test Tests ::::82:theta of AAOI 8/16/19 put is successful.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: End test Tests ::::82:theta of AAOI 8/16/19 put.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Start test Tests ::::84:estimated call option price of euro_option_1.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Test Tests ::::84:estimated call option price of euro_option_1 is successful.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: End test Tests ::::84:estimated call option price of euro_option_1.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Start test Tests ::::86:estimated call option price of euro_option_1.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Test Tests ::::86:estimated call option price of euro_option_1 is successful.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: End test Tests ::::86:estimated call option price of euro_option_1.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Start test Tests ::::88:estimated call option price of euro_option_1.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Test Tests ::::88:estimated call option price of euro_option_1 is successful.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: End test Tests ::::88:estimated call option price of euro_option_1.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Start test Tests ::::89:estimated call option price of euro_option_3.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Test Tests ::::89:estimated call option price of euro_option_3 is successful.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: End test Tests ::::89:estimated call option price of euro_option_3.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Start test Tests ::::92:estimated put option price of euro_option_3.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Test Tests ::::92:estimated put option price of euro_option_3 is successful.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: End test Tests ::::92:estimated put option price of euro_option_3.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Start test Tests ::::93:estimated put option price of euro_option_3.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Test Tests ::::93:estimated put option price of euro_option_3 is successful.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: End test Tests ::::93:estimated put option price of euro_option_3.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Start test Tests ::::96:estimated call option price of euro_option_4.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Test Tests ::::96:estimated call option price of euro_option_4 is successful.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: End test Tests ::::96:estimated call option price of euro_option_4.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Start test Tests ::::98:estimated call option price of euro_option_2.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Test Tests ::::98:estimated call option price of euro_option_2 is successful.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: End test Tests ::::98:estimated call option price of euro_option_2.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Start test Tests ::::100:estimated call option price of euro_option_1.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Test Tests ::::100:estimated call option price of euro_option_1 is successful.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: End test Tests ::::100:estimated call option price of euro_option_1.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Start test Tests ::::102:estimated put option price of euro_option_1.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Test Tests ::::102:estimated put option price of euro_option_1 is successful.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: End test Tests ::::102:estimated put option price of euro_option_1.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Start test Tests ::::104:estimated put option price of euro_option_1.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Test Tests ::::104:estimated put option price of euro_option_1 is successful.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: End test Tests ::::104:estimated put option price of euro_option_1.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Start test Tests ::::105:estimated put option price of euro_option_1.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Test Tests ::::105:estimated put option price of euro_option_1 is successful.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: End test Tests ::::105:estimated put option price of euro_option_1.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Start test Tests ::::108:estimated put option price of euro_option_3.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Test Tests ::::108:estimated put option price of euro_option_3 is successful.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: End test Tests ::::108:estimated put option price of euro_option_3.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Start test Tests ::::110:estimated put option price of euro_option_4.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Test Tests ::::110:estimated put option price of euro_option_4 is successful.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: End test Tests ::::110:estimated put option price of euro_option_4.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Start test Tests ::::112:estimated put option price of euro_option_1.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Test Tests ::::112:estimated put option price of euro_option_1 is successful.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: End test Tests ::::112:estimated put option price of euro_option_1.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Start test Tests ::::114:difference betwen date2 and date3.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Test Tests ::::114:difference betwen date2 and date3 is successful.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: End test Tests ::::114:difference betwen date2 and date3.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Start test Tests ::::116:difference between date5 and date6.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Test Tests ::::116:difference between date5 and date6 is successful.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: End test Tests ::::116:difference between date5 and date6.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Start test Tests ::::118:difference between date9 and date10.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Test Tests ::::118:difference between date9 and date10 is successful.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: End test Tests ::::118:difference between date9 and date10.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Start test Tests ::::119:difference between date11 and date10.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Test Tests ::::119:difference between date11 and date10 is successful.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: End test Tests ::::119:difference between date11 and date10.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Start test Tests ::::121:difference between date11 and date10.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Test Tests ::::121:difference between date11 and date10 is successful.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: End test Tests ::::121:difference between date11 and date10.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Start test Tests ::::124:out of the money condor, high volatility, 1 month out -- test.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Test Tests ::::124:out of the money condor, high volatility, 1 month out -- test is successful.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: End test Tests ::::124:out of the money condor, high volatility, 1 month out -- test.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Start test Tests ::::125:out of the money condor, low volatility, 1 month out -- test.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Test Tests ::::125:out of the money condor, low volatility, 1 month out -- test is successful.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: End test Tests ::::125:out of the money condor, low volatility, 1 month out -- test.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Start test Tests ::::127:0's.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Test Tests ::::127:0's is successful.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: End test Tests ::::127:0's.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Start test Tests ::::129:1's.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Test Tests ::::129:1's is successful.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: End test Tests ::::129:1's.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Start test Tests ::::132:average of stock price [1,2].
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Test Tests ::::132:average of stock price [1,2] is successful.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: End test Tests ::::132:average of stock price [1,2].
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Start test Tests ::::133:average of stock price [2.;2.].
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: Test Tests ::::133:average of stock price [2.;2.] is successful.
+2022-05-18T05:04:10+00:00 dhcp-vl2042-4678.redrover.cornell.edu#02 I: End test Tests ::::133:average of stock price [2.;2.].
