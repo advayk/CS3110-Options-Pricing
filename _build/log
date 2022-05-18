@@ -1,9 +1,9 @@
-# dune build @doc
+# dune exec test/main.exe
 # OCAMLPARAM: unset
 # Shared cache: disabled
 # Workspace root: /Users/akoranne/Spring_2022_3110/FinalProject/final_project
 # Auto-detected concurrency: 16
-$ /Users/akoranne/.opam/cs3110-2022Spring-final-project/bin/ocamlc.opt -config > /var/folders/k_/vx1zgrkj21j_hlqs81bfgs2c0000gn/T/dune_1fa3e0_output
+$ /Users/akoranne/.opam/cs3110-2022Spring-final-project/bin/ocamlc.opt -config > /var/folders/k_/vx1zgrkj21j_hlqs81bfgs2c0000gn/T/dune_40c0e3_output
 # Dune context:
 #  { name = "default"
 #  ; kind = "default"
@@ -135,30 +135,3 @@ $ /Users/akoranne/.opam/cs3110-2022Spring-final-project/bin/ocamlc.opt -config >
 #      ; windows_unicode = false
 #      }
 #  }
-$ (cd _build/default && /Users/akoranne/.opam/cs3110-2022Spring-final-project/bin/odoc support-files -o _doc/_html)
-$ (cd _build/default/_doc/_odoc/pkg/OFinance && /Users/akoranne/.opam/cs3110-2022Spring-final-project/bin/odoc compile --pkg OFinance -o page-index.odoc ../../../_mlds/OFinance/index.mld)
-$ (cd _build/default/src/.OFinance.objs/byte && /Users/akoranne/.opam/cs3110-2022Spring-final-project/bin/odoc compile -I . -I ../../../_doc/_odoc/pkg/OFinance --pkg OFinance -o oFinance.odoc oFinance.cmt)
-$ (cd _build/default/src/.OFinance.objs/byte && /Users/akoranne/.opam/cs3110-2022Spring-final-project/bin/odoc compile -I . -I ../../../_doc/_odoc/pkg/OFinance --pkg OFinance -o oFinance__Author.odoc oFinance__Author.cmti)
-> File "src/author.mli", line 11, characters 4-11:
-> Warning: Paragraph is not allowed in the tags section.
-> Suggestion: move 'Maxwell' before any tags.
-$ (cd _build/default/src/.OFinance.objs/byte && /Users/akoranne/.opam/cs3110-2022Spring-final-project/bin/odoc compile -I . -I ../../../_doc/_odoc/pkg/OFinance --pkg OFinance -o oFinance__Blackscholes.odoc oFinance__Blackscholes.cmti)
-$ (cd _build/default/src/.OFinance.objs/byte && /Users/akoranne/.opam/cs3110-2022Spring-final-project/bin/odoc compile -I . -I ../../../_doc/_odoc/pkg/OFinance --pkg OFinance -o oFinance__Maths.odoc oFinance__Maths.cmti)
-$ (cd _build/default/src/.OFinance.objs/byte && /Users/akoranne/.opam/cs3110-2022Spring-final-project/bin/odoc compile -I . -I ../../../_doc/_odoc/pkg/OFinance --pkg OFinance -o oFinance__Csvreader.odoc oFinance__Csvreader.cmti)
-$ (cd _build/default/src/.OFinance.objs/byte && /Users/akoranne/.opam/cs3110-2022Spring-final-project/bin/odoc compile -I . -I ../../../_doc/_odoc/pkg/OFinance --pkg OFinance -o oFinance__Portfolio.odoc oFinance__Portfolio.cmti)
-> File "src/portfolio.mli", line 50, characters 104-104:
-> Warning: End of text is not allowed in '[...]' (code).
-> File "src/portfolio.mli", line 53, characters 96-96:
-> Warning: End of text is not allowed in '[...]' (code).
-> File "src/portfolio.mli", line 56, characters 193-193:
-> Warning: End of text is not allowed in '[...]' (code).
-$ (cd _build/default/src/.OFinance.objs/byte && /Users/akoranne/.opam/cs3110-2022Spring-final-project/bin/odoc compile -I . -I ../../../_doc/_odoc/pkg/OFinance --pkg OFinance -o oFinance__Spread.odoc oFinance__Spread.cmti)
-$ (cd _build/default/src/.OFinance.objs/byte && /Users/akoranne/.opam/cs3110-2022Spring-final-project/bin/odoc compile -I . -I ../../../_doc/_odoc/pkg/OFinance --pkg OFinance -o oFinance__Binomial.odoc oFinance__Binomial.cmti)
-$ (cd _build/default/src/.OFinance.objs/byte && /Users/akoranne/.opam/cs3110-2022Spring-final-project/bin/odoc compile -I . -I ../../../_doc/_odoc/pkg/OFinance --pkg OFinance -o oFinance__Levy.odoc oFinance__Levy.cmti)
-$ (cd _build/default/_doc/_html && /Users/akoranne/.opam/cs3110-2022Spring-final-project/bin/odoc link -I ../_odoc/pkg/OFinance -I ../../src/.OFinance.objs/byte -o ../_odocls/OFinance/page-index.odocl ../_odoc/pkg/OFinance/page-index.odoc)
-$ (cd _build/default/_doc/_html && /Users/akoranne/.opam/cs3110-2022Spring-final-project/bin/odoc link -I ../_odoc/pkg/OFinance -I ../../src/.OFinance.objs/byte -o ../_odocls/OFinance/oFinance.odocl ../../src/.OFinance.objs/byte/oFinance.odoc)
-> File "../../src/.OFinance.objs/byte/oFinance.odoc":
-> Warning: Couldn't find the following modules:
->   Csv
-$ (cd _build/default/_doc/_html && /Users/akoranne/.opam/cs3110-2022Spring-final-project/bin/odoc html-generate -o . ../_odocls/OFinance/page-index.odocl)
-$ (cd _build/default/_doc/_html && /Users/akoranne/.opam/cs3110-2022Spring-final-project/bin/odoc html-generate -o . ../_odocls/OFinance/oFinance.odocl)

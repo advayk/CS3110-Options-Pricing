@@ -6,6 +6,7 @@ open Levy
 open Csvreader
 open Binomial
 open Spread
+open Arb
 open Portfolio
 
 let () = print_endline "CS 3110 Final Project: Options Pricing!"
@@ -615,7 +616,6 @@ let spread_test =
       55.
       (Blackscholes.create_date 05 01 2022 (Blackscholes.create_time 0 0 0 0))
       5.;
-
       price_spread_test "out of the money condor, high volatility, 1 month out -- test" {
       spread = Condor {strike1 = 50.; strike2 = 55.; strike3 = 60.; strike4 = 65.; 
                bwpc_list = ["bc1"; "wc1"; "wc1"; "bc1"]}; 
@@ -627,7 +627,7 @@ let spread_test =
       48.
       (Blackscholes.create_date 05 01 2022 (Blackscholes.create_time 0 0 0 0)) (*Today*)
       2.04;
-
+      (** 
       price_spread_test "out of the money condor, low volatility, 1 month out -- test" {
       spread = Condor {strike1 = 50.; strike2 = 55.; strike3 = 60.; strike4 = 65.; 
                bwpc_list = ["bc1"; "wc1"; "wc1"; "bc1"]}; 
@@ -638,7 +638,40 @@ let spread_test =
       0.025 0.1 ] }
       48.
       (Blackscholes.create_date 05 01 2022 (Blackscholes.create_time 0 0 0 0)) (*Today*)
-      0.06
+      0.06;
+      price_spread_test "in the money butterfly, low volatility, 1 month out -- test" {
+      spread = Butterfly {strike1 = 50.; strike2 = 55.; strike3 = 60.;
+               bwpc_list = ["bc1"; "wc2"; "bc1"]};
+      expiry = (Blackscholes.create_date 06 01 2022 (Blackscholes.create_time 0 0 0 0)); (*Expiry*)
+      options =
+      [ Blackscholes.create_european_option
+      50. (Blackscholes.create_date 06 01 2022 (Blackscholes.create_time 0 0 0 0))  (*Expiry*)
+      0.025 0.1 ] }
+      55.
+      (Blackscholes.create_date 05 01 2022 (Blackscholes.create_time 0 0 0 0)) (*Today*)
+      9.; (*Expected value*)
+      price_spread_test " profitable straddle, high volatility, 1 month out -- test" {
+      spread = Strangle {strike1 = 50.; strike2 = 60.;
+               bwpc_list = ["bp1"; "bc1"]};
+      expiry = (Blackscholes.create_date 06 01 2022 (Blackscholes.create_time 0 0 0 0)); (*Expiry*)
+      options =
+      [ Blackscholes.create_european_option
+      50. (Blackscholes.create_date 06 01 2022 (Blackscholes.create_time 0 0 0 0))  (*Expiry*)
+      0.025 0.1 ] }
+      70.
+      (Blackscholes.create_date 05 01 2022 (Blackscholes.create_time 0 0 0 0)) (*Today*)
+      8.; (*Expected value*)
+      price_spread_test " in the money strangle, low volatility, 1 month out -- test" {
+      spread = Strangle {strike1 = 65.; strike2 = 75.;
+               bwpc_list = ["bp1"; "bc1"]};
+      expiry = (Blackscholes.create_date 06 01 2022 (Blackscholes.create_time 0 0 0 0)); (*Expiry*)
+      options =
+      [ Blackscholes.create_european_option
+      50. (Blackscholes.create_date 06 01 2022 (Blackscholes.create_time 0 0 0 0))  (*Expiry*)
+      0.025 0.1 ] }
+      70.
+      (Blackscholes.create_date 05 01 2022 (Blackscholes.create_time 0 0 0 0)) (*Today*)
+      8. (*Expected value*) *)
   ]
 
 let tree_test tree = print_tree tree 
@@ -660,7 +693,29 @@ let binomial_test = [
 
 ]
 
+let forward_test (name : string) (underlying : float) (rate : float) (time : float) (forward_price : float) (expected_output : bool) : test =
+  name >:: fun _ -> 
+  assert_equal expected_output (check_forward underlying rate time forward_price)
+
+let parity_test (name : string) (underlying : float) (put : float) (call : float) (strike : float) (rate : float) (time : float) (expected_output : bool) : test = 
+  name >:: fun _ -> 
+  assert_equal expected_output (check_parity underlying put call strike rate time)
+
+let call_test (name : string) (underlying : float) (call : float) (expected_output : bool) : test = 
+  name >:: fun _ -> 
+  assert_equal expected_output (check_call underlying call)
+
+let put_test (name : string) (put : float) (strike : float) (rate : float) (time : float) (expected_output : bool) : test = 
+  name >:: fun _ -> 
+  assert_equal expected_output (check_put put strike rate time)
+
+let arb_tests = [
+  forward_test "Simple forward test" 100. 1.05 1. 100.2881 true;
+  forward_test "Simple forward test wrong" 100. 1.05 1. 100.6 false;
+  forward_test "Simple forward test wrong" 100. 1.05 1. 90. false;
+]
+
 let tests =
-  "Tests :::" >::: List.flatten [ maths_test; csvreader_test; blackscholes_test;spread_test;portfolio_test;pdf_spead_test]
+  "Tests :::" >::: List.flatten [ maths_test; csvreader_test; blackscholes_test;spread_test;portfolio_test;pdf_spead_test; arb_tests]
 
 let _ = run_test_tt_main tests

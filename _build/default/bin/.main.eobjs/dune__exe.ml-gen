@@ -1,3 +1,7 @@
+(** @canonical Dune__exe.Arb_loader *)
+module Arb_loader = Dune__exe__Arb_loader
+
+
 (** @canonical Dune__exe.Binomial_loader *)
 module Binomial_loader = Dune__exe__Binomial_loader
 

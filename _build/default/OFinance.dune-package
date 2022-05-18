@@ -7,8 +7,12 @@
    OFinance.a
    OFinance.cma
    OFinance.cmxa
+   arb.ml
+   arb.mli
    author.ml
    author.mli
+   backtester.ml
+   backtester.mli
    binomial.ml
    binomial.mli
    blackscholes.ml
@@ -24,10 +28,18 @@
    oFinance.cmt
    oFinance.cmx
    oFinance.ml
+   oFinance__Arb.cmi
+   oFinance__Arb.cmt
+   oFinance__Arb.cmti
+   oFinance__Arb.cmx
    oFinance__Author.cmi
    oFinance__Author.cmt
    oFinance__Author.cmti
    oFinance__Author.cmx
+   oFinance__Backtester.cmi
+   oFinance__Backtester.cmt
+   oFinance__Backtester.cmti
+   oFinance__Backtester.cmx
    oFinance__Binomial.cmi
    oFinance__Binomial.cmt
    oFinance__Binomial.cmti
@@ -76,8 +88,14 @@
   (wrapped
    (main_module_name OFinance)
    (modules
+    ((name Arb) (obj_name oFinance__Arb) (visibility public) (impl) (intf))
     ((name Author)
      (obj_name oFinance__Author)
+     (visibility public)
+     (impl)
+     (intf))
+    ((name Backtester)
+     (obj_name oFinance__Backtester)
      (visibility public)
      (impl)
      (intf))
