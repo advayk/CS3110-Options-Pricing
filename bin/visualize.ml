@@ -1,5 +1,6 @@
 open Base
 open Matplotlib
+open OFinance
 open Csvreader
 
 type colour =

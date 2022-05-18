@@ -1,0 +1,30 @@
+(** @canonical OFinance.Author *)
+module Author = OFinance__Author
+
+
+(** @canonical OFinance.Binomial *)
+module Binomial = OFinance__Binomial
+
+
+(** @canonical OFinance.Blackscholes *)
+module Blackscholes = OFinance__Blackscholes
+
+
+(** @canonical OFinance.Csvreader *)
+module Csvreader = OFinance__Csvreader
+
+
+(** @canonical OFinance.Levy *)
+module Levy = OFinance__Levy
+
+
+(** @canonical OFinance.Maths *)
+module Maths = OFinance__Maths
+
+
+(** @canonical OFinance.Montecarlo *)
+module Montecarlo = OFinance__Montecarlo
+
+
+(** @canonical OFinance.Spread *)
+module Spread = OFinance__Spread

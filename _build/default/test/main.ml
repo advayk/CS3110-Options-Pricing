@@ -1,4 +1,5 @@
 open OUnit2
+open OFinance
 open Blackscholes
 open Maths
 open Levy

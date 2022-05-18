@@ -1,1 +1,1 @@
-bin/main.ml: ANSITerminal Blackscholes List Spread String
+bin/main.ml: ANSITerminal Blackscholes List OFinance String

@@ -1,1 +1,1 @@
-bin/interface.ml: ANSITerminal Binomial Binomial_loader Blackscholes Csv_loader Csvreader Levy Main Maths Montecarlo Spread Spread_loader Visualize
+bin/interface.ml: ANSITerminal Binomial_loader Csv_loader Main OFinance Spread_loader Visualize
