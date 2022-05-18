@@ -1,7 +1,10 @@
+<<<<<<< HEAD
 (** @canonical Dune__exe.Arb_loader *)
 module Arb_loader = Dune__exe__Arb_loader
 
 
+=======
+>>>>>>> 97cb8f3c9dbb272e57b2ded40c2932b243c1cf3e
 (** @canonical Dune__exe.Binomial_loader *)
 module Binomial_loader = Dune__exe__Binomial_loader
 

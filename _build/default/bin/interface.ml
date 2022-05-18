@@ -16,11 +16,18 @@ let rec interface_main () =
     match read_line () with
     | "quit" ->  ANSITerminal.print_string [ ANSITerminal.red ] "\nThank You ! \n\n";
     | "make spread" -> Spread_loader.spread_main (); interface_main ()
+<<<<<<< HEAD
     | "make reader" -> Csv_loader.main (); interface_main ()
     | "make binomial" -> Binomial_loader.main (); interface_main ()
     | "make option" -> Main.main(); interface_main ()
     | "make visualize" -> Visualize.main(); interface_main ()
     | "make arbitrage" -> Arb_loader.main(); interface_main ()
+=======
+    | "make reader" -> Csv_loader.main ();  interface_main ()
+    | "make binomial" -> Binomial_loader.main (); interface_main ()
+    | "make option" -> Main.main(); interface_main ()
+    | "make visualize" -> Visualize.main(); interface_main ()
+>>>>>>> 97cb8f3c9dbb272e57b2ded40c2932b243c1cf3e
     | _ -> interface_main ()
 
   let () =  interface_main ()

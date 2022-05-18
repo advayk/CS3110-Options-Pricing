@@ -7,6 +7,7 @@ open Csvreader
 open Binomial
 open Spread
 open Arb
+open Portfolio
 
 let () = print_endline "CS 3110 Final Project: Options Pricing!"
 
@@ -15,9 +16,10 @@ let () = print_endline "CS 3110 Final Project: Options Pricing!"
 (** [csv_test filename expected_output] constructs an OUnit
     test named [name] that asserts the equality of [expected_output]
     with [from_csv filename]. *)
-  let csv_test (name : string) (filename : string) (expected_output : string) =
-    name >:: fun _ -> 
-    assert (expected_output = (filename |> load_csv |> from_csv |> first))
+let csv_test (name : string) (filename : string) (expected_output : string) =
+  name >:: fun _ -> 
+  assert (expected_output = (filename |> load_csv |> from_csv |> first))
+
 
 (*CSV Reader*)
 (** [from_csv_test filename expected_output] constructs an OUnit
@@ -48,8 +50,7 @@ let european_call_options_price_test
   name >:: fun _ ->
   assert (
     close_enough expected_output
-      (european_call_options_price european_option current_stock_price
-         current_date))
+      (european_call_options_price european_option current_stock_price current_date))
 
 let european_put_options_price_test
   (name : string)
@@ -66,6 +67,30 @@ let european_put_options_price_test
 let diff_between_dates_test (name : string) (date1 : Blackscholes.date) (date2 : Blackscholes.date) (expected_output : int) : test =
   name >:: fun _ -> assert_equal expected_output (diff_between_dates date1 date2)
 
+let portfolio_val_test (name : string) (stock_prices : float list) (portfolio_weights : float list) (acc : float) (expected_output : float) : test =
+  name >:: fun _ -> assert_equal expected_output (portfolio_value stock_prices portfolio_weights acc)  
+  
+let average_price_test (name : string) (stock_prices : float list) (expected_output : float) : test =
+  name >:: fun _ -> assert_equal expected_output (average_price stock_prices)  
+    
+let normalize_vector_test (name : string) (stock_prices : float list) (expected_output : float list) : test =
+  name >:: fun _ -> assert_equal expected_output (normalize_weights stock_prices)  
+    
+let estimate_risk_first_moment_test (name : string) (stock_prices : float list) (expected_output : float) : test =
+  name >:: fun _ -> assert_equal expected_output (estimate_risk_first_moment stock_prices)  
+
+let get_price_at_date_test (name : string) (stock_data : (stock_date * float) list ) (d : stock_date) (expected_output : float) : test =
+  name >:: fun _ -> assert_equal expected_output (get_price_at_date stock_data d)  
+
+let get_price_at_time_test (name : string) (stock_data : (stock_time * float) list ) input_time (expected_output : float) : test =
+  name >:: fun _ -> assert_equal expected_output (get_price_at_time stock_data input_time)  
+    
+let expected_returns_test (name : string) (expected_stock_returns :  float list ) (weights : float list) (expected_output : float) : test =
+  name >:: fun _ -> assert_equal expected_output (expected_returns expected_stock_returns weights)  
+    
+let get_price_ticker_test (name : string) (stock_data :  (ticker*float) list ) (tick : ticker) (expected_output : float) : test =
+  name >:: fun _ -> assert_equal expected_output (get_price_ticker stock_data tick)  
+     
 let euro_option_1_time = create_time 0 0 0 0
 let euro_option_1_expiration_date = create_date 3 22 2022 euro_option_1_time
 
@@ -94,6 +119,17 @@ let euro_option_1_expiration_date = create_date 3 22 2022 euro_option_1_time
 let float_about_eq a b =
   a -. b |> Float.abs < 1e-1 *. (a *. b |> Float.abs |> Float.sqrt)
 
+let pdf_draw_test
+  (name : string)
+  (pdf : Maths.pdf)
+  (x : float)
+  (expected_output : float): test =
+  name >:: fun _ ->
+    let result = Maths.pdf_value pdf x in
+    (* result |> Printf.printf "\n%8f\n";
+    expected_output |> Printf.printf "%8f\n"; *)
+    assert (float_about_eq expected_output result)
+
 let cdf_test
     (name : string)
     (pdf : Maths.pdf)
@@ -101,8 +137,8 @@ let cdf_test
     (expected_output : float) : test =
   name >:: fun _ ->
   let result = Maths.cdf pdf x in
-  (* result |> Printf.printf "\n%8f\n";
-  expected_output |> Printf.printf "%8f\n"; *)
+  result |> Printf.printf "\n%8f\n";
+  expected_output |> Printf.printf "%8f\n";
   assert (result |> float_about_eq expected_output)
 
 let integrate_test
@@ -259,6 +295,63 @@ let blackscholes_test =
       diff_between_dates_test "difference between date11 and date10" date12 date11 7;
   ]
 
+  let stock_date_1 = make_stock_date 1 1 2022
+  let stock_date_2 = make_stock_date 1 2 2022
+  let stock_date_3 = make_stock_date 4 3 2022
+  let stock_date_4 = make_stock_date 5 6 2022
+
+  let stock_time_1 = make_stock_time 1 0 0  
+  let stock_time_2 = make_stock_time 1 1 0  
+  let stock_time_3 = make_stock_time 1 1 1  
+
+  let stock_time_4 = make_stock_time 1 2 1  
+
+  let appl = make_stock_ticker "AAPL"  
+  let amzn = make_stock_ticker "AMZN"  
+  let pfe = make_stock_ticker "PFE"  
+
+  let mu = make_stock_ticker "MU" 
+  let nvda = make_stock_ticker "NVDA" 
+
+
+
+  let portfolio_test = [
+    portfolio_val_test "compute value of portfolio 1" [1.;2.] [3.;4.] 0. 11.; 
+    portfolio_val_test "0's" [0.;0.] [0.;0.] 0. 0.; 
+    portfolio_val_test "empty list" [] [] 0. 0.;
+    portfolio_val_test "1's" [1.;1.] [1.;1.] 0. 2.;
+    average_price_test "average of stock price 0" [0.;0.] 0.;
+    average_price_test "average of stock price" [1.] 1.;
+    average_price_test "average of stock price [1,2]" [1.;2.] 1.5;
+    average_price_test "average of stock price [2.;2.]" [2.;2.] 2.;
+    average_price_test "average of stock price [5.;6.]" [5.;6.] 5.5;
+    normalize_vector_test "normalize normal list" [] [];
+    normalize_vector_test "normalize vector with 1 element" [1.] [1.];
+    get_price_at_date_test "price at one date" [(stock_date_1,10.)] stock_date_1 10.;
+    get_price_at_date_test "price at one date" [(stock_date_1,10.);(stock_date_2,20.)] stock_date_2 20.;
+    get_price_at_date_test "price at one date" [(stock_date_1,10.);(stock_date_2,20.);(stock_date_3,30.);(stock_date_4,40.)] stock_date_4 40.;
+    get_price_at_time_test "price at one date" [(stock_time_1,10.)] stock_time_1 10.;
+    get_price_at_time_test "price at one date" [(stock_time_1,10.)] stock_time_1 10.;
+    get_price_at_time_test "price at one date" [(stock_time_1,10.);(stock_time_2,20.) ] stock_time_1 10.;
+    get_price_at_time_test "price at one date" [(stock_time_1,10.);(stock_time_2,20.);(stock_time_3,30.);(stock_time_4,40.) ] stock_time_4 40.;
+    expected_returns_test "price at one date" [1.;2.;3.] [1.;2.;3.] 14.;
+    expected_returns_test "price at one date" [1.;2.;4.] [1.;2.;3.] 17.;
+    expected_returns_test "price at one date" [3.;2.;4.] [1.;2.;3.] 19.;
+    expected_returns_test "price at one date" [3.;2.;4.] [1.;2.;4.] 23.;
+    expected_returns_test "price at one date" [3.;2.;4.] [1.;2.;5.] 27.;
+    expected_returns_test "price at one date" [3.;2.;4.] [1.;2.;6.] 31.;
+    expected_returns_test "price at one date" [6.;2.;4.] [1.;2.;6.] 34.;
+    get_price_ticker_test "price at one date" [(appl,20.)] appl 20.;
+    get_price_ticker_test "price at one date" [(appl,0.)] appl 0.;
+    get_price_ticker_test "price at one date" [(amzn,30.)] amzn 30.;
+    get_price_ticker_test "ticker price 2 elements" [(amzn,30.); (pfe,50.)] pfe 50.;
+    get_price_ticker_test "ticker price 3 elements" [(amzn,30.); (pfe,50.);(appl,20.)] appl 20.;
+    get_price_ticker_test "ticker price 4 elements" [(amzn,30.); (pfe,50.);(appl,20.);(nvda,20.)] nvda 20.;
+    get_price_ticker_test "ticker price 4 elements" [(amzn,30.); (pfe,50.);(appl,20.);(nvda,20.)] appl 20.;
+    get_price_ticker_test "ticker price 4 elements" [(amzn,30.); (pfe,50.);(appl,20.);(nvda,20.)] amzn 30.;
+    get_price_ticker_test "ticker price 5 elements" [(amzn,30.); (pfe,50.);(appl,20.);(mu,100.);(nvda,20.)] mu 100.;
+
+  ]
 
   let one_row_data = "Data/test.csv" |> load_csv |> from_csv
   let clean_data = "Data/clean_data.csv" |> load_csv |> from_csv
@@ -318,8 +411,8 @@ let blackscholes_test =
     get_greek_test "theta of AAPL 3/20/20 put" "theta" clean_data "AAPL" "3/20/20" "put" [(110.0,-2.4869);(115.0,-3.2828);(120.0,-3.8502);(125.0,-4.4064);(130.0,-5.0188);(135.0,-5.6698);(140.0,-6.3978);(145.0,-7.1622);(150.0,-7.9846);(155.0,-8.8021);(160.0,-9.6562);(165.0,-10.4481);(170.0,-11.2779);(175.0,-11.8627);(180.0,-12.5291);(185.0,-13.1718);(190.0,-13.5158);(195.0,-13.8169);(200.0,-13.6534);(205.0,-13.7151);(210.0,-13.3369);(215.0,-12.7104);(220.0,-12.1365);(225.0,-11.2631);(230.0,-10.3404);(235.0,-9.4797);(240.0,-8.4472);(245.0,-6.9816);(250.0,-5.7727);(255.0,-6.0613);(260.0,-4.7538);(265.0,-3.8957);(270.0,-3.0827);(275.0,-2.3204);(280.0,-1.612);(285.0,-0.9586);(290.0,-0.3595);(295.0,0.1869);(300.0,0.6835);];
     get_greek_test "delta of AAPL 1/17/20 call" "delta" clean_data "AAPL" "1/17/20" "call" [(50.0,0.9919);(55.0,0.9919);(60.0,0.9918);(65.0,0.9918);(70.0,0.9918);(75.0,0.9917);(80.0,0.9915);(85.0,0.9911);(90.0,0.9903);(95.0,0.9891);(100.0,0.9871);(105.0,0.9842);(110.0,0.9801);(115.0,0.9744);(120.0,0.967);(125.0,0.9575);(130.0,0.9457);(135.0,0.9316);(140.0,0.9173);(145.0,0.9142);(150.0,0.8953);(155.0,0.8808);(160.0,0.8446);(165.0,0.8326);(170.0,0.8021);(175.0,0.7693);(180.0,0.7363);(185.0,0.6963);(190.0,0.6523);(195.0,0.6049);(200.0,0.5547);(205.0,0.5025);(210.0,0.4493);(215.0,0.396);(220.0,0.3449);(225.0,0.2947);(230.0,0.2483);(235.0,0.2088);(240.0,0.1735);(245.0,0.1394);(250.0,0.114);(255.0,0.0923);(260.0,0.0735);(265.0,0.0601);(270.0,0.0467);(275.0,0.0385);(280.0,0.0313);(285.0,0.0258);(290.0,0.0226);(300.0,0.0151);(310.0,0.0125);(320.0,0.0068);(330.0,0.004);(340.0,0.0024);];
     get_greek_test "gamma of AAPL 1/17/20 call" "gamma" clean_data "AAPL" "1/17/20" "call" [(50.0,0.0);(55.0,0.0);(60.0,0.0);(65.0,0.0);(70.0,0.0);(75.0,0.0);(80.0,0.0);(85.0,0.0);(90.0,0.0001);(95.0,0.0001);(100.0,0.0002);(105.0,0.0004);(110.0,0.0005);(115.0,0.0007);(120.0,0.001);(125.0,0.0013);(130.0,0.0017);(135.0,0.0021);(140.0,0.0025);(145.0,0.0028);(150.0,0.0033);(155.0,0.0039);(160.0,0.0045);(165.0,0.0052);(170.0,0.0059);(175.0,0.0066);(180.0,0.0075);(185.0,0.0083);(190.0,0.009);(195.0,0.0096);(200.0,0.0101);(205.0,0.0105);(210.0,0.0106);(215.0,0.0106);(220.0,0.0102);(225.0,0.0098);(230.0,0.0092);(235.0,0.0084);(240.0,0.0075);(245.0,0.0066);(250.0,0.0057);(255.0,0.0049);(260.0,0.0042);(265.0,0.0036);(270.0,0.0029);(275.0,0.0025);(280.0,0.0021);(285.0,0.0018);(290.0,0.0015);(300.0,0.0011);(310.0,0.0009);(320.0,0.0005);(330.0,0.0003);(340.0,0.0002);];
-    get_greek_test "vega of AAPL 1/17/20 call" "vega" clean_data "AAPL" "1/17/20" "call" [(50.0,0.0002);(55.0,0.0009);(60.0,0.0036);(65.0,0.0119);(70.0,0.033);(75.0,0.0807);(80.0,0.1766);(85.0,0.352);(90.0,0.6476);(95.0,1.1113);(100.0,1.7951);(105.0,2.7499);(110.0,4.0201);(115.0,5.6386);(120.0,7.6223);(125.0,9.9697);(130.0,12.6599);(135.0,15.6533);(140.0,18.4405);(145.0,19.0387);(150.0,22.3887);(155.0,24.7814);(160.0,30.135);(165.0,31.7262);(170.0,35.4528);(175.0,38.9571);(180.0,42.0039);(185.0,45.1008);(190.0,47.8021);(195.0,49.9268);(200.0,51.335);(205.0,51.9008);(210.0,51.5475);(215.0,50.2433);(220.0,48.0777);(225.0,45.0438);(230.0,41.3775);(235.0,37.5557);(240.0,33.5323);(245.0,29.0316);(250.0,25.2418);(255.0,21.6653);(260.0,18.2448);(265.0,15.6133);(270.0,12.7983);(275.0,10.938);(280.0,9.2418);(285.0,7.8647);(290.0,7.0439);(300.0,4.9974);(310.0,4.2306);(320.0,2.4958);(330.0,1.5588);(340.0,0.989);];
-]
+    ]
+
 let maths_test =
   [
     integrate_test " f(x) = ln(x) numerically integrated med bounds "
@@ -407,7 +500,50 @@ let maths_test =
       levy_test "exponential walk" {pdf = { functn = (fun x -> x) ; 
       distribution_class = Maths.Laplace {lambda = 1. ; peak = 0.0}} ; 
       init = 0.0 ; 
-      numsteps = 1000}
+      numsteps = 1000};
+      cdf_test " normal cdf"
+      {functn = (fun x -> x); 
+      distribution_class =
+      Maths.Normal { stddev = 1.; mean = 0. };
+      }
+      0. 0.5;
+    
+      cdf_test " normal cdf"
+      {functn = (fun x -> x); 
+      distribution_class =
+      Maths.Normal { stddev = 1.; mean = 2. };
+      }
+      2. 0.5;
+
+    
+      cdf_test "exp cdf"
+      {functn = (fun x -> x); 
+      distribution_class =
+      Maths.Laplace { lambda = 1.; peak = 0. };
+      }
+      0. 0.5;
+
+      cdf_test "exp cdf"
+      {functn = (fun x -> x); 
+      distribution_class =
+      Maths.Laplace { lambda = 1.; peak = 0. };
+      }
+      0.4 0.664840;
+
+      cdf_test "exp cdf"
+      {functn = (fun x -> x); 
+      distribution_class =
+      Maths.Laplace { lambda = 1.; peak = 0. };
+      }
+      0.8 0.775336;
+
+      cdf_test "lorentz cdf"
+      {functn = (fun x -> x); 
+      distribution_class =
+      Maths.Lorentzian { gamma = 1.; peak = 0. };
+      }
+      0. 0.5;
+      
   ]
  let price_spread_test
     (name : string)
@@ -419,6 +555,43 @@ let maths_test =
   let result = Spread.price_spread spread underlying today in
   assert (result |> float_about_eq expected_output)
 
+let pdf_spead_test = [
+  pdf_draw_test "exponential value" {functn = (fun x -> x); distribution_class = 
+  Maths.Laplace{lambda = 1. ; peak = 0. }} 0. (0.5*.(1.));
+  pdf_draw_test "exponential value" {functn = (fun x -> x); distribution_class = 
+  Maths.Laplace{lambda = 2. ; peak = 0. }} 0. (0.5*.(2.));
+  pdf_draw_test "exponential value" {functn = (fun x -> x); distribution_class = 
+  Maths.Laplace{lambda = 0.1 ; peak = 0. }} 0. (0.5*.(0.1));
+  pdf_draw_test "exponential value" {functn = (fun x -> x); distribution_class = 
+  Maths.Laplace{lambda = 2. ; peak = 0. }} 3. (0.002479);
+
+  pdf_draw_test "normal value" {functn = (fun x -> x); distribution_class = 
+  Maths.Normal{stddev = 1. ; mean = 0. }} 3. (0.004432);
+  pdf_draw_test "normal value" {functn = (fun x -> x); distribution_class = 
+  Maths.Normal{stddev = Float.pi ; mean = 0. }} 3. (0.080491);
+  pdf_draw_test "normal value" {functn = (fun x -> x); distribution_class = 
+  Maths.Normal{stddev = 3. ; mean = 0. }} 1. (0.125794);
+  pdf_draw_test "normal value" {functn = (fun x -> x); distribution_class = 
+  Maths.Normal{stddev = 80. ; mean = 0. }} 199. (0.000226);
+  
+  pdf_draw_test "log normal value" {functn = (fun x -> x); distribution_class = 
+  Maths.LogNormal{sigma_of_log = 1. ; mean_of_log = 0. }} 3. (0.072728);
+  pdf_draw_test "log normal value" {functn = (fun x -> x); distribution_class = 
+  Maths.LogNormal{sigma_of_log = Float.pi ; mean_of_log = 0. }} 3. (0.039818);
+  pdf_draw_test "log normal value" {functn = (fun x -> x); distribution_class = 
+  Maths.LogNormal{sigma_of_log = 3. ; mean_of_log = 0. }} 1. (0.132981);
+  pdf_draw_test "log normal value" {functn = (fun x -> x); distribution_class = 
+  Maths.LogNormal{sigma_of_log = 80. ; mean_of_log = 0. }} 199. (0.0000256);
+  
+  pdf_draw_test "lorentzian value" {functn = (fun x -> x); distribution_class = 
+  Maths.Lorentzian{gamma = 1. ; peak = 0. }} 3. (0.031831);
+  pdf_draw_test "lorentzian value" {functn = (fun x -> x); distribution_class = 
+  Maths.Lorentzian{gamma = Float.pi ; peak = 0. }} 3. (0.052995);
+  pdf_draw_test "lorentzian value" {functn = (fun x -> x); distribution_class = 
+  Maths.Lorentzian{gamma = 3. ; peak = 0. }} 1. (0.095493);
+  pdf_draw_test "lorentzian value" {functn = (fun x -> x); distribution_class = 
+  Maths.Lorentzian{gamma = 80. ; peak = 0. }} 199. (0.000554);
+]
 
 let spread_test =
   [
@@ -543,6 +716,6 @@ let arb_tests = [
 ]
 
 let tests =
-  "Tests :::" >::: List.flatten [ maths_test; csvreader_test; blackscholes_test;spread_test;arb_tests]
+  "Tests :::" >::: List.flatten [ maths_test; csvreader_test; blackscholes_test;spread_test;portfolio_test;pdf_spead_test; arb_tests]
 
 let _ = run_test_tt_main tests

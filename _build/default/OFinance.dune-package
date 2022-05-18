@@ -7,12 +7,17 @@
    OFinance.a
    OFinance.cma
    OFinance.cmxa
+<<<<<<< HEAD
    arb.ml
    arb.mli
    author.ml
    author.mli
    backtester.ml
    backtester.mli
+=======
+   author.ml
+   author.mli
+>>>>>>> 97cb8f3c9dbb272e57b2ded40c2932b243c1cf3e
    binomial.ml
    binomial.mli
    blackscholes.ml
@@ -28,18 +33,24 @@
    oFinance.cmt
    oFinance.cmx
    oFinance.ml
+<<<<<<< HEAD
    oFinance__Arb.cmi
    oFinance__Arb.cmt
    oFinance__Arb.cmti
    oFinance__Arb.cmx
+=======
+>>>>>>> 97cb8f3c9dbb272e57b2ded40c2932b243c1cf3e
    oFinance__Author.cmi
    oFinance__Author.cmt
    oFinance__Author.cmti
    oFinance__Author.cmx
+<<<<<<< HEAD
    oFinance__Backtester.cmi
    oFinance__Backtester.cmt
    oFinance__Backtester.cmti
    oFinance__Backtester.cmx
+=======
+>>>>>>> 97cb8f3c9dbb272e57b2ded40c2932b243c1cf3e
    oFinance__Binomial.cmi
    oFinance__Binomial.cmt
    oFinance__Binomial.cmti
@@ -60,11 +71,23 @@
    oFinance__Maths.cmt
    oFinance__Maths.cmti
    oFinance__Maths.cmx
+<<<<<<< HEAD
+=======
+   oFinance__Portfolio.cmi
+   oFinance__Portfolio.cmt
+   oFinance__Portfolio.cmti
+   oFinance__Portfolio.cmx
+>>>>>>> 97cb8f3c9dbb272e57b2ded40c2932b243c1cf3e
    oFinance__Spread.cmi
    oFinance__Spread.cmt
    oFinance__Spread.cmti
    oFinance__Spread.cmx
    opam
+<<<<<<< HEAD
+=======
+   portfolio.ml
+   portfolio.mli
+>>>>>>> 97cb8f3c9dbb272e57b2ded40c2932b243c1cf3e
    spread.ml
    spread.mli))
  (libexec (OFinance.cmxs))
@@ -82,17 +105,23 @@
   (wrapped
    (main_module_name OFinance)
    (modules
+<<<<<<< HEAD
     ((name Arb) (obj_name oFinance__Arb) (visibility public) (impl) (intf))
+=======
+>>>>>>> 97cb8f3c9dbb272e57b2ded40c2932b243c1cf3e
     ((name Author)
      (obj_name oFinance__Author)
      (visibility public)
      (impl)
      (intf))
+<<<<<<< HEAD
     ((name Backtester)
      (obj_name oFinance__Backtester)
      (visibility public)
      (impl)
      (intf))
+=======
+>>>>>>> 97cb8f3c9dbb272e57b2ded40c2932b243c1cf3e
     ((name Binomial)
      (obj_name oFinance__Binomial)
      (visibility public)
@@ -114,6 +143,14 @@
      (visibility public)
      (impl)
      (intf))
+<<<<<<< HEAD
+=======
+    ((name Portfolio)
+     (obj_name oFinance__Portfolio)
+     (visibility public)
+     (impl)
+     (intf))
+>>>>>>> 97cb8f3c9dbb272e57b2ded40c2932b243c1cf3e
     ((name Spread)
      (obj_name oFinance__Spread)
      (visibility public)

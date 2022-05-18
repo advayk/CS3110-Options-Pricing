@@ -10,5 +10,9 @@
 ; ANSITerminal
 ; csvreader
 ; matplotlib
+<<<<<<< HEAD
 ; binomial
 ; arb))
+=======
+; binomial))
+>>>>>>> 97cb8f3c9dbb272e57b2ded40c2932b243c1cf3e

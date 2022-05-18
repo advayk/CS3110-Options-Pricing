@@ -1,9 +1,15 @@
 # dune exec test/main.exe
 # OCAMLPARAM: unset
 # Shared cache: disabled
+<<<<<<< HEAD
 # Workspace root: /home/maxzweig/3110/CS3110-Options-Pricing
 # Auto-detected concurrency: 8
 $ /home/maxzweig/.opam/4.13.0/bin/ocamlc.opt -config > /tmp/dune_687c93_output
+=======
+# Workspace root: /Users/akoranne/Spring_2022_3110/FinalProject/final_project
+# Auto-detected concurrency: 16
+$ /Users/akoranne/.opam/cs3110-2022Spring-final-project/bin/ocamlc.opt -config > /var/folders/k_/vx1zgrkj21j_hlqs81bfgs2c0000gn/T/dune_481d86_output
+>>>>>>> 97cb8f3c9dbb272e57b2ded40c2932b243c1cf3e
 # Dune context:
 #  { name = "default"
 #  ; kind = "default"
@@ -12,6 +18,7 @@ $ /home/maxzweig/.opam/4.13.0/bin/ocamlc.opt -config > /tmp/dune_687c93_output
 #  ; for_host = None
 #  ; fdo_target_exe = None
 #  ; build_dir = "default"
+<<<<<<< HEAD
 #  ; toplevel_path = Some External "/home/maxzweig/.opam/4.13.0/lib/toplevel"
 #  ; ocaml_bin = External "/home/maxzweig/.opam/4.13.0/bin"
 #  ; ocaml = Ok External "/home/maxzweig/.opam/4.13.0/bin/ocaml"
@@ -36,11 +43,62 @@ $ /home/maxzweig/.opam/4.13.0/bin/ocamlc.opt -config > /tmp/dune_687c93_output
 #        ; "OPAMCOLOR" : "always"
 #        }
 #  ; findlib_path = [ External "/home/maxzweig/.opam/4.13.0/lib" ]
+=======
+#  ; toplevel_path =
+#      Some
+#        External
+#          "/Users/akoranne/.opam/cs3110-2022Spring-final-project/lib/toplevel"
+#  ; ocaml_bin =
+#      External "/Users/akoranne/.opam/cs3110-2022Spring-final-project/bin"
+#  ; ocaml =
+#      Ok
+#        External
+#          "/Users/akoranne/.opam/cs3110-2022Spring-final-project/bin/ocaml"
+#  ; ocamlc =
+#      External
+#        "/Users/akoranne/.opam/cs3110-2022Spring-final-project/bin/ocamlc.opt"
+#  ; ocamlopt =
+#      Ok
+#        External
+#          "/Users/akoranne/.opam/cs3110-2022Spring-final-project/bin/ocamlopt.opt"
+#  ; ocamldep =
+#      Ok
+#        External
+#          "/Users/akoranne/.opam/cs3110-2022Spring-final-project/bin/ocamldep.opt"
+#  ; ocamlmklib =
+#      Ok
+#        External
+#          "/Users/akoranne/.opam/cs3110-2022Spring-final-project/bin/ocamlmklib.opt"
+#  ; env =
+#      map
+#        { "DUNE_OCAML_HARDCODED" :
+#            "/Users/akoranne/.opam/cs3110-2022Spring-final-project/lib"
+#        ; "DUNE_OCAML_STDLIB" :
+#            "/Users/akoranne/.opam/cs3110-2022Spring-final-project/lib/ocaml"
+#        ; "DUNE_SOURCEROOT" :
+#            "/Users/akoranne/Spring_2022_3110/FinalProject/final_project"
+#        ; "INSIDE_DUNE" :
+#            "/Users/akoranne/Spring_2022_3110/FinalProject/final_project/_build/default"
+#        ; "MANPATH" :
+#            "/Users/akoranne/Spring_2022_3110/FinalProject/final_project/_build/install/default/bin"
+#        ; "OCAMLFIND_IGNORE_DUPS_IN" :
+#            "/Users/akoranne/Spring_2022_3110/FinalProject/final_project/_build/install/default/lib"
+#        ; "OCAMLPATH" :
+#            "/Users/akoranne/Spring_2022_3110/FinalProject/final_project/_build/install/default/lib"
+#        ; "OCAMLTOP_INCLUDE_PATH" :
+#            "/Users/akoranne/Spring_2022_3110/FinalProject/final_project/_build/install/default/lib/toplevel"
+#        ; "OCAML_COLOR" : "always"
+#        ; "OPAMCOLOR" : "always"
+#        }
+#  ; findlib_path =
+#      [ External "/Users/akoranne/.opam/cs3110-2022Spring-final-project/lib" ]
+>>>>>>> 97cb8f3c9dbb272e57b2ded40c2932b243c1cf3e
 #  ; arch_sixtyfour = true
 #  ; natdynlink_supported = true
 #  ; supports_shared_libraries = true
 #  ; ocaml_config =
 #      { version = "4.13.0"
+<<<<<<< HEAD
 #      ; standard_library_default = "/home/maxzweig/.opam/4.13.0/lib/ocaml"
 #      ; standard_library = "/home/maxzweig/.opam/4.13.0/lib/ocaml"
 #      ; standard_runtime = "the_standard_runtime_variable_was_deleted"
@@ -54,32 +112,68 @@ $ /home/maxzweig/.opam/4.13.0/bin/ocamlc.opt -config > /tmp/dune_687c93_output
 #      ; ocamlopt_cppflags = [ "-D_FILE_OFFSET_BITS=64" ]
 #      ; bytecomp_c_compiler =
 #          [ "gcc"
+=======
+#      ; standard_library_default =
+#          "/Users/akoranne/.opam/cs3110-2022Spring-final-project/lib/ocaml"
+#      ; standard_library =
+#          "/Users/akoranne/.opam/cs3110-2022Spring-final-project/lib/ocaml"
+#      ; standard_runtime = "the_standard_runtime_variable_was_deleted"
+#      ; ccomp_type = "cc"
+#      ; c_compiler = "cc"
+#      ; ocamlc_cflags =
+#          [ "-O2"; "-fno-strict-aliasing"; "-fwrapv"; "-pthread" ]
+#      ; ocamlc_cppflags = [ "-D_FILE_OFFSET_BITS=64" ]
+#      ; ocamlopt_cflags =
+#          [ "-O2"; "-fno-strict-aliasing"; "-fwrapv"; "-pthread" ]
+#      ; ocamlopt_cppflags = [ "-D_FILE_OFFSET_BITS=64" ]
+#      ; bytecomp_c_compiler =
+#          [ "cc"
+>>>>>>> 97cb8f3c9dbb272e57b2ded40c2932b243c1cf3e
 #          ; "-O2"
 #          ; "-fno-strict-aliasing"
 #          ; "-fwrapv"
 #          ; "-pthread"
+<<<<<<< HEAD
 #          ; "-fPIC"
 #          ; "-D_FILE_OFFSET_BITS=64"
 #          ]
 #      ; bytecomp_c_libraries = [ "-lm"; "-ldl"; "-lpthread" ]
 #      ; native_c_compiler =
 #          [ "gcc"
+=======
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ]
+#      ; bytecomp_c_libraries = [ "-lm"; "-lpthread" ]
+#      ; native_c_compiler =
+#          [ "cc"
+>>>>>>> 97cb8f3c9dbb272e57b2ded40c2932b243c1cf3e
 #          ; "-O2"
 #          ; "-fno-strict-aliasing"
 #          ; "-fwrapv"
 #          ; "-pthread"
+<<<<<<< HEAD
 #          ; "-fPIC"
 #          ; "-D_FILE_OFFSET_BITS=64"
 #          ]
 #      ; native_c_libraries = [ "-lm"; "-ldl" ]
+=======
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ]
+#      ; native_c_libraries = [ "-lm" ]
+>>>>>>> 97cb8f3c9dbb272e57b2ded40c2932b243c1cf3e
 #      ; native_pack_linker = [ "ld"; "-r"; "-o" ]
 #      ; cc_profile = []
 #      ; architecture = "amd64"
 #      ; model = "default"
 #      ; int_size = 63
 #      ; word_size = 64
+<<<<<<< HEAD
 #      ; system = "linux"
 #      ; asm = [ "as" ]
+=======
+#      ; system = "macosx"
+#      ; asm = [ "cc"; "-c"; "-Wno-trigraphs" ]
+>>>>>>> 97cb8f3c9dbb272e57b2ded40c2932b243c1cf3e
 #      ; asm_cfi_supported = true
 #      ; with_frame_pointers = false
 #      ; ext_exe = ""
@@ -90,8 +184,13 @@ $ /home/maxzweig/.opam/4.13.0/bin/ocamlc.opt -config > /tmp/dune_687c93_output
 #      ; os_type = "Unix"
 #      ; default_executable_name = "a.out"
 #      ; systhread_supported = true
+<<<<<<< HEAD
 #      ; host = "x86_64-pc-linux-gnu"
 #      ; target = "x86_64-pc-linux-gnu"
+=======
+#      ; host = "x86_64-apple-darwin21.2.0"
+#      ; target = "x86_64-apple-darwin21.2.0"
+>>>>>>> 97cb8f3c9dbb272e57b2ded40c2932b243c1cf3e
 #      ; profiling = false
 #      ; flambda = false
 #      ; spacetime = false
