@@ -15,9 +15,10 @@ let () = print_endline "CS 3110 Final Project: Options Pricing!"
 (** [csv_test filename expected_output] constructs an OUnit
     test named [name] that asserts the equality of [expected_output]
     with [from_csv filename]. *)
-  let csv_test (name : string) (filename : string) (expected_output : string) =
-    name >:: fun _ -> 
-    assert (expected_output = (filename |> load_csv |> from_csv |> first))
+let csv_test (name : string) (filename : string) (expected_output : string) =
+  name >:: fun _ -> 
+  assert (expected_output = (filename |> load_csv |> from_csv |> first))
+
 
 (*CSV Reader*)
 (** [from_csv_test filename expected_output] constructs an OUnit
@@ -48,8 +49,7 @@ let european_call_options_price_test
   name >:: fun _ ->
   assert (
     close_enough expected_output
-      (european_call_options_price european_option current_stock_price
-         current_date))
+      (european_call_options_price european_option current_stock_price current_date))
 
 let european_put_options_price_test
   (name : string)
@@ -69,10 +69,27 @@ let diff_between_dates_test (name : string) (date1 : Blackscholes.date) (date2 :
 let portfolio_val_test (name : string) (stock_prices : float list) (portfolio_weights : float list) (acc : float) (expected_output : float) : test =
   name >:: fun _ -> assert_equal expected_output (portfolio_value stock_prices portfolio_weights acc)  
   
-
 let average_price_test (name : string) (stock_prices : float list) (expected_output : float) : test =
   name >:: fun _ -> assert_equal expected_output (average_price stock_prices)  
     
+let normalize_vector_test (name : string) (stock_prices : float list) (expected_output : float list) : test =
+  name >:: fun _ -> assert_equal expected_output (normalize_weights stock_prices)  
+    
+let estimate_risk_first_moment_test (name : string) (stock_prices : float list) (expected_output : float) : test =
+  name >:: fun _ -> assert_equal expected_output (estimate_risk_first_moment stock_prices)  
+
+let get_price_at_date_test (name : string) (stock_data : (stock_date * float) list ) (d : stock_date) (expected_output : float) : test =
+  name >:: fun _ -> assert_equal expected_output (get_price_at_date stock_data d)  
+
+let get_price_at_time_test (name : string) (stock_data : (stock_time * float) list ) input_time (expected_output : float) : test =
+  name >:: fun _ -> assert_equal expected_output (get_price_at_time stock_data input_time)  
+    
+let expected_returns_test (name : string) (expected_stock_returns :  float list ) (weights : float list) (expected_output : float) : test =
+  name >:: fun _ -> assert_equal expected_output (expected_returns expected_stock_returns weights)  
+    
+let get_price_ticker_test (name : string) (stock_data :  (ticker*float) list ) (tick : ticker) (expected_output : float) : test =
+  name >:: fun _ -> assert_equal expected_output (get_price_ticker stock_data tick)  
+     
 let euro_option_1_time = create_time 0 0 0 0
 let euro_option_1_expiration_date = create_date 3 22 2022 euro_option_1_time
 
@@ -101,6 +118,17 @@ let euro_option_1_expiration_date = create_date 3 22 2022 euro_option_1_time
 let float_about_eq a b =
   a -. b |> Float.abs < 1e-1 *. (a *. b |> Float.abs |> Float.sqrt)
 
+let pdf_draw_test
+  (name : string)
+  (pdf : Maths.pdf)
+  (x : float)
+  (expected_output : float): test =
+  name >:: fun _ ->
+    let result = Maths.pdf_value pdf x in
+    (* result |> Printf.printf "\n%8f\n";
+    expected_output |> Printf.printf "%8f\n"; *)
+    assert (float_about_eq expected_output result)
+
 let cdf_test
     (name : string)
     (pdf : Maths.pdf)
@@ -108,8 +136,8 @@ let cdf_test
     (expected_output : float) : test =
   name >:: fun _ ->
   let result = Maths.cdf pdf x in
-  (* result |> Printf.printf "\n%8f\n";
-  expected_output |> Printf.printf "%8f\n"; *)
+  result |> Printf.printf "\n%8f\n";
+  expected_output |> Printf.printf "%8f\n";
   assert (result |> float_about_eq expected_output)
 
 let integrate_test
@@ -266,6 +294,26 @@ let blackscholes_test =
       diff_between_dates_test "difference between date11 and date10" date12 date11 7;
   ]
 
+  let stock_date_1 = make_stock_date 1 1 2022
+  let stock_date_2 = make_stock_date 1 2 2022
+  let stock_date_3 = make_stock_date 4 3 2022
+  let stock_date_4 = make_stock_date 5 6 2022
+
+  let stock_time_1 = make_stock_time 1 0 0  
+  let stock_time_2 = make_stock_time 1 1 0  
+  let stock_time_3 = make_stock_time 1 1 1  
+
+  let stock_time_4 = make_stock_time 1 2 1  
+
+  let appl = make_stock_ticker "AAPL"  
+  let amzn = make_stock_ticker "AMZN"  
+  let pfe = make_stock_ticker "PFE"  
+
+  let mu = make_stock_ticker "MU" 
+  let nvda = make_stock_ticker "NVDA" 
+
+
+
   let portfolio_test = [
     portfolio_val_test "compute value of portfolio 1" [1.;2.] [3.;4.] 0. 11.; 
     portfolio_val_test "0's" [0.;0.] [0.;0.] 0. 0.; 
@@ -276,8 +324,31 @@ let blackscholes_test =
     average_price_test "average of stock price [1,2]" [1.;2.] 1.5;
     average_price_test "average of stock price [2.;2.]" [2.;2.] 2.;
     average_price_test "average of stock price [5.;6.]" [5.;6.] 5.5;
-
-
+    normalize_vector_test "normalize normal list" [] [];
+    normalize_vector_test "normalize vector with 1 element" [1.] [1.];
+    get_price_at_date_test "price at one date" [(stock_date_1,10.)] stock_date_1 10.;
+    get_price_at_date_test "price at one date" [(stock_date_1,10.);(stock_date_2,20.)] stock_date_2 20.;
+    get_price_at_date_test "price at one date" [(stock_date_1,10.);(stock_date_2,20.);(stock_date_3,30.);(stock_date_4,40.)] stock_date_4 40.;
+    get_price_at_time_test "price at one date" [(stock_time_1,10.)] stock_time_1 10.;
+    get_price_at_time_test "price at one date" [(stock_time_1,10.)] stock_time_1 10.;
+    get_price_at_time_test "price at one date" [(stock_time_1,10.);(stock_time_2,20.) ] stock_time_1 10.;
+    get_price_at_time_test "price at one date" [(stock_time_1,10.);(stock_time_2,20.);(stock_time_3,30.);(stock_time_4,40.) ] stock_time_4 40.;
+    expected_returns_test "price at one date" [1.;2.;3.] [1.;2.;3.] 14.;
+    expected_returns_test "price at one date" [1.;2.;4.] [1.;2.;3.] 17.;
+    expected_returns_test "price at one date" [3.;2.;4.] [1.;2.;3.] 19.;
+    expected_returns_test "price at one date" [3.;2.;4.] [1.;2.;4.] 23.;
+    expected_returns_test "price at one date" [3.;2.;4.] [1.;2.;5.] 27.;
+    expected_returns_test "price at one date" [3.;2.;4.] [1.;2.;6.] 31.;
+    expected_returns_test "price at one date" [6.;2.;4.] [1.;2.;6.] 34.;
+    get_price_ticker_test "price at one date" [(appl,20.)] appl 20.;
+    get_price_ticker_test "price at one date" [(appl,0.)] appl 0.;
+    get_price_ticker_test "price at one date" [(amzn,30.)] amzn 30.;
+    get_price_ticker_test "ticker price 2 elements" [(amzn,30.); (pfe,50.)] pfe 50.;
+    get_price_ticker_test "ticker price 3 elements" [(amzn,30.); (pfe,50.);(appl,20.)] appl 20.;
+    get_price_ticker_test "ticker price 4 elements" [(amzn,30.); (pfe,50.);(appl,20.);(nvda,20.)] nvda 20.;
+    get_price_ticker_test "ticker price 4 elements" [(amzn,30.); (pfe,50.);(appl,20.);(nvda,20.)] appl 20.;
+    get_price_ticker_test "ticker price 4 elements" [(amzn,30.); (pfe,50.);(appl,20.);(nvda,20.)] amzn 30.;
+    get_price_ticker_test "ticker price 5 elements" [(amzn,30.); (pfe,50.);(appl,20.);(mu,100.);(nvda,20.)] mu 100.;
 
   ]
 
@@ -339,22 +410,6 @@ let blackscholes_test =
     get_greek_test "theta of AAPL 3/20/20 put" "theta" clean_data "AAPL" "3/20/20" "put" [(110.0,-2.4869);(115.0,-3.2828);(120.0,-3.8502);(125.0,-4.4064);(130.0,-5.0188);(135.0,-5.6698);(140.0,-6.3978);(145.0,-7.1622);(150.0,-7.9846);(155.0,-8.8021);(160.0,-9.6562);(165.0,-10.4481);(170.0,-11.2779);(175.0,-11.8627);(180.0,-12.5291);(185.0,-13.1718);(190.0,-13.5158);(195.0,-13.8169);(200.0,-13.6534);(205.0,-13.7151);(210.0,-13.3369);(215.0,-12.7104);(220.0,-12.1365);(225.0,-11.2631);(230.0,-10.3404);(235.0,-9.4797);(240.0,-8.4472);(245.0,-6.9816);(250.0,-5.7727);(255.0,-6.0613);(260.0,-4.7538);(265.0,-3.8957);(270.0,-3.0827);(275.0,-2.3204);(280.0,-1.612);(285.0,-0.9586);(290.0,-0.3595);(295.0,0.1869);(300.0,0.6835);];
     get_greek_test "delta of AAPL 1/17/20 call" "delta" clean_data "AAPL" "1/17/20" "call" [(50.0,0.9919);(55.0,0.9919);(60.0,0.9918);(65.0,0.9918);(70.0,0.9918);(75.0,0.9917);(80.0,0.9915);(85.0,0.9911);(90.0,0.9903);(95.0,0.9891);(100.0,0.9871);(105.0,0.9842);(110.0,0.9801);(115.0,0.9744);(120.0,0.967);(125.0,0.9575);(130.0,0.9457);(135.0,0.9316);(140.0,0.9173);(145.0,0.9142);(150.0,0.8953);(155.0,0.8808);(160.0,0.8446);(165.0,0.8326);(170.0,0.8021);(175.0,0.7693);(180.0,0.7363);(185.0,0.6963);(190.0,0.6523);(195.0,0.6049);(200.0,0.5547);(205.0,0.5025);(210.0,0.4493);(215.0,0.396);(220.0,0.3449);(225.0,0.2947);(230.0,0.2483);(235.0,0.2088);(240.0,0.1735);(245.0,0.1394);(250.0,0.114);(255.0,0.0923);(260.0,0.0735);(265.0,0.0601);(270.0,0.0467);(275.0,0.0385);(280.0,0.0313);(285.0,0.0258);(290.0,0.0226);(300.0,0.0151);(310.0,0.0125);(320.0,0.0068);(330.0,0.004);(340.0,0.0024);];
     get_greek_test "gamma of AAPL 1/17/20 call" "gamma" clean_data "AAPL" "1/17/20" "call" [(50.0,0.0);(55.0,0.0);(60.0,0.0);(65.0,0.0);(70.0,0.0);(75.0,0.0);(80.0,0.0);(85.0,0.0);(90.0,0.0001);(95.0,0.0001);(100.0,0.0002);(105.0,0.0004);(110.0,0.0005);(115.0,0.0007);(120.0,0.001);(125.0,0.0013);(130.0,0.0017);(135.0,0.0021);(140.0,0.0025);(145.0,0.0028);(150.0,0.0033);(155.0,0.0039);(160.0,0.0045);(165.0,0.0052);(170.0,0.0059);(175.0,0.0066);(180.0,0.0075);(185.0,0.0083);(190.0,0.009);(195.0,0.0096);(200.0,0.0101);(205.0,0.0105);(210.0,0.0106);(215.0,0.0106);(220.0,0.0102);(225.0,0.0098);(230.0,0.0092);(235.0,0.0084);(240.0,0.0075);(245.0,0.0066);(250.0,0.0057);(255.0,0.0049);(260.0,0.0042);(265.0,0.0036);(270.0,0.0029);(275.0,0.0025);(280.0,0.0021);(285.0,0.0018);(290.0,0.0015);(300.0,0.0011);(310.0,0.0009);(320.0,0.0005);(330.0,0.0003);(340.0,0.0002);];
-    get_greek_test "vega of AAPL 1/17/20 call" "vega" clean_data "AAPL" "1/17/20" "call" [(50.0,0.0002);(55.0,0.0009);(60.0,0.0036);(65.0,0.0119);(70.0,0.033);(75.0,0.0807);(80.0,0.1766);(85.0,0.352);(90.0,0.6476);(95.0,1.1113);(100.0,1.7951);(105.0,2.7499);(110.0,4.0201);(115.0,5.6386);(120.0,7.6223);(125.0,9.9697);(130.0,12.6599);(135.0,15.6533);(140.0,18.4405);(145.0,19.0387);(150.0,22.3887);(155.0,24.7814);(160.0,30.135);(165.0,31.7262);(170.0,35.4528);(175.0,38.9571);(180.0,42.0039);(185.0,45.1008);(190.0,47.8021);(195.0,49.9268);(200.0,51.335);(205.0,51.9008);(210.0,51.5475);(215.0,50.2433);(220.0,48.0777);(225.0,45.0438);(230.0,41.3775);(235.0,37.5557);(240.0,33.5323);(245.0,29.0316);(250.0,25.2418);(255.0,21.6653);(260.0,18.2448);(265.0,15.6133);(270.0,12.7983);(275.0,10.938);(280.0,9.2418);(285.0,7.8647);(290.0,7.0439);(300.0,4.9974);(310.0,4.2306);(320.0,2.4958);(330.0,1.5588);(340.0,0.989);];
-    get_greek_test "gamma of AAOI 9/27/19 call" "gamma" clean_data "AAOI" "9/27/19" "call" [(4.5,0.0042);(5.5,0.025);(6.0,0.0452);(6.5,0.0702);(7.0,0.0993);(7.5,0.1284);(8.0,0.1553);(8.5,0.1863);(9.0,0.2092);(9.5,0.213);(10.0,0.1865);(10.5,0.1689);(11.0,0.1421);(11.5,0.118);(12.0,0.1004);(12.5,0.0824);(13.0,0.0663);(13.5,0.0525);(14.0,0.041);(14.5,0.0316);(15.0,0.0241);(15.5,0.0182);(16.0,0.0137);];
-    get_greek_test "vega of AAOI 9/27/19 call" "vega" clean_data "AAOI" "9/27/19" "call" [(4.5,0.0297);(5.5,0.1768);(6.0,0.3197);(6.5,0.4879);(7.0,0.6807);(7.5,0.8731);(8.0,1.0339);(8.5,1.1474);(9.0,1.2045);(9.5,1.1799);(10.0,1.1069);(10.5,0.964);(11.0,0.8445);(11.5,0.7106);(12.0,0.6579);(12.5,0.5396);(13.0,0.4344);(13.5,0.3441);(14.0,0.2687);(14.5,0.2073);(15.0,0.1582);(15.5,0.1195);(16.0,0.0896);];
-    get_greek_test "theta of AAOI 9/27/19 call" "theta" clean_data "AAOI" "9/27/19" "call" [(4.5,-0.2015);(5.5,-0.7099);(6.0,-1.192);(6.5,-1.7263);(7.0,-2.3266);(7.5,-2.9195);(8.0,-3.3586);(8.5,-3.435);(9.0,-3.3595);(9.5,-3.155);(10.0,-3.1567);(10.5,-2.6382);(11.0,-2.4022);(11.5,-2.045);(12.0,-2.0565);(12.5,-1.6852);(13.0,-1.3557);(13.5,-1.0732);(14.0,-0.8376);(14.5,-0.6458);(15.0,-0.4926);(15.5,-0.3722);(16.0,-0.2789);];
-    get_greek_test "delta of AAOI 9/27/19 put" "delta" clean_data "AAOI" "9/27/19" "put" [(4.5,-0.0396);(5.5,-0.0685);(6.0,-0.0757);(6.5,-0.1018);(7.0,-0.1362);(7.5,-0.2053);(8.0,-0.2792);(8.5,-0.3748);(9.0,-0.4749);(9.5,-0.5727);(10.0,-0.6646);(10.5,-0.7423);(11.0,-0.8219);(11.5,-0.8645);(12.0,-0.8918);(12.5,-0.9082);(13.0,-0.9167);(13.5,-0.9375);(14.0,-0.9534);(14.5,-0.9655);(15.0,-0.9746);(15.5,-0.9814);(16.0,-0.9865);];
-    get_greek_test "gamma of AAOI 9/27/19 put" "gamma" clean_data "AAOI" "9/27/19" "put" [(4.5,0.0216);(5.5,0.0402);(6.0,0.0521);(6.5,0.0721);(7.0,0.0996);(7.5,0.1307);(8.0,0.1669);(8.5,0.1905);(9.0,0.2014);(9.5,0.2001);(10.0,0.1887);(10.5,0.1674);(11.0,0.1424);(11.5,0.1156);(12.0,0.0944);(12.5,0.0791);(13.0,0.0688);(13.5,0.0552);(14.0,0.0438);(14.5,0.0343);(15.0,0.0266);(15.5,0.0204);(16.0,0.0155);];
-    get_greek_test "vega of AAOI 9/27/19 put" "vega" clean_data "AAOI" "9/27/19" "put" [(4.5,0.2584);(5.5,0.3995);(6.0,0.4313);(6.5,0.5378);(7.0,0.6606);(7.5,0.86);(8.0,1.0166);(8.5,1.1466);(9.0,1.2041);(9.5,1.1864);(10.0,1.1022);(10.5,0.9765);(11.0,0.7882);(11.5,0.6584);(12.0,0.5618);(12.5,0.4983);(13.0,0.4634);(13.5,0.3721);(14.0,0.2948);(14.5,0.2308);(15.0,0.1789);(15.5,0.1374);(16.0,0.1047);];
-    get_greek_test "theta of AAOI 9/27/19 put" "theta" clean_data "AAOI" "9/27/19" "put" [(4.5,-1.4459);(5.5,-1.8547);(6.0,-1.6653);(6.5,-1.8684);(7.0,-2.0337);(7.5,-2.6184);(8.0,-2.8533);(8.5,-3.1635);(9.0,-3.2766);(9.5,-3.1734);(10.0,-2.8649);(10.5,-2.4917);(11.0,-1.837);(11.5,-1.529);(12.0,-1.3205);(12.5,-1.2093);(13.0,-1.189);(13.5,-0.8839);(14.0,-0.6241);(14.5,-0.4073);(15.0,-0.2292);(15.5,-0.0847);(16.0,0.0315);];
-    get_greek_test "delta of AAOI 8/16/19 call" "delta" clean_data "AAOI" "8/16/19" "call" [(2.5,1.0);(4.0,1.0);(4.5,1.0);(5.0,0.9998);(5.5,0.9987);(6.0,0.9933);(6.5,0.9764);(7.0,0.9373);(7.5,0.8754);(8.0,0.7764);(8.5,0.643);(9.0,0.4072);(9.5,0.3556);(10.0,0.2455);(10.5,0.1682);(11.0,0.1181);(11.5,0.0874);(12.0,0.0691);(12.5,0.0587);(13.0,0.0534);(13.5,0.0373);(14.0,0.0257);(14.5,0.0176);(15.0,0.0119);(15.5,0.008);(16.0,0.0054);(17.5,0.0016);];
-    get_greek_test "gamma of AAOI 8/16/19 call" "gamma" clean_data "AAOI" "8/16/19" "call" [(2.5,0.0);(4.0,0.0);(4.5,0.0);(5.0,0.0004);(5.5,0.003);(6.0,0.0129);(6.5,0.0383);(7.0,0.0847);(7.5,0.147);(8.0,0.2204);(8.5,0.2798);(9.0,0.8491);(9.5,0.2772);(10.0,0.2286);(10.5,0.176);(11.0,0.132);(11.5,0.1001);(12.0,0.0784);(12.5,0.0643);(13.0,0.0554);(13.5,0.0414);(14.0,0.0305);(14.5,0.0221);(15.0,0.0158);(15.5,0.0112);(16.0,0.0078);(17.5,0.0026);];
-    get_greek_test "vega of AAOI 8/16/19 call" "vega" clean_data "AAOI" "8/16/19" "call" [(2.5,0.0);(4.0,0.0);(4.5,0.0);(5.0,0.0002);(5.5,0.0012);(6.0,0.005);(6.5,0.015);(7.0,0.0331);(7.5,0.0551);(8.0,0.0802);(8.5,0.1001);(9.0,0.1042);(9.5,0.1);(10.0,0.0845);(10.5,0.0674);(11.0,0.0531);(11.5,0.0426);(12.0,0.0357);(12.5,0.0314);(13.0,0.0292);(13.5,0.0218);(14.0,0.0161);(14.5,0.0117);(15.0,0.0083);(15.5,0.0059);(16.0,0.0041);(17.5,0.0014);];
-    get_greek_test "theta of AAOI 8/16/19 call" "theta" clean_data "AAOI" "8/16/19" "call" [(2.5,-0.0574);(4.0,-0.0934);(4.5,-0.1457);(5.0,-0.6338);(5.5,-3.6403);(6.0,-15.1393);(6.5,-44.6248);(7.0,-98.5522);(7.5,-157.2598);(8.0,-222.0189);(8.5,-272.4151);(9.0,-97.2003);(9.5,-274.0974);(10.0,-237.2663);(10.5,-196.5372);(11.0,-162.3082);(11.5,-138.0065);(12.0,-123.2857);(12.5,-116.6925);(13.0,-116.9534);(13.5,-87.5425);(14.0,-64.4228);(14.5,-46.7097);(15.0,-33.4294);(15.5,-23.6542);(16.0,-16.5717);(17.5,-5.4313);];
-    get_greek_test "delta of AAOI 8/16/19 put" "delta" clean_data "AAOI" "8/16/19" "put" [(2.5,0.0);(4.0,-0.0012);(4.5,-0.0047);(5.0,-0.0133);(5.5,-0.0306);(6.0,-0.0446);(6.5,-0.0663);(7.0,-0.1004);(7.5,-0.1543);(8.0,-0.2374);(8.5,-0.3573);(9.0,-0.6135);(9.5,-0.6761);(10.0,-0.8178);(10.5,-0.9123);(11.0,-0.9598);(11.5,-0.9831);(12.0,-0.9935);(12.5,-0.9977);(13.0,-0.9992);(13.5,-0.9997);(14.0,-0.9999);(14.5,-1.0);(15.0,-1.0);(15.5,-1.0);(16.0,-1.0);(17.5,-1.0);];
-    get_greek_test "gamma of AAOI 8/16/19 put" "gamma" clean_data "AAOI" "8/16/19" "put" [(2.5,0.0);(4.0,0.0017);(4.5,0.0056);(5.0,0.0139);(5.5,0.0282);(6.0,0.0426);(6.5,0.0647);(7.0,0.0982);(7.5,0.1468);(8.0,0.2107);(8.5,0.2789);(9.0,0.9973);(9.5,0.3128);(10.0,0.2428);(10.5,0.1514);(11.0,0.0823);(11.5,0.0398);(12.0,0.0174);(12.5,0.007);(13.0,0.0026);(13.5,0.0009);(14.0,0.0003);(14.5,0.0001);(15.0,0.0);(15.5,0.0);(16.0,0.0);(17.5,0.0);];
-    get_greek_test "vega of AAOI 8/16/19 put" "vega" clean_data "AAOI" "8/16/19" "put" [(2.5,0.0);(4.0,0.0011);(4.5,0.0037);(5.0,0.0092);(5.5,0.0186);(6.0,0.0253);(6.5,0.0345);(7.0,0.0472);(7.5,0.0638);(8.0,0.0829);(8.5,0.1001);(9.0,0.1027);(9.5,0.0965);(10.0,0.0709);(10.5,0.0427);(11.0,0.0232);(11.5,0.0112);(12.0,0.0049);(12.5,0.002);(13.0,0.0007);(13.5,0.0003);(14.0,0.0001);(14.5,0.0);(15.0,0.0);(15.5,0.0);(16.0,0.0);(17.5,0.0);];
-    get_greek_test "theta of AAOI 8/16/19 put" "theta" clean_data "AAOI" "8/16/19" "put" [(2.5,-0.0076);(4.0,-5.5363);(4.5,-18.3464);(5.0,-45.9356);(5.5,-92.9696);(6.0,-113.9419);(6.5,-140.2264);(7.0,-172.7194);(7.5,-210.4669);(8.0,-248.089);(8.5,-273.2134);(9.0,-80.2643);(9.5,-225.945);(10.0,-157.4229);(10.5,-91.475);(11.0,-49.6094);(11.5,-23.8503);(12.0,-10.2659);(12.5,-3.9349);(13.0,-1.2687);(13.5,-0.2345);(14.0,0.1429);(14.5,0.2773);(15.0,0.3279);(15.5,0.3512);(16.0,0.3662);(17.5,0.4019);];    
     ]
 
 let maths_test =
@@ -444,7 +499,50 @@ let maths_test =
       levy_test "exponential walk" {pdf = { functn = (fun x -> x) ; 
       distribution_class = Maths.Laplace {lambda = 1. ; peak = 0.0}} ; 
       init = 0.0 ; 
-      numsteps = 1000}
+      numsteps = 1000};
+      cdf_test " normal cdf"
+      {functn = (fun x -> x); 
+      distribution_class =
+      Maths.Normal { stddev = 1.; mean = 0. };
+      }
+      0. 0.5;
+    
+      cdf_test " normal cdf"
+      {functn = (fun x -> x); 
+      distribution_class =
+      Maths.Normal { stddev = 1.; mean = 2. };
+      }
+      2. 0.5;
+
+    
+      cdf_test "exp cdf"
+      {functn = (fun x -> x); 
+      distribution_class =
+      Maths.Laplace { lambda = 1.; peak = 0. };
+      }
+      0. 0.5;
+
+      cdf_test "exp cdf"
+      {functn = (fun x -> x); 
+      distribution_class =
+      Maths.Laplace { lambda = 1.; peak = 0. };
+      }
+      0.4 0.664840;
+
+      cdf_test "exp cdf"
+      {functn = (fun x -> x); 
+      distribution_class =
+      Maths.Laplace { lambda = 1.; peak = 0. };
+      }
+      0.8 0.775336;
+
+      cdf_test "lorentz cdf"
+      {functn = (fun x -> x); 
+      distribution_class =
+      Maths.Lorentzian { gamma = 1.; peak = 0. };
+      }
+      0. 0.5;
+      
   ]
  let price_spread_test
     (name : string)
@@ -456,6 +554,43 @@ let maths_test =
   let result = Spread.price_spread spread underlying today in
   assert (result |> float_about_eq expected_output)
 
+let pdf_spead_test = [
+  pdf_draw_test "exponential value" {functn = (fun x -> x); distribution_class = 
+  Maths.Laplace{lambda = 1. ; peak = 0. }} 0. (0.5*.(1.));
+  pdf_draw_test "exponential value" {functn = (fun x -> x); distribution_class = 
+  Maths.Laplace{lambda = 2. ; peak = 0. }} 0. (0.5*.(2.));
+  pdf_draw_test "exponential value" {functn = (fun x -> x); distribution_class = 
+  Maths.Laplace{lambda = 0.1 ; peak = 0. }} 0. (0.5*.(0.1));
+  pdf_draw_test "exponential value" {functn = (fun x -> x); distribution_class = 
+  Maths.Laplace{lambda = 2. ; peak = 0. }} 3. (0.002479);
+
+  pdf_draw_test "normal value" {functn = (fun x -> x); distribution_class = 
+  Maths.Normal{stddev = 1. ; mean = 0. }} 3. (0.004432);
+  pdf_draw_test "normal value" {functn = (fun x -> x); distribution_class = 
+  Maths.Normal{stddev = Float.pi ; mean = 0. }} 3. (0.080491);
+  pdf_draw_test "normal value" {functn = (fun x -> x); distribution_class = 
+  Maths.Normal{stddev = 3. ; mean = 0. }} 1. (0.125794);
+  pdf_draw_test "normal value" {functn = (fun x -> x); distribution_class = 
+  Maths.Normal{stddev = 80. ; mean = 0. }} 199. (0.000226);
+  
+  pdf_draw_test "log normal value" {functn = (fun x -> x); distribution_class = 
+  Maths.LogNormal{sigma_of_log = 1. ; mean_of_log = 0. }} 3. (0.072728);
+  pdf_draw_test "log normal value" {functn = (fun x -> x); distribution_class = 
+  Maths.LogNormal{sigma_of_log = Float.pi ; mean_of_log = 0. }} 3. (0.039818);
+  pdf_draw_test "log normal value" {functn = (fun x -> x); distribution_class = 
+  Maths.LogNormal{sigma_of_log = 3. ; mean_of_log = 0. }} 1. (0.132981);
+  pdf_draw_test "log normal value" {functn = (fun x -> x); distribution_class = 
+  Maths.LogNormal{sigma_of_log = 80. ; mean_of_log = 0. }} 199. (0.0000256);
+  
+  pdf_draw_test "lorentzian value" {functn = (fun x -> x); distribution_class = 
+  Maths.Lorentzian{gamma = 1. ; peak = 0. }} 3. (0.031831);
+  pdf_draw_test "lorentzian value" {functn = (fun x -> x); distribution_class = 
+  Maths.Lorentzian{gamma = Float.pi ; peak = 0. }} 3. (0.052995);
+  pdf_draw_test "lorentzian value" {functn = (fun x -> x); distribution_class = 
+  Maths.Lorentzian{gamma = 3. ; peak = 0. }} 1. (0.095493);
+  pdf_draw_test "lorentzian value" {functn = (fun x -> x); distribution_class = 
+  Maths.Lorentzian{gamma = 80. ; peak = 0. }} 199. (0.000554);
+]
 
 let spread_test =
   [
@@ -526,6 +661,6 @@ let binomial_test = [
 ]
 
 let tests =
-  "Tests :::" >::: List.flatten [ maths_test; csvreader_test; blackscholes_test;spread_test;portfolio_test]
+  "Tests :::" >::: List.flatten [ maths_test; csvreader_test; blackscholes_test;spread_test;portfolio_test;pdf_spead_test]
 
 let _ = run_test_tt_main tests

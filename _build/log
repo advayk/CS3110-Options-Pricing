@@ -3,7 +3,7 @@
 # Shared cache: disabled
 # Workspace root: /Users/akoranne/Spring_2022_3110/FinalProject/final_project
 # Auto-detected concurrency: 16
-$ /Users/akoranne/.opam/cs3110-2022Spring-final-project/bin/ocamlc.opt -config > /var/folders/k_/vx1zgrkj21j_hlqs81bfgs2c0000gn/T/dune_4147a8_output
+$ /Users/akoranne/.opam/cs3110-2022Spring-final-project/bin/ocamlc.opt -config > /var/folders/k_/vx1zgrkj21j_hlqs81bfgs2c0000gn/T/dune_481d86_output
 # Dune context:
 #  { name = "default"
 #  ; kind = "default"
@@ -135,16 +135,3 @@ $ /Users/akoranne/.opam/cs3110-2022Spring-final-project/bin/ocamlc.opt -config >
 #      ; windows_unicode = false
 #      }
 #  }
-$ (cd _build/default && /Users/akoranne/.opam/cs3110-2022Spring-final-project/bin/ocamlc.opt -w +a-4-6-7-9-27-29-30-32..42-44-45-48-50-60-66-67 -warn-error -a+31 -g -bin-annot -I test/.main.eobjs/byte -I /Users/akoranne/.opam/cs3110-2022Spring-final-project/lib/ANSITerminal -I /Users/akoranne/.opam/cs3110-2022Spring-final-project/lib/csv -I /Users/akoranne/.opam/cs3110-2022Spring-final-project/lib/ounit2 -I /Users/akoranne/.opam/cs3110-2022Spring-final-project/lib/ounit2/advanced -I /Users/akoranne/.opam/cs3110-2022Spring-final-project/lib/seq -I /Users/akoranne/.opam/cs3110-2022Spring-final-project/lib/stdlib-shims -I src/.OFinance.objs/byte -no-alias-deps -opaque -o test/.main.eobjs/byte/dune__exe__Main.cmo -c -impl test/main.ml)
-> File "test/main.ml", line 1:
-> Warning 70 [missing-mli]: Cannot find interface file.
-> File "test/main.ml", line 136, characters 6-12:
-> 136 |   let result = Levy.walk generator in
->             ^^^^^^
-> Warning 26 [unused-var]: unused variable result.
-$ (cd _build/default && /Users/akoranne/.opam/cs3110-2022Spring-final-project/bin/ocamlopt.opt -w +a-4-6-7-9-27-29-30-32..42-44-45-48-50-60-66-67 -warn-error -a+31 -g -I test/.main.eobjs/byte -I test/.main.eobjs/native -I /Users/akoranne/.opam/cs3110-2022Spring-final-project/lib/ANSITerminal -I /Users/akoranne/.opam/cs3110-2022Spring-final-project/lib/csv -I /Users/akoranne/.opam/cs3110-2022Spring-final-project/lib/ounit2 -I /Users/akoranne/.opam/cs3110-2022Spring-final-project/lib/ounit2/advanced -I /Users/akoranne/.opam/cs3110-2022Spring-final-project/lib/seq -I /Users/akoranne/.opam/cs3110-2022Spring-final-project/lib/stdlib-shims -I src/.OFinance.objs/byte -I src/.OFinance.objs/native -intf-suffix .ml -no-alias-deps -opaque -o test/.main.eobjs/native/dune__exe__Main.cmx -c -impl test/main.ml)
-> File "test/main.ml", line 136, characters 6-12:
-> 136 |   let result = Levy.walk generator in
->             ^^^^^^
-> Warning 26 [unused-var]: unused variable result.
-$ (cd _build/default && /Users/akoranne/.opam/cs3110-2022Spring-final-project/bin/ocamlopt.opt -w +a-4-6-7-9-27-29-30-32..42-44-45-48-50-60-66-67 -warn-error -a+31 -g -o test/main.exe /Users/akoranne/.opam/cs3110-2022Spring-final-project/lib/ocaml/unix.cmxa -I /Users/akoranne/.opam/cs3110-2022Spring-final-project/lib/ocaml -I /Users/akoranne/.opam/cs3110-2022Spring-final-project/lib/ocaml /Users/akoranne/.opam/cs3110-2022Spring-final-project/lib/ANSITerminal/ANSITerminal.cmxa -I /Users/akoranne/.opam/cs3110-2022Spring-final-project/lib/ANSITerminal /Users/akoranne/.opam/cs3110-2022Spring-final-project/lib/csv/csv.cmxa src/OFinance.cmxa /Users/akoranne/.opam/cs3110-2022Spring-final-project/lib/stdlib-shims/stdlib_shims.cmxa /Users/akoranne/.opam/cs3110-2022Spring-final-project/lib/ounit2/advanced/oUnitAdvanced.cmxa /Users/akoranne/.opam/cs3110-2022Spring-final-project/lib/ounit2/oUnit.cmxa test/.main.eobjs/native/dune__exe__Main.cmx)
