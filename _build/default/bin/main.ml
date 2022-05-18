@@ -8,7 +8,6 @@ let blackscholes_date  lst =
   let time = Blackscholes.create_time 0 0 0 0  in 
   Blackscholes.create_date (int_of_string (List.nth lst 0)) ( int_of_string (List.nth lst 1)) (int_of_string (List.nth lst 2)) time
 
-
 let main () =
   ANSITerminal.print_string [ ANSITerminal.red ]
     "\n\nWelcome to the Cornell Quant Funds Blackscholes options pricing model.\n";

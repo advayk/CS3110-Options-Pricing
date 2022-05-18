@@ -1,8 +1,5 @@
 open ANSITerminal
 open OFinance
-(* 
-open Blackscholes
-open Csvreader *)
 
 let blackscholes_date  lst = 
   let time = Blackscholes.create_time 0 0 0 0  in 

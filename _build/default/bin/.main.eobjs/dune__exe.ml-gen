@@ -18,6 +18,10 @@ module Interface = Dune__exe__Interface
 module Main = Dune__exe__Main
 
 
+(** @canonical Dune__exe.Portfolio_loader *)
+module Portfolio_loader = Dune__exe__Portfolio_loader
+
+
 (** @canonical Dune__exe.Spread_loader *)
 module Spread_loader = Dune__exe__Spread_loader
 

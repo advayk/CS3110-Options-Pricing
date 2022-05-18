@@ -1,4 +1,3 @@
-open OFinance
 
 let main () =
   ANSITerminal.print_string [ ANSITerminal.red ]
@@ -18,6 +17,3 @@ let main () =
     | option -> 
     print_endline ("-----input data-----");
     print_endline (string_of_bool (Arb.check_call (float_of_string underlying) (float_of_string option) ))
-
-
-
