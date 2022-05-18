@@ -1,1 +1,1 @@
-bin/arb_loader.ml: Arb
+bin/arb_loader.ml:

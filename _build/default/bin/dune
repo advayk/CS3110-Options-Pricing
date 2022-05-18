@@ -1,5 +1,5 @@
 (executables
- (names main csv_loader spread_loader visualize binomial_loader interface)
+ (names main csv_loader spread_loader visualize binomial_loader interface arb_loader)
  (libraries OFinance ANSITerminal matplotlib))
 
 ; blackscholes
@@ -10,9 +10,5 @@
 ; ANSITerminal
 ; csvreader
 ; matplotlib
-<<<<<<< HEAD
 ; binomial
 ; arb))
-=======
-; binomial))
->>>>>>> 97cb8f3c9dbb272e57b2ded40c2932b243c1cf3e

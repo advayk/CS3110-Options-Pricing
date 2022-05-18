@@ -16,9 +16,6 @@
  | LongCall of {strike1:float; bwpc_list: string list}
  | LongPut of {strike1:float; bwpc_list: string list}
  (*ATM at 1*)
-<<<<<<< HEAD
- | BullCallLadder of {strike1:float; strike2:float; strike3:float; bwpc_list: string list}
-=======
  | BullCallLadder of {strike1:float; strike2:float; strike3:float; 
                       bwpc_list: string list}
  | BullPut of {strike1:float;strike2:float;bwpc_list: string list}
@@ -39,7 +36,6 @@
  strike4: float; strike5:float; strike6: float; strike7:float; 
  strike8:float; strike9: float; strike10:float; strike11:float; strike12:float;
  bwpc_list: string list}
->>>>>>> 97cb8f3c9dbb272e57b2ded40c2932b243c1cf3e
 
  (** The abstract type of values representing an option spread. *)
 

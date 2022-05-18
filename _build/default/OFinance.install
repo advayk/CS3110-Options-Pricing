@@ -3,17 +3,12 @@ lib: [
   "_build/install/default/lib/OFinance/OFinance.a"
   "_build/install/default/lib/OFinance/OFinance.cma"
   "_build/install/default/lib/OFinance/OFinance.cmxa"
-<<<<<<< HEAD
   "_build/install/default/lib/OFinance/arb.ml"
   "_build/install/default/lib/OFinance/arb.mli"
   "_build/install/default/lib/OFinance/author.ml"
   "_build/install/default/lib/OFinance/author.mli"
   "_build/install/default/lib/OFinance/backtester.ml"
   "_build/install/default/lib/OFinance/backtester.mli"
-=======
-  "_build/install/default/lib/OFinance/author.ml"
-  "_build/install/default/lib/OFinance/author.mli"
->>>>>>> 97cb8f3c9dbb272e57b2ded40c2932b243c1cf3e
   "_build/install/default/lib/OFinance/binomial.ml"
   "_build/install/default/lib/OFinance/binomial.mli"
   "_build/install/default/lib/OFinance/blackscholes.ml"
@@ -29,24 +24,18 @@ lib: [
   "_build/install/default/lib/OFinance/oFinance.cmt"
   "_build/install/default/lib/OFinance/oFinance.cmx"
   "_build/install/default/lib/OFinance/oFinance.ml"
-<<<<<<< HEAD
   "_build/install/default/lib/OFinance/oFinance__Arb.cmi"
   "_build/install/default/lib/OFinance/oFinance__Arb.cmt"
   "_build/install/default/lib/OFinance/oFinance__Arb.cmti"
   "_build/install/default/lib/OFinance/oFinance__Arb.cmx"
-=======
->>>>>>> 97cb8f3c9dbb272e57b2ded40c2932b243c1cf3e
   "_build/install/default/lib/OFinance/oFinance__Author.cmi"
   "_build/install/default/lib/OFinance/oFinance__Author.cmt"
   "_build/install/default/lib/OFinance/oFinance__Author.cmti"
   "_build/install/default/lib/OFinance/oFinance__Author.cmx"
-<<<<<<< HEAD
   "_build/install/default/lib/OFinance/oFinance__Backtester.cmi"
   "_build/install/default/lib/OFinance/oFinance__Backtester.cmt"
   "_build/install/default/lib/OFinance/oFinance__Backtester.cmti"
   "_build/install/default/lib/OFinance/oFinance__Backtester.cmx"
-=======
->>>>>>> 97cb8f3c9dbb272e57b2ded40c2932b243c1cf3e
   "_build/install/default/lib/OFinance/oFinance__Binomial.cmi"
   "_build/install/default/lib/OFinance/oFinance__Binomial.cmt"
   "_build/install/default/lib/OFinance/oFinance__Binomial.cmti"
@@ -67,23 +56,17 @@ lib: [
   "_build/install/default/lib/OFinance/oFinance__Maths.cmt"
   "_build/install/default/lib/OFinance/oFinance__Maths.cmti"
   "_build/install/default/lib/OFinance/oFinance__Maths.cmx"
-<<<<<<< HEAD
-=======
   "_build/install/default/lib/OFinance/oFinance__Portfolio.cmi"
   "_build/install/default/lib/OFinance/oFinance__Portfolio.cmt"
   "_build/install/default/lib/OFinance/oFinance__Portfolio.cmti"
   "_build/install/default/lib/OFinance/oFinance__Portfolio.cmx"
->>>>>>> 97cb8f3c9dbb272e57b2ded40c2932b243c1cf3e
   "_build/install/default/lib/OFinance/oFinance__Spread.cmi"
   "_build/install/default/lib/OFinance/oFinance__Spread.cmt"
   "_build/install/default/lib/OFinance/oFinance__Spread.cmti"
   "_build/install/default/lib/OFinance/oFinance__Spread.cmx"
   "_build/install/default/lib/OFinance/opam"
-<<<<<<< HEAD
-=======
   "_build/install/default/lib/OFinance/portfolio.ml"
   "_build/install/default/lib/OFinance/portfolio.mli"
->>>>>>> 97cb8f3c9dbb272e57b2ded40c2932b243c1cf3e
   "_build/install/default/lib/OFinance/spread.ml"
   "_build/install/default/lib/OFinance/spread.mli"
 ]

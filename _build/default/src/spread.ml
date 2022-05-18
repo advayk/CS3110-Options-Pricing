@@ -3,18 +3,12 @@ open Blackscholes
 open Stdlib
 
 type spread = 
-<<<<<<< HEAD
-| Condor of {strike1:float; strike2:float; strike3:float; strike4:float ; bwpc_list: string list } 
-=======
 | Condor of {strike1:float; strike2:float; strike3:float; strike4:float; bwpc_list: string list } 
->>>>>>> 97cb8f3c9dbb272e57b2ded40c2932b243c1cf3e
 | Butterfly of {strike1:float; strike2:float; strike3:float; bwpc_list: string list}
 | BearPut of {strike1:float; strike2:float; bwpc_list: string list}
 | LongCall of {strike1:float; bwpc_list: string list}
 | LongPut of {strike1:float; bwpc_list: string list}
 | BullCallLadder of {strike1:float; strike2:float; strike3:float; bwpc_list : string list}
-<<<<<<< HEAD
-=======
 | BullPut of {strike1:float;strike2:float;bwpc_list: string list}
 | Straddle of {strike1:float; strike2: float; bwpc_list: string list}
 | Strangle of {strike1:float; strike2: float; bwpc_list: string list}
@@ -27,7 +21,6 @@ float;strike5:float; strike6: float; strike7:float; strike8:float; strike9: floa
 | MexicanCowboyHat of {strike1:float; strike2: float; strike3:float; strike4: 
 float;strike5:float; strike6: float; strike7:float; strike8:float; strike9: float; 
 strike10:float; strike11:float; strike12: float; bwpc_list: string list}
->>>>>>> 97cb8f3c9dbb272e57b2ded40c2932b243c1cf3e
 
 type t = { spread : spread; expiry : Blackscholes.date; options : european_option list}
 
@@ -38,8 +31,6 @@ let get_spread_bwpc_list = function
 | LongCall {strike1; bwpc_list} -> ["bc1"]
 | LongPut {strike1; bwpc_list} -> ["bp1"]
 | BullCallLadder{strike1; strike2; strike3; bwpc_list} -> ["bc1"; "wc1"; "wc1"]
-<<<<<<< HEAD
-=======
 | BullPut{strike1;strike2;bwpc_list;} -> ["bp1";"wp1"]
 | Straddle {strike1;strike2;bwpc_list;} -> ["bp1";"bc1"]
 | Strangle {strike1;strike2;bwpc_list;} -> ["wp1";"wc1"]
@@ -53,7 +44,6 @@ strike5; strike6; strike7; strike8; strike9; bwpc_list} ->
 | MexicanCowboyHat {strike1; strike2; strike3; strike4; strike5; strike6; 
 strike7; strike8; strike9; strike10; strike11; strike12; bwpc_list} -> 
   ["bp1";"bp1";"bp1"; "bc1";"wc1";"wc1"; "bc1";"wc1";"bc1"; "bc1";"bc1";"bc1"]
->>>>>>> 97cb8f3c9dbb272e57b2ded40c2932b243c1cf3e
 
 let blackscholes_date  lst = 
   let time = Blackscholes.create_time 0 0 0 0  in 
@@ -122,8 +112,6 @@ let make_t (name : string) (expiry : date) (r : float) (v : float)  =
         strike3 = List.nth strikes 2;
         bwpc_list = ["bc1"; "wc1"; "wc1"]} in 
         {spread = option_spread; expiry = expiry; options = make_options strikes expiry r v})
-<<<<<<< HEAD
-=======
     | "bull put" -> (
         let strikes = get_strikes 2 in 
         let option_spread =  BullPut
@@ -216,7 +204,6 @@ let make_t (name : string) (expiry : date) (r : float) (v : float)  =
           strike12 = List.nth strikes 11;
           bwpc_list = ["bp1";"bp1";"bp1"; "bc1";"wc1";"wc1"; "bc1";"wc1";"bc1"; "bc1";"bc1";"bc1"]} in 
           {spread = option_spread; expiry = expiry; options = make_options strikes expiry r v})
->>>>>>> 97cb8f3c9dbb272e57b2ded40c2932b243c1cf3e
     | _ -> failwith ("Spread not recognized")
 
 let rec price_options (options : european_option list) 

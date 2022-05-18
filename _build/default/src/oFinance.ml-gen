@@ -1,21 +1,15 @@
-<<<<<<< HEAD
 (** @canonical OFinance.Arb *)
 module Arb = OFinance__Arb
 
 
-=======
->>>>>>> 97cb8f3c9dbb272e57b2ded40c2932b243c1cf3e
 (** @canonical OFinance.Author *)
 module Author = OFinance__Author
 
 
-<<<<<<< HEAD
 (** @canonical OFinance.Backtester *)
 module Backtester = OFinance__Backtester
 
 
-=======
->>>>>>> 97cb8f3c9dbb272e57b2ded40c2932b243c1cf3e
 (** @canonical OFinance.Binomial *)
 module Binomial = OFinance__Binomial
 
@@ -36,12 +30,9 @@ module Levy = OFinance__Levy
 module Maths = OFinance__Maths
 
 
-<<<<<<< HEAD
-=======
 (** @canonical OFinance.Portfolio *)
 module Portfolio = OFinance__Portfolio
 
 
->>>>>>> 97cb8f3c9dbb272e57b2ded40c2932b243c1cf3e
 (** @canonical OFinance.Spread *)
 module Spread = OFinance__Spread
